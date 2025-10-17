@@ -1,1 +1,17 @@
 @charset "utf-8";
+
+:root {
+    --main-bg:#F0EBDE;
+    --black: #1D1D1B;
+    --w-color: #ffffff;
+    --yellow-100: #FFFAED;
+    --yellow-200: #F5F0E4;
+    --yellow-300: #EEE9D6;
+    --yellow-400: #F2DEC0;
+    --yellow-500: #DACAB0;
+    --yellow-600: #CEB791;
+    --yellow-700: #A2824F;
+    --yellow-800: #74521C;
+    --yellow-800: #4D2F00;
+
+}
