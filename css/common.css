@@ -34,13 +34,13 @@ header h1 {
 }
 
 nav {
-    flex: 1;
+   /*  flex: 1; */
 }
 
 nav ul {
     display: flex;
     justify-content: space-between;
-    padding-inline: 100px;
+    gap: 50px;
 }
 
 nav ul li {
