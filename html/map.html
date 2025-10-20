@@ -10,7 +10,7 @@
     <title>NMK</title>
     <link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/main_style.css">
+    <!-- <link rel="stylesheet" href="../css/main_style.css"> -->
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/map_style.css">
     <script src="https://kit.fontawesome.com/d471c8851f.js" crossorigin="anonymous"></script>
@@ -40,65 +40,76 @@
             </div><!-- //.right -->
         </div><!-- //.inner -->
     </header>
-    <div class="sub">
-        <img class="logo" src="../asset/img_Collection/sub_logo.png" />
-        <i class="fa-solid fa-chevron-right"></i>
-        <div class="menu_title">Visit</div>
-        <i class="fa-solid fa-chevron-right"></i>
-        <div class="menu_sub">Museum Map</div>
-    </div><!-- //.sub -->
+    <main>
+        <div class="sub">
+            <img class="logo" src="../asset/img_Collection/sub_logo.png" />
+            <i class="fa-solid fa-chevron-right"></i>
+            <div class="menu_title">Visit</div>
+            <i class="fa-solid fa-chevron-right"></i>
+            <div class="menu_sub">Museum Map</div>
+        </div><!-- //.sub -->
+        <div class="map_content">
+            <div class="inner">
+                <!-- 페이지 제목 + 층 탭 -->
+                <div class="left">
+                    <div class="txt_box">
+                        <h2 class="page_title">Museum Map</h2>
+                        <div class="floor_tabs">
+                            <button class="tab active">1F</button>
+                            <button class="tab">2F</button>
+                            <button class="tab">3F</button>
+                        </div>
+                        <div class="bottom">
+                            <h3 class="b_title">
+                                Medieval and Early Modern History
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </h3>
+                            <p class="info">
+                                The Medieval and Early Modern History section highlights Korea’s development through
+                                the Goryeo, Joseon, and Korean Empire periods, showcasing key events, conflicts, and
+                                cultural achievements.
+                            </p>
+                        </div>
+                        <div>--------------------------------</div>
+                    </div>
+                    <div class="highlighted_artifact">
+                        <h4>Highlighted Artifact</h4>
+                        <ul class="arts">
+                            <li>
+                                <div class="img_box"><img src="../asset/img_map/1f_1.png"
+                                        alt="Imperial Royal Seal of the Great"></div>
+                                <p>Imperial Royal Seal of the Great...</p>
+                            </li>
+                            <li>
+                                <div class="img_box"><img src="../asset/img_map/1f_2.png"
+                                        alt="Rain Gauge and Stone Pedestal"></div>
+                                <p>Rain Gauge and Stone Pedestal</p>
+                            </li>
+                            <li>
+                                <div class="img_box"> <img src="../asset/img_map/1f_3.png"
+                                        alt="Earrings with Thick Hollow Rings"></div>
+                                <p>Earrings with Thick Hollow Rings</p>
+                            </li>
+                            <li>
+                                <div class="img_box"><img src="../asset/img_map/1f_4.png"
+                                        alt="Baekje Gilt-Bronze Incense Burner"></div>
+                                <p>Baekje Gilt-Bronze Incense Burner</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 지도 이미지 -->
+                <div class="map_right">
+                    <img src="../asset/img/museum_map_1f.png" alt="Museum 1F Map">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
 </div><!-- //.wrap -->
 <!-- 왼쪽 텍스트 + 오른쪽 지도 -->
-<div class="map_content">
-    <div class="inner">
-        <!-- 페이지 제목 + 층 탭 -->
-        <div class="txt_box">
-            <h2 class="page_title">Museum Map</h2>
-            <div class="floor_tabs">
-                <button class="tab active">1F</button>
-                <button class="tab">2F</button>
-                <button class="tab">3F</button>
-            </div>
-            <div class="bottom">
-                <h3 class="b_title">
-                    Medieval and Early Modern History
-                    <i class="fa-solid fa-chevron-down"></i>
-                </h3>
-                <p class="info">
-                    The Medieval and Early Modern History section highlights Korea’s development through
-                    the Goryeo, Joseon, and Korean Empire periods, showcasing key events, conflicts, and
-                    cultural achievements.
-                </p>
-            </div>
-            <div>--------------------------------</div>
-        </div>
-        <div class="highlighted_artifact">
-            <h4>Highlighted Artifact</h4>
-            <ul class="arts">
-                <li>
-                    <img src="../asset/img_map/1f_1.png" alt="Imperial Royal Seal of the Great">
-                    <p>Imperial Royal Seal of the Great...</p>
-                </li>
-                <li>
-                    <img src="../asset/img_map/1f_2.png" alt="Rain Gauge and Stone Pedestal">
-                    <p>Rain Gauge and Stone Pedestal</p>
-                </li>
-                <li>
-                    <img src="../asset/img_map/1f_3.png" alt="Earrings with Thick Hollow Rings">
-                    <p>Earrings with Thick Hollow Rings</p>
-                </li>
-                <li>
-                    <img src="../asset/img_map/1f_4.png" alt="Baekje Gilt-Bronze Incense Burner">
-                    <p>Baekje Gilt-Bronze Incense Burner</p>
-                </li>
-            </ul>
-        </div>
-        <!-- 지도 이미지 -->
-        <div class="map_right">
-            <img src="../asset/img/museum_map_1f.png" alt="Museum 1F Map">
-        </div>
-    </div>
-</div>
 
 
 </html>
