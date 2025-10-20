@@ -73,7 +73,7 @@ header .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0 70px;
     background: rgba(226, 218, 215, 0.7);
 }
 
@@ -81,6 +81,9 @@ header h1 {
     text-indent: -9999px;
 }
 
+.inner .logo{
+    width: 225px;
+}
 
 nav {
     /*  flex: 1; */
@@ -91,7 +94,8 @@ nav ul {
     display: flex;
     justify-content: space-between;
     gap: 70px;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 nav ul li {
@@ -101,7 +105,6 @@ nav ul li {
 header .right {
     display: flex;
     gap: 26px;
-    padding: 30px;
 }
 
 .banner_top {
