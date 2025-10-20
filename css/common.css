@@ -34,9 +34,7 @@ header h1 {
     padding: 30px;
 }
 
-nav {
-    /*  flex: 1; */
-}
+
 
 nav ul {
     display: flex;
