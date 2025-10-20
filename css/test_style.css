@@ -1,0 +1,19 @@
+.banner_top {
+    background-image: url(../asset/img_Collection/image\ 853.png);
+    /* 본인 배너이미지 */
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 40px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 300;
+    font-size: 18px;
+    background: var(--red-05-point);
+    color: #fff;
+    /* 본인 버튼 크기 조정 */
+}

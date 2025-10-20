@@ -55,7 +55,7 @@ body {
 }
 
 .inner {
-    width: 100%;
+    width: 1674px;
     margin-inline: auto;
 }
 
@@ -66,6 +66,7 @@ header {
     left: 0;
     top: 0;
     z-index: 10;
+    background: rgba(226, 218, 215, 0.7);
 }
 
 header .inner {
@@ -73,8 +74,8 @@ header .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 70px;
-    background: rgba(226, 218, 215, 0.7);
+    /* padding: 0 70px; */
+
 }
 
 .inner .logo {
@@ -107,63 +108,87 @@ header .right {
     margin-left: 70px;
 }
 
-.banner_top {
+main {
+    padding-top: 80px;
+}
+
+main .banner_top {
     position: relative;
     width: 100%;
     height: 265px;
-    margin-top: 80px;
     /* GNB 높이에 맞춰 조정 */
     overflow: hidden;
     background-color: #1d1d1b;
-}
-
-.banner_top .banner_img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.85;
-}
-
-.banner_top .txt {
-    position: absolute;
-    bottom: 60px;
-    left: 90px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: 700;
-    /* font-family: "Zen Antique", serif; */
-    font-weight: 500;
-    /* font-style: normal; */
-}
-
-.sub {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 80px;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    background-size: cover;
+    background-image: url(../asset/img_Special/mini_banner.png);
+}
+
+main .banner_top .txt {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: var(--title-Zen);
+}
+
+main .sub {
     background: #f9f6ef;
     font-size: 15px;
     color: #222;
 }
 
-.sub .logo {
+main .sub .inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+}
+
+main .sub .logo {
     width: 20px;
 }
 
-.sub i {
+main .sub i {
     color: #aaa;
     font-size: 12px;
 }
 
-.sub .menu_sub {
+main .sub .menu_sub {
     color: #222;
+    font-weight: 500;
 }
 
-.footer {
+main .tit {
+    font-family: var(--title-Zen);
+    font-size: 50px;
+    font-weight: 500;
+}
+
+/* 버튼 */
+main .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 40px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 300;
+    font-size: 18px;
+    background: var(--red-05-point);
+    color: #fff;
+}
+
+/* body title */
+main .txt_box h3{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+footer {
     width: 100%;
     height: 771px;
-    background: #181819;
+    background: url(/asset/img/footer.png);
 }
