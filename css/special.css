@@ -229,3 +229,21 @@ body {
     width: 463px;
     height: 609px;
 }
+
+.Exhibition_3 {
+    display: flex;
+}
+
+.img_3 {
+    width: 307px;
+    height: 405px;
+}
+
+.Exhibition_4 {
+    display: flex;
+}
+
+.img_4 {
+    width: 380px;
+    height: 500px;
+}
