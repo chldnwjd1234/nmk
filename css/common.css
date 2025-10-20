@@ -73,24 +73,24 @@ header .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 30px;
     background: rgba(226, 218, 215, 0.7);
 }
 
 header h1 {
-    font-size: 20px;
-    font-weight: 700;
-    padding: 30px;
+    text-indent: -9999px;
 }
 
 nav {
     /*  flex: 1; */
-    margin-left: 380px;
+    margin-left: 200px;
 }
 
 nav ul {
     display: flex;
     justify-content: space-between;
-    gap: 90px;
+    gap: 70px;
+    font-size: 20px;
 }
 
 nav ul li {
