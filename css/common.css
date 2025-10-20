@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
 
 * {
     box-sizing: border-box;
@@ -34,7 +35,7 @@ header h1 {
 }
 
 nav {
-   /*  flex: 1; */
+    /*  flex: 1; */
 }
 
 nav ul {
@@ -47,9 +48,62 @@ nav ul li {
     align-items: center;
 }
 
-header .right{
+header .right {
     display: flex;
     gap: 26px;
     padding: 30px;
 }
 
+.banner_top {
+    position: relative;
+    width: 100%;
+    height: 265px;
+    margin-top: 80px;
+    /* GNB 높이에 맞춰 조정 */
+    overflow: hidden;
+    background-color: #1d1d1b;
+}
+
+.banner_top .banner_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+.banner_top .txt {
+    position: absolute;
+    bottom: 60px;
+    left: 90px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    /* font-family: "Zen Antique", serif; */
+    font-weight: 500;
+    /* font-style: normal; */
+}
+.sub {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 80px;
+  background: #f9f6ef;
+  font-size: 15px;
+  color: #222;
+}
+
+.sub .logo {
+  width: 20px;
+}
+
+.sub i {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.sub .menu_sub {
+  color: #222;
+}
