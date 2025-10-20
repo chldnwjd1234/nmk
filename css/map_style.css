@@ -1,0 +1,19 @@
+@charset "urf-8";
+
+.txt_box {
+    width: 632px;
+    height: 380px;
+    background: yellow;
+}
+.floor {
+    display: flex;
+    width: 316px;
+    height: 43px;
+}
+.floor article {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 46px 36px;
+    transition: background-color .6s;
+}
