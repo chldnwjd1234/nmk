@@ -9,16 +9,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NMK</title>
     <link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/collection_style.css">
+    <link rel="stylesheet" href="../css/sub_common.css">
+    <script src="https://kit.fontawesome.com/048017a919.js" crossorigin="anonymous"></script>
+    <script src="../js/collection.js"></script>
 </head>
 
 <body>
     <div class="wrap">
         <header>
             <div class="inner">
-                <h1><a href="#">NATIONAL MUSEUM</a></h1>
+                <img src="../asset/img/eng_header_logo.png" alt="logo">
+                <h1><a href="#">NMK</a></h1>
                 <nav>
                     <ul>
                         <li><a href="#">VISIT</a></li>
@@ -49,6 +53,89 @@
             <i class="fa-solid fa-chevron-right"></i>
             <div class="menu_sub">Collection Database</div>
         </div><!-- //.sub -->
+        <section class="search">
+            <div class="search_bar">
+                <input type="search" placeholder="Search ..." />
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="txt_btn">
+                <button>Ceramics</button>
+                <button>Bronze</button>
+                <button>Ordnance</button>
+                <button>Metal</button>
+                <button>Paper</button>
+                <button>Joseon</button>
+            </div><!-- //.txt_btn -->
+            <div class="view_btns">
+                <img src="../asset/img_Collection/icon1_on.png" alt="grid view" class="on" data-view="grid">
+                <img src="../asset/img_Collection/icon2_off.png" alt="list view" data-view="list">
+            </div><!-- //.view_btns -->
+
+            <!-- 카드슬라이드 섹션 -->
+            <section class="results">
+                <div class="results_head">
+                    <span class="count"><b>6707</b> Results</span>
+                </div>
+
+                <section class="card_wrap">
+                    <ul>
+                        <li class="card">
+                            <div class="thumb"><img src="../asset/img_Collection/c1_AlbumofGeumgangsanMountain.jpg"
+                                    alt=""></div>
+                            <div class="meta">
+                                <div class="title">Album of Geumgangsan</div>
+                                <div class="desc">First Trip to Geumgangsan Mountain in 1711</div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="thumb"><img src="../asset/img_Collection/c2_Clearingafter RainonMountInwang.jpg"
+                                    alt=""></div>
+                            <div class="meta">
+                                <div class="title">Clearing after Rain on Mount Inwang</div>
+                                <div class="desc">Sense of Space and Reality in Clearing after Rain on Mount Inwang
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="thumb"><img src="../asset/img_Collection/c5_SariraReliquaries.jpg" alt=""></div>
+                            <div class="meta">
+                                <div class="title">Sarira Reliquaries</div>
+                                <div class="desc">Archaeological Site in Wanggung-ri: From Royal Palace to Buddhist
+                                    Temples</div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="thumb"><img src="../asset/img_Collection/c7_Gilt-silverCupandStand.jpg" alt="">
+                            </div>
+                            <div class="meta">
+                                <div class="title">Gilt-silver Cup and Stand</div>
+                                <div class="desc">Purpose of Cups with a Stand, Origin of Cups with a Stand</div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="thumb"><img src="../asset/img_Collection/유물.png" alt=""></div>
+                            <div class="meta">
+                                <div class="title">Amitabha Buddha Stele</div>
+                                <div class="desc">Buddhist Stele Created by Former Citizens of Baekje</div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="thumb"><img src="../asset/img_Collection/c3_PortraitofHeoMok.jpg" alt=""></div>
+                            <div class="meta">
+                                <div class="title">Portrait of Heo Mok</div>
+                                <div class="desc">Masterpiece of Late Joseon Portraiture</div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </section>
+
+
+
+
+            </section>
+
     </main>
 </body>
 
