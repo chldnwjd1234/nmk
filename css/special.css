@@ -35,7 +35,8 @@
 
 }
 
-.SpecialExhibition .txt_right p {
+.SpecialExhibition .txt_right h2 {
     font-family: var(--title-Zen);
     font-size: 50px;
+    color: var(--gray-09);
 }
