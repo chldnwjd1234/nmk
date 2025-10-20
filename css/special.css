@@ -18,7 +18,13 @@
 }
 
 .SpecialExhibition .txt_right {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+.SpecialExhibition .txt_right .box_1 {
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .SpecialExhibition .txt_right .label_1,
@@ -34,14 +40,16 @@
     align-items: center;
 }
 
-.SpecialExhibition .txt_right .label_1 { 
-    margin-right: 10px;
+.SpecialExhibition .txt_right .box_1 {
+
 }
+
 
 .SpecialExhibition .txt_right h2 {
     font-family: var(--title-Zen);
     font-size: 50px;
     color: var(--gray-09);
+    margin-bottom: 10px;
 }
 
 .SpecialExhibition .txt_right p {
