@@ -1,19 +1,168 @@
 @charset "urf-8";
+ .sub {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 80px;
+  background: #f9f6ef;
+  font-size: 15px;
+  color: #222;
+  margin-top: 80px;
+}
+
+.sub .logo {
+  width: 20px;
+}
+
+.sub i {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.sub .menu_sub {
+  color: #222;
+}
+
+.map_content {
+    width: 100%;
+    height: 100%;
+    background: yellow; /* 종이 질감 느낌 배경색 */
+    padding: 45px 117px;
+}
+
+.map_content .inner {
+    width: 1686px;
+    height: 743px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 255px;
+    background: #ddd;
+}
 
 .txt_box {
-    width: 632px;
-    height: 380px;
-    background: yellow;
+    margin-bottom: 40px;
+    gap: 40px;
 }
-.floor {
+
+.page_title {
+    font-family: var(--title-Zen);
+    font-size: 50px;
+    font-weight: 500;
+    color: var(--black);
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+}
+
+.floor_tabs {
     display: flex;
-    width: 316px;
-    height: 43px;
+    gap: 14px;
 }
-.floor article {
-    flex: 1;
-    background: #fff;
+
+.floor_tabs .tab {
+    background: var(--yellow-02);
+    color: var(--gray-05);
+    border: none;
     border-radius: 10px;
-    padding: 46px 36px;
-    transition: background-color .6s;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 28px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.floor_tabs .tab.active {
+    background: var(--red-05-point);
+    color: var(--w-color);
+}
+
+.floor_tabs .tab:hover:not(.active) {
+    background: var(--yellow-03);
+    color: var(--black);
+}
+
+/* ===============================
+   Left Text Section
+=============================== */
+.map_left {
+    flex: 1;
+}
+
+.map_section_title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.map_section_title i {
+    font-size: 14px;
+    color: var(--gray-06);
+}
+
+.map_section_text {
+    color: var(--black);
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 520px;
+}
+
+/* ===============================
+   Highlighted Artifact
+=============================== */
+.highlighted_artifact {width: 632px; height: 231px;}
+.highlighted_artifact h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 16px;
+}
+
+.artifact_list {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 600px;
+}
+
+.artifact_list li {
+    text-align: left;
+}
+
+.artifact_list img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.artifact_list p {
+    font-size: 14px;
+    color: var(--gray-08);
+    line-height: 1.4;
+}
+
+/* ===============================
+   Right Map Image
+=============================== */
+.map_right {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.map_right img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    border-radius: 10px;
 }

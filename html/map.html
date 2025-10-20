@@ -18,66 +18,87 @@
     <script src="js/main.js"></script>
 </head>
 
-<body>
-    <!DOCTYPE html>
-    <html lang="ko">
+<div class="wrap">
+    <header>
+        <div class="inner">
+            <img src="../asset/img/eng_header_logo.png" alt="logo">
+            <h1><a href="#">NMK</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">VISIT</a></li>
+                    <li><a href="#">EXHIBITION</a></li>
+                    <li><a href="#">COLLECTION</a></li>
+                    <li><a href="#">EVENT</a></li>
+                    <li><a href="#">NMK GLOBAL</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">MUSEUM SHOP</a></li>
+                </ul>
+            </nav>
+            <div class="right">
+                <a href="#"><img src="../asset/img/icon1.png" alt=""></a>
+                <a href="#"><img src="../asset/img/icon2.png" alt=""></a>
+            </div><!-- //.right -->
+        </div><!-- //.inner -->
+    </header>
+    <div class="sub">
+        <img class="logo" src="../asset/img_Collection/sub_logo.png" />
+        <i class="fa-solid fa-chevron-right"></i>
+        <div class="menu_title">Visit</div>
+        <i class="fa-solid fa-chevron-right"></i>
+        <div class="menu_sub">Museum Map</div>
+    </div><!-- //.sub -->
+</div><!-- //.wrap -->
+<!-- 왼쪽 텍스트 + 오른쪽 지도 -->
+<div class="map_content">
+    <div class="inner">
+        <!-- 페이지 제목 + 층 탭 -->
+        <div class="txt_box">
+            <h2 class="page_title">Museum Map</h2>
+            <div class="floor_tabs">
+                <button class="tab active">1F</button>
+                <button class="tab">2F</button>
+                <button class="tab">3F</button>
+            </div>
+            <div class="bottom">
+                <h3 class="b_title">
+                    Medieval and Early Modern History
+                    <i class="fa-solid fa-chevron-down"></i>
+                </h3>
+                <p class="info">
+                    The Medieval and Early Modern History section highlights Korea’s development through
+                    the Goryeo, Joseon, and Korean Empire periods, showcasing key events, conflicts, and
+                    cultural achievements.
+                </p>
+            </div>
+            <div>--------------------------------</div>
+        </div>
+        <div class="highlighted_artifact">
+            <h4>Highlighted Artifact</h4>
+            <ul class="arts">
+                <li>
+                    <img src="../asset/img_map/1f_1.png" alt="Imperial Royal Seal of the Great">
+                    <p>Imperial Royal Seal of the Great...</p>
+                </li>
+                <li>
+                    <img src="../asset/img_map/1f_2.png" alt="Rain Gauge and Stone Pedestal">
+                    <p>Rain Gauge and Stone Pedestal</p>
+                </li>
+                <li>
+                    <img src="../asset/img_map/1f_3.png" alt="Earrings with Thick Hollow Rings">
+                    <p>Earrings with Thick Hollow Rings</p>
+                </li>
+                <li>
+                    <img src="../asset/img_map/1f_4.png" alt="Baekje Gilt-Bronze Incense Burner">
+                    <p>Baekje Gilt-Bronze Incense Burner</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 지도 이미지 -->
+        <div class="map_right">
+            <img src="../asset/img/museum_map_1f.png" alt="Museum 1F Map">
+        </div>
+    </div>
+</div>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Free Web tutorials">
-        <meta name="keywords" content="HTML, CSS, JavaScript">
-        <meta name="author" content="John Doe">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>NMK</title>
-        <link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" href="../css/main_style.css">
-        <link rel="stylesheet" href="../css/common.css">
-        <link rel="stylesheet" href="../css/map_style.css">
-        <script src="https://kit.fontawesome.com/d471c8851f.js" crossorigin="anonymous"></script>
-        <script src="js/common.js"></script>
-        <script src="js/main.js"></script>
-    </head>
 
-    <body>
-        <div class="sub">
-
-        </div><!-- //.sub -->
-        <section class="inner">
-            <div class="txt_box">
-                <div class="tit">
-                    <h2>Museum Map</h2>
-                    <div class="floor">
-                        <article>
-                            <a href="#">
-                                <h3>1F</h3>
-                            </a>
-                        </article>
-                        <article>
-                            <a href="#">
-                                <h3>2F</h3>
-                            </a>
-                        </article>
-                        <article>
-                            <a href="#">
-                                <h3>3F</h3>
-                            </a>
-                        </article>
-                    </div><!-- //.floor -->
-                </div>
-                <div class="bottom">
-                     <div class="select_box">
-                            <button type="button">Medieval and Early Modern History <i class="fa-solid fa-angle-up"></i></button>
-                            <ul>
-                                <li><a href="#">Prehistory and Ancient History</a></li> 
-                            </ul>
-                        </div><!-- //.select_box -->
-            </div><!-- //.txt_box -->
-        </section><!--//.inner -->
-        <div class="footer">
-
-        </div><!-- //.footer -->
-    </body>
-
-    </html>
-</body>
+</html>
