@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.SpecialExhibition {
+    padding: 45px 198px 14px 137px;
+    background: #ccc;
+}
+
+.SpecialExhibition .img_left img{
+    width: 580px;
+    height: 740px;
+}
+
+.SpecialExhibition .txt_right {
+    width: 134px;
+    height: 42px;
+    background-color: black;
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+}
+
+.SpecialExhibition .txt_right .label_1 {
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+}
