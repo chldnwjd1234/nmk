@@ -98,13 +98,14 @@ main .inner {}
 
 main .highlight {
     width: 100%;
-    height: 100vh;
-    background: #D8C9AF;
+    /* height: 100vh; */
+    background: url(../asset/img/bg_left.png) no-repeat left center, url(../asset/img/bg_right.png) right center no-repeat;
+    background-color: #D8C9AF;
     position: relative;
 }
 
 main .highlight .title {
-    position: absolute;
+    /* position: absolute; */
     width: 684px;
     height: 182px;
     /*     top: 57px;
@@ -118,4 +119,30 @@ main .highlight .title {
 .title h2 {
     font-family: var(--title-Zen);
     font-size: 65px;
+}
+
+.highlight .contents {
+    display: flex;
+    flex-direction: column;
+    width: 1790px;
+    margin-left: auto;
+    gap: 90px;
+}
+
+.highlight .contents .top {
+    display: flex;
+    gap: 30px;
+}
+
+.highlight .contents .top a {
+    width: 476px;
+    height: 600px;
+    background: yellow;
+}
+
+.highlight .contents .bottom {
+    width: 1284px;
+    height: 526px;
+    background: lavender;
+    margin-left: auto;
 }
