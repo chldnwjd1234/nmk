@@ -5,9 +5,16 @@
     background: #ccc;
 }
 
-.SpecialExhibition .img_left img{
+.SpecialExhibition .inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+.SpecialExhibition .img_left img {
     width: 580px;
     height: 740px;
+    display: block;
 }
 
 .SpecialExhibition .txt_right {
@@ -15,12 +22,20 @@
     height: 42px;
     background-color: black;
     color: #fff;
-    border-radius: 20px;
-    display: flex;
+    border-radius: 5px;
+    display: inline-flex;
 }
 
-.SpecialExhibition .txt_right .label_1 {
+.SpecialExhibition .txt_right .label_1,
+.label_2 {
     font-size: 16px;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
+
+}
+
+.SpecialExhibition .txt_right p {
+    font-family: var(--title-Zen);
+    font-size: 50px;
 }
