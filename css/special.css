@@ -1,6 +1,8 @@
 @charset "utf-8";
 
-.inner {}
+body {
+    background: var(--bg);
+}
 
 .SpecialExhibition {
     padding: 45px 0 14px;
