@@ -34,3 +34,8 @@
     align-items: center;
 
 }
+
+.SpecialExhibition .txt_right p {
+    font-family: var(--title-Zen);
+    font-size: 50px;
+}
