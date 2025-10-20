@@ -8,7 +8,6 @@
 }
 
 :root {
-    font-size: 25px;
     --w-color: #FFFFFF;
     --black: #1D1D1B;
     --bg: #F0EBDE;
@@ -78,7 +77,7 @@ header .inner {
 }
 
 header h1 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     padding: 30px;
 }
@@ -103,3 +102,4 @@ header .right {
     gap: 26px;
     padding: 30px;
 }
+
