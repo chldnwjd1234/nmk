@@ -19,7 +19,7 @@ main .inner {}
     right: 0;
     top: 80vh;
     width: 822px;
-    height: 226px;
+    height: 225px;
     background: url(../asset/img/cloud2.png) yellow;
     filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .12));
 }
@@ -27,17 +27,22 @@ main .inner {}
 .museum_cta .cta_content {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 42px;
     z-index: 2;
     color: #111;
+    position: absolute;
+    left: 79px;
+    top: 50px
 }
 
-.cta_content .info {
-    /*     display: flex;
-    align-items: flex-start;
-    gap: 28px;
-    flex-direction: column; */
+.museum_cta .left,
+.museum_cta .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
+
 
 .cta_content .today,
 .cta_content .fees {
@@ -46,33 +51,21 @@ main .inner {}
     gap: 4px;
 }
 
+
 .cta_content .label {
-    font-size: 12px;
-    color: #6b6f76
+    font-size: 14px;
+    color: var(--gray-08)
 }
 
 .cta_content .time,
 .cta_content .free {
-    font-weight: 700;
-    font-size: 15px
+    font-weight: 500;
+    font-size: 20px
 }
 
 .cta_content .note {
     font-size: 13px;
-    color: #5a5f66
-}
-
-.btns {
-    display: flex;
-    gap: 10px;
-    margin-left: 22px;
-}
-
-.cta_content .btns {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-left: auto;
+    color: #5a5f66;
 }
 
 .btn_1,
