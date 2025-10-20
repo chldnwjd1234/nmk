@@ -11,6 +11,7 @@
     align-items: center;
     border-bottom: 1px solid var(--black);
     padding-bottom: 4px;
+    background: yellowgreen;
 }
 
 .search_bar input {
@@ -28,7 +29,7 @@
     width: 40px;
     height: 40px;
     margin-left: 6px;
-    border: 1px solid #cdbfae;
+    border: none;
     border-radius: 50%;
     background: var(--w-color);
     opacity: 0.8;
@@ -42,24 +43,23 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    /* background: salmon; */
+    background: #ccc;
 }
 
 .txt_btn button {
-    padding: 8px 14px;
-    border: 1px solid #ded6c8;
+    padding: 10px 20px;
+    border: none;
     border-radius: 999px;
     background: var(--w-color);
     opacity: 0.9;
-    font-size: 14px;
+    font-size: 18px;
     color: var(--black);
     cursor: pointer;
     transition: 0.2s;
 }
 
 .txt_btn button:hover {
-    background: var(--black);
-    opacity: 0.7;
+    background: var(--gray-08);
     color: var(--w-color);
     border-color: #1d1d1b;
 }
@@ -87,24 +87,24 @@
 }
 
 /* 카드 슬라이드 섹션 */
-.results {
-    padding: 24px 20px 60px;
+.con {
+    /* padding: 24px 0px 0px; */
     width: 100%;
     background: darkcyan;
 }
 
-.results .results_head {
-    max-width: 1200px;
+.con .results {
+    max-width: 100%;
     margin: 0 auto 12px;
     text-align: left;
 }
 
-.results .count {
-    font-size: 13px;
+.con .count {
+    font-size: 17px;
     color: var(--black);
 }
 
-.results .count b {
+.con .count b {
     color: var(--red-06);
 }
 
@@ -127,7 +127,7 @@
     gap: 20px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 20px 80px;
+    /* padding: 0px 0px; */
     list-style: none;
     margin: 0;
     /* background: saddlebrown; */
@@ -155,8 +155,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 20px 20px;
-    /* background: #666; */
+    padding: 20px 20px 10px;
 }
 
 .thumb img {
@@ -175,14 +174,14 @@
 }
 
 .title {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 23px;
+    font-weight: 500;
     color: var(--black);
     margin-bottom: 2px;
 }
 
 .card_wrap ul li p {
-    font-size: 12px;
+    font-size: 20px;
     color: var(--gray-06);
     line-height: 1.4;
 }
