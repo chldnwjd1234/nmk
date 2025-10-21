@@ -77,6 +77,12 @@ body {
     margin-inline: auto;
 }
 
+@media screen and (max-width:1673px) {
+    .inner {
+        width: 95%;
+    }
+}
+
 header {
     width: 100%;
     height: 80px;
@@ -145,6 +151,12 @@ main .banner_top {
     align-items: flex-end;
     padding-bottom: 30px;
     background-size: cover;
+
+}
+
+main .banner_top .inner {
+    background: yellow;
+
 }
 
 main .banner_top .txt {
@@ -152,6 +164,8 @@ main .banner_top .txt {
     font-size: 50px;
     font-weight: 500;
     font-family: var(--title-Zen);
+    background: #ccc;
+    /* margin-inline: 0; */
 }
 
 main .sub {
@@ -217,10 +231,10 @@ main .txt_box h3 {
 
 /* footer */
 
-footer{
+footer {
     width: 100%;
     height: 771px;
-    background: url(/asset/img/footer_sub.png) no-repeat ,url(/asset/img/bg_all2.png) no-repeat;
+    background: url(/asset/img/footer_sub.png) no-repeat right top, url(/asset/img/bg_all2.png) no-repeat right top;
     color: var(--w-color);
     font-weight: 300;
     font-size: 20px;
@@ -254,6 +268,7 @@ footer .f_txt ul li {
 }
 
 footer .f_bot {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -275,48 +290,62 @@ footer .f_bot p::before {
 footer .f_right {
     display: flex;
     margin-top: 37px;
+    gap: 28px;
 }
 
 .select_box {
-    width: 240px;
-    height: 100%;
     position: relative;
+    height: 42px;
+    overflow: hidden;
+    border-radius: var(--r-10);
+}
+
+.select_box.on {
+    overflow: visible;
 }
 
 footer .select_box>button {
-    width: 220px;
-    height: 42px;
+    /*    width: 220px;
+    height: 42px; */
     background: var(--gray-08);
     border: 0;
     padding: 10px 30px;
+    gap: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--w-color);
     font-size: 18px;
     cursor: pointer;
-    border-radius: var(--r-10);
-    overflow: hidden;
+    position: relative;
+    z-index: 2;
+
 }
 
 footer .select_box>button i {
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 .select_box ul {
     position: absolute;
     left: 0;
-    bottom: 10%;
+    bottom: 20px;
     width: 100%;
-    height: 440px;
-    display: none;
     flex-direction: column;
     border-radius: 10px;
-    margin-bottom: 6px;
-    overflow: hidden;
+    background: #ccc;
+    padding: 10px;
+    transition: .3s;
+    /*     overflow: hidden; */
     /* display: flex; */
 }
 
+.select_box.on ul {
+    bottom: 42px;
+}
+
 .select_box ul li {
-    font-size: 16px;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
 }
