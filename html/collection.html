@@ -8,23 +8,22 @@
     <meta name="author" content="일단해보조">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NMK</title>
-    <link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/collection_style.css">
-    <link rel="stylesheet" href="../css/sub_common.css">
-    <script src="https://kit.fontawesome.com/048017a919.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../js/collection.js" defer></script>
+    <link rel="shortcut icon" href="/asset/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/collection_style.css"><!-- 본인 스타일 -->
+    <!--     <link rel="stylesheet" href="/css/common_media.css">
+    <link rel="stylesheet" href="/css/test_media.css"> --><!-- 본인 미디어스타일 -->
+    <!-- <script src="/js/common.js"></script>
+    <script src="/js/collection.js"></script> 본인 js -->
+    <script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="wrap">
         <header>
             <div class="inner">
-                <img src="../asset/img/eng_header_logo.png" alt="logo">
-                <h1><a href="#">NMK</a></h1>
+                <h1><a href="main.html"><img src="../asset/img/eng_header_logo.png" alt="NMK" class="logo"></a></h1>
                 <nav>
                     <ul>
                         <li><a href="#">VISIT</a></li>
@@ -35,254 +34,553 @@
                         <li><a href="#">ABOUT US</a></li>
                         <li><a href="#">MUSEUM SHOP</a></li>
                     </ul>
+                    <div class="right">
+                        <a href="#"><img src="../asset/img/icon1.png" alt="global"></a>
+                        <a href="#"><img src="../asset/img/icon2.png" alt="mypage"></a>
+                    </div><!-- //.right -->
                 </nav>
-                <div class="right">
-                    <a href="#"><img src="../asset/img/icon1.png" alt=""></a>
-                    <a href="#"><img src="../asset/img/icon2.png" alt=""></a>
-                </div><!-- //.right -->
             </div><!-- //.inner -->
         </header>
-    </div><!-- //.wrap -->
-    <main>
-        <div class="banner_top">
-            <img class="banner_img" src="../asset/img_Collection/image 853.png" alt="Collection Banner">
-            <div class="txt">Collection Database</div>
-        </div><!-- //.banner_top -->
-        <div class="sub">
-            <img class="logo" src="../asset/img_Collection/sub_logo.png" />
-            <i class="fa-solid fa-chevron-right"></i>
-            <div class="menu_title">Collection</div>
-            <i class="fa-solid fa-chevron-right"></i>
-            <div class="menu_sub">Collection Database</div>
-        </div><!-- //.sub -->
-        <section class="search">
-            <div class="search_bar">
-                <input type="search" placeholder="Search ..." />
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-            <div class="txt_btn">
-                <button>Ceramics</button>
-                <button>Bronze</button>
-                <button>Ordnance</button>
-                <button>Metal</button>
-                <button>Paper</button>
-                <button>Joseon</button>
-            </div><!-- //.txt_btn -->
-            <div class="view_btns">
-                <button class="btn1 on" type="button"></button>
-                <button class="btn2" type="button"></button>
-                <!--   <img src="../asset/img_Collection/icon1_on.png" alt="grid view" class="on" data-view="grid">
-                <img src="../asset/img_Collection/icon2_off.png" alt="list view" data-view="list"> -->
-            </div><!-- //.view_btns -->
-        </section><!-- //.search -->
-        <!-- 카드슬라이드 섹션 -->
-        <section class="con">
-            <div class="results">
-                <span><b>6707</b> Results</span>
-            </div>
 
-            <section class="card_wrap">
-                <div class="card_all swiper">
-                    <ul class="swiper-wrapper">
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c1_AlbumofGeumgangsanMountain.jpg"
-                                    alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Album of Geumgangsan</div>
-                                <p>First Trip to Geumgangsan Mountain in 1711</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c2_Clearingafter RainonMountInwang.jpg"
-                                    alt=""></div>
-                            <div class="txt">
-                                <div class="title">Clearing after Rain on Mount Inwang</div>
-                                <p>Sense of Space and Reality in Clearing after Rain on Mount Inwang
-                                </p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c5_SariraReliquaries.jpg" alt=""></div>
-                            <div class="txt">
-                                <div class="title">Sarira Reliquaries</div>
-                                <p>Archaeological Site in Wanggung-ri: From Royal Palace to Buddhist
-                                    Temples</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c7_Gilt-silverCupandStand.jpg" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Gilt-silver Cup and Stand</div>
-                                <p>Purpose of Cups with a Stand, Origin of Cups with a Stand</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/유물.png" alt=""></div>
-                            <div class="txt">
-                                <div class="title">Amitabha Buddha Stele</div>
-                                <p>Buddhist Stele Created by Former Citizens of Baekje</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c3_PortraitofHeoMok.jpg" alt=""></div>
-                            <div class="txt">
-                                <div class="title">Portrait of Heo Mok</div>
-                                <p>Masterpiece of Late Joseon Portraiture</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c8_BhaisajyaguruBuddhaTriad.jpg"
-                                    alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Bhaisajyaguru Buddha Triad</div>
-                                <p>Buddhist Stele Created by Former Citizens of Baekje</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c4_JeongYeochang’sVila.jpg" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Jeong Yeochang’s Villa</div>
-                                <p>Painting the Beauty of Jirisan Mountain and Seomjin Rive</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c9_BellwithInscription.png" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Bell with Inscription: “Fourth ..</div>
-                                <p>New Flower Design of the Late Goryeo Period</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c10_Gong with Inscription.png" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Gong with Inscription: “Sixth Year of Xianto ..</div>
-                                <p>The inscription on the side of the gong is embossed in reverse script, reading from
-                                    left to right</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c14_SutraonFilialPiety.png" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Sutra on Filial Piety</div>
-                                <p>Depicting the Ten Maternal Benevolences</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/Gilt-bronze Bodhisattva.png" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Gilt-bronze Bodhisattva</div>
-                                <p>Icon of Early Buddhist Sculpture of the Three Kingdoms Period</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c11_Gathering of Officials.jpg" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Gathering of Officials from the ..</div>
-                                <p>Production Date of Gathering of Officials from the Ministry </p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img
-                                    src="../asset/img_Collection/c17_WhitePorcelainJarwithGrapeandMonkeyDesign.jpg"
-                                    alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">White Porcelain Jar with Grape ..</div>
-                                <p>Symbolic Meaning of Grapes and Monkey</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c12_CrownOrnaments.jpg" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Crown Ornaments from the Tomb of King Muryeong</div>
-                                <p>Gold Crown Ornaments Worn by King Muryeong and his Queen Consort</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c15_StupaforStatePreceptorWon.png"
-                                    alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Stupa for State Preceptor Won ..</div>
-                                <p>Life and Faith of State Preceptor Wongong, Jijong</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c18_BronzeRitualObject.jpg" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Bronze Ritual Object with Farming Sce ..</div>
-                                <p>Correlation to Pottery Designs and Bronze Age Fields</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c13_Water-MoonAvalokiteshvara.jpg"
-                                    alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Water-Moon Avalokiteshvara</div>
-                                <p>Mount Potalaka, the Pure Land of Avalokiteshvara Bodhisattva</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/Gilt-bronze Bodhisattva.png" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Gilt-bronze Buddha Triad </div>
-                                <p>Buddha Triad Sharing One Halo</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/Stone Ksitigarbha Bodhisattva.png"
-                                    alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Stone Ksitigarbha Bodh ..</div>
-                                <p>Faith in Ksitigarbha Bodhisattva and Sutras</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/Gold_Crown.jpg" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Gold Crown and Gold Belt</div>
-                                <p>Excavation of Hwangnamdaechong Tomb</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img src="../asset/img_Collection/c20_PortraitofSongSiyeol.jpg" alt="">
-                            </div>
-                            <div class="txt">
-                                <div class="title">Portrait of Song Siyeol</div>
-                                <p>Simple Clothing as Symbol of a True Neo-Confucianist</p>
-                            </div>
-                        </li>
-                        <li class="card swiper-slide">
-                            <div class="thumb"><img
-                                    src="../asset/img_Collection/c25_BaekjeStoneBuddhaandGilt_bronzeBodhisattva.jpg"
-                                    alt="">hg
-                            </div>
-                            <div class="txt">
-                                <div class="title">Baekje Stone Buddha and Gilt-b..</div>
-                                <p>Sabi Period of Baekje: Great Flourishing of Buddhism</p>
-                            </div>
-                        </li>
-                    </ul>
+        <main class="bg">
+            <section class="banner_top">
+                <div class="txt inner">Collection Database</div><!-- 배너 타이틀 -->
+            </section><!-- //.banner_top -->
+
+            <div class="sub">
+                <div class="inner">
+                    <a href="/html/main.html"><img class="logo" src="../asset/img_Collection/sub_logo.png" /></a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <a href="/html/collection.html">Collection</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <a class="menu_sub" href="/html/collection.html">Collection Database</a>
+                </div><!-- 각자 맞는 페이지 걸기 -->
+            </div><!-- //.sub -->
+            <section class="search">
+                <div class="search_bar">
+                    <input type="search" placeholder="Search ..." />
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
-            </section><!-- //.card_wrap -->
-        </section><!-- //.con -->
+                <div class="txt_btn">
+                    <button>Ceramics</button>
+                    <button>Bronze</button>
+                    <button>Ordnance</button>
+                    <button>Metal</button>
+                    <button>Paper</button>
+                    <button>Joseon</button>
+                </div><!-- //.txt_btn -->
+                <div class="view_btns">
+                    <button class="btn2" type="button"></button>
+                    <button class="btn1 on" type="button"></button>
+                </div><!-- //.view_btns -->
+            </section><!-- //.search -->
 
-    </main>
+            <!-- 카드슬라이드 섹션 -->
+            <section class="con">
+                <div class="results">
+                    <span><b>6707</b> Results</span>
+                </div><!-- //.results -->
+                <section class="card_wrap1">
+                    <div class="card_all swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c1_AlbumofGeumgangsanMountain.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Album of Geumgangsan</div>
+                                    <p>First Trip to Geumgangsan Mountain in 1711</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img
+                                        src="../asset/img_Collection/c2_Clearingafter RainonMountInwang.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Clearing after Rain on Mount Inwang</div>
+                                    <p>Sense of Space and Reality in Clearing after Rain on Mount Inwang
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c5_SariraReliquaries.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Sarira Reliquaries</div>
+                                    <p>Archaeological Site in Wanggung-ri: From Royal Palace to Buddhist
+                                        Temples</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c7_Gilt-silverCupandStand.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gilt-silver Cup and Stand</div>
+                                    <p>Purpose of Cups with a Stand, Origin of Cups with a Stand</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/유물.png" alt=""></div>
+                                <div class="txt">
+                                    <div class="title">Amitabha Buddha Stele</div>
+                                    <p>Buddhist Stele Created by Former Citizens of Baekje</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c3_PortraitofHeoMok.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Portrait of Heo Mok</div>
+                                    <p>Masterpiece of Late Joseon Portraiture</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c8_BhaisajyaguruBuddhaTriad.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bhaisajyaguru Buddha Triad</div>
+                                    <p>Buddhist Stele Created by Former Citizens of Baekje</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c4_JeongYeochang’sVila.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Jeong Yeochang’s Villa</div>
+                                    <p>Painting the Beauty of Jirisan Mountain and Seomjin Rive</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c9_BellwithInscription.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bell with Inscription: “Fourth ..</div>
+                                    <p>New Flower Design of the Late Goryeo Period</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c10_Gong with Inscription.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gong with Inscription: “Sixth Year of Xianto ..</div>
+                                    <p>The inscription on the side of the gong is embossed in reverse script, reading
+                                        from
+                                        left to right</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c14_SutraonFilialPiety.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Sutra on Filial Piety</div>
+                                    <p>Depicting the Ten Maternal Benevolences</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/Gilt-bronze Bodhisattva.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gilt-bronze Bodhisattva</div>
+                                    <p>Icon of Early Buddhist Sculpture of the Three Kingdoms Period</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c11_Gathering of Officials.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gathering of Officials from the ..</div>
+                                    <p>Production Date of Gathering of Officials from the Ministry </p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img
+                                        src="../asset/img_Collection/c17_WhitePorcelainJarwithGrapeandMonkeyDesign.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">White Porcelain Jar with Grape ..</div>
+                                    <p>Symbolic Meaning of Grapes and Monkey</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c12_CrownOrnaments.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Crown Ornaments from the Tomb of King Muryeong</div>
+                                    <p>Gold Crown Ornaments Worn by King Muryeong and his Queen Consort</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c15_StupaforStatePreceptorWon.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Stupa for State Preceptor Won ..</div>
+                                    <p>Life and Faith of State Preceptor Wongong, Jijong</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c18_BronzeRitualObject.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bronze Ritual Object with Farming Sce ..</div>
+                                    <p>Correlation to Pottery Designs and Bronze Age Fields</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c13_Water-MoonAvalokiteshvara.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Water-Moon Avalokiteshvara</div>
+                                    <p>Mount Potalaka, the Pure Land of Avalokiteshvara Bodhisattva</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/Gilt-bronze Bodhisattva.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gilt-bronze Buddha Triad </div>
+                                    <p>Buddha Triad Sharing One Halo</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/Stone Ksitigarbha Bodhisattva.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Stone Ksitigarbha Bodh ..</div>
+                                    <p>Faith in Ksitigarbha Bodhisattva and Sutras</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/Gold_Crown.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gold Crown and Gold Belt</div>
+                                    <p>Excavation of Hwangnamdaechong Tomb</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c20_PortraitofSongSiyeol.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Portrait of Song Siyeol</div>
+                                    <p>Simple Clothing as Symbol of a True Neo-Confucianist</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img
+                                        src="../asset/img_Collection/c25_BaekjeStoneBuddhaandGilt_bronzeBodhisattva.jpg"
+                                        alt="">hg
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Baekje Stone Buddha and Gilt-b..</div>
+                                    <p>Sabi Period of Baekje: Great Flourishing of Buddhism</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section><!-- //.card_wrap1 -->
+                <section class="card_wrap2">
+                    <div class="card_all2">
+                        <ul>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c1_AlbumofGeumgangsanMountain.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Album of Geumgangsan</div>
+                                    <p>First Trip to Geumgangsan Mountain in 1711</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img
+                                        src="../asset/img_Collection/c2_Clearingafter RainonMountInwang.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Clearing after Rain on Mount Inwang</div>
+                                    <p>Sense of Space and Reality in Clearing after Rain on Mount Inwang
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c5_SariraReliquaries.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Sarira Reliquaries</div>
+                                    <p>Archaeological Site in Wanggung-ri: From Royal Palace to Buddhist
+                                        Temples</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c7_Gilt-silverCupandStand.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gilt-silver Cup and Stand</div>
+                                    <p>Purpose of Cups with a Stand, Origin of Cups with a Stand</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/유물.png" alt=""></div>
+                                <div class="txt">
+                                    <div class="title">Amitabha Buddha Stele</div>
+                                    <p>Buddhist Stele Created by Former Citizens of Baekje</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c3_PortraitofHeoMok.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Portrait of Heo Mok</div>
+                                    <p>Masterpiece of Late Joseon Portraiture</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c8_BhaisajyaguruBuddhaTriad.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bhaisajyaguru Buddha Triad</div>
+                                    <p>Buddhist Stele Created by Former Citizens of Baekje</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c4_JeongYeochang’sVila.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Jeong Yeochang’s Villa</div>
+                                    <p>Painting the Beauty of Jirisan Mountain and Seomjin Rive</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c9_BellwithInscription.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bell with Inscription: “Fourth ..</div>
+                                    <p>New Flower Design of the Late Goryeo Period</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c10_Gong with Inscription.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gong with Inscription: “Sixth Year of Xianto ..</div>
+                                    <p>The inscription on the side of the gong is embossed in reverse script, reading
+                                        from
+                                        left to right</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c14_SutraonFilialPiety.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Sutra on Filial Piety</div>
+                                    <p>Depicting the Ten Maternal Benevolences</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/Gilt-bronze Bodhisattva.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gilt-bronze Bodhisattva</div>
+                                    <p>Icon of Early Buddhist Sculpture of the Three Kingdoms Period</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c11_Gathering of Officials.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gathering of Officials from the ..</div>
+                                    <p>Production Date of Gathering of Officials from the Ministry </p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img
+                                        src="../asset/img_Collection/c17_WhitePorcelainJarwithGrapeandMonkeyDesign.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">White Porcelain Jar with Grape ..</div>
+                                    <p>Symbolic Meaning of Grapes and Monkey</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c12_CrownOrnaments.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Crown Ornaments from the Tomb of King Muryeong</div>
+                                    <p>Gold Crown Ornaments Worn by King Muryeong and his Queen Consort</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c15_StupaforStatePreceptorWon.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Stupa for State Preceptor Won ..</div>
+                                    <p>Life and Faith of State Preceptor Wongong, Jijong</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c18_BronzeRitualObject.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bronze Ritual Object with Farming Sce ..</div>
+                                    <p>Correlation to Pottery Designs and Bronze Age Fields</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c13_Water-MoonAvalokiteshvara.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Water-Moon Avalokiteshvara</div>
+                                    <p>Mount Potalaka, the Pure Land of Avalokiteshvara Bodhisattva</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/Gilt-bronze Bodhisattva.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gilt-bronze Buddha Triad </div>
+                                    <p>Buddha Triad Sharing One Halo</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/Stone Ksitigarbha Bodhisattva.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Stone Ksitigarbha Bodh ..</div>
+                                    <p>Faith in Ksitigarbha Bodhisattva and Sutras</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/Gold_Crown.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gold Crown and Gold Belt</div>
+                                    <p>Excavation of Hwangnamdaechong Tomb</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c20_PortraitofSongSiyeol.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Portrait of Song Siyeol</div>
+                                    <p>Simple Clothing as Symbol of a True Neo-Confucianist</p>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img
+                                        src="../asset/img_Collection/c25_BaekjeStoneBuddhaandGilt_bronzeBodhisattva.jpg"
+                                        alt="">hg
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Baekje Stone Buddha and Gilt-b..</div>
+                                    <p>Sabi Period of Baekje: Great Flourishing of Buddhism</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </section><!-- //.con -->
+
+        </main>
+        <footer>
+            <div class="inner">
+                <div class="f_top">
+                    <div class="f_txt">
+                        <h3>Websites</h3>
+                        <ul>
+                            <li><a href="#">Children’s Museum</a></li>
+                            <li><a href="#">Museum Shop</a></li>
+                            <li><a href="#">NMK Magazine</a></li>
+                            <li><a href="#">JKAA</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Learning</h3>
+                        <ul>
+                            <li><a href="#">Learning</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Connect</h3>
+                        <ul>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f_bot">
+                    <div class="bot_txt">
+                        <p>137 Seobinggo-ro, Yongsan-gu, Seoul, 04383, Republic of Korea</p>
+                        <p>Tel : +82-2-2077-9000</p>
+                        <p>© National Museum of Korea.</p>
+                    </div><!-- //.bot_txt -->
+                    <div class="f_right">
+                        <div class="select_box">
+                            <button type="button">Related Site<i class="fa-solid fa-angle-up"></i></button>
+                            <ul>
+                                <li><a href="#">Jeonju National Museum</a></li>
+                                <li><a href="#">Daegu National Museum</a></li>
+                                <li><a href="#">Buyeo National Museum</a></li>
+                                <li><a href="#">Gongju National Museum</a></li>
+                                <li><a href="#">Jinju National Museum</a></li>
+                                <li><a href="#">Cheongju National Museum</a></li>
+                                <li><a href="#">Gimhae National Museum</a></li>
+                                <li><a href="#">Jeju National Museum</a></li>
+                                <li><a href="#">Chuncheon National Museum</a></li>
+                                <li><a href="#">Naju National Museum</a></li>
+                                <li><a href="#">Iksan National Museum</a></li>
+                                <li><a href="#">Cultural Foundation of National Museum of Korea</a></li>
+                                <li><a href="#">Friends of National Museum of Korea</a></li>
+                                <li><a href="#">The Korean Museum Association</a></li>
+                            </ul>
+                        </div><!-- //.select_box -->
+                        <div class="select_box">
+                            <button type="button">Guidebook Download<i class="fa-solid fa-angle-up"></i></button>
+                            <ul>
+                                <li><a href="#">한국어(PDF)</a></li>
+                                <li><a href="#">English(PDF)</a></li>
+                                <li><a href="#">中文(PDF)</a></li>
+                                <li><a href="#">日本語(PDF)</a></li>
+                                <li><a href="#">Français(PDF)</a></li>
+                                <li><a href="#">Deutsche(PDF)</a></li>
+                                <li><a href="#">Español(PDF)</a></li>
+                            </ul>
+                        </div><!-- //.select_box -->
+                    </div><!-- //.f_right -->
+                </div><!-- //.f_bot -->
+            </div>
+        </footer>
+    </div><!-- //.wrap -->
 </body>
+
 
 </html>

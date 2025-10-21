@@ -1,7 +1,11 @@
 @charset "utf-8";
+.banner_top {
+    background-image: url(/asset/img_Collection/banner_collection.png);
+    /* 본인 배너이미지 */
+}
 
 .search {
-    padding: 30px 80px;
+    padding: 45px 80px;
     text-align: center;
 }
 
@@ -9,7 +13,7 @@
 .search_bar {
     display: inline-flex;
     align-items: center;
-    border-bottom: 1px solid var(--black);
+    border-bottom: 2px solid var(--black);
     padding-bottom: 4px;
     background: yellowgreen;
 }
@@ -17,11 +21,9 @@
 .search_bar input {
     border: none;
     background: none;
-    outline: none;
     width: 300px;
-    font-size: 17px;
+    font-size: var(--fspre-21);
     color: var(--gray-07-footer);
-    /* background: violet; */
 }
 
 /* 돋보기 아이콘 */
@@ -30,15 +32,15 @@
     height: 40px;
     margin-left: 6px;
     border: none;
-    border-radius: 50%;
+    border-radius: var(--r-round);
     background: var(--w-color);
     opacity: 0.8;
     cursor: pointer;
 }
 
-/* 카테고리 버튼 */
+/* search btn */
 .txt_btn {
-    margin-top: 20px;
+    margin-top: 32px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -47,12 +49,12 @@
 }
 
 .txt_btn button {
-    padding: 10px 20px;
+    padding: 13px 29px;
     border: none;
-    border-radius: 999px;
+    border-radius: var(--r-round);
     background: var(--w-color);
     opacity: 0.9;
-    font-size: 18px;
+    font-size: var(--fspre-21);
     color: var(--black);
     cursor: pointer;
     transition: 0.2s;
@@ -61,7 +63,6 @@
 .txt_btn button:hover {
     background: var(--gray-08);
     color: var(--w-color);
-    border-color: #1d1d1b;
 }
 
 /* 레이아웃 버튼 */
@@ -70,6 +71,7 @@
     justify-content: center;
     gap: 10px;
     margin-top: 76px;
+    margin-bottom: 76px;
 }
 
 .view_btns button {
@@ -77,12 +79,13 @@
     height: 56px;
     background-size: 38px;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: var(--r-10);
     cursor: pointer;
     transition: 0.25s;
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--yellow-02);
+    border: none;
 }
 
 .view_btns button.btn1 {
@@ -109,18 +112,17 @@
 
 /* 카드 슬라이드 섹션 */
 .con {
-    padding: 31px 123px 0px;
+    padding: 0px 123px 0px;
     width: 100%;
     background: darkcyan;
 }
 
 .con .results {
-    /* max-width: 100%; */
     margin-bottom: 12px;
 }
 
 .con span {
-    font-size: 17px;
+    font-size: var(--fspre-20);
     color: var(--black);
 }
 
@@ -128,92 +130,71 @@
     color: var(--red-06);
 }
 
-/* .cards {
-    max-width: 1200px;
-    margin: 0 auto;
-    background: #ccc;
-} */
 
 /* 카드 공통 */
-/* .cards.grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    justify-content: center;
-} */
 .card_wrap {
     width: 100%;
 }
 
-.card_wrap ul {
+.card_wrap1 ul {
     display: flex;
     width: 100%;
     gap: 20px;
-    height: 600px;
-    /* overflow-x: auto; */
-    /* scroll-behavior: smooth; */
-    /* padding: 0px 0px; */
-    /*   list-style: none;
-    margin: 0; */
-    /* background: saddlebrown; */
+    height: 550px;
+    margin: 0; 
+    background: saddlebrown;
 }
 
-.card_wrap ul>li.card {
-    /* flex: 0 0 auto; */
+.card_wrap1 ul li.card {
     width: fit-content;
     background: rgba(255, 255, 255, 0.4);
-    border-radius: 14px;
+    border-radius: var(--r-15);
     box-shadow: 0 1px 8px rgba(0, 0, 0, .05);
-    /* overflow: hidden; */
-    /* height: auto; */
-    /* width: fit-content; */
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
-    box-sizing: border-box;
+    box-sizing: border-box;  
 
 }
 
 /* 이미지 영역 */
-.card_wrap .card .thumb {
-    /* flex: none; */
-    /* height: 250px; */
+.card_wrap1 .card .thumb {
     height: 440px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     overflow: hidden;
-    /* padding: 20px 20px 10px; */
+    padding: 20px 20px 10px 20px;
+    /* margin-top: 20px; */
 }
 
-.thumb img {
+.card .thumb img {
     height: 100%;
     object-fit: cover;
-    /* max-height: 230px; */
-    /* height: 100%; */
-    /* width: auto; */
-    /* object-fit: contain; */
-    border-radius: 20px;
+    border-radius: var(--r-20);
     display: block;
+    
+    
 }
 
 /* 텍스트 */
-.card_wrap .card .txt {
-    padding: 8px 14px 20px;
+ .card .txt {
+    padding: 20px ;
     text-align: left;
-    background: yellow;
+    /* background: yellow; */
     display: block;
 }
 
-.title {
-    font-size: 23px;
+ .card .title {
+    font-size: var(--fspre-23);
     font-weight: 500;
     color: var(--black);
     margin-bottom: 2px;
 }
 
-.card_wrap ul li p {
-    font-size: 18px;
+.card p {
+    font-size: var(--fspre-20);
     color: var(--gray-06);
     line-height: 1.4;
 }
+

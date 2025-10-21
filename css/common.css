@@ -145,7 +145,7 @@ main .banner_top {
     align-items: flex-end;
     padding-bottom: 30px;
     background-size: cover;
-    background-image: url(../asset/img_Special/mini_banner.png);
+    /* background-image: url(../asset/img_Special/mini_banner.png); */
 }
 
 main .banner_top .txt {
