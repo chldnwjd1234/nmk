@@ -221,7 +221,7 @@ main .exhibition{
 main .muds{
     width: 100%;
     height: 1685px;
-    background-color: var( --gray-09);
+    background: linear-gradient(180deg, #201F25 0%, #282C33 57.21%);
 }
 
 footer.main{
