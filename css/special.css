@@ -4,6 +4,12 @@ body {
     background: var(--bg);
 }
 
+.banner_top {
+    background-image: url(/asset/img_Special/sub_banner.png);
+    /* 본인 배너이미지 */
+}
+
+
 .SpecialExhibition {
     padding: 45px 0 14px;
     /* background: #ccc; */
@@ -103,22 +109,22 @@ body {
     line-height: 1.4;
 }
 
-.btn {
+.btn_all {
     display: flex;
     margin-top: 90px;
     align-items: center;
 }
 
-.btn .btn_left {
+.btn_all .btn_left {
     display: flex;
     gap: 13px;
 }
 
-.btn_right {
+.btn {
     margin-left: auto;
 }
 
-.btn .btn_left button {
+.btn_all .btn_left button {
     width: 60px;
     height: 60px;
     border-radius: 50px;
@@ -126,7 +132,7 @@ body {
     background: var(--gray-05);
 }
 
-.btn .btn_right .reserve_btn {
+.btn_all .btn .reserve_btn {
     display: inline-block;
     padding: 16px 100px;
     background: var(--red-06);
@@ -135,64 +141,120 @@ body {
     font-size: 21px;
     line-height: 1.3;
 }
-.ExhibitionVisual .inner {
-    display: flex;
-}
 
-.Exhibition_mini_banner {
+.ExhibitionVisual {
     width: 100%;
     height: 612px;
     margin-top: 114px;
-    background: url(../asset/img_Special/mini_banner.png);
-    justify-content: center;
+    overflow: hidden;
+    background: #333;
+    /*     justify-content: center; */
+    position: relative;
+
+}
+
+.ExhibitionVisual::before {
+    content: '';
+    background: url(../asset/img_Special/mini_banner.png) lightgray 50% / cover no-repeat;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    position: absolute;
+}
+
+.ExhibitionVisual .inner {
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
+    height: 100%;
 }
 
-.Exhibition_right {
-    width: 940px;
-    height: 612px;
-    margin-left: auto;
+.ExhibitionVisual .txt_all {
+    width: 770px;
+    position: relative;
 }
 
-.Exhibition_right h3 {
+.ExhibitionVisual .contents {
+    /* background: #ccc; */
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    /*     margin-left: auto; */
+}
+
+.ExhibitionVisual h3 {
     font-size: 65px;
     line-height: 1.5;
     font-family: var(--title-Zen);
     color: var(--w-color);
+    text-align: left;
+    /* background: yellow; */
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-.Exhibition_right p {
+.ExhibitionVisual p {
     font-size: 25px;
     line-height: 1.3;
     color: var(--w-color);
 }
 
-.ExhibitionStructure .inner{
-    flex-direction: column;
-    margin-top: 96px;
+
+
+
+.ExhibitionStructure .inner {
+    /*     flex-direction: column; */
+
 }
 
-.ExhibitionStructure .inner .title {
+
+
+.title {
     font-size: 50px;
     line-height: 1.5;
     font-family: var(--title-Zen);
+    margin-top: 96px;
 }
 
-.Exhibition_1{
+/* .Exhibition_1 {
     display: flex;
+    margin-top: 72px;
+} */
+
+/* .img_1 {
+    width: 380px;
+    height: 500px;
+} */
+.articles_all {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     margin-top: 72px;
 }
 
-.img_1 {
-    width: 380px;
-    height: 500px;
+.articles_all article {
+    display: flex;
+    gap: 52px;
 }
+
+
 
 .Exhibition_txt {
-    margin-left: 52px;
+    flex: 1;
+    /* background: #ccc; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* padding-bottom: 30px; */
+    /* margin-left: 52px; */
 }
 
-.Exhibition_txt h2 {
+.articles_all article:nth-child(even) .Exhibition_txt {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.Exhibition_txt i {
     font-size: 80px;
     line-height: 1.5;
     font-family: var(--title-Zen);
@@ -221,7 +283,7 @@ body {
     color: var(--gray-07-footer);
 }
 
-.Exhibition_2 {
+/* .Exhibition_2 {
     display: flex;
 }
 
@@ -246,4 +308,52 @@ body {
 .img_4 {
     width: 380px;
     height: 500px;
+} */
+
+.MajorExhibition {
+    margin-top: 216px;
 }
+
+.MajorExhibition .tit {
+    font-size: 50px;
+    line-height: 1.5;
+    font-family: var(--title-Zen);
+    margin-bottom: 72px;
+}
+
+.slide_box {
+    display: flex;
+    gap: 80px;
+}
+
+.slide_box span {
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--gray-07-footer);
+}
+
+.MajorExhibition span:nth-child(2n+1) {
+    margin-bottom: 10px;
+    margin-top: 213px;
+}
+
+.MajorExhibition span:nth-child(2) {
+    margin-top: 10px;
+}
+
+.RecommendedExhibition .tit {
+    font-size: 50px;
+    line-height: 1.5;
+    font-family: var(--title-Zen);
+    margin-bottom: 72px;
+    margin-top: 216px;
+}
+
+
+.Recommended {
+    display: flex;
+}
+
