@@ -87,16 +87,18 @@
 /* 층 탭 */
 .floor_tabs {
     display: flex;
-    gap: 14px;
+    gap: 12px;
     margin-bottom: 40px;
 }
 
 .floor_tabs .tab {
-    background: var(--yellow-01);
-    color: var(--gray-05);
+    width: 110px;
+    height: 56px;
+    background: var(--gray-05);
+    color: var(--w-color);
     border: none;
     border-radius: 10px;
-    font-size: 21px;
+    font-size: var(--fspre-25);
     font-weight: 400;
     padding: 8px 34px;
     cursor: pointer;
