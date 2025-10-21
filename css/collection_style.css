@@ -343,7 +343,7 @@
 
 /* 그리드 형식의 호버 뷰버튼 */
 .card_wrap2 .card_overlay .overlay_content .viewicon_btn {
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 13px 30px;
     background: var(--w-color);
     color: var(--black);

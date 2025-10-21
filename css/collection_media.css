@@ -1,77 +1,74 @@
 @charset "utf-8";
 @media screen and (max-width:1024px) {
 
-    /* 검색 영역 */
-    .search {
-        padding-top: 30px;
-    }
+  /* 검색 영역 */
+  .search { padding-top: 30px; }
+  .search_bar {
+    width: 100%;
+    max-width: 420px;
+  }
+  .search_bar input { font-size: 16px; }
 
-    .search_bar {
-        width: 400px;
-    }
+  /* 불필요한 버튼/슬라이드 비활성화 */
+  .view_btns, .card_wrap1 { display: none !important; }
+  .card_wrap2 { display: block !important; }
 
-    .search_bar input {
-        font-size: 16px;
-    }
+  /* 전체 레이아웃 여백 */
+  .con { padding: 0 24px 120px; }
+  .card .title { font-size: 17px; }
 
-    /* 뷰 버튼 숨기기 */
-    .view_btns {
-        display: none;
-    }
+  /* ===== 카드 그리드 ===== */
+  .card_wrap2 ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
 
-    .txt_btn button {
-        font-size: 17px;
-    }
+  .card_wrap2 ul li {
+    background: rgba(255,255,255,0.4);
+    border-radius: var(--r-15);
+    box-shadow: 0 1px 8px rgba(0,0,0,.05);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px;
+  }
 
-    /* 카드 섹션 */
-    .con {
-        padding: 0px 40px 150px 40px;
-    }
+  .card_wrap2 ul li .thumb {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--r-15);
+    overflow: hidden;
+  }
 
-    .con .results {
-        text-align: left;
-    }
+  .card_wrap2 ul li .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
-    .card .title {
-        font-size: 17px;
-    }
+  /* 오버레이 & 버튼 */
+  .card_overlay { border-radius: var(--r-15); transition: opacity .3s; }
+  .card:hover .card_overlay { opacity: 1; }
 
-    /* 슬라이드 레이아웃 숨기기 */
-    .card_wrap1 {
-        display: none !important;
-    }
+  .card_wrap2 .overlay_content .category,
+  .card_wrap2 .overlay_content .Dimensions {
+    font-size: 14px;
+    color: var(--gray-04);
+  }
 
-    /* 그리드 레이아웃 강제 표시 */
-    .card_wrap2 {
-        display: block !important;
-    }
+  .card_wrap2 .overlay_content .period,
+  .card_wrap2 .overlay_content .treasure,
+  .card_wrap2 .overlay_content .cm {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
 
-    /* 그리드 카드 3열로 변경 */
-    .card_wrap2 ul li {
-        width: 32%;
-        margin-right: 2%;
-    }
-
-    .card_wrap2 ul li:nth-child(4n) {
-        margin-right: 2%;
-    }
-
-    .card_wrap2 ul li:nth-child(3n) {
-        margin-right: 0;
-    }
-
-    /* 카드 이미지 높이 조정 */
-    .card_wrap2 ul li .thumb {
-        height: 250px;
-        overflow: hidden;
-        border-radius: var(--r-15);
-    }
-
-    .card_wrap2 ul li .thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  .viewicon_btn {
+    padding: 12px 28px;
+    font-size: 16px;
+  }
 }
+
 
 @media screen and (max-width:402px) {}
