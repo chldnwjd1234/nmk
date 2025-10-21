@@ -44,13 +44,14 @@
     opacity: 0.8;
     cursor: pointer;
     position: absolute;
-    right: 0; 
+    right: 0;
     transform: translateX(100%);
     margin: 0;
 }
 
 .search_bar button i {
-    font-size: 20px; /* 20px에서 24px로 증가 (원하는 크기로 조정) */
+    font-size: 20px;
+    /* 20px에서 24px로 증가 (원하는 크기로 조정) */
     color: var(--black);
 }
 
@@ -127,7 +128,7 @@
 
 /* 카드 슬라이드 섹션 */
 .con {
-    padding: 0px 100px 200px 100px ;
+    padding: 0px 100px 200px 100px;
     width: 100%;
 }
 
@@ -241,6 +242,141 @@
     justify-content: flex-start;
     box-sizing: border-box;
     margin-right: 1%;
+    position: relative;
+}
+
+.card_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: var(--r-15);
+}
+
+.card:hover .card_overlay {
+    opacity: 1;
+}
+
+/* 오버레이 컨텐츠 */
+/* --.card_wrap1-- */
+.card_wrap1 .overlay_content {
+    text-align: center;
+    color: var(--w-color);
+    padding: 20px;
+}
+
+.card_wrap1 .overlay_content .category,
+.card_wrap1 .overlay_content .Dimensions {
+    font-size: var(--fspre-20);
+    color: var(--gray-04);
+    /* margin-bottom: 3px; */
+    font-weight: 200;
+}
+
+.card_wrap1 .overlay_content .period,
+.card_wrap1 .overlay_content .treasure,
+.card_wrap1 .overlay_content .cm {
+    font-size: var(--fspre-25);
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: var(--w-color);
+    /* background-color: aqua; */
+}
+
+/* --.card_wrap2-- */
+
+.card_wrap2 .overlay_content {
+    text-align: center;
+    color: var(--w-color);
+    padding: 20px;
+}
+
+.card_wrap2 .overlay_content .category,
+.card_wrap2 .overlay_content .Dimensions {
+    font-size: 15px;
+    color: var(--gray-04);
+    /* margin-bottom: 3px; */
+    font-weight: 200;
+}
+
+.card_wrap2 .overlay_content .period,
+.card_wrap2 .overlay_content .treasure,
+.card_wrap2 .overlay_content .cm {
+    /* font-size: var(--fspre-25); */
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: var(--w-color);
+}
+
+/* mini */
+.card_wrap2 .mini_overlay_content {
+    text-align: center;
+    color: var(--w-color);
+    padding: 20px;
+}
+
+.card_wrap2 .mini_overlay_content .category,
+.card_wrap2 .mini_overlay_content .Dimensions {
+    font-size: 15px;
+    color: var(--gray-04);
+    /* margin-bottom: 3px; */
+    font-weight: 200;
+}
+
+.card_wrap2 .mini_overlay_content .period,
+.card_wrap2 .mini_overlay_content .treasure,
+.card_wrap2 .mini_overlay_content .cm {
+    /* font-size: var(--fspre-25); */
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: var(--w-color);
+}
+
+/* 그리드 형식의 호버 뷰버튼 */
+.card_wrap2 .card_overlay .overlay_content .viewicon_btn {
+    margin-top: 10px;
+    padding: 13px 30px;
+    background: var(--w-color);
+    color: var(--black);
+    border: none;
+    border-radius: var(--r-round);
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    background: var(--yellow-03);
+}
+
+/* View Details 버튼 */
+.viewicon_btn {
+    margin-top: 30px;
+    padding: 18px 50px;
+    background: var(--w-color);
+    color: var(--black);
+    border: none;
+    border-radius: var(--r-round);
+    font-size: var(--fspre-20);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    background: var(--yellow-03);
+}
+
+.view_btn i {
+    font-size: 16px;
 }
 
 .card_wrap2 ul li:nth-child(4n) {
@@ -253,4 +389,16 @@
 
 .card_wrap2 ul li .thumb img {
     width: 100%;
+}
+
+/* 카드 애니메이션 */
+.card_wrap2 .card {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.card_wrap2 .card.show {
+    transform: translateY(0);
+    opacity: 1;
 }

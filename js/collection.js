@@ -37,10 +37,25 @@ document.addEventListener('DOMContentLoaded', () => {
       disableOnInteraction: false,
     },
   });
+  const cards = document.querySelectorAll('.card_wrap2 .card');
 
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, observerOptions);
 
-
+  cards.forEach((card, index) => {
+    card.style.transitionDelay = `${0.01 * (index % 10)}s`; // 8개씩 묶음
+    observer.observe(card);
+  });
 });
 
 
