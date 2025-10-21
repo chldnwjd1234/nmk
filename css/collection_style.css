@@ -1,12 +1,15 @@
 @charset "utf-8";
 
+
 .banner_top {
     background-image: url(/asset/img_Collection/banner_collection.png);
     /* 본인 배너이미지 */
 }
 
+
 .search {
-    padding: 45px 80px;
+    /* padding: 45px 80px; */
+    padding-top: 45px;
     text-align: center;
 }
 
@@ -15,16 +18,19 @@
     display: inline-flex;
     align-items: center;
     border-bottom: 2px solid var(--black);
-    padding-bottom: 4px;
-    background: yellowgreen;
+    padding-bottom: 11px;
+    width: 442px;
+    position: relative;
 }
 
 .search_bar input {
     border: none;
     background: none;
-    width: 300px;
+    width: 100%;
     font-size: var(--fspre-21);
     color: var(--gray-07-footer);
+    margin-left: 10px;
+    /* padding-right: 40px; */
 }
 
 /* 돋보기 아이콘 */
@@ -37,6 +43,15 @@
     background: var(--w-color);
     opacity: 0.8;
     cursor: pointer;
+    position: absolute;
+    right: 0; 
+    transform: translateX(100%);
+    margin: 0;
+}
+
+.search_bar button i {
+    font-size: 20px; /* 20px에서 24px로 증가 (원하는 크기로 조정) */
+    color: var(--black);
 }
 
 /* search btn */
@@ -46,7 +61,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    background: #ccc;
 }
 
 .txt_btn button {
@@ -71,8 +85,8 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 76px;
-    margin-bottom: 76px;
+    margin-top: 40px;
+    margin-bottom: 72px;
 }
 
 .view_btns button {
@@ -113,9 +127,8 @@
 
 /* 카드 슬라이드 섹션 */
 .con {
-    padding: 0px 123px 0px;
+    padding: 0px 100px 200px 100px ;
     width: 100%;
-    background: darkcyan;
 }
 
 .con .results {
@@ -144,10 +157,9 @@
 .card_wrap1 ul {
     display: flex;
     width: 100%;
-    gap: 20px;
-    height: 550px;
+    /* gap: 20px; */
+    height: 600px;
     margin: 0;
-    background: saddlebrown;
 }
 
 .card_wrap1 ul li.card {
@@ -159,34 +171,32 @@
     flex-direction: column;
     justify-content: flex-start;
     box-sizing: border-box;
-
+    /* background-color: aqua; */
 }
 
 /* 이미지 영역 */
 .card_wrap1 .card .thumb {
-    height: 440px;
+    height: 500px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     overflow: hidden;
     padding: 20px 20px 10px 20px;
-    /* margin-top: 20px; */
 }
 
 .card .thumb img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: var(--r-20);
     display: block;
-
-
 }
 
 /* 텍스트 */
 .card .txt {
     padding: 20px;
     text-align: left;
-    /* background: yellow; */
     display: block;
 }
 
@@ -195,12 +205,19 @@
     font-weight: 500;
     color: var(--black);
     margin-bottom: 2px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    line-height: 1.3;
+    white-space: nowrap;
 }
 
 .card p {
     font-size: var(--fspre-20);
     color: var(--gray-06);
     line-height: 1.4;
+    -webkit-line-clamp: 2;
 }
 
 .card_wrap2::after {
