@@ -42,18 +42,21 @@
     gap: 255px;
 } */
 /* map 페이지의 main .inner만 flexbox 적용 */
-main .inner {
+.space {
     display: flex;
-    gap: 255px;
+    justify-content: space-between;
+    /* gap: 255px; */
     align-items: flex-start;
 }
+
 /* 왼쪽 텍스트 박스 전체 */
 .inner .left {
     width: 632px;
-    height: 727px;
+    /* height: 727px; */
     display: flex;
     flex-direction: column;
     gap: 48px;
+    padding-bottom: 50px;
 }
 
 .txt_box .title {
@@ -167,12 +170,14 @@ main .inner {
 .arts li {
     display: flex;
     flex-direction: column;
-    flex: 1; /* 동일한 너비 */
+    flex: 1;
+    /* 동일한 너비 */
 }
 
 .arts .img_box {
     width: 100%;
-    aspect-ratio: 1 / 1; /* 정사각형 비율 */
+    aspect-ratio: 1 / 1;
+    /* 정사각형 비율 */
     background: var(--yellow-03);
     margin-bottom: 8px;
     overflow: hidden;
@@ -191,7 +196,8 @@ main .inner {
     color: var(--black);
     /* 2줄 말줄임 추가 */
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* 2줄까지만 표시 */
+    -webkit-line-clamp: 2;
+    /* 2줄까지만 표시 */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -199,14 +205,25 @@ main .inner {
 
 /* 오른쪽 지도 영역 */
 .map_right {
-    flex: 1;
-    display: flex;
+    position: relative;
+    background: #ccc;
+    width: 798px;
+    /* flex: 1; */
+    /*     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; */
 }
 
 .map_right img {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
     width: 100%;
     height: auto;
     max-width: 798px;
+}
+
+.map_right img.on {
+    display: block;
 }
