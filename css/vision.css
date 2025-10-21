@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+.banner_top {
+    background-image: url(../asset/img_Vision/sub_banner.png);
+}
+
+/* main */
+
+main.bg {
+    background-color: var(--bg);
+}
+
+main .section1 {
+    width: 100%;
+    min-height: 2016px;
+    position: relative;
+    text-align: center;
+    padding-bottom: 100px;
+    /* 하단 여백 */
+}
+
+main .section1>img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 83px;
+    position: relative;
+    z-index: 2;
+}
+
+main .section1 .bg_nmk {
+    position: absolute;
+    top: 680px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 좌우만 중앙 정렬 */
+    z-index: 0;
+}
+
+main .section1 .bg_nmk img {
+    display: block;
+}
+
+main .section1 .bg_nmk2 img:first-child{
+    position: absolute;
+    margin-left: 550px;
+    margin-top: -230px;
+}
+main .section1 .bg_nmk2 img:nth-child(2) {
+    position: absolute;
+    margin-left: -58%;
+    margin-top: 220px;
+}
+main .section1 .bg_nmk2 img:nth-child(3) {
+    position: absolute;
+    margin-left: 18%;
+    margin-top: 900px;
+}
+main .section1 .bg_nmk2 img:nth-child(4) {
+    position: absolute;
+    margin-left: 40%;
+    margin-top: 1100px;
+}
+
+main .section1 .txt_box {
+    color: var(--gray-09);
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    /* 배경 이미지 위에 표시 */
+}
+
+main .txt_box h3 {
+    font-family: 'Zen Antique';
+    font-size: var(--fszenT-XL-65);
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    /* h3 사이 간격 */
+    /* background-color: rebeccapurple; */
+}
+
+main .txt_box .living_space {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* 왼쪽 정렬 */
+    gap: 10px;
+    /* h3와 이미지 사이 간격 */
+    margin-left: 30px;
+    width: fit-content;
+    /* 내용물 크기만큼만 */
+}
+
+main .txt_box .living_space h3 {
+    display: inline-block;
+    transform: rotate(90deg);
+    transform-origin: left top;
+    margin-left: 30px;
+    margin-top: 40px;
+    width: fit-content;
+    /* h3 크기 제한 */
+}
+
+main .txt_box .living_space .brush {
+    margin-left: 20px;
+    /* 왼쪽 여백으로 위치 조정 */
+}
+
+main .txt_box h3:last-child {
+    text-align: right;
+    margin-right: 0;
+    /* 오른쪽으로 밀어냄 */
+}
+
+main .txt_box h3.big {
+    font-size: 5.625rem;
+    margin-bottom: 20px;
+    /* 첫 번째 제목 아래 더 큰 간격 */
+}
