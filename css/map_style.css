@@ -41,15 +41,14 @@
     align-items: flex-start;
     gap: 255px;
 } */
-/* map 페이지의 main .inner만 flexbox 적용 */
+
 .space {
     display: flex;
     justify-content: space-between;
-    /* gap: 255px; */
     align-items: flex-start;
 }
 
-/* 왼쪽 텍스트 박스 전체 */
+/* 왼쪽 박스 전체 */
 .inner .left {
     width: 632px;
     /* height: 727px; */
@@ -59,20 +58,21 @@
     padding-bottom: 50px;
 }
 
-.txt_box .title {
+.txt_box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-bottom: 1px dashed #59574D;
+    /* padding-bottom: 40px; */
+}
+
+.inner .left .txt_box .title {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.txt_box {
-    /* flex: 1.2; */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 48px;
-    border-bottom: 1px dashed #59574D;
-}
+
 
 /* 제목 */
 .page_title {
@@ -80,6 +80,7 @@
     font-size: var(--fszenT-L-50);
     font-weight: 500;
     letter-spacing: 150%;
+    line-height: 1.5;
     color: var(--black);
 }
 
@@ -113,6 +114,7 @@
 }
 
 /* 밑 소개글 */
+
 .left .bottom {
     width: 100%;
     display: flex;
@@ -121,32 +123,100 @@
     margin-bottom: 68px;
 }
 
+/* 드롭다운 컨테이너 */
+.dropdown {
+    position: relative;
+    margin-bottom: 20px;
+}
+
 .left .bottom .b_title {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    /* 아이콘을 오른쪽으로 */
     gap: 4px;
     font-size: var(--fspre-30);
     letter-spacing: 0.02em;
     font-weight: 550;
     color: var(--black);
-    margin-bottom: 20px;
-    /* display: flex;
-    align-items: center;
-    gap: 8px; */
+    cursor: pointer;
+    /* 클릭 가능하게 */
+    transition: all 0.3s ease;
+}
+
+.left .bottom .b_title:hover {
+    color: var(--red-05-point);
+    /* 호버 효과 추가 */
 }
 
 .left .bottom .b_title i {
     font-size: 14px;
     color: var(--black);
+    transition: transform 0.3s ease;
+}
+
+/* 드롭다운 열렸을 때 아이콘 회전 */
+.dropdown>.b_title.active i {
+    transform: rotate(180deg);
+}
+
+/* 드롭다운 메뉴 */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    background: var(--w-color);
+    border: 1px solid var(--gray-02);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    overflow: hidden;
+}
+
+.dropdown_menu.show {
+    display: block;
+}
+
+.dropdown_menu .b_title {
+    padding: 16px 20px;
+    margin-bottom: 0;
+    /* 기본 margin 제거 */
+    border-bottom: 1px solid var(--gray-01);
+    transition: background 0.2s ease;
+    font-size: 20px; /* 또는 var(--fspre-25) 등 원하는 크기 */
+    font-weight: 400; /* 기본보다 얇게 */
+}
+
+.dropdown_menu .b_title:last-child {
+    border-bottom: none;
+}
+
+.dropdown_menu .b_title:hover {
+    background: var(--yellow-01);
+}
+
+/* 내용 wrapper */
+.content-wrapper {
+    margin-top: 20px;
 }
 
 .left .bottom .info {
+    display: none;
+    /* 기본 숨김 */
     width: 100%;
     color: var(--black);
     font-size: var(--fspre-25);
     font-weight: 400;
     line-height: 1.4;
 }
+
+.content-wrapper .info.active {
+    display: block;
+    /* 활성화된 내용만 표시 */
+}
+
 
 /* Highlighted Artifact */
 .highlighted_artifact {
@@ -177,8 +247,7 @@
 .arts .img_box {
     width: 100%;
     aspect-ratio: 1 / 1;
-    /* 정사각형 비율 */
-    background: var(--yellow-03);
+    background: rgba(124, 134, 111, 0.32);
     margin-bottom: 8px;
     overflow: hidden;
 }
@@ -218,7 +287,7 @@
     display: none;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 154px;
     width: 100%;
     height: auto;
     max-width: 798px;

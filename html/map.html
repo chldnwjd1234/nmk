@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/test_media.css"> --><!-- 본인 미디어스타일 -->
     <!--     <script src="/js/common.js"></script>
     <script src="/js/test.js"></script> --><!-- 본인 js -->
+    <script src="/js/map.js" defer></script>
     <script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
 </head>
 
@@ -23,7 +24,7 @@
     <div class="wrap">
         <header>
             <div class="inner">
-                <h1><a href="map.html"><img src="../asset/img/eng_header_logo.png" alt="NMK" class="logo"></a></h1>
+                <h1><a href="main.html"><img src="../asset/img/eng_header_logo.png" alt="NMK" class="logo"></a></h1>
                 <nav>
                     <ul>
                         <li><a href="#">VISIT</a></li>
@@ -63,8 +64,8 @@
                                 <button class="tab">3F</button>
                             </div>
                         </div>
-                        <div class="bottom">
-                            <h3 class="b_title">
+                        <!-- <div class="bottom">
+                            <h3 class="b_title title_1">
                                 Medieval and Early Modern History
                                 <i class="fa-solid fa-chevron-down"></i>
                             </h3>
@@ -75,6 +76,51 @@
                                 and
                                 cultural achievements.
                             </p>
+                            <h3 class="b_title title_2">
+                                Prehistory and Ancient History
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </h3>
+                            <p class="info">
+                                The Prehistory and Ancient History section displays artifacts that represent some of the
+                                earliest evidence of Korean civilization and culture.
+                            </p>
+
+                        </div> -->
+                        <div class="bottom">
+                            <div class="dropdown">
+                                <!-- 현재 선택된 제목 (클릭하면 드롭다운) -->
+                                <h3 class="b_title active">
+                                    Medieval and Early Modern History
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </h3>
+
+                                <!-- 드롭다운 메뉴 -->
+                                <div class="dropdown_menu">
+                                    <h3 class="b_title" data-content="content1">
+                                        Medieval and Early Modern History
+                            
+                                    </h3>
+                                    <h3 class="b_title" data-content="content2">
+                                        Prehistory and Ancient History
+                                    
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <!-- 내용들 -->
+                            <div class="content-wrapper">
+                                <p class="info active" id="content1">
+                                    The Medieval and Early Modern History section highlights Korea's development
+                                    through the Goryeo, Joseon, and Korean Empire periods, showcasing key events,
+                                    conflicts,
+                                    and cultural achievements.
+                                </p>
+                                <p class="info" id="content2">
+                                    The Prehistory and Ancient History section displays artifacts that represent some of
+                                    the
+                                    earliest evidence of Korean civilization and culture.
+                                </p>
+                            </div>
                         </div>
 
                     </div>
