@@ -9,10 +9,7 @@ main.bg {
     background-color: var(--bg);
 }
 
-main .inner {
-    width: 1674px;
-    margin: 0 auto;
-}
+
 
 main .moon {
     height: 692px;
@@ -32,20 +29,12 @@ main .moon img {
 /* Welcome 섹션 */
 main .Welcome {
     width: 100%;
-    height: 1337px;
+    background: url(../asset/img_Vision/section2-welcome-bg.png) no-repeat;
+    /* height: 1337px; */
     position: relative;
+    overflow-x: hidden;
 }
 
-main .Welcome::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../asset/img_Vision/section2-welcome-bg.png) center/cover no-repeat;
-    z-index: 0;
-}
 
 main .Welcome .inner {
     position: relative;
@@ -62,19 +51,17 @@ main .Welcome .flower2 {
 
 main .Welcome .flower3 {
     position: absolute;
-    left: 60%;
-    top: 600px;
+    right: -18%;
+    bottom: 0;
 }
 
 main .Welcome .txt_box {
     color: var(--gray-09);
-    text-align: left;
-    position: relative;
     z-index: 2;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 500px;
+    position: relative;
 }
 
 main .txt_box h3 {

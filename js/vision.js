@@ -1,29 +1,37 @@
-// GSAP ScrollTrigger 플러그인 등록
-gsap.registerPlugin(ScrollTrigger);
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
 
-// 페이지 로드 후 실행
-window.addEventListener('DOMContentLoaded', function() {
-    
-    // flower2 스크롤 애니메이션
-    gsap.to('.flower2', {
-        rotation: 30,  
+    // 🌸 flower 회전 (기존 코드)
+    const flowerTl = gsap.timeline({
         scrollTrigger: {
-            trigger: '.Welcome',  // 트리거 요소
-            start: 'top bottom',  // Welcome 섹션 상단이 화면 하단에 닿을 때 시작
-            end: 'bottom top',    // Welcome 섹션 하단이 화면 상단에 닿을 때 끝
-            scrub: 1,  // 스크롤과 동기화 (1은 1초 지연)
-            // markers: true  // 디버깅용 (나중에 삭제)
+            trigger: ".Welcome",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1,
         }
     });
-    
-    // flower3 스크롤 애니메이션
-    gsap.to('.flower3', {
-        rotation: 40,
+    flowerTl.to(".flower2", { rotation: 30 }, 0)
+        .to(".flower3", { rotation: 40 }, 0);
+
+    // ✨ 텍스트 순차 fade-in
+    const textTl = gsap.timeline({
         scrollTrigger: {
-            trigger: '.Welcome',
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 1
+            trigger: ".Welcome",
+            start: "top 80%",
+            end: "bottom bottom",
+            scrub: 1, // ✅ 스크롤 진행률 기반 (자동 역방향 포함)
         }
     });
+
+    // 순차 등장
+    textTl
+        .from(".txt_box .big", { opacity: 0, y: 30, duration: 0.8, ease: "power2.out" })
+        .from(".txt_box .living_space", { opacity: 0, y: 30, duration: 0.8, ease: "power2.out" }, "+=0.2")
+        .from(".txt_box .bottom p", {
+            opacity: 0,
+            y: 30,
+            duration: 0.6,
+            ease: "power2.out",
+            stagger: 0.15 // ✅ p 세 개 순차 fade-in
+        }, "+=0.2");
 });
