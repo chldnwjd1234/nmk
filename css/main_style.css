@@ -259,17 +259,12 @@ main .vision .v_card {
     padding-left: 600px;
 }
 
-main .vision .v_card div {
-    /* background: red; */
-}
+
 
 main .vision .v_card img {
     transition: .6s;
 }
 
-main .vision .v_card img:hover {
-    /* transform: scale(1.2); */
-}
 
 
 main .vision .line img {
