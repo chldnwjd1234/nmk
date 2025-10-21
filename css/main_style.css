@@ -267,10 +267,12 @@ main .vision .line img {
     overflow: hidden;
 }
 
+/* exhibition */
+
 main .exhibition {
     width: 100%;
     min-height: 1100px;
-    background-color: var(--gray-09);
+    background: url(/asset/img/ex_bg.png) no-repeat, var(--gray-09);
     position: relative;
     overflow: hidden;
 }
@@ -287,6 +289,7 @@ main .exhibition .title {
     text-align: center;
     padding-top: 100px;
 }
+
 
 main .exhibition .ex_cards {
     position: absolute;
