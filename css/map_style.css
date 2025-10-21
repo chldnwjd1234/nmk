@@ -1,5 +1,5 @@
 @charset "urf-8";
-
+/* 
 .sub {
     display: flex;
     align-items: center;
@@ -29,46 +29,55 @@
     width: 100%;
     background: lightskyblue;
     margin-top: 45px;
-}
+} */
 
 /* 내부 레이아웃 */
-.map_content .right{
+/* .map_content .inner {
+    width: 100%;
+    padding: 0 117px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 255px;
+} */
+/* map 페이지의 main .inner만 flexbox 적용 */
+main .inner {
+    display: flex;
+    gap: 255px;
+    align-items: flex-start;
+}
+/* 왼쪽 텍스트 박스 전체 */
+.inner .left {
+    width: 632px;
+    height: 727px;
     display: flex;
     flex-direction: column;
     gap: 48px;
 }
-.map_content .inner {
-    width: 100%;
-    padding: 0 117px;
-    /* margin: 0 auto; */
+
+.txt_box .title {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    /* gap: 255px; */
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* 왼쪽 텍스트 박스 */
-.map_content .left {
-    display: flex;
-    
-    width: 632px;
-}
 .txt_box {
     /* flex: 1.2; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 48px;
     border-bottom: 1px dashed #59574D;
 }
 
 /* 제목 */
 .page_title {
     font-family: var(--title-Zen);
-    font-size: 56px;
+    font-size: var(--fszenT-L-50);
     font-weight: 500;
     letter-spacing: 150%;
     color: var(--black);
-    margin-bottom: 20px;
 }
 
 /* 층 탭 */
@@ -79,7 +88,7 @@
 }
 
 .floor_tabs .tab {
-    background: var(--yellow-02);
+    background: var(--yellow-01);
     color: var(--gray-05);
     border: none;
     border-radius: 10px;
@@ -100,196 +109,97 @@
     color: var(--black);
 }
 
-/* 본문 텍스트 */
-.bottom {
+/* 밑 소개글 */
+.left .bottom {
     width: 100%;
-    background: yellow;
-    padding: 0 40px 0 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 47px 0 0;
     margin-bottom: 68px;
 }
 
-.b_title {
-    font-size: 30px;
-    letter-spacing: 140%;
-    font-weight: 600;
-    color: var(--black);
-    margin-bottom: 20px;
+.left .bottom .b_title {
     display: flex;
     align-items: center;
-    gap: 8px;
-}
-
-.b_title i {
-    font-size: 14px;
-    color: var(--gray-06);
-}
-
-.info {
+    gap: 4px;
+    font-size: var(--fspre-30);
+    letter-spacing: 0.02em;
+    font-weight: 550;
     color: var(--black);
-    font-size: 25px;
-    line-height: 140%;
-    max-width: 520px;
+    margin-bottom: 20px;
+    /* display: flex;
+    align-items: center;
+    gap: 8px; */
 }
 
-/* 구분선 */
-/* .txt_box>div:nth-of-type(3) {
-    border-bottom: 1px solid var(--gray-03);
-    margin: 32px 0;
-} */
-
-/* Highlighted Artifact */
-.highlighted_artifact {
-    width: 100%;
-    margin-top: 40px;
-}
-
-.highlighted_artifact h4 {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--black);
-    margin-bottom: 16px;
-}
-
-.arts {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.arts li {
-    text-align: left;
-}
-
-.arts img {
-    width: 100%;
-    border-radius: 6px;
-    background: var(--yellow-03);
-    margin-bottom: 10px;
-}
-
-.arts p {
+.left .bottom .b_title i {
     font-size: 14px;
-    color: var(--gray-08);
+    color: var(--black);
+}
+
+.left .bottom .info {
+    width: 100%;
+    color: var(--black);
+    font-size: var(--fspre-25);
+    font-weight: 400;
     line-height: 1.4;
 }
 
-/* 오른쪽 지도 영역 */
-.map_right {
-    /* width: 798px;
-    height: 481px; */
-    flex: 1.2;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.map_right img {
-    width: 798px;
-    height: 481px;
-    max-width: 800px;
-}
-
-/* .map_content {
-    width: 100%;
-    height: 100%;
-    background: blue;
-    padding: 45px 117px;
-}
-
-.map_content .inner {
-    width: 1686px;
-    height: 743px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 255px;
-    background: #ddd;
-}
-
-.map_content .inner .txt_box {
-    margin-bottom: 40px;
-    gap: 40px;
-    background: pink;
-}
-
-.page_title {
-    font-family: var(--title-Zen);
-    font-size: 50px;
-    font-weight: 500;
-    color: var(--black);
-    letter-spacing: -0.02em;
-    margin-bottom: 24px;
-}
-
-.floor_tabs {
-    display: flex;
-    gap: 14px;
-}
-
-.floor_tabs .tab {
-    background: var(--yellow-02);
-    color: var(--gray-05);
-    border: none;
-    border-radius: 10px;
-    font-size: 21px;
-    font-weight: 700;
-    padding: 10px 28px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.floor_tabs .tab.active {
-    background: var(--red-05-point);
-    color: var(--w-color);
-}
-
-.floor_tabs .tab:hover:not(.active) {
-    background: var(--yellow-03);
-    color: var(--black);
-}
-
-
+/* Highlighted Artifact */
 .highlighted_artifact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 632px;
-    height: 231px;
-    background: green;
 }
 
 .highlighted_artifact h4 {
-    font-size: 30px;
+    font-size: var(--fspre-30);
     font-weight: 500;
     color: var(--black);
-    margin-bottom: 16px;
 }
 
 .highlighted_artifact .arts {
     display: flex;
     gap: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
-.artifact_list li {
-    text-align: left;
+.arts li {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* 동일한 너비 */
 }
 
-.artifact_list li img {
-    width: 50px;
-    height: auto;
-    border-radius: 6px;
-    margin-bottom: 10px;
+.arts .img_box {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 정사각형 비율 */
+    background: var(--yellow-03);
+    margin-bottom: 8px;
+    overflow: hidden;
 }
 
-.artifact_list p {
-    font-size: 14px;
-    color: var(--gray-08);
-    line-height: 1.4;
+.arts .img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
+.highlighted_artifact li p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--black);
+    /* 2줄 말줄임 추가 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 2줄까지만 표시 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 오른쪽 지도 영역 */
 .map_right {
-    flex: 1.2;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -298,6 +208,5 @@
 .map_right img {
     width: 100%;
     height: auto;
-    max-width: 800px;
-    border-radius: 10px;
-} */
+    max-width: 798px;
+}
