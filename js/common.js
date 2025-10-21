@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    AOS.init();
+    // AOS.init();
     const header = document.querySelector('header');
     document.querySelector('header').addEventListener('click', () => {
         header.classList.toggle('on');

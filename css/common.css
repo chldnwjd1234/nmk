@@ -294,8 +294,9 @@ footer .f_right {
 .select_box {
     position: relative;
     height: 42px;
-    overflow: hidden;
+    /* overflow: hidden; */
     border-radius: var(--r-10);
+    transition: .6s;
 }
 
 .select_box.on {
@@ -325,20 +326,21 @@ footer .select_box>button {
     display: flex;
     position: absolute;
     left: 0;
-    bottom: 52px;
     width: 100%;
     flex-direction: column;
     border-radius: 10px;
     background: var(--gray-05);
     padding: 0 10px;
-    transition: max-height 0.6s;
+    transition: 0.6s;
     max-height: 0;
     overflow: hidden;
+    padding: 10px;
+    bottom: 0;
 }
 
 .select_box.on ul {
-    padding: 10px;
     max-height: 580px;
+    bottom: 52px;
 }
 
 .select_box ul li {

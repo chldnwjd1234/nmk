@@ -9,13 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NMK</title>
     <link rel="shortcut icon" href="/asset/favicon.ico" type="image/x-icon">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/main_style.css"><!-- 본인 스타일 -->
     <!--     <link rel="stylesheet" href="/css/common_media.css">
     <link rel="stylesheet" href="/css/test_media.css"> --><!-- 본인 미디어스타일 -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="/js/common.js"></script>
     <script src="/js/main.js"></script>
     <script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
@@ -74,21 +76,23 @@
                 <div class="title">
                     <h2>Highlight</h2>
                 </div>
-                <div class="contents">
-                    <div class="top">
-                        <a href="/html/exhibition.html">
-                            <div class="icon">Special Exhibition</div>
-                            <h3>Tour of National Treasures</h3>
-                        </a>
-                        <a href="/html/exhibition.html">
-                            <div class="icon">Special Exhibition</div>
-                            <h3>The Collectors of Light</h3>
-                        </a>
-                    </div>
-                    <div class="bottom">
-                        <a href="/html/collection.html">
-                            <div class="icon">Collection</div>
-                        </a>
+                <div class="inner">
+                    <div class="contents">
+                        <div class="top">
+                            <a href="/html/exhibition.html">
+                                <div class="icon">Special Exhibition</div>
+                                <h3>Tour of National Treasures</h3>
+                            </a>
+                            <a href="/html/exhibition.html">
+                                <div class="icon">Special Exhibition</div>
+                                <h3>The Collectors of Light</h3>
+                            </a>
+                        </div>
+                        <div class="bottom">
+                            <a href="/html/collection.html">
+                                <div class="icon">Collection</div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section><!-- //.highlight -->
@@ -102,22 +106,24 @@
                         <h2>Reflecting the Future</h2>
                         <h2><img src="/asset/img/v_line.png" alt="line">by Embracing the Past</h2>
                     </div>
-                    <div class="v_card">
-                        <img src="/asset/img/v_img1.png" alt="img">
-                        <img src="/asset/img/v_img3.png" alt="img">
-                        <img src="/asset/img/v_img2.png" alt="img">
-                    </div><!-- //.v_card1 -->
+                </div><!-- //.inner -->
+                <div class="horizontal_all">
                     <div class="line">
                         <img src="/asset/img/line_2.png" alt="">
                     </div>
-                </div><!-- //.inner -->
+                    <div class="v_card track">
+                        <div> <img src="/asset/img/v_img1.png" alt="img"></div>
+                        <div> <img src="/asset/img/v_img3.png" alt="img"></div>
+                        <div> <img src="/asset/img/v_img2.png" alt="img"></div>
+                    </div><!-- //.v_card1 -->
+                </div>
             </section><!-- //.vision  -->
             <section class="exhibition">
                 <div class="inner">
                     <div class="title">
                         <h2>NMK Global Exhibition</h2>
                     </div>
-                    <div class="ex_cards">
+                    <!--  <div class="ex_cards">
                         <div class="ex_card">
                             <img src="/asset/img/ex_img1.png" alt="exhibition">
                         </div>
@@ -133,7 +139,7 @@
                         <div class="ex_card">
                             <img src="/asset/img/ex_img5.png" alt="exhibition">
                         </div>
-                    </div>
+                    </div> -->
                 </div><!-- //inner -->
             </section><!-- //.exhibition -->
 
