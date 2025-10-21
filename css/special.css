@@ -159,7 +159,6 @@ main.bg {
     background: #333;
     /*     justify-content: center; */
     position: relative;
-
 }
 
 .ExhibitionVisual::before {
@@ -211,7 +210,8 @@ main.bg {
 
 .ExhibitionStructure {
     /* background: #ccc; */
-    background: url(/asset/img_Special/exhibition-bg\ 1.png);
+    background: url(/asset/img_Special/e);
+    background-position: left top;
 }
 
 .ExhibitionStructure .inner {
@@ -225,7 +225,8 @@ main.bg {
     font-size: 50px;
     line-height: 1.5;
     font-family: var(--title-Zen);
-    margin-top: 96px;
+    padding-top: 96px;
+    /* padding: 0 96px; */
 }
 
 /* .Exhibition_1 {
@@ -408,30 +409,39 @@ main.bg {
     perspective: 1000px;
     transform-style: preserve-3d;
     overflow: visible; */
-    padding: 40px;
-    margin-bottom: 200px;
+    padding-top: 50px;
+    padding-bottom: 200px;
 }
 
 .Recommended .swiper-slide {
-  width: 480px;
-  height: 696px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: #000;
+    width: 480px;
+    height: 696px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 5px 5px 80px 10px rgba(0, 0, 0, 0.3);
+}
+
+.Recommended .swiper-slide-active {
+    box-shadow: none;
 }
 
 .Recommended .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(60%);
+}
+
+.Recommended .swiper-slide-active img {
+    filter: brightness(100%);
 }
 
 .Recommended .swiper-slide:hover img {
-  filter: brightness(40%); 
-  cursor: pointer;
+
+    /* cursor: pointer; */
 }
 
 /* .Recommended article img {
