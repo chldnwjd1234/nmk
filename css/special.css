@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+body {
+    background: var(--bg);
+}
+
+.SpecialExhibition {
+    padding: 45px 0 14px;
+    /* background: #ccc; */
+    border-bottom: 1px dashed var(--gray-05);
+}
+
+.SpecialExhibition .inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    width: 1674px;
+    margin-bottom: 114px;
+    margin-inline: auto;
+    /* background: yellow; */
+}
+
+.SpecialExhibition .img_left img {
+    width: 580px;
+    height: 740px;
+    display: block;
+}
+
+.SpecialExhibition .txt_right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 35px 0;
+}
+
+.SpecialExhibition .txt_right .top {
+    height: 192px;
+    border-bottom: 1px dashed var(--gray-05);
+    margin-bottom: 35PX;
+}
+
+.SpecialExhibition .txt_right .box_1 {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.SpecialExhibition .txt_right .box_1 span {
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    /* display: inline-flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.SpecialExhibition .txt_right .box_1 {}
+
+
+.SpecialExhibition .txt_right h2 {
+    font-family: var(--title-Zen);
+    font-size: 50px;
+    color: var(--gray-09);
+    line-height: 1.5;
+    margin-top: 5px;
+    margin-bottom: 9px;
+    /* margin-bottom: 10px; */
+}
+
+.SpecialExhibition .txt_right p {
+    color: var(--gray-07-footer);
+}
+
+.data {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.data span {
+    color: var(--gray-07-footer);
+}
+
+.data img {
+    width: 29px;
+}
+
+.Exhibition .Exhibition_txt_1 {
+    margin-bottom: 32PX;
+}
+
+.Exhibition h3 {
+    font-size: 30PX;
+    margin-bottom: 8PX;
+    line-height: 1.3;
+}
+
+.Exhibition P {
+    font-size: 20PX;
+    color: var(--gray-07-footer);
+    line-height: 1.4;
+}
+
+.btn {
+    display: flex;
+    margin-top: 90px;
+    align-items: center;
+}
+
+.btn .btn_left {
+    display: flex;
+    gap: 13px;
+}
+
+.btn_right {
+    margin-left: auto;
+}
+
+.btn .btn_left button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    background: var(--gray-05);
+}
+
+.btn .btn_right .reserve_btn {
+    display: inline-block;
+    padding: 16px 100px;
+    background: var(--red-06);
+    border-radius: 10px;
+    color: var(--w-color);
+    font-size: 21px;
+    line-height: 1.3;
+}
+.ExhibitionVisual .inner {
+    display: flex;
+}
+
+.Exhibition_mini_banner {
+    width: 100%;
+    height: 612px;
+    margin-top: 114px;
+    background: url(../asset/img_Special/mini_banner.png);
+    justify-content: center;
+    align-items: center;
+}
+
+.Exhibition_right {
+    width: 940px;
+    height: 612px;
+    margin-left: auto;
+}
+
+.Exhibition_right h3 {
+    font-size: 65px;
+    line-height: 1.5;
+    font-family: var(--title-Zen);
+    color: var(--w-color);
+}
+
+.Exhibition_right p {
+    font-size: 25px;
+    line-height: 1.3;
+    color: var(--w-color);
+}
+
+.ExhibitionStructure .inner{
+    flex-direction: column;
+    margin-top: 96px;
+}
+
+.ExhibitionStructure .inner .title {
+    font-size: 50px;
+    line-height: 1.5;
+    font-family: var(--title-Zen);
+}
+
+.Exhibition_1{
+    display: flex;
+    margin-top: 72px;
+}
+
+.img_1 {
+    width: 380px;
+    height: 500px;
+}
+
+.Exhibition_txt {
+    margin-left: 52px;
+}
+
+.Exhibition_txt h2 {
+    font-size: 80px;
+    line-height: 1.5;
+    font-family: var(--title-Zen);
+    color: var(--gray-05);
+    margin-bottom: 6px;
+}
+
+.Exhibition_txt h3 {
+    font-size: 35px;
+    line-height: 1.3;
+    color: var(--black);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.Exhibition_txt p {
+    font-size: 25px;
+    line-height: 1.3;
+    color: var(--gray-08);
+    margin-bottom: 20px;
+}
+
+.Exhibition_txt span {
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--gray-07-footer);
+}
+
+.Exhibition_2 {
+    display: flex;
+}
+
+.img_2 {
+    width: 463px;
+    height: 609px;
+}
+
+.Exhibition_3 {
+    display: flex;
+}
+
+.img_3 {
+    width: 307px;
+    height: 405px;
+}
+
+.Exhibition_4 {
+    display: flex;
+}
+
+.img_4 {
+    width: 380px;
+    height: 500px;
+}
