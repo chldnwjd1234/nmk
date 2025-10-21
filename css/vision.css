@@ -60,7 +60,7 @@ main .Welcome .txt_box {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 500px;
+    gap: 200px;
     position: relative;
 }
 
@@ -80,6 +80,7 @@ main .txt_box h3.big {
 main .txt_box h3:last-child {
     text-align: right;
     margin-right: 0;
+    margin-bottom: 500px;
 }
 
 /* living_space */
@@ -107,54 +108,85 @@ main .txt_box .living_space::after {
     background-size: contain;
     background-repeat: no-repeat;
 }
-
-/* visions 섹션 */
+/* visions 섹션 - 자유로운 카드 배치 */
 main .visions {
     width: 100%;
-    min-height: 1728px;
+    height: 1728px;
     position: relative;
     background: url(../asset/img_Vision/section3-3visions-bg.png) center/cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
     padding: 100px 0;
 }
 
+main .visions .card_set {
+    position: relative;
+    margin: 0 auto;
+}
+
+/* 각 카드를 absolute로 자유롭게 배치 */
 main .visions .card1,
 main .visions .card2,
 main .visions .card3 {
+    position: absolute;
     display: flex;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px;
-    width: 90%;
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-start;
 }
 
-main .visions .card1 img,
-main .visions .card2 img,
-main .visions .card3 img {
-    width: 400px;
+/* Create Life - 왼쪽에 바싹 */
+main .visions .card1 {
+    top: 0;
+    left: 0;
+}
+
+main .visions .card1 img {
+    width: auto;
     height: auto;
     flex-shrink: 0;
 }
 
+/* Lead the Future - 중앙 */
+main .visions .card2 {
+    top: 250px;
+    left: 40%;
+    transform: translateX(-50%);
+}
+
+main .visions .card2 img {
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* Make the World - 오른쪽 하단 */
+main .visions .card3 {
+    top: 500px;
+    left: 35%;
+}
+
+main .visions .card3 img {
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* 텍스트 박스 */
 main .visions .txt_box {
+    padding: 0;
     flex: 1;
 }
 
 main .visions .txt_box h4 {
     font-family: 'Zen Antique';
-    font-size: var(--fszenT-XL-65);
+    font-size: 2.5rem;
     font-weight: 500;
     color: var(--gray-09);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 main .visions .txt_box p {
-    font-size: 1.125rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.6;
     color: var(--gray-08);
 }
 
@@ -167,7 +199,7 @@ main .Architecture {
 
 main .Architecture .txt_box h3 {
     font-family: 'Zen Antique';
-    font-size: var(--fszenT-XL-65);
+    font-size: var(--fszenT-L-50);
     font-weight: 500;
 }
 
