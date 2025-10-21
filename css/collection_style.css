@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 .banner_top {
     background-image: url(/asset/img_Collection/banner_collection.png);
     /* 본인 배너이미지 */
@@ -132,8 +133,12 @@
 
 
 /* 카드 공통 */
+.card_wrap.on {
+    display: block;
+}
+
 .card_wrap {
-    width: 100%;
+    display: none;
 }
 
 .card_wrap1 ul {
@@ -141,7 +146,7 @@
     width: 100%;
     gap: 20px;
     height: 550px;
-    margin: 0; 
+    margin: 0;
     background: saddlebrown;
 }
 
@@ -153,7 +158,7 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
-    box-sizing: border-box;  
+    box-sizing: border-box;
 
 }
 
@@ -173,19 +178,19 @@
     object-fit: cover;
     border-radius: var(--r-20);
     display: block;
-    
-    
+
+
 }
 
 /* 텍스트 */
- .card .txt {
-    padding: 20px ;
+.card .txt {
+    padding: 20px;
     text-align: left;
     /* background: yellow; */
     display: block;
 }
 
- .card .title {
+.card .title {
     font-size: var(--fspre-23);
     font-weight: 500;
     color: var(--black);
@@ -198,3 +203,37 @@
     line-height: 1.4;
 }
 
+.card_wrap2::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.card_wrap2 ul {}
+
+.card_wrap2 ul li {
+    float: left;
+    width: 24%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: var(--r-15);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .05);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    margin-right: 1%;
+}
+
+.card_wrap2 ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.card_wrap2 ul li .thumb {
+    width: 100%;
+}
+
+.card_wrap2 ul li .thumb img {
+    width: 100%;
+}
