@@ -39,5 +39,41 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleActions: "play none none reset",
         },
     });
+
+
+
+    // ==================== Showcase stack ====================
+    const pin_bg = document.getElementById("pin_bg");
+    const photos = gsap.utils.toArray(".ex_card");
+
+    const pinTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".pin_scene",
+            start: "top top",
+            end: "+=1800",
+            pin: true,
+            scrub: true,
+            anticipatePin: 1,
+            toggleActions: "play none none reset",
+        },
+    });
+
+    pinTl.to(pin_bg, { filter: "blur(12px)", scale: 1.06, duration: 1, ease: "none" }, 0);
+    photos.forEach((el, i) => {
+        pinTl.add(() => {
+            el.style.zIndex = String(100 + i);
+            el.classList.add("glitch");
+            gsap.delayedCall(0.4, () => el.classList.remove("glitch"));
+        }, i * 0.22);
+        pinTl.fromTo(
+            el,
+            { opacity: 0, y: 1080, scale: 0.4, filter: "blur(6px)", rotate: i % 2 ? 4 : -4 },
+            { opacity: 1, y: 0, scale: 1, filter: "blur(0px)", rotate: i % 2 ? 5 : -5, duration: 0.85, ease: "power3.out" },
+            i * 0.22
+        );
+    });
+    pinTl.to(".float_wrap", { yPercent: -6, duration: 0.8, ease: "none" }, ">0.1");
+
+
     window.addEventListener("resize", () => ScrollTrigger.refresh());
 })

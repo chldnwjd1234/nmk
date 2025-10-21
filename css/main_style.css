@@ -306,18 +306,36 @@ main .vision .line img {
 main .exhibition {
     width: 100%;
     height: 100vh;
-    min-height: 1100px;
-    background: url(/asset/img/ex_bg.png) no-repeat, var(--gray-09);
+    /* min-height: 1100px; */
+    background: var(--gray-09);
     /* position: relative; */
     overflow: hidden;
 }
 
 main .exhibition .inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 100px 50px;
     position: relative;
+    width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+
+.pin_bg {
+    position: absolute;
+    inset: -2px;
+    /* 1~2px 확장해서 경계 숨김 */
+    background-size: cover;
+    background-position: center;
+    will-change: transform, filter;
+    transform: translateZ(0);
+    /* 티어링 줄이기 */
+}
+
+.pin_overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .45));
+    z-index: 1;
+    pointer-events: none;
 }
 
 main .exhibition .title {
@@ -328,29 +346,104 @@ main .exhibition .title {
 
 main .exhibition .ex_cards {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: 200px;
-    margin-left: -500px;
-    width: 1000px;
-    height: 500px;
-    z-index: 3;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+    z-index: 2;
 }
+
 
 
 main .exhibition .ex_card {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(.9);
+    width: min(40vw, 480px);
+    height: min(52vw, 640px);
+    /* 3:4에 가깝게 (원하면 조정) */
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+    opacity: 0;
+    filter: blur(6px);
+    will-change: transform, filter, opacity;
 }
-
 
 main .exhibition .ex_card img {
-    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
+.ex_card.glitch::before,
+.ex_card.glitch::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    mix-blend-mode: screen;
+    opacity: .6;
+    pointer-events: none;
+}
+
+.ex_card.glitch::before {
+    transform: translate(2px, 0);
+    filter: hue-rotate(30deg) saturate(1.2);
+}
+
+.ex_card.glitch::after {
+    transform: translate(-2px, 0);
+    filter: hue-rotate(-30deg) saturate(1.2);
+}
+
+@keyframes glitch_slices {
+    0% {
+        clip-path: inset(0 0 90% 0);
+        transform: translateX(-1px);
+    }
+
+    20% {
+        clip-path: inset(10% 0 70% 0);
+        transform: translateX(2px);
+    }
+
+    40% {
+        clip-path: inset(40% 0 40% 0);
+        transform: translateX(-2px);
+    }
+
+    60% {
+        clip-path: inset(65% 0 20% 0);
+        transform: translateX(1px);
+    }
+
+    80% {
+        clip-path: inset(80% 0 5% 0);
+        transform: translateX(-1px);
+    }
+
+    100% {
+        clip-path: inset(0 0 90% 0);
+        transform: translateX(0);
+    }
+}
+
+.ex_card.glitch::before {
+    animation: glitch_slices .35s steps(6) both;
+}
+
+.ex_card.glitch::after {
+    animation: glitch_slices .35s steps(6) reverse both;
+}
+
+/* 
 main .exhibition .ex_card:nth-child(1) {
     z-index: 3;
 }
@@ -369,7 +462,7 @@ main .exhibition .ex_card:nth-child(4) {
 
 main .exhibition .ex_card:nth-child(5) {
     z-index: 1;
-}
+} */
 
 main .muds {
     width: 100%;
