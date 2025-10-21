@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', function() {
     
     // flower2 스크롤 애니메이션
     gsap.to('.flower2', {
-        rotation: 40,  // 시계방향 40도
+        rotation: 30,  
         scrollTrigger: {
             trigger: '.Welcome',  // 트리거 요소
             start: 'top bottom',  // Welcome 섹션 상단이 화면 하단에 닿을 때 시작
