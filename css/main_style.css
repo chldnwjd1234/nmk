@@ -19,12 +19,12 @@ main {
     top: 90vh;
     width: 822px;
     height: 225px;
-    background: url(../asset/img/cloud2.png);
+    background: url(/asset/img/cloud_info.png) no-repeat 50px;
     z-index: 10;
     filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .12));
     display: flex;
     align-items: center;
-    padding: 0 60px;
+    padding: 0 110px;
 }
 
 .museum_cta .cta_content {
@@ -105,8 +105,9 @@ main {
 
 main .highlight {
     width: 100%;
-    height: 1695px;
-    background: url(../asset/img/bg_left.png) no-repeat left center, url(../asset/img/bg_right.png) right center no-repeat ,url(../asset/img/bg_all.png) no-repeat center ;
+    height: 1700px;
+    padding-top: 30px;
+    background: url(/asset/img/bg_left.png) no-repeat left center, url(/asset/img/bg_right.png) right center no-repeat, url(/asset/img/bg_all.png) no-repeat center;
     background-color: #D8C9AF;
     position: relative;
 }
@@ -114,7 +115,7 @@ main .highlight {
 main .highlight .title {
     width: 684px;
     height: 182px;
-    background: url(../asset/img/cloud.png) -75px center no-repeat;
+    background: url(/asset/img/cloud.png) -75px center no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,15 +127,17 @@ main .highlight .title {
     color: var(--w-color);
 }
 
-.highlight .title h2{
+.highlight .title h2 {
     color: var(--black);
 }
+
 .highlight .contents {
     display: flex;
     flex-direction: column;
     width: 1790px;
     margin-left: auto;
     gap: 90px;
+    margin-top: 72px;
 }
 
 .highlight .contents .top {
@@ -145,11 +148,11 @@ main .highlight .title {
 .highlight .contents .top a {
     width: 476px;
     height: 600px;
-    background: url(../asset/img/h_img1.png);
+    background: url(/asset/img/h_img1.png);
 }
 
-.highlight .contents .top a:nth-child(2){
-    background: url(../asset/img/h_img2.png);
+.highlight .contents .top a:nth-child(2) {
+    background: url(/asset/img/h_img2.png);
 }
 
 .highlight .contents .top .icon {
@@ -168,7 +171,7 @@ main .highlight .title {
 }
 
 
-.highlight .contents h3{
+.highlight .contents h3 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,41 +198,215 @@ main .highlight .title {
 .highlight .contents .bottom {
     width: 1284px;
     height: 526px;
-    background: url(../asset/img/h_img3.png);
+    background: url(/asset/img/h_img3.png);
     margin-left: auto;
 }
+
+main .backimg {
+    width: 100%;
+    height: 674px;
+    background: url(/asset/img/v_bg1.png) no-repeat center top / 100% auto, url(/asset/img/bg_all.png) no-repeat center;
+    background-color: #D8C9AF;
+    margin: 0;
+    display: block;
+}
+
 
 main .vision {
     width: 100%;
     height: 1154px;
-    background: url(../asset/img/v_bg1.png) no-repeat;
-    background-color: var( --gray-09);
+    background: url(/asset/img/v_bg2.png) no-repeat;
+    background-color: var(--gray-09);
+    margin-top: -5px;
+    position: relative;
+    overflow: hidden;
 }
 
-main .vision .title{
+main .vision .title {
     color: var(--w-color);
 }
 
 
-main .exhibition{
-    width: 100%;
-    height: 1543px;
-    background-color: var( --gray-09);
+main .vision .title h2 img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+main .vision .title h2:nth-child(2) {
+    margin-top: 30px;
 }
 
 
-main .muds{
+main .vision .v_card {
+    display: flex;
+    align-items: flex-end;
+    gap: 50px;
+    margin-left: 600px;
+    margin-top: 72px;
+}
+
+main .vision .v_card img:nth-child(1) {
+    width: 450px;
+    height: 550px;
+}
+
+main .vision .v_card img:nth-child(2),
+main .vision .v_card img:nth-child(3) {
+    width: 350px;
+    height: 450px;
+    margin-bottom: 50px;
+}
+
+
+main .vision .line img {
+    position: absolute;
+    left: -100px;
+    top: 250px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+main .exhibition {
+    width: 100%;
+    min-height: 1100px;
+    background-color: var(--gray-09);
+    position: relative;
+    overflow: hidden;
+}
+
+main .exhibition .inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 50px;
+    position: relative;
+    height: 100%;
+}
+
+main .exhibition .title {
+    text-align: center;
+    padding-top: 100px;
+}
+
+main .exhibition .ex_cards {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 200px;
+    margin-left: -500px;
+    width: 1000px;
+    height: 500px;
+    z-index: 3;
+}
+
+
+main .exhibition .ex_card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+main .exhibition .ex_card img {
+    display: block;
+}
+
+main .exhibition .ex_card:nth-child(1) {
+    z-index: 3;
+}
+
+main .exhibition .ex_card:nth-child(2) {
+    z-index: 5;
+}
+
+main .exhibition .ex_card:nth-child(3) {
+    z-index: 3;
+}
+
+main .exhibition .ex_card:nth-child(4) {
+    z-index: 3;
+}
+
+main .exhibition .ex_card:nth-child(5) {
+    z-index: 1;
+}
+
+main .muds {
     width: 100%;
     height: 1685px;
+    padding-top: 127px;
     background: linear-gradient(180deg, #201F25 0%, #282C33 57.21%);
 }
 
-footer.main{
+
+main .muds .title {
+    width: 684px;
+    height: 182px;
+    background: url(/asset/img/cloud.png) -75px center no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .muds .title h2 {
+    color: var(--black);
+}
+
+footer.main {
     width: 100%;
     height: 771px;
     background: url(/asset/img/footer.png) no-repeat #282C33;
 }
 
 footer .select_box>button {
-     background: var(--gray-06);
+    background: var(--gray-06);
+}
+
+.top-btn {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 90px;
+    height: 90px;
+    background: var(--red-05-point);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.top-btn img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 5px;
+}
+
+.top-btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.top-btn:hover {
+    background: var(--blue-06);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 스크롤 시 나타나기 */
+.top-btn {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.top-btn.show {
+    opacity: 1;
+    pointer-events: auto;
 }

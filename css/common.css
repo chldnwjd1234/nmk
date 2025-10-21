@@ -77,11 +77,6 @@ body {
     margin-inline: auto;
 }
 
-@media screen and (max-width:1673px) {
-    .inner {
-        width: 95%;
-    }
-}
 
 header {
     width: 100%;
@@ -90,7 +85,11 @@ header {
     left: 0;
     top: 0;
     z-index: 10;
+    backdrop-filter: blur(15px);
     background: rgba(226, 218, 215, 0.7);
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
 }
 
 header .inner {
@@ -114,9 +113,9 @@ nav {
 nav ul {
     display: flex;
     justify-content: space-between;
-    gap: 60px;
+    gap: 50px;
     font-size: var(--fspre-20);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 nav ul li {
@@ -129,6 +128,11 @@ header .right {
     margin-left: 70px;
 }
 
+header .right img {
+    width: 30px;
+    height: 30px;
+}
+
 /* main */
 
 main {
@@ -137,7 +141,7 @@ main {
 
 /* 한지배경 */
 main.bg {
-    background: url(/asset/img/bg_all2.png) center no-repeat;
+    background: url(/asset/img/bg_all2.png) center no-repeat var(--bg);
 }
 
 main .banner_top {
@@ -154,18 +158,12 @@ main .banner_top {
 
 }
 
-main .banner_top .inner {
-    background: yellow;
-
-}
 
 main .banner_top .txt {
-    color: #fff;
+    color: var(--w-color);
     font-size: 50px;
     font-weight: 500;
     font-family: var(--title-Zen);
-    background: #ccc;
-    /* margin-inline: 0; */
 }
 
 main .sub {
@@ -234,7 +232,7 @@ main .txt_box h3 {
 footer {
     width: 100%;
     height: 771px;
-    background: url(/asset/img/footer_sub.png) no-repeat right top, url(/asset/img/bg_all2.png) no-repeat right top;
+    background: url(/asset/img/footer_sub.png) no-repeat right top, url(/asset/img/bg_all2.png) no-repeat right top var(--bg);
     color: var(--w-color);
     font-weight: 300;
     font-size: 20px;
@@ -282,7 +280,7 @@ footer .f_bot p {
 
 footer .f_bot p::before {
     content: '';
-    background: url(/asset/img/icon3.png);
+    background: url(/asset/img/icon3.png) no-repeat center / contain;
     width: 18px;
     height: 18px;
 }
@@ -305,8 +303,7 @@ footer .f_right {
 }
 
 footer .select_box>button {
-    /*    width: 220px;
-    height: 42px; */
+    height: 42px;
     background: var(--gray-08);
     border: 0;
     padding: 10px 30px;
@@ -318,33 +315,34 @@ footer .select_box>button {
     font-size: 18px;
     cursor: pointer;
     position: relative;
+    border-radius: var(--r-10);
     z-index: 2;
 
-}
 
-footer .select_box>button i {
-    /* margin-left: 10px; */
 }
 
 .select_box ul {
+    display: flex;
     position: absolute;
     left: 0;
-    bottom: 20px;
+    bottom: 52px;
     width: 100%;
     flex-direction: column;
     border-radius: 10px;
-    background: #ccc;
-    padding: 10px;
-    transition: .3s;
-    /*     overflow: hidden; */
-    /* display: flex; */
+    background: var(--gray-05);
+    padding: 0 10px;
+    transition: max-height 0.6s;
+    max-height: 0;
+    overflow: hidden;
 }
 
 .select_box.on ul {
-    bottom: 42px;
+    padding: 10px;
+    max-height: 580px;
 }
 
 .select_box ul li {
+    font-weight: 400;
     font-size: 14px;
     height: 40px;
     line-height: 40px;
