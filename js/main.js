@@ -20,6 +20,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
+    // museum_cta 애니메이션 (오른쪽에서 왼쪽으로)
+    gsap.fromTo(".museum_cta",
+        {
+            opacity: 0,
+            x: 200  // 오른쪽에서 시작
+        },
+        {
+            opacity: 1,
+            x: 0,
+            duration: 1,  // scrub 대신 duration 사용 (더 부드럽게)
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".museum_cta",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        }
+    );
+
+
+
     // ==================== Highlight Animations ====================
     // 1. 구름 타이틀 (먼저)
     gsap.fromTo(".highlight .title",
@@ -34,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTrigger: {
                 trigger: ".highlight .title",
                 start: "top 80%",
-                end: "top 10%",  // 30% → 10% (더 길게)
                 scrub: 2,  // 1 → 2 (더 부드럽게)
                 toggleActions: "play none none none"
             }
@@ -114,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: ".backimg",
                 start: "top 80%",
                 end: "bottom 100%",
-                scrub: 3,
+                scrub: 5,
                 markers: false
             }
         }
