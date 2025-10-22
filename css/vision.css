@@ -1,5 +1,6 @@
 @charset "utf-8";
-.wrap{
+
+.wrap {
     overflow-x: hidden;
 }
 
@@ -29,6 +30,11 @@ main .moon img {
     transform: translateX(-50%);
 }
 
+main .txt_box {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
 
 /* Welcome 섹션 */
 main .Welcome {
@@ -179,6 +185,7 @@ main .visions .card3 img {
 main .visions .txt_box {
     padding: 0;
     flex: 1;
+    gap: 4px;
 }
 
 main .visions .txt_box h4 {
@@ -195,6 +202,11 @@ main .visions .txt_box p {
     color: var(--gray-08);
 }
 
+
+
+
+
+
 /* Architecture 섹션 */
 main .Architecture {
     width: 100%;
@@ -202,14 +214,80 @@ main .Architecture {
     padding: 100px 0;
 }
 
-main .Architecture .txt_box {
-    max-width: 770px; /* 텍스트 최대 너비 제한 */
+main .Architecture .inner {
+    height: 773px;
+    position: relative;
 }
+
+main .Architecture .txt_box {
+    max-width: 770px;
+}
+
 main .Architecture .txt_box p {
     font-size: var(--fspre-25);
     line-height: 1.3;
-    margin-top: 72px;
 }
+
+main .Architecture .architecture_img {
+    position: absolute;
+    display: flex;
+    gap: 12px;
+    right: 0;
+    bottom: 0;
+}
+
+main .Architecture .architecture_img .left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+main .Architecture .architecture_img .left .top {
+    transform-origin: right top;
+    /* left top에서 right top으로 변경 */
+    rotate: 90deg;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    right: 0;
+    bottom: -5%;
+}
+
+main .Architecture .architecture_img .left p {
+    text-align: right;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+main .Architecture .architecture_img .left .bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+
+main .Architecture .architecture_img .right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+main .Architecture .architecture_img .right img:nth-child(2) {
+    width: 253px;
+    height: 234px;
+}
+
+
+
+
+
+
+
 /* Collection_Storage 섹션 */
 main .Collection_Storage {
     width: 100%;
