@@ -198,8 +198,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const mudsTimeline = gsap.timeline({
         scrollTrigger: {
             trigger: ".muds",
-            start: "top 50%",
-            toggleActions: "play none none none"
+            start: "top top",
+            end: "+=4000", //  pin 유지 시간 늘리기
+            scrub: 2,
+            // toggleActions: "play none none none",
+            pin: true,
+            anticipatePin: 1,
+            onLeave: () => {
+                // ✅ pin이 끝날 때 footer 등장 애니메이션 실행
+                /*           gsap.fromTo("footer",
+                              { y: 200, opacity: 0 },
+                              { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" }
+                          ); */
+            },
+            pinSpacing: false   // ✅ 자동 패딩 비활성화
         }
     });
 
@@ -272,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { opacity: 0, y: 20 },
             { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
             "-=0.6"
-        );
+        ).to({}, { duration: 2.5 })
 
 
     // Button underline animation
