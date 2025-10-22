@@ -1,74 +1,273 @@
-@charset "utf-8";
-@media screen and (max-width:1024px) {
+@media (max-width: 1024px) {
 
-  /* 검색 영역 */
-  .search { padding-top: 30px; }
+  .search {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
   .search_bar {
     width: 100%;
-    max-width: 420px;
+    max-width: 312px;
+    padding-bottom: 8px;
   }
-  .search_bar input { font-size: 16px; }
 
-  /* 불필요한 버튼/슬라이드 비활성화 */
-  .view_btns, .card_wrap1 { display: none !important; }
-  .card_wrap2 { display: block !important; }
+  .search_bar input {
+    font-size: 17px;
+    padding-right: 50px;
+  }
 
-  /* 전체 레이아웃 여백 */
-  .con { padding: 0 24px 120px; }
-  .card .title { font-size: 17px; }
+  /* 돋보기 아이콘 */
+  .search_bar button {
+    transform: translateX(0);
+    position: absolute;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    opacity: 1;
+  }
 
-  /* ===== 카드 그리드 ===== */
-  .card_wrap2 ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+  .search_bar button i {
+    font-size: 16px;
+    color: var(--gray-07-footer);
+  }
+
+  .qr_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background-color: var(--w-color);
+    border-radius: 50%;
+    opacity: 0.9;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+
+  .qr_icon img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* 검색 txt 버튼들 */
+  .txt_btn {
+    margin-top: 5px;
+    gap: 8px;
+  }
+
+  .txt_btn button {
+    padding: 8px 16px;
+    font-size: 17px;
+    border-radius: var(--r-20);
+  }
+
+  .view_btns {
+    display: none;
+  }
+
+  /* Results 텍스트 */
+  .con .results {
+    margin-bottom: 12px;
+  }
+
+  .con span {
+    font-size: 18px;
+  }
+
+  /* 카드 */
+  .con {
+    padding: 40px 70px;
+  }
+
+  .card_wrap1 {
+    display: none !important;
+  }
+
+  .card_wrap2 {
+    display: block !important;
   }
 
   .card_wrap2 ul li {
-    background: rgba(255,255,255,0.4);
-    border-radius: var(--r-15);
-    box-shadow: 0 1px 8px rgba(0,0,0,.05);
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    width: 30%;
+    margin-right: 3%;
+  }
+
+  .card_wrap2 ul li:nth-child(4n) {
+    margin-right: 3%;
+  }
+
+  .card_wrap2 ul li:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .card_wrap2 ul li:nth-child(3n+1) {
+    clear: left;
+  }
+
+
+  /* 카드 이미지 */
+  .card_wrap2 .card .thumb {
+    height: 100%;
+  }
+
+  .card_wrap2 .card .txt {
     padding: 10px;
   }
 
-  .card_wrap2 ul li .thumb {
-    aspect-ratio: 4 / 3;
-    border-radius: var(--r-15);
-    overflow: hidden;
+  .card_wrap2 .card .title {
+    font-size: 17px;
+    margin-bottom: 0;
   }
 
-  .card_wrap2 ul li .thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  .card_wrap2 .overlay_content .category {
+    font-size: 13px;
   }
 
-  /* 오버레이 & 버튼 */
-  .card_overlay { border-radius: var(--r-15); transition: opacity .3s; }
-  .card:hover .card_overlay { opacity: 1; }
-
-  .card_wrap2 .overlay_content .category,
-  .card_wrap2 .overlay_content .Dimensions {
-    font-size: 14px;
-    color: var(--gray-04);
+  .card_wrap2 .overlay_content .Dimensions,
+  .card_wrap2 .overlay_content .cm {
+    display: none;
   }
 
   .card_wrap2 .overlay_content .period,
-  .card_wrap2 .overlay_content .treasure,
-  .card_wrap2 .overlay_content .cm {
+  .card_wrap2 .overlay_content .treasure {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .card_wrap2 .card_overlay .overlay_content .viewicon_btn {
+    margin-top: 5px;
+    padding: 10px 20px;
+    font-size: 15px;
+    gap: 6px;
+  }
+
+
+}
+
+@media (max-width: 402px) {
+
+  .search {
+    padding: 30px 20px 20px;
+    flex-direction: column;
+    gap: 12px;
+    background-color: salmon;
+  }
+
+  .search_bar {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 8px;
+  }
+
+  .search_bar input {
+    font-size: 14px;
+  }
+
+  .search_bar button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .search_bar button i {
+    font-size: 14px;
+  }
+
+  .qr_icon {
+    display: none;
+  }
+
+  .txt_btn {
+    margin-top: 0;
+    gap: 6px;
+    padding: 0 20px;
+    display: none;
+  }
+
+  .txt_btn button {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .view_btns {
+    display: none;
+  }
+
+  .con {
+    padding: 20px 23px ;
+    /* background-color: blueviolet; */
+  }
+
+  .con span {
     font-size: 16px;
-    margin-bottom: 6px;
+  }
+
+  .card_wrap1 {
+    display: none !important;
+  }
+
+  .card_wrap2 {
+    display: block !important;
+  }
+
+  .card_wrap2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px ;
+    background-color: saddlebrown;
+  }
+
+  .card_wrap2 ul li {
+    width: 100%;
+    float: none;
+    margin: 0;
+    /* padding: 12px; */
+    padding: 10px;
+    margin-bottom: 0 !important;
+    background-color: aquamarine;
+  }
+
+  .card_wrap2 .card .thumb {
+    height: 240px;
+    padding: 0;
+  }
+
+  .card_wrap2 .card .txt {
+    padding: 12px 8px 8px;
+  }
+
+  .card_wrap2 .card .title {
+    font-size: 14px;
+    text-align: center;
+  }
+
+/* 
+  .card_wrap2 .overlay_content .Dimensions,
+  .card_wrap2 .overlay_content .cm {
+    display: none;
+  } */
+
+  .card_wrap2 .overlay_content .category {
+    font-size: 12px;
+  }
+
+  .card_wrap2 .overlay_content .period,
+  .card_wrap2 .overlay_content .treasure {
+    font-size: 14px;
+  }
+
+  .card_wrap2 .card_overlay .overlay_content .viewicon_btn {
+    padding: 10px 20px;
+    font-size: 13px;
   }
 
   .viewicon_btn {
-    padding: 12px 28px;
-    font-size: 16px;
+    font-size: 17px;
   }
+
 }
-
-
-@media screen and (max-width:402px) {}

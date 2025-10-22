@@ -55,6 +55,10 @@
     color: var(--black);
 }
 
+.qr_icon {
+  display: none;
+}
+
 /* search btn */
 .txt_btn {
     margin-top: 32px;
