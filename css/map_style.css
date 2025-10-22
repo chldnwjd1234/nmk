@@ -50,8 +50,8 @@
 
 /* 왼쪽 박스 전체 */
 .inner .left {
-    /* width: 632px; */
-    width: 100%;
+    width: 632px;
+    /* width: 100%; */
     /* height: 727px; */
     display: flex;
     flex-direction: column;
@@ -112,8 +112,8 @@
 }
 
 .floor_tabs .tab:hover:not(.active) {
-    background: var(--yellow-03);
-    color: var(--black);
+    background: var(--red-05-point);
+    color: var(--w-color);
 }
 
 /* 밑 소개글 */
@@ -254,12 +254,23 @@
     background: rgba(124, 134, 111, 0.32);
     margin-bottom: 8px;
     overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.arts .img_box:hover{
+    background: var(--red-03);
+    opacity: 0.8;
 }
 
 .arts .img_box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.arts .img_box img:hover {
+    transform: scale(1.05);
 }
 
 .highlighted_artifact li p {
@@ -280,8 +291,8 @@
 .map_right {
     position: relative;
     background: #ccc;
-    /* width: 798px; */
-    width: 100%;
+    width: 798px;
+    /* width: 100%; */
     /* flex: 1; */
     /*     display: flex;
     justify-content: center;
