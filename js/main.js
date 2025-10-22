@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: ".backimg",
                 start: "top 80%",
                 end: "bottom 100%",
-                scrub: 1,
+                scrub: 3,
                 markers: false
             }
         }
@@ -192,6 +192,112 @@ document.addEventListener('DOMContentLoaded', () => {
             markers: false
         }
     });
+
+
+    // ==================== MUDS Cloud Animation ====================
+    const mudsTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".muds",
+            start: "top 50%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    // 1. 구름들 좌우에서 부드럽게 나타나기 (위에서 아래로 순서대로)
+    mudsTimeline
+        // 1번 구름 (왼쪽에서 오른쪽으로, 전체 보임)
+        .fromTo(".cloud_1",
+            { left: "-60%", opacity: 0 },
+            { left: "0%", opacity: 1, duration: 1, ease: "power2.out" }
+        )
+        .to({}, { duration: 0.2 }) // 잠깐 대기
+
+        // 2번 구름 (오른쪽에서 왼쪽으로, 전체 보임)
+        .fromTo(".cloud_2",
+            { right: "-50%", opacity: 0 },
+            { right: "0%", opacity: 1, duration: 1, ease: "power2.out" }
+        )
+        .to({}, { duration: 0.2 }) // 잠깐 대기
+
+        // 3번 구름 (왼쪽에서 오른쪽으로, 전체 보임)
+        .fromTo(".cloud_3",
+            { left: "-40%", opacity: 0 },
+            { left: "0%", opacity: 1, duration: 1, ease: "power2.out" }
+        )
+        .to({}, { duration: 0.2 }) // 잠깐 대기
+
+        // 4번 구름 (오른쪽에서 왼쪽으로, 전체 보임)
+        .fromTo(".cloud_4",
+            { right: "-30%", opacity: 0 },
+            { right: "0%", opacity: 1, duration: 1, ease: "power2.out" }
+        )
+
+        // 2. 잠깐 대기
+        .to({}, { duration: 0.5 })
+
+        // 3. 구름들 커튼처럼 좌우로 갈라지며 사라지기
+        .to([".cloud_1", ".cloud_3"], {
+            left: "-100%",
+            opacity: 0,
+            duration: 1.2,
+            ease: "power2.inOut"
+        }, "curtain")
+        .to([".cloud_2", ".cloud_4"], {
+            right: "-100%",
+            opacity: 0,
+            duration: 1.2,
+            ease: "power2.inOut"
+        }, "curtain")
+
+        // 4. 최종 컨텐츠 (배경 + 타이틀) 나타나기
+        .to(".muds_content", {
+            opacity: 1,
+            duration: 1,
+            ease: "power2.out"
+        }, "-=0.5")
+        .fromTo(".muds_bg .title",
+            { opacity: 0, x: "-100%" }, // 왼쪽 밖에서 시작
+            { opacity: 1, x: "0%", duration: 1, ease: "power2.out" }, // 현재 위치로
+            "<" // 이전 애니메이션과 동시에
+        )
+
+        // 5. content_cloud 구름 오른쪽에서 슬라이드
+        .fromTo(".cloud_bg",
+            { opacity: 0, x: "100%" }, // 오른쪽 밖에서
+            { opacity: 1, x: "0%", duration: 1.2, ease: "power2.out" }, // 현재 위치로
+            "-=0.3"
+        )
+        // 6. 텍스트 나타나기
+        .fromTo(".content_text",
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
+            "-=0.6"
+        );
+
+
+    // Button underline animation
+    const btn = document.querySelector(".discover_btn");
+    const underline = btn.querySelector(".underline");
+
+    if (btn && underline) { // 요소 존재 확인
+        btn.addEventListener("mouseenter", () => {
+            gsap.to(underline, {
+                scaleX: 1,
+                duration: 0.4,
+                ease: "power2.out"
+            });
+        });
+
+        btn.addEventListener("mouseleave", () => {
+            gsap.to(underline, {
+                scaleX: 0,
+                duration: 0.4,
+                ease: "power2.in"
+            });
+        });
+    }
+
+
 
     // ==================== Showcase stack ====================
     const pin_bg = document.getElementById("pin_bg");

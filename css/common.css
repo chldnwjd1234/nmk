@@ -349,6 +349,7 @@ footer .select_box>button {
     overflow: hidden;
     padding: 10px;
     bottom: 0;
+    z-index: 100;
 }
 
 .select_box.on ul {
