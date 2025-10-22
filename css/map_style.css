@@ -4,6 +4,14 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding-bottom: 100px;
+}
+
+@media screen and (max-width: 1673px) {
+    .space {
+        width: 95%;
+    }
+
 }
 
 /* 왼쪽 박스 전체 */
@@ -185,7 +193,7 @@
     transition: all 0.3s ease;
 }
 
-.bottom .dropdown select:nth-child(1) {
+.bottom .dropdown select.active {
     display: block;
 }
 
@@ -206,7 +214,15 @@
     width: 100%;
 }
 
-.content .info {
+.content article {
+    display: none;
+}
+
+.content article.active {
+    display: block;
+}
+
+.content article .info {
     display: none;
     width: 100%;
     color: var(--black);
@@ -216,7 +232,7 @@
 }
 
 /* 첫 번째 info만 보이기 */
-.content .f1_content_wrapper .info:first-of-type {
+.content article .info.active {
     display: block;
 }
 
@@ -238,85 +254,67 @@
    Highlighted Artifact
 =========================== */
 .highlighted_artifact {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
 }
 
 .highlighted_artifact h4 {
-  font-size: var(--fspre-30);
-  font-weight: 600;
-  color: var(--black);
+    font-size: var(--fspre-30);
+    font-weight: 600;
+    color: var(--black);
 }
 
 /* 전체 리스트 (층별 묶음) */
-.artall > li {
-  display: none; /* 기본은 숨김 */
+.artall>li {
+    display: none;
+    /* 기본은 숨김 */
 }
 
 /* ✅ 1층(art_1f)만 표시 */
-.artall > li.art_1f.active {
-  display: block;
+.artall>li.active {
+    display: block;
 }
 
 /* 1층 리스트 내부 구조 */
-.art_1f ul {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-start;
+.artall>li>ul {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
 }
 
-.art_1f ul li {
-  width: 150px; /* 필요 시 조정 가능 */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.artall>li>ul li {
+    width: 150px;
+    /* 필요 시 조정 가능 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
 /* 이미지 박스 */
-.art_1f ul li .img_box {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background: var(--gray-02);
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 8px;
-  transition: all 0.3s ease;
-  cursor: pointer;
+.artall>li>ul li img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: var(--gray-02);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-.art_1f ul li .img_box img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
 
 /* 호버 효과 */
-.art_1f ul li .img_box:hover img {
-  transform: scale(1.05);
+.artall>li>ul li:hover img {
+    transform: scale(1.05);
 }
 
 .art_1f ul li .img_box:hover {
-  background: rgba(200, 150, 0, 0.1);
+    background: rgba(200, 150, 0, 0.1);
 }
 
-/* 텍스트 */
-.art_1f ul li p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.3;
-  color: var(--black);
-  text-align: center;
 
-  /* 두 줄까지만 표시 + 말줄임 */
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 
 /* 오른쪽 지도 영역 */
@@ -343,40 +341,74 @@
     position: relative;
     background: #ccc;
     width: 798px;
-    min-height: 600px;
+    height: 600px;
     /* ✅ 내부에 콘텐츠가 보이게 높이 확보 */
 }
 
 /* floor 공통 스타일 */
-.map_right ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+
 
 /* 기본적으로 모든 층 숨기기 */
-.map_right ul,
-.map_right ul li {
-    display: none;
-}
-
-.map_right {
-    position: relative;
-    width: 798px;
-    min-height: 600px;
-    background: none;
-}
 
 .map_right ul {
     display: none;
 }
 
+
+.map_right ul.active {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
 .map_right ul li {
     display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.map_right ul.img_box1 li:nth-child(1) {
+    background-image: url(/asset/img_map/mapf1/subtitle/mapf1_1_medieval_and_early_modern_history.png);
+}
+
+.map_right ul.img_box1 li:nth-child(2) {
+    background-image: url(/asset/img_map/mapf1/subtitle/mapf1_2_prehistory_and_ancient_history.png);
+}
+
+.map_right ul.img_box2 li:nth-child(1) {
+    background-image: url(/asset/img_map/mapf2/subtitle/mapf2_1_calligraphy_and_painting.png);
+}
+
+.map_right ul.img_box1 li:nth-child(2) {
+    background-image: url(/asset/img_map/mapf2/subtitle/mapf2_2_donated_collection.png);
+}
+
+.map_right ul.img_box2 li:nth-child(3) {
+    background-image: url(/asset/img_map/mapf2/subtitle/mapf2_3_room_of_quiet_contemplation.png);
+}
+
+.map_right ul.img_box3 li:nth-child(1) {
+    background-image: url(/asset/img_map/mapf3/subtitle/mapf3_1_sculpture_and_crafts.png);
+}
+
+.map_right ul.img_box3 li:nth-child(2) {
+    background-image: url(/asset/img_map/mapf3/subtitle/mapf3_2_world_art.png);
+}
+
+.map_right ul li.active {
+    display: block;
+    left: 0;
+    top: 0;
 }
 
 /* ✅ 우선순위 높이기 */
-.map_right ul.floor_1 {
+/* .map_right ul.img_box {
     display: block;
 }
 
@@ -390,4 +422,4 @@
     height: auto;
     object-fit: contain;
     margin-top: 154px;
-}
+} */
