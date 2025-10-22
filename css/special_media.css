@@ -147,51 +147,73 @@
         margin-top: 48px;
         display: flex;
         justify-content: space-between;
+        position: relative;
+        height: 100vh;
+        /* background: yellow; */
     }
 
     .articles_all article {
         display: flex;
         flex-direction: column;
-    }
-
-    .articles_all .Exhibition_1,
-    .articles_all .Exhibition_2,
-    .articles_all .Exhibition_3,
-    .articles_all .Exhibition_4,
-    .articles_all .Exhibition_5 {
-        background-color: rgba(255, 255, 255, .5);
+        position: absolute;
+        background-color: rgba(255, 255, 255, 1);
         /* opacity: 0.4; */
         width: 376px;
-        height: 920px;
+        height: 80vh;
         border-radius: 10px;
-
+        top: 0;
+        gap: 0;
     }
 
-    .articles_all .Exhibition_1 .img_1,
-    .articles_all .Exhibition_2 .img_2,
-    .articles_all .Exhibition_3 .img_3,
-    .articles_all .Exhibition_4 .img_4,
-    .articles_all .Exhibition_5 .img_5 {
-        width: 376px;
-        height: 535px;
+    .articles_all .Exhibition_1 {
+        top: 3%;
+    }
+
+    .articles_all .Exhibition_2 {
+        left: 10%;
+        top: 5%;
+    }
+
+    .articles_all .Exhibition_3 {
+        left: 20%;
+        top: 7%;
+    }
+
+    .articles_all .Exhibition_4 {
+        left: 30%;
+        top: 9%;
+    }
+
+    .articles_all .Exhibition_5 {
+        right: 0;
+        top: 11%;
+    }
+
+    .articles_all article img {
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
         border-radius: 10px 10px 0 0;
     }
 
     .Exhibition_txt {
-        align-items: flex-start;
+        justify-content: flex-start;
         text-align: left;
-        margin: 10px 28px 16px 28px;
+        /* background: #ccc; */
+        padding: 20px;
+        /* margin: 10px 28px 16px 28px; */
     }
 
     .articles_all article:nth-child(even) {
-        display: flex;
-        flex-direction: column-reverse;
+        /*    display: flex; */
+        /* flex-direction: column-reverse; */
         /* 순서 뒤집기 */
     }
 
     .articles_all article:nth-child(even) .Exhibition_txt {
         align-items: flex-start;
         text-align: left;
+        order: 1;
     }
 
     .Exhibition_txt i {
@@ -216,6 +238,7 @@
     .Exhibition_txt span {
         font-size: 14px;
         line-height: 1.3;
+        display: none;
     }
 
     .MajorExhibition {
@@ -322,11 +345,10 @@
     .articles_all .Exhibition_3,
     .articles_all .Exhibition_4,
     .articles_all .Exhibition_5 {
-        background-color: rgba(255, 255, 255, .5);
         /* opacity: 0.4; */
-        width: 352px;
+        /*       width: 352px;
         height: 374px;
-        border-radius: 10px;
+        border-radius: 10px; */
 
     }
 
