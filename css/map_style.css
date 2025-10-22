@@ -50,7 +50,8 @@
 
 /* 왼쪽 박스 전체 */
 .inner .left {
-    width: 632px;
+    /* width: 632px; */
+    width: 100%;
     /* height: 727px; */
     display: flex;
     flex-direction: column;
@@ -225,7 +226,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 632px;
+    /* width: 632px; */
+    width: 100%;
 }
 
 .highlighted_artifact h4 {
@@ -278,7 +280,8 @@
 .map_right {
     position: relative;
     background: #ccc;
-    width: 798px;
+    /* width: 798px; */
+    width: 100%;
     /* flex: 1; */
     /*     display: flex;
     justify-content: center;
