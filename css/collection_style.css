@@ -51,7 +51,6 @@
 
 .search_bar button i {
     font-size: 20px;
-    /* 20px에서 24px로 증가 (원하는 크기로 조정) */
     color: var(--black);
 }
 
