@@ -317,6 +317,14 @@ main.bg {
     margin-bottom: 20px;
 }
 
+.Exhibition_txt p.long {
+    display: block;
+}
+
+.Exhibition_txt p.short {
+    display: none;
+}
+
 .Exhibition_txt span {
     font-size: 16px;
     line-height: 1.3;

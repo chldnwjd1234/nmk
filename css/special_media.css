@@ -339,4 +339,33 @@
         height: 203px;
         border-radius: 10px 10px 0 0;
     }
+
+    .Exhibition_txt i {
+        display: none;
+    }
+
+    .Exhibition_txt h3 {
+        font-size: 16px;
+        line-height: 1.3;
+        margin-bottom: 4px;
+    }
+
+    .Exhibition_txt p {
+        font-size: 13px;
+        line-height: 1.4;
+        margin-bottom: 29px;
+    }
+
+    .Exhibition_txt p.long {
+        display: none;
+    }
+
+    .Exhibition_txt p.short {
+        display: block;
+    }
+
+    .Exhibition_txt span {
+        font-size: 12px;
+        line-height: 1.4;
+    }
 }
