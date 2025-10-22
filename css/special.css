@@ -20,24 +20,33 @@ main.bg {
 
 
 .SpecialExhibition {
-    padding: 45px 0 14px;
-    /* background: #ccc; */
+    padding-top: 45px;
     border-bottom: 1px dashed var(--gray-05);
+    /* background: #ccc; */
 }
 
 .SpecialExhibition .inner {
     display: flex;
     align-items: flex-start;
     gap: 35px;
-    width: 1674px;
     margin-bottom: 114px;
     margin-inline: auto;
     /* background: yellow; */
+    /* width: 1674px; */
+}
+
+.SpecialExhibition .img_left {
+    width: 582px;
+    height: 737px;
+    overflow: hidden;
+    /* 박스 밖 잘림 방지 */
 }
 
 .SpecialExhibition .img_left img {
-    width: 580px;
-    height: 740px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 비율 유지하며 꽉 채우기 */
     display: block;
 }
 
@@ -46,12 +55,16 @@ main.bg {
     flex-direction: column;
     flex: 1;
     padding: 35px 0;
+    /* background: yellow; */
 }
 
 .SpecialExhibition .txt_right .top {
-    height: 192px;
+    width: 100%;
+    height: auto;
     border-bottom: 1px dashed var(--gray-05);
     margin-bottom: 35PX;
+    padding-bottom: 30px;
+    /* background: yellow; */
 }
 
 .SpecialExhibition .txt_right .box_1 {
@@ -133,6 +146,10 @@ main.bg {
     margin-left: auto;
 }
 
+.btn_right {
+    margin-left: auto;
+}
+
 .btn_all .btn_left button {
     width: 60px;
     height: 60px;
@@ -141,7 +158,7 @@ main.bg {
     background: var(--gray-05);
 }
 
-.btn_all .btn .reserve_btn {
+.btn_all .btn_right .reserve_btn {
     display: inline-block;
     padding: 16px 100px;
     background: var(--red-06);
@@ -149,6 +166,7 @@ main.bg {
     color: var(--w-color);
     font-size: 21px;
     line-height: 1.3;
+    justify-content: space-between;
 }
 
 .ExhibitionVisual {
@@ -163,7 +181,7 @@ main.bg {
 
 .ExhibitionVisual::before {
     content: '';
-    background: url(../asset/img_Special/mini_banner.png) lightgray 50% / cover no-repeat;
+    background: url(../asset/img_Special/mini_banner_2.png) lightgray 50% / cover no-repeat;
     width: 100%;
     height: 100%;
     opacity: .5;
@@ -180,6 +198,7 @@ main.bg {
 .ExhibitionVisual .txt_all {
     width: 770px;
     position: relative;
+    /* background: #ccc; */
 }
 
 .ExhibitionVisual .contents {
@@ -188,6 +207,14 @@ main.bg {
     flex-direction: column;
     gap: 14px;
     /*     margin-left: auto; */
+}
+
+.contents {
+    display: block;
+}
+
+.contents_short {
+    display: none;
 }
 
 .ExhibitionVisual h3 {
@@ -322,6 +349,7 @@ main.bg {
     width: 380px;
     height: 500px;
 } */
+
 
 .MajorExhibition {
     margin-top: 216px;
