@@ -56,6 +56,29 @@ document.addEventListener('DOMContentLoaded', () => {
     card.style.transitionDelay = `${0.01 * (index % 10)}s`; // 8개씩 묶음
     observer.observe(card);
   });
+
+  // 필터 버튼 클릭 시 검색창에 텍스트 표시
+const filterBtns = document.querySelectorAll('.txt_btn button');
+const searchInput = document.querySelector('.search_bar input');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // 버튼 active 상태 변경
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    // 검색창에 버튼 텍스트 표시
+    searchInput.value = btn.textContent;
+    
+    // 필터 값 가져오기
+    const filterValue = btn.getAttribute('data-filter');
+    
+    // Isotope 필터링
+    grid.arrange({
+      filter: filterValue
+    });
+  });
+});
 });
 
 

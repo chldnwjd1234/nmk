@@ -1,5 +1,16 @@
 @media (max-width: 1024px) {
- .inner{width: 95%;}
+  header {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .inner {
+    width: 95%;
+  }
+
   .search {
     padding-top: 40px;
     display: flex;
@@ -59,6 +70,7 @@
   .txt_btn {
     margin-top: 5px;
     gap: 8px;
+    width: 100%;
   }
 
   .txt_btn button {
@@ -93,10 +105,21 @@
     display: block !important;
   }
 
+  .card_wrap2 ul {
+    max-width: 900px;
+    margin: 0 auto;
+     padding: 0;
+     background-color: #ccc;
+  }
+
   .card_wrap2 ul li {
     width: 30%;
     margin-right: 3%;
+    float: left;
+    background-color: aquamarine;
   }
+
+
 
   .card_wrap2 ul li:nth-child(4n) {
     margin-right: 3%;
@@ -148,145 +171,4 @@
     font-size: 15px;
     gap: 6px;
   }
-
-
-}
-
-@media (max-width: 402px) {
-
-  .search {
-    padding: 30px 20px 20px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .search_bar {
-    width: 100%;
-    max-width: 220px;
-    padding: 11px 5px;
-    border-radius: 8px;
-    border-bottom: none;
-    background-color: var(--w-color);
-    display: flex;
-    align-items: center;
-    height: 38px;
-
-  }
-
-  .search_bar input {
-    font-size: 14px;
-    width: 150px;
-  }
-
-  .search_bar button {
-    width: 32px;
-    height: 32px;
-    background-color: none;
-    right: 8px;
-  }
-
-  .search_bar button i {
-    font-size: 14px;
-  }
-
-  .qr_icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    background-color: var(--w-color);
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    margin: 0;
-  }
-
-  .txt_btn {
-    display: none;
-  }
-
-  .txt_btn button {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
-  .view_btns {
-    display: none;
-  }
-
-  .con {
-    padding: 20px 23px;
-    /* background-color: blueviolet; */
-  }
-
-  .con span {
-    font-size: 16px;
-  }
-
-  .card_wrap1 {
-    display: none !important;
-  }
-
-  .card_wrap2 {
-    display: block !important;
-  }
-
-  .card_wrap2 ul {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    background-color: saddlebrown;
-  }
-
-  .card_wrap2 ul li {
-    width: 100%;
-    float: none;
-    margin: 0;
-    /* padding: 12px; */
-    padding: 10px;
-    margin-bottom: 0 !important;
-    background-color: aquamarine;
-  }
-
-  .card_wrap2 .card .thumb {
-    height: 240px;
-    padding: 0;
-  }
-
-  .card_wrap2 .card .txt {
-    padding: 12px 8px 8px;
-  }
-
-  .card_wrap2 .card .title {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  /* 
-  .card_wrap2 .overlay_content .Dimensions,
-  .card_wrap2 .overlay_content .cm {
-    display: none;
-  } */
-
-  .card_wrap2 .overlay_content .category {
-    font-size: 12px;
-  }
-
-  .card_wrap2 .overlay_content .period,
-  .card_wrap2 .overlay_content .treasure {
-    font-size: 14px;
-  }
-
-  .card_wrap2 .card_overlay .overlay_content .viewicon_btn {
-    padding: 10px 20px;
-    font-size: 13px;
-  }
-
-  .viewicon_btn {
-    font-size: 17px;
-  }
-
 }
