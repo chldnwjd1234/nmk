@@ -122,6 +122,10 @@ nav ul li {
     align-items: center;
 }
 
+.ham_icon {
+    display: none;
+}
+
 header .right {
     display: flex;
     gap: 26px;

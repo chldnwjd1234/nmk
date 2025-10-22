@@ -5,3 +5,78 @@
         width: 95%;
     }
 }
+
+@media (max-width:1024px) {
+    header {
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(15px);
+        background: rgba(226, 218, 215, 0.7);
+    }
+
+    header .inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .ham_icon {
+        display: block;
+        width: 35px;
+        height: 35px;
+        background: url("/asset/img/ham_icon.png") no-repeat center / 24px;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+
+@media (max-width: 402px) {
+    header {
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(226, 218, 215, 0.8);
+        backdrop-filter: blur(15px);
+        z-index: 10;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .ham_icon {
+        display: block;
+        width: 38px;
+        height: 38px;
+        background: url("/asset/img/ham_icon.png") no-repeat center / 24px;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .inner .logo {
+        width: 150px;
+        height: auto;
+        display: block;
+    }
+}
