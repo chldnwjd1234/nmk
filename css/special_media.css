@@ -149,7 +149,7 @@
         justify-content: space-between;
         position: relative;
         height: 100vh;
-        background: yellow;
+        /* background: yellow; */
     }
 
     .articles_all article {
@@ -199,7 +199,7 @@
     .Exhibition_txt {
         justify-content: flex-start;
         text-align: left;
-        background: #ccc;
+        /* background: #ccc; */
         padding: 20px;
         /* margin: 10px 28px 16px 28px; */
     }
