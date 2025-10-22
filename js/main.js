@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
+
     window.addEventListener('scroll', () => {
         const topBtn = document.querySelector('.top-btn');
         if (window.scrollY > 300) {
@@ -18,12 +19,151 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
+    // ==================== Highlight Animations ====================
+    // 1. 구름 타이틀 (먼저)
+    gsap.fromTo(".highlight .title",
+        {
+            opacity: 0,
+            x: -150
+        },
+        {
+            opacity: 1,
+            x: 0,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".highlight .title",
+                start: "top 80%",
+                end: "top 10%",  // 30% → 10% (더 길게)
+                scrub: 2,  // 1 → 2 (더 부드럽게)
+                toggleActions: "play none none none"
+            }
+        }
+    );
+
+    // 2. 첫 번째 사진
+    gsap.fromTo(".highlight .contents .top a:nth-child(2)",
+        {
+            opacity: 0,
+            x: -600
+        },
+        {
+            opacity: 1,
+            x: 0,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".highlight .contents .top a:nth-child(2)",
+                start: "top 50%",
+                end: "top 10%",  // 더 길게
+                scrub: 5,
+                toggleActions: "play none none none"
+            }
+        }
+    );
+
+    // 3. 두 번째 사진
+    gsap.fromTo(".highlight .contents .top a:nth-child(1)",
+        {
+            opacity: 0,
+            x: -150
+        },
+        {
+            opacity: 1,
+            x: 0,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".highlight .contents .top a:nth-child(1)",
+                start: "top 35%",
+                end: "top 5%",  // 더 길게
+                scrub: 5,
+                toggleActions: "play none none none"
+            }
+        }
+    );
+
+    // 4. 세 번째 사진
+    gsap.fromTo(".highlight .contents .bottom",
+        {
+            opacity: 0,
+            x: 150
+        },
+        {
+            opacity: 1,
+            x: 0,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".highlight .contents .bottom",
+                start: "top 80%",
+                end: "top 30%",  // 더 길게
+                scrub: 2,
+                toggleActions: "play none none none"
+            }
+        }
+    );
+
+    // ==================== Ink Effect (backimg) ====================
+    gsap.fromTo(".backimg",
+        {
+            opacity: 0,
+            filter: "blur(12px)"
+        },
+        {
+            opacity: 1,
+            filter: "blur(0px)",
+            scrollTrigger: {
+                trigger: ".backimg",
+                start: "top 80%",
+                end: "bottom 100%",
+                scrub: 1,
+                markers: false
+            }
+        }
+    );
+
+
+    // ==================== Vision Title Animation ====================
+    gsap.fromTo(".vision .title h2:first-child",
+        {
+            opacity: 0,
+            x: -200
+        },
+        {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".vision",
+                start: "top 70%",
+                toggleActions: "play none none none"
+            }
+        }
+    );
+
+    gsap.fromTo(".vision .title h2:nth-child(2)",
+        {
+            opacity: 0,
+            x: -200
+        },
+        {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            delay: 0.5, // 두 번째 줄은 0.3초 늦게
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".vision",
+                start: "top 70%",
+                toggleActions: "play none none none"
+            }
+        }
+    );
+
     const total_width = () => {
         const wrap = document.querySelector(".horizontal_all");
         const track = document.querySelector(".track");
         return track.scrollWidth - wrap.clientWidth;
     };
-
 
     gsap.to(".track", {
         x: () => total_width(),
@@ -40,7 +180,18 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-
+    // ==================== Exhibition Title Fade ====================
+    gsap.to(".exhibition .title", {
+        opacity: 0,
+        y: -100,
+        scrollTrigger: {
+            trigger: ".pin_scene",
+            start: "top top",
+            end: "+=1000",
+            scrub: 1,
+            markers: false
+        }
+    });
 
     // ==================== Showcase stack ====================
     const pin_bg = document.getElementById("pin_bg");
@@ -74,6 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     pinTl.to(".float_wrap", { yPercent: -6, duration: 0.8, ease: "none" }, ">0.1");
 
-
     window.addEventListener("resize", () => ScrollTrigger.refresh());
-})
+
+});

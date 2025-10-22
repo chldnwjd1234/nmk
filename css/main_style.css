@@ -116,6 +116,12 @@ main .highlight {
     position: relative;
 }
 
+.highlight .title,
+.highlight .contents .top a,
+.highlight .contents .bottom {
+    opacity: 0;
+}
+
 main .highlight .title {
     width: 684px;
     height: 182px;
@@ -148,6 +154,7 @@ main .highlight .title {
     gap: 90px;
 }
 
+
 .highlight .contents .top {
     display: flex;
     gap: 30px;
@@ -157,12 +164,37 @@ main .highlight .title {
     width: 476px;
     height: 600px;
     background: url(/asset/img/h_img1.png);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
 }
 
 .highlight .contents .top a:nth-child(2) {
     background: url(/asset/img/h_img2.png);
 }
 
+/* 어두운 오버레이 */
+.highlight .contents .top a::before,
+.highlight .contents .bottom a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.highlight .contents .top a:hover::before,
+.highlight .contents .bottom a:hover::before {
+    opacity: 1;
+}
+
+/* 기존 아이콘 버튼 - 호버 시 숨김 */
 .highlight .contents .top .icon {
     display: flex;
     align-items: center;
@@ -176,15 +208,73 @@ main .highlight .title {
     background: #AA5F5F;
     color: var(--w-color);
     margin: 20px 0 0 25px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+    opacity: 1;
+}
+
+.highlight .contents .top a:hover .icon {
+    opacity: 0;
 }
 
 
 .highlight .contents h3 {
+    font-family: var(--title-Zen);
+}
+
+.highlight .contents .top h3 {
+    position: absolute;
+    bottom: 30px;
+    /* 평소엔 아래 고정 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    font-size: 28px;
+    color: black;
+    opacity: 1;
+    /* 평소에 보임 */
+    transition: opacity 0.4s ease, bottom 0.4s ease, top 0.4s ease, transform 0.4s ease;
+    z-index: 2;
+    margin-top: 0;
+}
+
+.highlight .contents .top a:hover h3 {
+    opacity: 1;
+    bottom: auto;
+    top: 50%;
+    color: var(--w-color);
+    transform: translate(-50%, -30px);
+    /* 호버 시 중앙으로 */
+}
+
+/* Learn More 버튼 - top 카드용 */
+.highlight .contents .top a::after {
+    content: 'Learn More';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 15px) translateY(20px);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
-    margin-top: 480px;
+    width: 150px;
+    height: 35px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 21px;
+    background: #AA5F5F;
+    color: var(--w-color);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.highlight .contents .top a:hover::after {
+    opacity: 1;
+    transform: translate(-50%, 15px) translateY(0);
 }
 
 .highlight .contents .bottom .icon {
@@ -200,36 +290,114 @@ main .highlight .title {
     background: #79895C;
     color: var(--w-color);
     margin: 20px 0 0 25px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    opacity: 1;
 }
 
+.highlight .contents .bottom a:hover .icon {
+    opacity: 0;
+}
+
+/* bottom 제목 - 호버 시 나타남 */
+.highlight .contents .bottom h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40px) translateY(20px);
+    width: 90%;
+    text-align: center;
+    font-size: 30px;
+    color: var(--w-color);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 2;
+    margin-top: 0;
+}
+
+.highlight .contents .bottom a:hover h3 {
+    opacity: 1;
+    transform: translate(-50%, -40px) translateY(0);
+}
+
+/* bottom Learn More 버튼 */
+.highlight .contents .bottom a::after {
+    content: 'Learn More';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 15px) translateY(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 35px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 21px;
+    background: #79895C;
+    color: var(--w-color);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.highlight .contents .bottom a:hover::after {
+    opacity: 1;
+    transform: translate(-50%, 15px) translateY(0);
+}
 
 .highlight .contents .bottom {
     width: 1284px;
     height: 526px;
     background: url(/asset/img/h_img3.png);
     margin-left: auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
 }
+
+
+/* 먹 이미지 backimg */
 
 main .backimg {
     width: 100%;
-    height: 674px;
-    background: url(/asset/img/v_bg1.png) no-repeat;
+    height: 800px;
+    background: url(/asset/img/ink-brush.png) no-repeat;
     background-size: cover;
+    background-position: center 15px;
+    opacity: 0;
+    position: relative;
 }
 
+main .backimg::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, transparent, #1F2523);
+    pointer-events: none;
+}
 
 main .vision {
     width: 100%;
-    background: url(/asset/img/v_bg2.png) no-repeat;
-    background-color: var(--gray-09);
+    background: url(/asset/img/v_bg2.png) no-repeat,
+        linear-gradient(180deg, #1F2523 0%, #1C1D1F 100%);
     position: relative;
     overflow: hidden;
+    margin-top: -1px;
+    /* 경계선 제거 */
 }
 
-main .vision .title {
-    color: var(--w-color);
+main .vision .title h2 {
+    opacity: 0;
+    /* 처음엔 안 보이게 */
 }
-
 
 main .vision .title h2 img {
     display: inline-block;
@@ -269,8 +437,6 @@ main .vision .v_card img {
 
 main .vision .line img {
     position: absolute;
-    /*     left: -100px;
-    top: 250px; */
     padding: 10px;
     overflow: hidden;
 }
@@ -280,9 +446,7 @@ main .vision .line img {
 main .exhibition {
     width: 100%;
     height: 100vh;
-    /* min-height: 1100px; */
-    background: var(--gray-09);
-    /* position: relative; */
+    background: url(/asset/img/ex_bg.png) no-repeat center/cover;
     overflow: hidden;
 }
 
@@ -315,8 +479,10 @@ main .exhibition .inner {
 main .exhibition .title {
     text-align: center;
     padding-top: 100px;
+    position: relative;
+    z-index: 10;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 
 main .exhibition .ex_cards {
     position: absolute;
@@ -417,33 +583,13 @@ main .exhibition .ex_card img {
     animation: glitch_slices .35s steps(6) reverse both;
 }
 
-/* 
-main .exhibition .ex_card:nth-child(1) {
-    z-index: 3;
-}
 
-main .exhibition .ex_card:nth-child(2) {
-    z-index: 5;
-}
-
-main .exhibition .ex_card:nth-child(3) {
-    z-index: 3;
-}
-
-main .exhibition .ex_card:nth-child(4) {
-    z-index: 3;
-}
-
-main .exhibition .ex_card:nth-child(5) {
-    z-index: 1;
-} */
 
 main .muds {
     width: 100%;
     height: 1685px;
     padding-top: 127px;
-    background: linear-gradient(180deg, #201F25 0%, #282C33 57.21%);
-    /* background: pink; */
+    background: linear-gradient(180deg, #121215 8%, #282C33 64.49%);
 }
 
 

@@ -5,3 +5,18 @@
         width: 95%;
     }
 }
+
+
+@media screen and (max-width:1024px) {
+    .inner {
+        width: 95%;
+    }
+}
+
+
+
+@media screen and (max-width:402px) {
+    .inner {
+        width: 95%;
+    }
+}
