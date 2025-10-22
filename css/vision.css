@@ -1,4 +1,7 @@
 @charset "utf-8";
+.wrap{
+    overflow-x: hidden;
+}
 
 .banner_top {
     background-image: url(../asset/img_Vision/sub_banner.png);
@@ -26,20 +29,25 @@ main .moon img {
     transform: translateX(-50%);
 }
 
+main .txt_box{
+    color: var(--gray-09);
+    gap: 72px;
+}
 /* Welcome 섹션 */
 main .Welcome {
     width: 100%;
-    background: url(../asset/img_Vision/section2-welcome-bg.png) no-repeat;
+    background: url(../asset/img_Vision/section2-welcome-bg.png) no-repeat center;
     /* height: 1337px; */
     position: relative;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    padding-bottom: 250px;
 }
 
 
 main .Welcome .inner {
     position: relative;
     z-index: 1;
-    height: 100%;
+    /* height: 100%; */
 }
 
 /* 꽃 이미지들 */
@@ -77,10 +85,10 @@ main .txt_box h3.big {
     margin-bottom: 20px;
 }
 
-main .txt_box h3:last-child {
+main .Welcome .txt_box h3:last-child {
     text-align: right;
     margin-right: 0;
-    margin-bottom: 500px;
+    /* margin-bottom: 100px; */
 }
 
 /* living_space */
@@ -89,26 +97,26 @@ main .txt_box .living_space {
     align-items: center;
     gap: 10px;
     width: fit-content;
+    height: fit-content;
     transform: rotate(90deg);
     transform-origin: left top;
     margin-left: 80px;
-    margin-top: -240px;
+    margin-top: -150px;
 }
 
-main .txt_box .living_space h3 {
-    margin: 0;
-}
 
 main .txt_box .living_space::after {
     content: '';
     display: block;
-    width: 234px;
+    width: 160px;
     height: 4px;
     background-image: url(../asset/img_Vision/line2.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
-/* visions 섹션 - 자유로운 카드 배치 */
+
+
+/* visions */
 main .visions {
     width: 100%;
     height: 1728px;
@@ -129,7 +137,7 @@ main .visions .card3 {
     position: absolute;
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 40px;
     align-items: flex-start;
 }
 
@@ -148,7 +156,7 @@ main .visions .card1 img {
 /* Lead the Future - 중앙 */
 main .visions .card2 {
     top: 250px;
-    left: 40%;
+    left: 45%;
     transform: translateX(-50%);
 }
 
@@ -161,7 +169,7 @@ main .visions .card2 img {
 /* Make the World - 오른쪽 하단 */
 main .visions .card3 {
     top: 500px;
-    left: 35%;
+    left: 36.5%;
 }
 
 main .visions .card3 img {
@@ -185,8 +193,8 @@ main .visions .txt_box h4 {
 }
 
 main .visions .txt_box p {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: var(--fspre-21);
+    line-height: 1.3;
     color: var(--gray-08);
 }
 
@@ -197,21 +205,10 @@ main .Architecture {
     padding: 100px 0;
 }
 
-main .Architecture .txt_box h3 {
-    font-family: 'Zen Antique';
-    font-size: var(--fszenT-L-50);
-    font-weight: 500;
-}
 
 /* Collection_Storage 섹션 */
 main .Collection_Storage {
     width: 100%;
     position: relative;
     padding: 100px 0;
-}
-
-main .Collection_Storage .txt_box h3 {
-    font-family: 'Zen Antique';
-    font-size: var(--fszenT-XL-65);
-    font-weight: 500;
 }
