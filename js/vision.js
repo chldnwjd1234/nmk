@@ -52,11 +52,35 @@ document.addEventListener('DOMContentLoaded', () => {
         .fromTo(".card2",
             { opacity: 0, x: "-50%", xPercent: -100 },
             { opacity: 1, x: "-50%", xPercent: 0, duration: 0.8, ease: "power2.out" },
-            "-=0.6" // 카드1이 절반쯤 왔을 때 시작
+            "-=0.6"
         )
         .fromTo(".card3",
             { opacity: 0, x: -600 },
             { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" },
-            "-=0.6" // 카드2가 절반쯤 왔을 때 시작
+            "-=0.6"
         );
+
+    // 🏛️ Architecture 섹션 애니메이션
+    const archTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".Architecture",
+            start: "top 80%",
+            end: "bottom bottom",
+            scrub: 1,
+        }
+    });
+
+    archTl
+        .fromTo(".Architecture .txt_box",
+            { opacity: 0, x: -200 }, // 왼쪽에서 시작
+            { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" }
+        )
+        .fromTo(".Architecture .architecture_img",
+            { opacity: 0, x: 200 }, // 오른쪽에서 시작
+            { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" },
+            "-=0.4" // txt_box와 약간 겹치면서 등장
+        );
+
+        
 });
+
