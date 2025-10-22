@@ -1,0 +1,371 @@
+@charset "utf-8";
+
+@media screen and (max-width:1024px) {
+    .inner {
+        width: 95%;
+    }
+
+    /* .SpecialExhibition .img_left {
+        flex: 0 0 317px;
+        width: 317px;
+        height: 450px;
+        overflow: hidden;
+    } */
+
+    .SpecialExhibition .inner {
+        margin-bottom: 66px;
+    }
+
+    .SpecialExhibition .img_left {
+        width: 317px;
+        height: 100%;
+    }
+
+    .SpecialExhibition .img_left img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        max-width: none;
+        /* ← 전역 img { max-width:100% }에 눌리는 경우 방지 */
+    }
+
+
+
+    .SpecialExhibition .txt_right {
+        padding: 0;
+    }
+
+    .SpecialExhibition .txt_right .top {
+        margin-bottom: 11px;
+        padding-bottom: 12px;
+    }
+
+    .SpecialExhibition .txt_right .box_1 span {
+        padding: 5px 10px;
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+    .SpecialExhibition .txt_right h2 {
+        font-size: 35px;
+        line-height: 1.3;
+    }
+
+    .data img {
+        width: 21px;
+    }
+
+    .data span {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .Exhibition .Exhibition_txt_1 {
+        margin-bottom: 12PX;
+    }
+
+    .Exhibition h3 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .Exhibition P {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .btn_all {
+        margin-top: 24px;
+    }
+
+    .btn_all .btn_left {
+        display: flex;
+        gap: 6px;
+    }
+
+    .btn_all .btn_left button {
+        width: 34px;
+        height: 34px;
+        border-radius: 20px;
+        border: none;
+        background: var(--gray-05);
+    }
+
+    .btn_all .btn_left button img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .btn_all .btn_right .reserve_btn {
+        display: inline-block;
+        padding: 8px 30px;
+        background: var(--red-06);
+        border-radius: 10px;
+        color: var(--w-color);
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    .ExhibitionVisual {
+        margin-top: 92px;
+        height: 380px;
+        width: 100%;
+    }
+
+    .ExhibitionVisual .txt_all {
+        width: 460px;
+
+    }
+
+    .ExhibitionVisual h3 {
+        font-size: 26px;
+        line-height: 1.5;
+    }
+
+    .ExhibitionVisual p {
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 200;
+    }
+
+    .title {
+        font-size: 35px;
+        line-height: 1.6;
+        padding-top: 160px;
+    }
+
+    .contents {
+        display: block;
+    }
+
+    .contents_short {
+        display: none;
+    }
+
+    .articles_all {
+        margin-top: 48px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .articles_all article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .articles_all .Exhibition_1,
+    .articles_all .Exhibition_2,
+    .articles_all .Exhibition_3,
+    .articles_all .Exhibition_4,
+    .articles_all .Exhibition_5 {
+        background-color: rgba(255, 255, 255, .5);
+        /* opacity: 0.4; */
+        width: 376px;
+        height: 920px;
+        border-radius: 10px;
+
+    }
+
+    .articles_all .Exhibition_1 .img_1,
+    .articles_all .Exhibition_2 .img_2,
+    .articles_all .Exhibition_3 .img_3,
+    .articles_all .Exhibition_4 .img_4,
+    .articles_all .Exhibition_5 .img_5 {
+        width: 376px;
+        height: 535px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .Exhibition_txt {
+        align-items: flex-start;
+        text-align: left;
+        margin: 10px 28px 16px 28px;
+    }
+
+    .articles_all article:nth-child(even) {
+        display: flex;
+        flex-direction: column-reverse;
+        /* 순서 뒤집기 */
+    }
+
+    .articles_all article:nth-child(even) .Exhibition_txt {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .Exhibition_txt i {
+        font-size: 35px;
+        line-height: 1.3;
+        color: var(--gray-07-footer);
+        margin-bottom: 12px;
+    }
+
+    .Exhibition_txt h3 {
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 4px;
+    }
+
+    .Exhibition_txt p {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 113px;
+    }
+
+    .Exhibition_txt span {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .MajorExhibition {
+        margin-top: 0;
+    }
+
+    .MajorExhibition .tit {
+        font-size: 35px;
+        line-height: 1.6;
+        padding-top: 160px;
+    }
+
+
+
+    .RecommendedExhibition .tit {
+        font-size: 35px;
+        line-height: 1.6;
+        padding-top: 160px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width:402px) {
+
+    /* 전체 레이아웃을 세로로 변경 */
+    .SpecialExhibition .inner {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .SpecialExhibition .txt_right .top {
+        border-bottom: none;
+    }
+
+
+    .SpecialExhibition .img_left {
+        width: 402px;
+        height: 205px;
+    }
+
+    .SpecialExhibition .txt_right h2 {
+        font-size: 23px;
+        line-height: 1.5;
+    }
+
+    .data img {
+        width: 15px;
+    }
+
+    .data span {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .Exhibition .Exhibition_txt_1 {
+        margin-bottom: 20PX;
+    }
+
+    .Exhibition h3 {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .Exhibition P {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+
+    .ExhibitionVisual {
+        margin-top: 80px;
+        height: 196px;
+        width: 100%;
+    }
+
+    .ExhibitionVisual .contents {
+        display: none;
+    }
+
+    .ExhibitionVisual .contents_short {
+        display: block;
+    }
+
+    .ExhibitionVisual .contents_short p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .txt_all .h3 {
+        font-size: 20px 1.5;
+    }
+
+    .title {
+        font-size: 23px;
+        line-height: 1.5;
+        padding-top: 80px;
+    }
+
+    .articles_all .Exhibition_1,
+    .articles_all .Exhibition_2,
+    .articles_all .Exhibition_3,
+    .articles_all .Exhibition_4,
+    .articles_all .Exhibition_5 {
+        background-color: rgba(255, 255, 255, .5);
+        /* opacity: 0.4; */
+        width: 352px;
+        height: 374px;
+        border-radius: 10px;
+
+    }
+
+    .articles_all .Exhibition_1 .img_1,
+    .articles_all .Exhibition_2 .img_2,
+    .articles_all .Exhibition_3 .img_3,
+    .articles_all .Exhibition_4 .img_4,
+    .articles_all .Exhibition_5 .img_5 {
+        width: 352px;
+        height: 203px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .Exhibition_txt i {
+        display: none;
+    }
+
+    .Exhibition_txt h3 {
+        font-size: 16px;
+        line-height: 1.3;
+        margin-bottom: 4px;
+    }
+
+    .Exhibition_txt p {
+        font-size: 13px;
+        line-height: 1.4;
+        margin-bottom: 29px;
+    }
+
+    .Exhibition_txt p.long {
+        display: none;
+    }
+
+    .Exhibition_txt p.short {
+        display: block;
+    }
+
+    .Exhibition_txt span {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}
