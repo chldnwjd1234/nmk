@@ -1,42 +1,15 @@
-// 드롭다운 토글
-const dropdownTitle = document.querySelector('.dropdown > .b_title');
-const dropdownMenu = document.querySelector('.dropdown_menu');
 
-dropdownTitle.addEventListener('click', () => {
-    dropdownMenu.classList.toggle('show');
-    dropdownTitle.classList.toggle('active');
-});
+// 층 탭 클릭 이벤트
+const floorTabs = document.querySelectorAll('.floor_tabs .tab');
+const artLists = document.querySelectorAll('.artall > li');
 
-// 메뉴 아이템 클릭
-const menuItems = document.querySelectorAll('.dropdown_menu .b_title');
-
-menuItems.forEach(item => {
-    item.addEventListener('click', () => {
-        // 선택된 제목으로 변경
-        const titleText = item.textContent.trim();
-        dropdownTitle.innerHTML = `${titleText} <i class="fa-solid fa-chevron-down"></i>`;
+floorTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+        // 모든 아트 리스트 숨기기
+        artLists.forEach(art => art.classList.remove('active'));
         
-        // 드롭다운 닫기
-        dropdownMenu.classList.remove('show');
-        dropdownTitle.classList.remove('active');
-        
-        // 내용 변경
-        const contentId = item.getAttribute('data-content');
-        
-        // 모든 내용 숨기기
-        document.querySelectorAll('.content-wrapper .info').forEach(info => {
-            info.classList.remove('active');
-        });
-        
-        // 선택된 내용만 표시
-        document.getElementById(contentId).classList.add('active');
+        // 선택된 층의 아트만 표시
+        artLists[index].classList.add('active');
     });
 });
 
-// 외부 클릭시 드롭다운 닫기
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('.dropdown')) {
-        dropdownMenu.classList.remove('show');
-        dropdownTitle.classList.remove('active');
-    }
-});
