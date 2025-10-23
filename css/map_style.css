@@ -208,7 +208,7 @@
 }
 
 .gps_toggle {
-  display: none;
+    display: none;
 }
 
 /* select에 해당하는 내용 */
@@ -270,13 +270,16 @@
     line-height: 1.4;
     color: var(--black);
 }
+
 /* img_box의 p 태그 폰트 설정 */
 .highlighted_artifact li p {
     font-weight: 450;
     line-height: 1.4;
     color: var(--black);
 }
-.highlighted_artifact 
+
+.highlighted_artifact
+
 /* 전체 리스트 (층별 묶음) */
 .artall>li {
     display: none;
@@ -417,8 +420,7 @@
 
 .map_right ul li.active {
     display: block;
-    left: 0;
-    top: 0;
+
 }
 
 /* ✅ 우선순위 높이기 */
