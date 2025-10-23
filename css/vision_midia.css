@@ -1,7 +1,155 @@
 @charset "utf-8";
 @media (max-width: 1024px) {
 
-}
-@media (max-width: 402px) {
+    /* Welcome 섹션 */
+    main .Welcome {
+        padding-bottom: 150px;
+        background-size: cover;
+        background-position: center;
+    }
 
+    main .Welcome .flower2 {
+        width: 250px;
+        left: 0%;
+        top: 180px;
+    }
+
+    main .Welcome .flower3 {
+        width: 250px;
+        right: -10%;
+        bottom: -160px;
+    }
+
+    main .Welcome .txt_box {
+        gap: 150px;
+    }
+
+    main .Welcome .txt_box h3,
+    main .Welcome .txt_box h3.big,
+    main .Welcome .txt_box h3.bottom {
+        font-size: 45px;
+    }
+
+    main .Welcome .txt_box .living_space h3 {
+        font-size: 35px;
+    }
+
+    main .Welcome .txt_box .living_space {
+        margin-left: 60px;
+        margin-top: -120px;
+    }
+
+    main .Welcome .txt_box .living_space::after {
+        width: 120px;
+    }
+
+
+
+    /* visions 섹션 */
+    main .visions {
+        height: auto;
+        padding: 80px 40px;
+    }
+
+    main .visions .card_set {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        height: 500px;
+    }
+
+    main .visions .card1,
+    main .visions .card2,
+    main .visions .card3 {
+        position: absolute;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    main .visions .card1 {
+        flex-direction: column;
+    }
+
+    main .visions .card1 img {
+        width: 150px;
+    }
+
+    main .visions .card1 .txt_box p {
+        font-size: 0;
+    }
+
+    main .visions .card1 .txt_box p::after {
+        content: 'Inclusive access through barrier-free design, clear \A guides, community engagement, and open data.';
+        font-size: 14px;
+        white-space: pre-line;
+    }
+
+    main .visions .card2 {
+        flex-direction: row;
+        width: 550px;
+        top: -120px;
+        left: 434px;
+    }
+
+    main .visions .card2 img {
+        width: 100px;
+    }
+
+    main .visions .card2 .txt_box {
+        margin-top: 60px;
+    }
+
+
+    main .visions .card2 .txt_box p {
+        font-size: 0;
+    }
+
+    main .visions .card2 .txt_box p::after {
+        content: 'Smart exhibitions and preservation through AI \A and digital technology, with a focus on sustainability.';
+        font-size: 14px;
+        white-space: pre-line;
+
+    }
+
+    main .visions .card3 {
+        top: 30px;
+        left: 268px;
+    }
+
+    main .visions .card3 img {
+        width: 180px;
+    }
+
+    main .visions .card3 .txt_box{
+        margin-top: 10px;
+    }
+
+    main .visions .card3 .txt_box p {
+        font-size: 0;
+    }
+
+    main .visions .card3 .txt_box p::after {
+        content: 'A global museum bridging \A cultures through diversity, \A innovation, and heritage.';
+        font-size: 14px;
+        white-space: pre-line;
+    }
+
+    main .visions .txt_box {
+        flex: 1;
+    }
+
+    main .visions .txt_box h4 {
+        font-size: 26px;
+        margin-bottom: 4px;
+    }
+
+    main .Architecture {
+        display: none;
+    }
+
+    main .Collection_Storage {
+        display: none;
+    }
 }
