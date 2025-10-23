@@ -6,7 +6,8 @@
 
 body {
     overflow-x: hidden;
-    min-height: 300vh; /* 스크롤 테스트용 - 충분히 길게 */
+    min-height: 300vh;
+    /* 스크롤 테스트용 - 충분히 길게 */
     margin: 0;
     padding: 0;
 }
@@ -19,7 +20,13 @@ body {
     height: 100vh;
     z-index: 9999;
     overflow: hidden;
-    transition: opacity 0.8s ease;
+    transition: opacity 1.6s ease;
+}
+
+/* 페이드아웃 상태 */
+#loading_screen.fade-out {
+    opacity: 0.1;
+    pointer-events: none;
 }
 
 .bg {
@@ -37,19 +44,22 @@ body {
     position: absolute;
     top: 0;
     height: 100%;
-    width: 50vw; /* 정확히 화면의 절반 */
+    width: 50vw;
+    /* 정확히 화면의 절반 */
     z-index: 3;
     transition: transform 1.5s ease-in-out;
 }
 
 .door_left {
     left: 0;
-    right: 50%; /* 정확히 중앙까지 */
+    right: 50%;
+    /* 정확히 중앙까지 */
     transform: translateX(0);
 }
 
 .door_right {
-    left: 50%; /* 정확히 중앙부터 시작 */
+    left: 50%;
+    /* 정확히 중앙부터 시작 */
     right: 0;
     transform: translateX(0);
 }
@@ -75,10 +85,4 @@ body {
 
 .logo.show {
     opacity: 1;
-}
-
-/* 페이드아웃 상태 */
-#loading_screen.fade-out {
-    opacity: 0;
-    pointer-events: none;
 }
