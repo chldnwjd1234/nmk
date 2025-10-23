@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             opacity: 1,
             x: 0,
-            duration: 0.8,           // ✅ scrub 삭제, duration 추가
+            duration: 0.8,
             ease: "power2.out",
             scrollTrigger: {
                 trigger: ".highlight .title",
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const highlightTL = gsap.timeline({
         scrollTrigger: {
             trigger: ".highlight .contents",
-            start: "top 70%",        // ✅ contents 기준
+            start: "top 70%",
             toggleActions: "play none none none"
         }
     });
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .fromTo(".highlight .contents .bottom",
             { opacity: 0, x: 150 },
             { opacity: 1, x: 0, duration: 0.7, ease: "power2.out" },
-            "-=0.1"    // ✅ -0.3 → -0.1 (덜 겹치게)
+            "-=0.1"
         );
 
 
@@ -158,52 +158,41 @@ document.addEventListener('DOMContentLoaded', () => {
         return track.scrollWidth - wrap.clientWidth;
     };
 
-    let trackAni = gsap.to(".track", {
-        x: () => total_width(),
+    gsap.to(".track", {
+        x: () => -total_width(),
+        ease: "expo.out",
+        scrollTrigger: {
+            trigger: ".horizontal_all",
+            start: "top top",
+            end: () => "+=" + (total_width() + window.innerWidth),
+            scrub: 1.5,
+            pin: true,
+            anticipatePin: 1,
+            toggleActions: "play none none reset",
+            invalidateOnRefresh: true
+        },
+    });
+    // ==================== SVG Line Drawing (Horizontal Scroll 연동) ====================
+    const svgPath = document.querySelector(".animated_path");
+    const pathLength = svgPath.getTotalLength();
+
+    // 초기값 세팅
+    svgPath.style.strokeDasharray = pathLength;
+    svgPath.style.strokeDashoffset = pathLength;
+
+    gsap.to(svgPath, {
+        strokeDashoffset: 0,
         ease: "none",
         scrollTrigger: {
             trigger: ".horizontal_all",
             start: "top top",
             end: () => "+=" + (total_width() + window.innerWidth),
-            scrub: true,
-            marker: true,
-            pin: true,
-            anticipatePin: 1,
-            toggleActions: "play none none reset",
-        },
+            scrub: 1,
+            pin: false
+        }
     });
 
-    window.addEventListener('scroll', () => {
-        const svgCon = document.querySelector('.horizontal_all');
-        const path = document.querySelector('.animated_path');
-        const pathLenght = path.getTotalLength();
-        scrollHandler(svgCon, path, pathLenght);
 
-    })
-    function calcDashOffset(scrollY, element, length) {
-        const ratio = (scrollY - element.offsetTop) / element.offsetHeight; // 스크롤 위치와 요소 높이 비율 계산
-        const value = length - (length * ratio); // 대시 오프셋 값을 계산
-        return Math.max(0, Math.min(value, length)); // 범위 내에서 반환
-    }
-
-    //스크롤 이벤트에 따른 경로 애니메이션 처리
-    function scrollHandler(svgCon, path, pathLenght) {
-        const scrollY = window.scrollY + (window.innerHeight * 0.8);
-        //화면 높이 고려한 스크롤 위치 계산
-        path.style.strokeDashoffset = calcDashOffset(scrollY, svgCon, pathLenght)
-    }
-    // ==================== Line Draw Animation ====================
-    /*  gsap.to(".animated_path", {
-         strokeDashoffset: 0,
-         ease: "none",
-         scrollTrigger: {
-             trigger: ".horizontal_all",
-             start: "top top",
-             end: () => "+=" + (total_width() + window.innerHeight),
-             scrub: true,
-             pin: false,
-         }
-     }); */
     // ==================== Exhibition Title Fade ====================
     gsap.to(".exhibition .title", {
         opacity: 0,
@@ -254,13 +243,12 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: ".muds",
             start: "top top",
-            end: "+=4000",
+            end: window.innerWidth <= 1024 ? "+=10000" : "+=4000",  // 1024px: 7000, 데스크탑: 4000
             scrub: 2,
             pin: true,
             anticipatePin: 1,
         }
     });
-
     // 1. 구름들 좌우에서 부드럽게 나타나기
     mudsTimeline
         .fromTo(".cloud_1",
@@ -353,6 +341,48 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+
+
+    /* 반응형 1024 js */
+
+    if (window.innerWidth <= 1024) {
+        // vision 카드 펼치기
+        ScrollTrigger.create({
+            trigger: ".vision .horizontal_all",
+            start: "top 40%",
+            onEnter: () => {
+                setTimeout(() => {
+                    document.querySelector(".v_card").classList.add("spread");
+                }, 900);
+            },
+            onLeaveBack: () => {
+                document.querySelector(".v_card").classList.remove("spread");
+            }
+        });
+
+        // 카드 터치 이벤트
+        const cards = document.querySelectorAll(".v_card .card_item");
+
+        cards.forEach((card, index) => {
+            card.addEventListener("click", function (e) {
+                e.stopPropagation();
+                // 다른 카드 active 제거
+                cards.forEach(c => c.classList.remove("active"));
+                // 클릭한 카드만 active
+                this.classList.add("active");
+            });
+        });
+
+        // 배경 클릭시 active 해제
+        document.querySelector(".vision .horizontal_all").addEventListener("click", function (e) {
+            if (e.target === this) {
+                cards.forEach(c => c.classList.remove("active"));
+            }
+        });
+    }
+
+    
 
     window.addEventListener("resize", () => ScrollTrigger.refresh());
 });

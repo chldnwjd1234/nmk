@@ -195,7 +195,7 @@ header .right img {
     right: 0;
     top: 0;
     height: 3px;
-    background: url('/asset/img/gnb_long.png') repeat-x center/auto 100%;
+    background: url('/asset/img/gnb_long.svg') repeat-x center/auto 100%;
 }
 
 nav ul.gnb>li:hover .sub_menu {
@@ -270,7 +270,7 @@ nav ul.gnb>li:hover .sub_menu {
     width: 2px;
     height: auto;
     min-height: 150px;
-    background: url('/asset/img/gnb_short.png') repeat-y center/100% auto;
+    background: url('/asset/img/gnb_short.svg') repeat-y center/100% auto;
     flex-shrink: 0;
     margin: 0 -30px;
 }

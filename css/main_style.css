@@ -455,12 +455,22 @@ main .vision .v_card .card_item {
     cursor: pointer;
 }
 
+
+/* 오른쪽 여백 영역 */
+.track_space {
+    width: 200px;
+    /* 여기 숫자 조절 */
+    flex-shrink: 0;
+}
+
+
 main .vision .v_card .card_item img {
     display: block;
     width: 100%;
     height: auto;
     transition: transform 0.6s ease;
 }
+
 
 /* 오버레이 스타일 */
 main .vision .v_card .card_overlay {
@@ -554,6 +564,7 @@ main .vision .line_right {
     bottom: -70px;
     height: auto;
     z-index: 2;
+    background: #1C1D1F;
 }
 
 main .vision .line_draw {
@@ -640,8 +651,6 @@ main .exhibition .ex_card {
     border-radius: 18px;
     background-size: cover;
     background-position: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
     opacity: 0;
     filter: blur(6px);
     will-change: transform, filter, opacity;
@@ -751,7 +760,7 @@ main .muds {
 
 /* 1번 구름 - 제일 위 */
 .cloud_1 {
-    width: 55%;
+    width: 60%;
     height: auto;
     top: 0%;
     left: -10%;
@@ -760,7 +769,7 @@ main .muds {
 
 /* 2번 구름 - 1번과 살짝 겹침 */
 .cloud_2 {
-    width: 60%;
+    width: 65%;
     height: auto;
     top: 12%;
     right: 0;
@@ -769,16 +778,16 @@ main .muds {
 
 /* 3번 구름 - 2번과 더 많이 겹침 */
 .cloud_3 {
-    width: 80%;
+    width: 70%;
     height: auto;
-    top: 28%;
-    left: -80%;
+    top: 22%;
+    left: 10%;
     z-index: 13;
 }
 
 /* 4번 구름 - 3번과 겹치며 가장 크고 아래쪽 */
 .cloud_4 {
-    width: 70%;
+    width: 75%;
     height: auto;
     top: 48%;
     right: -100%;
