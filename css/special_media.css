@@ -13,12 +13,19 @@
     } */
 
     .SpecialExhibition .inner {
+        grid-template-columns: 317px 1fr;
         margin-bottom: 66px;
+        display: flex;
+        gap: 20px;
     }
 
     .SpecialExhibition .img_left {
         width: 317px;
-        height: 100%;
+        height: auto;
+        /* 100%에서 auto로 변경 */
+        align-self: stretch;
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .SpecialExhibition .img_left img {
@@ -28,12 +35,16 @@
         display: block;
         max-width: none;
         /* ← 전역 img { max-width:100% }에 눌리는 경우 방지 */
+        min-height: 100%;
     }
 
 
 
     .SpecialExhibition .txt_right {
         padding: 0;
+        flex: 1;
+        /* 남은 공간 차지 */
+        position: relative;
     }
 
     .SpecialExhibition .txt_right .top {
@@ -77,11 +88,25 @@
 
     .btn_all {
         margin-top: 24px;
+        display: contents;
+        position: static;
+        margin-top: 0;
     }
 
     .btn_all .btn_left {
         display: flex;
         gap: 6px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .btn_all .btn_right {
+        grid-column: 1;
+        grid-row: 2;
+        display: flex;
+        gap: 6px;
+
     }
 
     .btn_all .btn_left button {
@@ -141,6 +166,13 @@
 
     .contents_short {
         display: none;
+    }
+
+    .ExhibitionStructure {
+        padding-bottom: 160PX;
+        background: url(/asset/img_Special/exhibition-bg2_1024.png);
+        background-position: center 45%;
+
     }
 
     .articles_all {
@@ -243,22 +275,57 @@
 
     .MajorExhibition {
         margin-top: 0;
+        overflow-x: auto;
     }
 
     .MajorExhibition .tit {
         font-size: 35px;
         line-height: 1.6;
-        padding-top: 160px;
+        /* padding-top: 160px; */
     }
 
+    .slide_box .img:nth-child(even) img {
+        width: 310px;
+        height: 358px;
+    }
+
+    .slide_box .img:nth-child(odd) img {
+        width: 510px;
+        height: 358px;
+    }
+
+    .slide_box {
+        gap: 53px;
+        padding-top: 50px;
+        min-width: 100%;
+        padding-top: 50px;
+        padding-left: 20px;
+        /* 124px에서 줄이기 */
+        padding-right: 20px;
+        /* 124px에서 줄이기 */
+        height: auto;
+        /* 85vh 제거 */
+        margin-top: 100px;
+        /* 72px 제거 */
+    }
 
 
     .RecommendedExhibition .tit {
         font-size: 35px;
         line-height: 1.6;
         padding-top: 160px;
-        margin-bottom: 0;
+        margin-bottom: 60px;
         margin-top: 0;
+    }
+
+    .Recommended .swiper-slide {
+        width: 300px;
+        height: 380px;
+    }
+
+    .Recommended .swiper-slide img {
+        width: 100%;
+        height: 100%;
     }
 
 }
