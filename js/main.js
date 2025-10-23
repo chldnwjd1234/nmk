@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const topBtn = document.querySelector('.top-btn');
         if (window.scrollY > 0) {
             document.querySelector('header').classList.remove('maintop');
+        } else {
+            document.querySelector('header').classList.add('maintop');
         }
 
         if (window.scrollY > 300) {
@@ -331,18 +333,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const pin_bg = document.getElementById("pin_bg");
     const photos = gsap.utils.toArray(".ex_card");
 
-   const pinTl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".pin_scene",
-        start: "top top",
-        end: "+=1800",
-        pin: true,
-        scrub: true,
-        anticipatePin: 1,
-        pinSpacing: false,  // true → false로 변경 (중요!)
-        toggleActions: "play none none reset",
-    },
-});
+    const pinTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".pin_scene",
+            start: "top top",
+            end: "+=1800",
+            pin: true,
+            scrub: true,
+            anticipatePin: 1,
+            pinSpacing: false,  // true → false로 변경 (중요!)
+            toggleActions: "play none none reset",
+        },
+    });
 
     pinTl.to(pin_bg, { filter: "blur(12px)", scale: 1.06, duration: 1, ease: "none" }, 0);
     photos.forEach((el, i) => {
