@@ -1,5 +1,56 @@
+@media (max-width:1440px) {
+  .con {
+    padding: 0 40px 200px 40px;
+  }
+
+  .card_wrap2 ul li {
+    width: 33.33%;
+  }
+
+  /* 카드 이미지 */
+  .card_wrap2 .card .thumb {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card_wrap2 .card .txt {
+    /* padding: 8px; */
+    /* background-color: #ccc; */
+    padding: 8px 8px 4px;
+  }
+
+  .card_wrap2 .card .title {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  /* 카드 hover */
+  .card_wrap2 .overlay_content .category {
+    font-size: 13px;
+  }
+
+  .card_wrap2 .overlay_content .Dimensions,
+  .card_wrap2 .overlay_content .cm {
+    display: none;
+  }
+
+  .card_wrap2 .overlay_content .period,
+  .card_wrap2 .overlay_content .treasure {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .card_wrap2 .card_overlay .overlay_content .viewicon_btn {
+    margin-top: 5px;
+    padding: 10px 20px;
+    font-size: 15px;
+    gap: 6px;
+  }
+}
+
 @media (max-width: 1024px) {
 
+  header,
   footer {
     display: none;
   }
@@ -102,74 +153,10 @@
     display: block !important;
   }
 
-  .card_wrap2 ul {
-    max-width: 900px;
-    margin: 0 auto;
-     padding: 0;
-     background-color: salmon;
-  }
-
   .card_wrap2 ul li {
-    width: 30%;
-    margin-right: 3%;
-    float: left;
-    background-color: aqua;
+    width: 50%;
   }
 
-
-
-  .card_wrap2 ul li:nth-child(4n) {
-    margin-right: 3%;
-  }
-
-  .card_wrap2 ul li:nth-child(3n) {
-    margin-right: 0;
-  }
-
-  .card_wrap2 ul li:nth-child(3n+1) {
-    clear: left;
-  }
-
-
-  /* 카드 이미지 */
-  .card_wrap2 .card .thumb {
-    height: 100%;
-  }
-
-  .card_wrap2 .card .txt {
-    /* padding: 8px; */
-    /* background-color: #ccc; */
-    padding: 8px 8px 4px;
-  }
-
-  .card_wrap2 .card .title {
-    font-size: 15px;
-    margin-bottom: 0;
-  }
-
-
-  /* 카드 hover */
-  .card_wrap2 .overlay_content .category {
-    font-size: 13px;
-  }
-
-  .card_wrap2 .overlay_content .Dimensions,
-  .card_wrap2 .overlay_content .cm {
-    display: none;
-  }
-
-  .card_wrap2 .overlay_content .period,
-  .card_wrap2 .overlay_content .treasure {
-    font-size: 15px;
-    margin-bottom: 8px;
-  }
-
-  .card_wrap2 .card_overlay .overlay_content .viewicon_btn {
-    margin-top: 5px;
-    padding: 10px 20px;
-    font-size: 15px;
-    gap: 6px;
-  }
 }
 
 @media (max-width: 402px) {
