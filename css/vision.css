@@ -84,7 +84,7 @@ main .txt_box h3 {
 }
 
 main .txt_box h3.big {
-    font-size: 90px;
+    font-size: 5.625rem;
     margin-bottom: 20px;
 }
 
@@ -301,7 +301,7 @@ main .Collection_Storage {
     position: relative;
     padding-top: 216px;
     height: 1303px;
-    margin-bottom: 216px;
+    /* margin-bottom: 216px; */
 }
 
 main .Collection_Storage .bg {

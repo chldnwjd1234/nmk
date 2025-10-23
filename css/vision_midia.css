@@ -1,5 +1,9 @@
 @charset "utf-8";
+
 @media (max-width: 1024px) {
+    footer {
+        display: none;
+    }
 
     /* Welcome 섹션 */
     main .Welcome {
@@ -43,19 +47,17 @@
         width: 120px;
     }
 
-
-
     /* visions 섹션 */
     main .visions {
-        height: auto;
-        padding: 80px 40px;
+        height: 700px;
+        padding: 80px 19px;
+        width: 100%;
+        background: url(../asset/img_Vision/Padsection3-3visions-bg.png) center/cover no-repeat;
+
     }
 
     main .visions .card_set {
         position: relative;
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
         height: 500px;
     }
 
@@ -70,6 +72,8 @@
 
     main .visions .card1 {
         flex-direction: column;
+        top: 0;
+        left: 0;
     }
 
     main .visions .card1 img {
@@ -101,7 +105,6 @@
         margin-top: 60px;
     }
 
-
     main .visions .card2 .txt_box p {
         font-size: 0;
     }
@@ -110,7 +113,6 @@
         content: 'Smart exhibitions and preservation through AI \A and digital technology, with a focus on sustainability.';
         font-size: 14px;
         white-space: pre-line;
-
     }
 
     main .visions .card3 {
@@ -136,22 +138,26 @@
         white-space: pre-line;
     }
 
-    main .visions .txt_box {
-        flex: 1;
-    }
-
     main .visions .txt_box h4 {
         font-size: 26px;
         margin-bottom: 4px;
     }
 
     /* Architecture 섹션 */
+    main .Architecture {
+        height: 600px;
+    }
+
     main .Architecture .inner {
         height: auto;
+        display: flex;
+        align-items: flex-end;
     }
+
 
     main .Architecture .txt_box h3 {
         font-size: 45px;
+        margin-bottom: 150px;
     }
 
     main .Architecture .txt_box p {
@@ -165,19 +171,234 @@
         white-space: pre-line;
     }
 
+    main .Architecture .architecture_img {
+        position: relative;
+        display: flex;
+        gap: 12px;
+    }
+
+    main .Architecture .architecture_img .left {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    main .Architecture .architecture_img .left .top {
+        bottom: -20px;
+    }
+
     main .Architecture .architecture_img .left .top p,
     main .Architecture .architecture_img .left .bottom p {
         display: none;
     }
 
-    main .Architecture .architecture_img .left .top img,
-    main .Architecture .architecture_img .left .bottom img,
-    main .Architecture .architecture_img .right img {
-        width: 80%;
-        height: auto;
+
+    main .Architecture .architecture_img .left .bottom img {
+        width: 330px;
     }
 
+    main .Architecture .architecture_img .left .top img {
+        width: 295px;
+    }
+
+
+    main .Architecture .architecture_img .right {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        position: relative;
+    }
+
+    main .Architecture .architecture_img .right img:nth-child(1) {
+        position: absolute;
+        top: -90px;
+        right: 0;
+        width: 210px;
+    }
+
+    main .Architecture .architecture_img .right img:nth-child(2) {
+        width: 170px;
+
+    }
+
+    main .Architecture .architecture_img .right img:nth-child(3) {
+        content: url('../asset/img_Vision/Architecture_rightbottom.png');
+        width: 170px;
+    }
+
+    /* Collection_Storage 섹션 */
     main .Collection_Storage {
+        display: block;
+        height: auto;
+        /* padding: 80px 40px; */
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    main .Collection_Storage .bg {
+        position: absolute;
+        top: 26%;
+        left: -60%;
+        /* transform: translate(-50%); */
+        z-index: 0;
+    }
+
+    main .Collection_Storage .bg img {
+        width: 100%;
+    }
+
+    main .Collection_Storage .inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    main .Collection_Storage .txt_box h3 {
+        font-size: 45px;
+        margin-bottom: 60px;
+    }
+
+    main .Collection_Storage .collection_label {
+        padding-top: 0;
+        transform: scale(0.6);
+        transform-origin: left top;
+
+    }
+
+    main .Collection_Storage .collection_label img {
+        padding-left: 40px;
+    }
+
+
+
+    main .Collection_Storage .collection_label ul.labels li {
+        font-size: 20px;
+        padding: 10px 25px;
+        white-space: nowrap;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(1) {
+        top: 2%;
+        left: 800px;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(2) {
+        top: 14%;
+        left: 800px;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(3) {
+        top: 28.5%;
+        left: 800px;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(4) {
+        top: 39%;
+        left: 800px;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(5) {
+        top: 49.5%;
+        right: -300px;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(6) {
+        top: 63%;
+        left: 725px;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(7) {
+        bottom: -3%;
+        left: 800px;
+    }
+
+}
+
+@media (max-width: 402px) {
+    /* Welcome 섹션 */
+    main .Welcome {
+        padding-bottom: 100px;
+    }
+
+    main .Welcome .flower2,
+    main .Welcome .flower3 {
+        width: 150px;
+    }
+
+    main .Welcome .flower2 {
+        top: 100px;
+    }
+
+    main .Welcome .flower3 {
+        bottom: -100px;
+    }
+
+    main .Welcome .txt_box {
+        gap: 100px;
+    }
+
+    main .Welcome .txt_box h3,
+    main .Welcome .txt_box h3.big,
+    main .Welcome .txt_box h3.bottom {
+        font-size: 23px;
+    }
+
+    main .Welcome .txt_box .living_space h3 {
+        font-size: 20px;
+    }
+
+    main .Welcome .txt_box .living_space {
+        margin-left: 40px;
+        margin-top: -80px;
+    }
+
+    main .Welcome .txt_box .living_space::after {
         display: none;
     }
+
+ 
+/* visions 섹션 */
+main .visions {
+    height: auto;
+    /* padding: 60px 20px; */
+}
+main .visions .card_set {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+main .visions .card1,
+main .visions .card2,
+main .visions .card3 {
+    position: static;
+    flex-direction: column;
+    flex: 1;
+}
+
+main .visions .card1 img,
+main .visions .card2 img,
+main .visions .card3 img {
+    width: 100%;
+}
+
+main .visions .txt_box {
+    position: absolute;
+    bottom: 10px;
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+main .visions .txt_box h4 {
+    font-size: 17px;
+    color: #FFF;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+main .visions .txt_box p {
+    display: none;
+}
 }
