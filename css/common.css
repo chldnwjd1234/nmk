@@ -180,7 +180,7 @@ header .right img {
     right: 0;
     top: 80px;
     backdrop-filter: blur(15px);
-    background: #E7DFDA;
+    background: #F3EEE7;
     opacity: 0;
     visibility: hidden;
     transition: opacity .4s, visibility .4s;
@@ -698,7 +698,7 @@ footer .select_box>button {
     cursor: pointer;
     position: relative;
     border-radius: var(--r-10);
-    z-index: 2;
+    z-index: 10;
 }
 
 .select_box ul {
@@ -715,7 +715,7 @@ footer .select_box>button {
     overflow: hidden;
     padding: 10px;
     bottom: 0;
-    z-index: 3;
+    z-index: 1;
 }
 
 .select_box.on ul {

@@ -130,6 +130,11 @@
         width: 210px;
     }
 
+    .mobile_menu {
+        width: 70%;
+        max-width: none;
+    }
+
     main .banner_top {
         height: 175px;
     }
@@ -143,6 +148,11 @@
 @media (max-width:402px) {
     .inner .logo {
         width: 110px;
+    }
+
+    .mobile_menu {
+        width: 90%;
+        max-width: none;
     }
 
     main .banner_top {
