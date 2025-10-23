@@ -294,7 +294,7 @@ nav ul.gnb>li:hover .sub_menu {
 }
 
 .sub_right ul li a {
-    font-size: 18px;
+    font-size:1.125rem ;
     color: var(--black);
     transition: .3s;
     display: block;
@@ -356,7 +356,7 @@ nav ul.gnb>li:hover .sub_menu {
     background: none;
     border: none;
     color: var(--black);
-    font-size: 24px;
+    font-size:1.5rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -371,7 +371,7 @@ nav ul.gnb>li:hover .sub_menu {
     width: 50%;
     max-width: 400px;
     height: 100vh;
-    background: url(/asset/img/bg_all2.png), url('/asset/img/mo_img.png') no-repeat , var(--bg);
+    background: url(/asset/img/bg_all2.png), url('/asset/img/mo_img.png') no-repeat, var(--bg);
     background-position: left;
     transform: translateX(100%);
     transition: transform 0.4s ease;
@@ -398,7 +398,7 @@ header.on .mobile_menu {
 .mobile_gnb>li>a {
     display: block;
     padding: 20px 0;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     color: var(--black);
     font-family: var(--title-Zen);
@@ -449,7 +449,6 @@ header.on .mobile_menu {
     content: '\f107';
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    font-size: 16px;
     color: var(--black);
     transition: transform 0.3s;
     display: block;
@@ -482,7 +481,6 @@ header.on .mobile_menu {
 .mobile_sub li a {
     display: block;
     padding: 12px 0;
-    font-size: 16px;
     color: var(--gray-07-footer);
 }
 
@@ -532,7 +530,7 @@ main .banner_top {
 
 main .banner_top .txt {
     color: var(--w-color);
-    font-size: 50px;
+    font-size: var(--fszenT-L-50);
     font-weight: 500;
     font-family: var(--title-Zen);
 }
@@ -556,7 +554,7 @@ main .sub .logo {
 
 main .sub i {
     color: #aaa;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 main .sub .menu_sub {
@@ -572,7 +570,7 @@ main .space {
 
 main .tit {
     font-family: var(--title-Zen);
-    font-size: 50px;
+    font-size: var(--fszenT-L-50);
     font-weight: 500;
 }
 
@@ -586,7 +584,7 @@ main .btn {
     padding: 10px 30px;
     border-radius: var(--r-round);
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1.125rem;
     background: var(--red-05-point);
     color: #fff;
 }
@@ -606,7 +604,7 @@ footer {
     background: url(/asset/img/footer_sub.png) no-repeat right top, url(/asset/img/bg_all2.png) no-repeat right top var(--bg);
     color: var(--w-color);
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.3;
     position: relative;
     z-index: 1;
@@ -618,7 +616,7 @@ footer.dark {
     background: url(/asset/img/footer.png) no-repeat right top#282C34;
     color: var(--w-color);
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.3;
 }
 
@@ -638,7 +636,7 @@ footer .f_txt {
 }
 
 footer .f_txt h3 {
-    font-size: 25px;
+    font-size: var(--fspre-25);
     margin-bottom: 24px;
     font-weight: 700;
 }
@@ -694,7 +692,7 @@ footer .select_box>button {
     justify-content: center;
     align-items: center;
     color: var(--w-color);
-    font-size: 18px;
+    font-size: 1.125rem;
     cursor: pointer;
     position: relative;
     border-radius: var(--r-10);
@@ -725,7 +723,7 @@ footer .select_box>button {
 
 .select_box ul li {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     height: 40px;
     line-height: 40px;
 }
