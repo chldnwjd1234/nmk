@@ -102,10 +102,10 @@
 
     main .highlight {
         width: 100%;
-        height: 70vh;
+        height: 80vh;
         padding-top: 30px;
-        background: url(/asset/img/h_pad_bg2.png) no-repeat bottom 30px left,
-            url(/asset/img/h_pad_bg1.png) no-repeat top 36px right;
+        background: url(/asset/img/h_pad_bg2.png) no-repeat bottom -20px left,
+            url(/asset/img/h_pad_bg1.png) no-repeat top 56px right;
         position: relative;
     }
 
@@ -155,7 +155,7 @@
 
     /* h_img3 */
     main .highlight .contents .bottom {
-        margin-top: -360px;
+        margin-top: -380px;
         margin-right: 40px;
         background: url(/asset/img/pad_h2.png) no-repeat;
         background-size: contain;
@@ -171,5 +171,14 @@
     .highlight .contents .bottom .icon {
         display: none;
     }
+
+    main .backimg{
+        background: url(/asset/img/pad_ink.png) no-repeat;
+    
+    }
+
+   main .backimg::after{
+    background: none;
+   }
 
 }
