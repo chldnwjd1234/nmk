@@ -20,7 +20,7 @@
         /* display: block; */
         /* flex 해제 */
         flex-direction: column;
-        padding-top: 200px;
+        padding-top: 266px;
         background: #ccc;
         padding-bottom: 60px;
         position: relative;
@@ -29,61 +29,136 @@
 
     .space .left .txt_box .title {
         position: absolute;
+        background: yellow;
         left: 0;
-        top: 0;
+        top: 40px;
     }
 
     /* ✅ .left와 .map_right 모두 width 100% */
     .space .left {
         width: 100%;
-        margin-bottom: 40px;
+        /* margin-bottom: 40px; */       
         order: 2;
         flex-direction: row;
+        background: blue;
     }
 
     .space .map_right {
         width: 100%;
-        height: 500px;
+        height: 574px;
         position: static;
         /* absolute 해제 */
-        background: transparent;
+        background: var(--yellow-01);
+        /* padding: 30px 20px 21px 29px; */
         border-radius: 20px;
-        margin-bottom: 40px;
-        order: 1;
+        margin-bottom: 8px;
+        /* order: 1; */
     }
 
     /* 제목 크기 */
     .space .left .txt_box .title .page_title {
-        font-size: 2.5rem;
+        font-size: 35px;
+        line-height: 1.3;
     }
 
-    /* 드롭다운 + GPS */
+    /* 층 탭 */
+    .space .left .txt_box .title .floor_tabs {
+        gap: 12px;
+    }
+
+    .space .left .txt_box .title .floor_tabs .tab {
+        width: 70px;
+        height: 40px;
+        font-size: 21px;
+        padding: 7px 25px;
+    }
+
+    /* About the Gallery */
+    .left .bottom::before {
+        content: 'About the Gallery';
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.3;
+        color: var(--black);
+        margin-bottom: 20px;
+    }
+
     .left .bottom {
         height: auto;
-        margin-bottom: 40px;
+        /* margin-bottom: 90px; */
+        background: green;
     }
 
     .bottom .dropdown {
         position: absolute;
-        top: 100px;
+        width: 100%;
+        top: 185px;
+        background: pink;
     }
 
-    .bottom .dropdown::after {
-        content: 'GPS';
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 100px;
-        height: 60px;
-        background: var(--w-color);
-        border: 1px solid var(--gray-03);
-        border-radius: 8px;
+    /* GPS */
+    
+    .gps_toggle {
         display: flex;
         align-items: center;
-        justify-content: center;
-        font-size: 1.125rem;
-        font-weight: 500;
+        gap: 10px;
+        position: absolute;
+        right: 0;
+        top: 200px;
+        z-index: 10;
     }
+
+    .gps_toggle input {
+        display: none;
+        
+    }
+
+
+    .gps_toggle label {
+        position: relative;
+        width: 90px;
+        height: 40px;
+        background: #e0e0e0;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+  
+    .gps_toggle label::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 4px;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    
+    .gps_toggle input:checked+label {
+        background: var(--red-05-point);
+    }
+
+    
+    .gps_toggle input:checked+label::before {
+        transform: translateX(50px);
+    }
+
+    
+    .gps_toggle span {
+        font-size: 17px;
+        font-weight: 500;
+        color: var(--black);
+        line-height: 1.3;
+        
+    }
+
+    
+    
 
     .bottom .dropdown select {
         width: calc(100% - 120px);
@@ -92,16 +167,23 @@
 
     /* content 스타일 */
     .content article .info {
-        font-size: 1.125rem;
-        line-height: 1.5;
+        font-size: 16px;
+        background: yellow;
     }
 
     /* 지도 이미지 */
     .map_right ul li {
-        position: relative;
+        .map_right ul li {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            /* 수평 + 수직 모두 중앙 */
+        }
+
+        /* position: relative;
         top: 0;
         background-size: contain;
-        background-position: center;
+        background-position: center; */
     }
 
     /* Highlighted Artifact */
@@ -109,6 +191,16 @@
         width: 100%;
     }
 
+    .highlighted_artifact h4 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.3;
+        color: var(--black);
+        /* margin-bottom: 20px; */
+    }
+    .highlighted_artifact li p {
+        display: none;
+    }
     .highlighted_artifact .artall>li>ul {
         gap: 12px;
     }

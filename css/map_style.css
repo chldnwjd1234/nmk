@@ -41,7 +41,7 @@
     font-family: var(--title-Zen);
     font-size: var(--fszenT-L-50);
     font-weight: 500;
-    letter-spacing: 150%;
+    letter-spacing: -0.02em;
     line-height: 1.5;
     color: var(--black);
 }
@@ -50,7 +50,7 @@
 .space .left .txt_box .title .floor_tabs {
     display: flex;
     gap: 12px;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     /* background: blue; */
 }
 
@@ -63,6 +63,7 @@
     border-radius: 10px;
     font-size: var(--fspre-25);
     font-weight: 400;
+    line-height: 1.3;
     padding: 8px 34px;
     cursor: pointer;
     transition: all 0.25s ease;
@@ -86,7 +87,7 @@
     height: 222px;
     display: flex;
     flex-direction: column;
-    padding: 0 47px 0 0;
+    padding: 0 48px 0 0;
     margin-bottom: 68px;
     /* background: pink; */
 }
@@ -170,12 +171,15 @@
     display: none;
     width: 100%;
     height: 60px;
-    padding: 16px 20px;
+    /* padding: 16px 20px; */
     font-size: var(--fspre-30);
     font-weight: 500;
+    line-height: 1.4;
     color: var(--black);
-    /* background: var(--w-color); */
+    background: transparent;
     border: none;
+    box-shadow: none;
+    border-radius: 8px;
     /* border: 1px solid var(--gray-03); */
     /* border-radius: 8px; */
     cursor: pointer;
@@ -200,6 +204,11 @@
 .bottom .dropdown select:focus {
     outline: none;
     border-color: var(--red-05-point);
+    color: var(--black);
+}
+
+.gps_toggle {
+  display: none;
 }
 
 /* select에 해당하는 내용 */
@@ -258,9 +267,16 @@
 .highlighted_artifact h4 {
     font-size: var(--fspre-30);
     font-weight: 600;
+    line-height: 1.4;
     color: var(--black);
 }
-
+/* img_box의 p 태그 폰트 설정 */
+.highlighted_artifact li p {
+    font-weight: 450;
+    line-height: 1.4;
+    color: var(--black);
+}
+.highlighted_artifact 
 /* 전체 리스트 (층별 묶음) */
 .artall>li {
     display: none;
