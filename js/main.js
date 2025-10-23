@@ -223,15 +223,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const mudsTimeline = gsap.timeline({
         scrollTrigger: {
             trigger: ".muds",
-            start: "top top",
-            end: "+=4000",
-            scrub: 2,
-            pin: true,
+            start: "top top",      // 화면 맨 위에 도달하면 고정
+            end: "+=3500",         // 스크롤 길이 (숫자 조절 가능)
+            scrub: 2,              // 스크롤과 동기화
+            pin: true,             // 화면 고정!
             anticipatePin: 1,
-            pinSpacing: false   // ✅ false로 유지
+            pinSpacing: true
         }
     });
-
     // 1. 구름들 좌우에서 부드럽게 나타나기 (위에서 아래로 순서대로)
     mudsTimeline
         // 1번 구름 (왼쪽에서 오른쪽으로, 전체 보임)
@@ -332,17 +331,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const pin_bg = document.getElementById("pin_bg");
     const photos = gsap.utils.toArray(".ex_card");
 
-    const pinTl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".pin_scene",
-            start: "top top",
-            end: "+=1800",
-            pin: true,
-            scrub: true,
-            anticipatePin: 1,
-            toggleActions: "play none none reset",
-        },
-    });
+   const pinTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".pin_scene",
+        start: "top top",
+        end: "+=1800",
+        pin: true,
+        scrub: true,
+        anticipatePin: 1,
+        pinSpacing: false,  // true → false로 변경 (중요!)
+        toggleActions: "play none none reset",
+    },
+});
 
     pinTl.to(pin_bg, { filter: "blur(12px)", scale: 1.06, duration: 1, ease: "none" }, 0);
     photos.forEach((el, i) => {

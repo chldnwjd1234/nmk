@@ -538,6 +538,7 @@ main .exhibition {
     height: 100vh;
     background: url(/asset/img/ex_bg.png) no-repeat center/cover;
     overflow: hidden;
+    margin-bottom: 0
 }
 
 main .exhibition .inner {
@@ -859,6 +860,9 @@ main .muds {
 }
 
 /* footer */
+footer {
+    margin-top: 0;
+}
 
 footer .select_box>button {
     background: var(--gray-06);
@@ -909,10 +913,4 @@ footer .select_box>button {
 .top-btn.show {
     opacity: 1;
     pointer-events: auto;
-}
-
-.footer_space {
-    height: 100vh;
-    /* muds pin 구간과 동일한 높이 */
-    background: transparent;
 }
