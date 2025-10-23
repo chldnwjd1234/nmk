@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "-=0.6"
         );
 
+
     // 🏛️ Architecture 섹션 애니메이션
     const archTl = gsap.timeline({
         scrollTrigger: {
