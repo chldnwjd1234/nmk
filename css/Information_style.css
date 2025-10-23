@@ -10,21 +10,33 @@
     margin-bottom: 72px;
 }
 
-.top_btn a {
+.top_btn button {
     padding: 14px 36px;
     border-radius: 300px;
     margin-left: 15px;
+    border: none;
+    cursor: pointer;
+    color: var(--w-color);
+    background-color: var(--gray-05);
 }
 
-.top_btn .Visitor {
+.top_btn button.on {
     color: var(--w-color);
     background-color: var(--red-05-point);
 }
 
-.top_btn .Directions {
-    color: var(--w-color);
-    background-color: var(--gray-05);
+
+
+/* tab */
+.tab {
+    display: none;
 }
+
+.tab.on {
+    display: block;
+}
+
+/*.vi_section  */
 
 .OpeningHours {
     padding-bottom: 114px;
@@ -270,4 +282,10 @@
     padding: 171px 296px 45px 58px;
     overflow: hidden;
     position: relative;
+}
+
+/* di_section */
+.di_section {
+    height: 1000px;
+    background: red;
 }
