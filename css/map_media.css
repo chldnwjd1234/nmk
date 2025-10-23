@@ -1,30 +1,55 @@
 /* media.css */
+@media screen and (max-width: 1673px) {
+    .space {
+        width: 95%;
+    }
+
+}
 
 @media screen and (max-width: 1024px) {
+    header {
+        display: none;
+    }
+
     .inner {
         max-width: 100%;
-        padding: 0 40px;
     }
 
     /* ✅ .space 전체를 wrapping */
-    .space {
-        display: block; /* flex 해제 */
+    main .space {
+        /* display: block; */
+        /* flex 해제 */
+        flex-direction: column;
+        padding-top: 200px;
+        background: #ccc;
         padding-bottom: 60px;
+        position: relative;
+        justify-content: flex-start;
+    }
+
+    .space .left .txt_box .title {
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 
     /* ✅ .left와 .map_right 모두 width 100% */
     .space .left {
         width: 100%;
         margin-bottom: 40px;
+        order: 2;
+        flex-direction: row;
     }
 
     .space .map_right {
         width: 100%;
         height: 500px;
-        position: static; /* absolute 해제 */
+        position: static;
+        /* absolute 해제 */
         background: transparent;
         border-radius: 20px;
         margin-bottom: 40px;
+        order: 1;
     }
 
     /* 제목 크기 */
@@ -39,7 +64,8 @@
     }
 
     .bottom .dropdown {
-        position: relative;
+        position: absolute;
+        top: 100px;
     }
 
     .bottom .dropdown::after {
@@ -83,11 +109,11 @@
         width: 100%;
     }
 
-    .highlighted_artifact .artall > li > ul {
+    .highlighted_artifact .artall>li>ul {
         gap: 12px;
     }
 
-    .highlighted_artifact .artall > li > ul li {
+    .highlighted_artifact .artall>li>ul li {
         width: calc((100% - 36px) / 4);
     }
 
