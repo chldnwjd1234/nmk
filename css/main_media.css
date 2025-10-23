@@ -1,1 +1,21 @@
 @charset "utf-8";
+
+
+/* 1024px 이하 반응형 */
+@media (max-width:1024px) {
+    .main_visual {
+        width: 100%;
+        height: 80vh;
+        /* ✅ 높이 줄이기 */
+        object-fit: cover;
+    }
+    .museum_cta{display: none;}
+
+    main .highlight .title {
+     
+    }
+
+}
+
+/* 402px 이하 반응형 */
+@media (max-width:402px) {}

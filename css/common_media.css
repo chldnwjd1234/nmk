@@ -2,7 +2,7 @@
 
 @media screen and (max-width:1750px) {
     .inner {
-        width: 95%;
+        width: 90%;
     }
 }
 
@@ -13,12 +13,24 @@
     }
 }
 
+/* 데스크탑에서는 모바일 메뉴 숨김 */
+@media (min-width:1461px) {
+    .mobile_menu {
+        display: none;
+    }
+
+    .ham {
+        display: none;
+    }
+
+    .mobile_overlay {
+        display: none;
+        /* ✅ 데스크탑에서 완전 숨김 */
+    }
+}
+
+
 @media (max-width:1460px) {
-
-    /* html {
-        font-size: 14px;
-    } */
-
     header .inner {
         position: relative;
         display: flex;
@@ -113,24 +125,13 @@
     }
 }
 
-/* 데스크탑에서는 모바일 메뉴 숨김 */
-@media (min-width:1461px) {
-    .mobile_menu {
-        display: none;
-    }
-
-    .ham {
-        display: none;
-    }
-
-    .mobile_overlay {
-        display: none;
-        /* ✅ 데스크탑에서 완전 숨김 */
-    }
-}
-
 /* 1024px 이하 반응형 */
 @media (max-width:1024px) {
+
+    html {
+        font-size: 15px;
+        /* 1단계 축소 */
+    }
 
     header .inner .logo {
         width: 210px;
@@ -152,7 +153,83 @@
 
     footer {
         height: auto;
+        padding: 30px 0 50px;
+        background: url(/asset/img/t_footer.png) repeat-y top right var(--bg);
     }
+
+    footer.dark {
+        height: auto;
+        padding: 30px 0 50px;
+        background: url(/asset/img/t_d_footer.png) repeat-y top right #282C34;
+    }
+
+    footer .f_top {
+        gap: 80px;
+        padding-bottom: 30px;
+        margin-bottom: 25px;
+    }
+
+    footer .f_txt {
+        margin-top: 20px;
+    }
+
+    footer .f_txt h3 {
+        margin-bottom: 15px;
+    }
+
+    footer .f_txt ul li {
+        margin-bottom: 10px;
+    }
+
+    /* 하단 세로 배치 */
+    footer .f_bot {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 25px;
+        padding-top: 25px;
+    }
+
+    footer .bot_txt {
+        flex: 1;
+    }
+
+    footer .f_bot p {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    footer .f_bot p::before {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+    }
+
+    footer .f_right {
+        width: auto;
+        justify-content: space-between;
+        padding: 8px 20px;
+        font-size: 0.9rem;
+        height: 38px;
+    }
+
+    footer .select_box {
+        width: auto;
+        height: 38px;
+    }
+
+    footer .select_box>button {
+        width: auto;
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+
+    .select_box ul {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+
 }
 
 /* 402px 이하 반응형 */

@@ -43,9 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     );
-
     // ==================== Highlight Animations ====================
-    // 1. 구름 타이틀
+    // 1. 타이틀 먼저
     gsap.fromTo(".highlight .title",
         {
             opacity: 0,
@@ -54,75 +53,46 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             opacity: 1,
             x: 0,
+            duration: 0.8,           // ✅ scrub 삭제, duration 추가
             ease: "power2.out",
             scrollTrigger: {
                 trigger: ".highlight .title",
                 start: "top 80%",
-                scrub: 2,
                 toggleActions: "play none none none"
             }
         }
     );
 
-    // 2. 첫 번째 사진
-    gsap.fromTo(".highlight .contents .top a:nth-child(2)",
-        {
-            opacity: 0,
-            x: -600
-        },
-        {
-            opacity: 1,
-            x: 0,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: ".highlight .contents .top a:nth-child(2)",
-                start: "top 50%",
-                end: "top 10%",
-                scrub: 5,
-                toggleActions: "play none none none"
-            }
+    // 2. 사진들 타임라인
+    const highlightTL = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".highlight .contents",
+            start: "top 70%",        // ✅ contents 기준
+            toggleActions: "play none none none"
         }
-    );
+    });
 
-    // 3. 두 번째 사진
-    gsap.fromTo(".highlight .contents .top a:nth-child(1)",
-        {
-            opacity: 0,
-            x: -150
-        },
-        {
-            opacity: 1,
-            x: 0,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: ".highlight .contents .top a:nth-child(1)",
-                start: "top 35%",
-                end: "top 5%",
-                scrub: 5,
-                toggleActions: "play none none none"
-            }
-        }
-    );
+    highlightTL
+        // 첫 번째 사진
+        .fromTo(".highlight .contents .top a:nth-child(2)",
+            { opacity: 0, x: -600 },
+            { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" }
+        )
 
-    // 4. 세 번째 사진
-    gsap.fromTo(".highlight .contents .bottom",
-        {
-            opacity: 0,
-            x: 150
-        },
-        {
-            opacity: 1,
-            x: 0,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".highlight .contents .bottom",
-                start: "top 80%",
-                end: "top 30%",
-                scrub: 2,
-                toggleActions: "play none none none"
-            }
-        }
-    );
+        // 두 번째 사진
+        .fromTo(".highlight .contents .top a:nth-child(1)",
+            { opacity: 0, x: -150 },
+            { opacity: 1, x: 0, duration: 0.7, ease: "power2.out" },
+            "-=0.4"
+        )
+
+        // 세 번째 사진 - 살짝 늦게
+        .fromTo(".highlight .contents .bottom",
+            { opacity: 0, x: 150 },
+            { opacity: 1, x: 0, duration: 0.7, ease: "power2.out" },
+            "-=0.1"    // ✅ -0.3 → -0.1 (덜 겹치게)
+        );
+
 
     // ==================== Ink Effect (backimg) ====================
     gsap.fromTo(".backimg",
@@ -189,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     gsap.to(".track", {
-        x: () => -total_width(),
+        x: () => total_width(),
         ease: "none",
         scrollTrigger: {
             trigger: ".horizontal_all",
@@ -203,6 +173,18 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
+    // ==================== Line Draw Animation ====================
+    gsap.to(".animated_path", {
+        strokeDashoffset: 0,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".horizontal_all",
+            start: "top top",
+            end: () => "+=" + (total_width() + window.innerHeight),
+            scrub: true,
+            pin: false,
+        }
+    });
     // ==================== Exhibition Title Fade ====================
     gsap.to(".exhibition .title", {
         opacity: 0,

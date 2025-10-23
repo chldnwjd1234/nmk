@@ -696,6 +696,7 @@ footer .select_box>button {
     cursor: pointer;
     position: relative;
     border-radius: var(--r-10);
+    font-family: inherit;
     z-index: 10;
 }
 
