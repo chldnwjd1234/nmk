@@ -148,7 +148,7 @@ main .highlight .title {
 
 .title h2 {
     font-family: var(--title-Zen);
-    font-size: 65px;
+    font-size: var(--fszenT-XL-65);
     color: var(--w-color);
 }
 

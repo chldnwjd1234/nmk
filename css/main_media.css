@@ -5,17 +5,89 @@
 @media (max-width:1024px) {
     .main_visual {
         width: 100%;
-        height: 80vh;
+        height: 90vh;
         /* ✅ 높이 줄이기 */
         object-fit: cover;
     }
-    .museum_cta{display: none;}
 
-    main .highlight .title {
-     
+    .museum_cta {
+        width: 100%;
+        height: 56px;
+        background: #2d3238;
+        padding: 0 20px;
+        border-radius: 0;
+        /* 둥근 모서리 제거 */
+        filter: none;
+        box-shadow: none;
+        right: 0;
+        left: 0;
     }
 
+    .museum_cta .cta_content {
+        flex-direction: row;
+        gap: 16px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .museum_cta .left,
+    .museum_cta .right {
+        flex-direction: row;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .museum_cta .left {
+        padding-right: 0;
+        /* 구분선 제거 */
+        border-right: none;
+        /* 구분선 제거 */
+    }
+
+    /* Fees 숨기기 */
+    .museum_cta .fees {
+        display: none;
+    }
+
+    .cta_content .today {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .cta_content .label {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 400;
+    }
+
+    .cta_content .time {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .btn_1,
+    .btn_2 {
+        height: 40px;
+        padding: 0 28px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .btn_1 {
+        background: #5a6068;
+        color: #fff;
+    }
+
+    .btn_2 {
+        background: #c9302c;
+        color: #fff;
+    }
 }
+
+
 
 /* 402px 이하 반응형 */
 @media (max-width:402px) {}
