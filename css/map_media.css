@@ -1,0 +1,97 @@
+/* media.css */
+
+@media screen and (max-width: 1024px) {
+    .inner {
+        max-width: 100%;
+        padding: 0 40px;
+    }
+
+    /* ✅ .space 전체를 wrapping */
+    .space {
+        display: block; /* flex 해제 */
+        padding-bottom: 60px;
+    }
+
+    /* ✅ .left와 .map_right 모두 width 100% */
+    .space .left {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .space .map_right {
+        width: 100%;
+        height: 500px;
+        position: static; /* absolute 해제 */
+        background: transparent;
+        border-radius: 20px;
+        margin-bottom: 40px;
+    }
+
+    /* 제목 크기 */
+    .space .left .txt_box .title .page_title {
+        font-size: 2.5rem;
+    }
+
+    /* 드롭다운 + GPS */
+    .left .bottom {
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .bottom .dropdown {
+        position: relative;
+    }
+
+    .bottom .dropdown::after {
+        content: 'GPS';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100px;
+        height: 60px;
+        background: var(--w-color);
+        border: 1px solid var(--gray-03);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+
+    .bottom .dropdown select {
+        width: calc(100% - 120px);
+        font-size: 1.25rem;
+    }
+
+    /* content 스타일 */
+    .content article .info {
+        font-size: 1.125rem;
+        line-height: 1.5;
+    }
+
+    /* 지도 이미지 */
+    .map_right ul li {
+        position: relative;
+        top: 0;
+        background-size: contain;
+        background-position: center;
+    }
+
+    /* Highlighted Artifact */
+    .highlighted_artifact {
+        width: 100%;
+    }
+
+    .highlighted_artifact .artall > li > ul {
+        gap: 12px;
+    }
+
+    .highlighted_artifact .artall > li > ul li {
+        width: calc((100% - 36px) / 4);
+    }
+
+    .highlighted_artifact li p {
+        font-size: 14px;
+    }
+}

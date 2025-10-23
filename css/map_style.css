@@ -56,7 +56,7 @@
     display: flex;
     gap: 12px;
     margin-bottom: 40px;
-    background: blue;
+    /* background: blue; */
 }
 
 .space .left .txt_box .title .floor_tabs .tab {
@@ -93,7 +93,7 @@
     flex-direction: column;
     padding: 0 47px 0 0;
     margin-bottom: 68px;
-    background: pink;
+    /* background: pink; */
 }
 
 /* 드롭다운 컨테이너 */
@@ -210,7 +210,7 @@
 /* select에 해당하는 내용 */
 /* 모든 info 숨기기 */
 .content {
-    background: yellow;
+    /* background: yellow; */
     width: 100%;
 }
 
@@ -297,7 +297,7 @@
 .artall>li>ul li img {
     width: 100%;
     aspect-ratio: 1 / 1;
-    background: var(--gray-02);
+    background: rgba(124, 134, 111, 0.32);
     border-radius: 8px;
     margin-bottom: 8px;
     transition: transform 0.3s ease;
@@ -308,10 +308,13 @@
 /* 호버 효과 */
 .artall>li>ul li:hover img {
     transform: scale(1.05);
+    background: var(--red-03);
+
 }
 
 .art_1f ul li .img_box:hover {
     background: rgba(200, 150, 0, 0.1);
+
 }
 
 
