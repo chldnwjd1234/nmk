@@ -122,7 +122,7 @@
         width: 180px;
     }
 
-    main .visions .card3 .txt_box{
+    main .visions .card3 .txt_box {
         margin-top: 10px;
     }
 
@@ -145,7 +145,37 @@
         margin-bottom: 4px;
     }
 
+    /* Architecture 섹션 */
+    main .Architecture .inner {
+        height: auto;
+    }
 
+    main .Architecture .txt_box h3 {
+        font-size: 45px;
+    }
+
+    main .Architecture .txt_box p {
+        font-size: 0;
+        width: 350px;
+    }
+
+    main .Architecture .txt_box p::after {
+        content: 'The National Museum of Korea blends traditional Korean architecture with modern design, emphasizing harmony, simplicity, and minimal ornamentation. \A Set between Namsan Mountain and Mirror Pond, it reflects the balance of yin and yang. \A The open plaza, inspired by maru, connects exhibition and performance spaces while integrating with nature and gardens. \A Located at the southern gateway of Yongsan Park, the museum serves as a central cultural landmark in Seoul.';
+        font-size: 18px;
+        white-space: pre-line;
+    }
+
+    main .Architecture .architecture_img .left .top p,
+    main .Architecture .architecture_img .left .bottom p {
+        display: none;
+    }
+
+    main .Architecture .architecture_img .left .top img,
+    main .Architecture .architecture_img .left .bottom img,
+    main .Architecture .architecture_img .right img {
+        width: 80%;
+        height: auto;
+    }
 
     main .Collection_Storage {
         display: none;
