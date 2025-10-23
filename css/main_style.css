@@ -16,8 +16,8 @@ main {
 .main_visual {
     width: 100%;
     height: 100vh;
-    background: #ccc;
     position: relative;
+    overflow: hidden;
 }
 
 
@@ -33,6 +33,14 @@ main {
     display: flex;
     align-items: center;
     padding: 0 110px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1s ease-out;
+}
+
+.museum_cta.slide-in {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .museum_cta .cta_content {
@@ -694,7 +702,7 @@ main .muds {
 
 /* 1번 구름 - 제일 위 */
 .cloud_1 {
-    width: 40%;
+    width: 45%;
     height: auto;
     top: 0%;
     left: -60%;
@@ -703,7 +711,7 @@ main .muds {
 
 /* 2번 구름 - 1번과 살짝 겹침 */
 .cloud_2 {
-    width: 50%;
+    width: 60%;
     height: auto;
     top: 12%;
     right: -70%;
@@ -712,7 +720,7 @@ main .muds {
 
 /* 3번 구름 - 2번과 더 많이 겹침 */
 .cloud_3 {
-    width: 40%;
+    width: 60%;
     height: auto;
     top: 28%;
     left: -80%;
@@ -721,7 +729,7 @@ main .muds {
 
 /* 4번 구름 - 3번과 겹치며 가장 크고 아래쪽 */
 .cloud_4 {
-    width: 100%;
+    width: 70%;
     height: auto;
     top: 48%;
     right: -100%;
