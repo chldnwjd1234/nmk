@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
-
+    document.querySelector('header').classList.add('maintop');
     window.addEventListener('scroll', () => {
         const topBtn = document.querySelector('.top-btn');
+        if (window.scrollY > 0) {
+            document.querySelector('header').classList.remove('maintop');
+        }
+
         if (window.scrollY > 300) {
             topBtn.classList.add('show');
         } else {
