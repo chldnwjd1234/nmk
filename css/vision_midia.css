@@ -48,13 +48,14 @@
     }
 
     /* visions 섹션 */
-    main .visions {
-        height: 700px;
-        padding: 80px 19px;
-        width: 100%;
-        background: url(../asset/img_Vision/Padsection3-3visions-bg.png) center/cover no-repeat;
-
-    }
+main .visions {
+    /* padding: 40px ; */
+    height: auto;
+    min-height: 800px;
+    width: 100%;
+    background: url(/asset/img_Vision/grape2.png) no-repeat center bottom;
+    background-size: cover;
+}
 
     main .visions .card_set {
         position: relative;
@@ -311,7 +312,7 @@
 
     main .Collection_Storage .collection_label ul.labels li:nth-child(7) {
         bottom: -3%;
-        left: 800px;
+        left: 770px;
     }
 
 }
@@ -361,10 +362,12 @@
 
     /* visions */
     main .visions {
-        padding: 40px 0 0;
-        height: 100%;
+    /* padding: 40px 0 80px 0; */
+    height: auto;
+    min-height: 500px;
         width: 100%;
         background: url(/asset/img_Vision/grape2.png) no-repeat;
+         background-size: 80%;
     }
 
     main .visions .card_set {
@@ -478,10 +481,9 @@
         display: none; 
     }
 
-    main .Collection_Storage .bg img {
-        z-index: -1;
-    }
-    
+main .Collection_Storage .bg {
+    display: none;
+}
     main .Collection_Storage {
         background: url("../asset/img_Vision/MMcollection_storage.png") center/contain no-repeat;
         background-size: 90%; 

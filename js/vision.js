@@ -100,18 +100,27 @@ labels.forEach(label => {
 const isMobile = window.innerWidth <= 402;
 
 if (isMobile) {
-    // 모바일: 간단한 이미지 등장 애니메이션
-    gsap.from(".Collection_Storage", {
+    // 모바일: h3 먼저, 배경 이미지 나중에
+    gsap.timeline({
         scrollTrigger: {
             trigger: ".Collection_Storage",
             start: "top 80%",
             end: "top 30%",
             scrub: 1,
-        },
+        }
+    })
+    .from(".Collection_Storage .txt_box h3", {
+        y: 50,
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.out"
+    })
+    .from(".Collection_Storage .bg", {
         y: 100,
         opacity: 0,
+        duration: 0.8,
         ease: "power2.out"
-    });
+    }, "+=0.3");
 } else {
     // 웹/탭: 기존 인터랙션
     ScrollTrigger.create({
