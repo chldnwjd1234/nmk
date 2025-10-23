@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 300vh; /* 스크롤 테스트용 - 충분히 길게 */
+    margin: 0;
+    padding: 0;
+}
+
+#loading_screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    overflow: hidden;
+    transition: opacity 0.8s ease;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.door_left,
+.door_right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50vw; /* 정확히 화면의 절반 */
+    z-index: 3;
+    transition: transform 1.5s ease-in-out;
+}
+
+.door_left {
+    left: 0;
+    right: 50%; /* 정확히 중앙까지 */
+    transform: translateX(0);
+}
+
+.door_right {
+    left: 50%; /* 정확히 중앙부터 시작 */
+    right: 0;
+    transform: translateX(0);
+}
+
+/* 문 열린 상태 */
+.door_left.open {
+    transform: translateX(-100%);
+}
+
+.door_right.open {
+    transform: translateX(100%);
+}
+
+.logo {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.logo.show {
+    opacity: 1;
+}
+
+/* 페이드아웃 상태 */
+#loading_screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
