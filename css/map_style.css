@@ -278,7 +278,7 @@
     color: var(--black);
 }
 
-.highlighted_artifact
+.highlighted_artifact 
 
 /* 전체 리스트 (층별 묶음) */
 .artall>li {
