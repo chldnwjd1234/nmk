@@ -7,6 +7,10 @@
     position: relative;
 }
 
+header.maintop {
+    background: rgba(255, 255, 255, 0.7);
+}
+
 main {
     width: 100%;
     height: auto;
@@ -534,6 +538,7 @@ main .exhibition {
     height: 100vh;
     background: url(/asset/img/ex_bg.png) no-repeat center/cover;
     overflow: hidden;
+    margin-bottom: 0
 }
 
 main .exhibition .inner {
@@ -678,6 +683,7 @@ main .muds {
     background: linear-gradient(180deg, #121215 8%, #282C33 64.49%);
     position: relative;
     overflow: hidden;
+    margin-top: 0;
 }
 
 .cloud_container {
@@ -702,10 +708,10 @@ main .muds {
 
 /* 1번 구름 - 제일 위 */
 .cloud_1 {
-    width: 45%;
+    width: 55%;
     height: auto;
     top: 0%;
-    left: -60%;
+    left: -10%;
     z-index: 11;
 }
 
@@ -714,13 +720,13 @@ main .muds {
     width: 60%;
     height: auto;
     top: 12%;
-    right: -70%;
+    right: 0;
     z-index: 12;
 }
 
 /* 3번 구름 - 2번과 더 많이 겹침 */
 .cloud_3 {
-    width: 60%;
+    width: 80%;
     height: auto;
     top: 28%;
     left: -80%;
@@ -855,6 +861,11 @@ main .muds {
 }
 
 /* footer */
+footer {
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+}
 
 footer .select_box>button {
     background: var(--gray-06);
@@ -905,10 +916,4 @@ footer .select_box>button {
 .top-btn.show {
     opacity: 1;
     pointer-events: auto;
-}
-
-.footer_space {
-    height: 100vh;
-    /* muds pin 구간과 동일한 높이 */
-    background: transparent;
 }
