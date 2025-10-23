@@ -24,6 +24,10 @@ main {
     overflow: hidden;
 }
 
+.museum_cta_mobile {
+    display: none;
+}
+
 
 .museum_cta {
     position: absolute;

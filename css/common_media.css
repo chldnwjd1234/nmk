@@ -160,6 +160,32 @@
         padding: 30px 0 50px;
         background: url(/asset/img/t_d_footer.png) repeat-y top right #282C34;
     }
+
+
+    footer.dark::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: var(--black);
+        z-index: -1;
+    }
+
+    footer.dark::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        background: var(--black);
+        z-index: -1;
+    }
+
 }
 
 /* 1024px 이하 반응형 */
