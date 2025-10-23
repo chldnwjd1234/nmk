@@ -9,36 +9,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NMK</title>
     <link rel="shortcut icon" href="/asset/favicon.ico" type="image/x-icon">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/main_style.css"><!-- 본인 스타일 -->
     <!--     <link rel="stylesheet" href="/css/common_media.css">
     <link rel="stylesheet" href="/css/test_media.css"> --><!-- 본인 미디어스타일 -->
-    <!--  <script src="/js/common.js"></script>
-    <script src="/js/test.js"></script> --><!-- 본인 js -->
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/main.js"></script>
     <script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
 </head>
+
 
 <body>
     <div class="wrap">
         <header>
             <div class="inner">
-                <h1><a href="#"><img src="../asset/img/eng_header_logo.png" alt="NMK" class="logo"></a></h1>
+                <h1><a href="main.html"><img src="/asset/img/eng_header_logo.png" alt="NMK" class="logo"></a></h1>
                 <nav>
-                    <ul>
-                        <li><a href="#">VISIT</a></li>
-                        <li><a href="#">EXHIBITION</a></li>
-                        <li><a href="#">COLLECTION</a></li>
-                        <li><a href="#">EVENT</a></li>
-                        <li><a href="#">NMK GLOBAL</a></li>
-                        <li><a href="#">ABOUT US</a></li>
-                        <li><a href="#">MUSEUM SHOP</a></li>
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">VISIT</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>VISIT</h2>
+                                        <p>Learn more about visiting the<br>National Museum of Korea.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="#">Visitor Information</a></li>
+                                            <li><a href="#">Guided Tours</a></li>
+                                            <li><a href="#">Amenities</a></li>
+                                            <li><a href="#">Museum Map</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">EXHIBITION</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>EXHIBITION</h2>
+                                        <p>Discover current and upcoming exhibitions.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="#">Permanent Exhibitions</a></li>
+                                            <li><a href="#">Special Exhibitions</a></li>
+                                            <li><a href="#">Immersive Digital Gallery</a></li>
+                                            <li><a href="#">Exhibits Online</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">COLLECTION</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>COLLECTION</h2>
+                                        <p>Explore the museum’s treasured artifacts.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="#">Collection Database</a></li>
+                                            <li><a href="#">Curator’s Picks</a></li>
+                                            <li><a href="#">Highlights</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">EVENT</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>EVENT</h2>
+                                        <p>Join cultural programs <br> and special events.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="#">Event</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">NMK GLOBAL</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>NMK GLOBAL</h2>
+                                        <p>Experience the museum’s world outreach.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="#">At a Glance</a></li>
+                                            <li><a href="#">International Organizations</a></li>
+                                            <li><a href="#">Global Exhibitions</a></li>
+                                            <li><a href="#">Academic Activities</a></li>
+                                            <li><a href="#">Exchange Programs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">ABOUT US</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>ABOUT US</h2>
+                                        <p>Learn about the museum’s history and vision.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="#">Vision and Strategy</a></li>
+                                            <li><a href="#">History</a></li>
+                                            <li><a href="#">Builldings</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">MUSEUM SHOP</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>MUSEUM SHOP</h2>
+                                        <p>Find unique gifts inspired <br> by our collection.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="#">MUSEUM SHOP</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                     <div class="right">
-                        <a href="#"><img src="../asset/img/icon1.png" alt=""></a>
-                        <a href="#"><img src="../asset/img/icon2.png" alt=""></a>
+                        <a href="#"><img src="/asset/img/icon1.png" alt="global"></a>
+                        <a href="#"><img src="/asset/img/icon2.png" alt="mypage"></a>
                     </div><!-- //.right -->
                 </nav>
+                <!-- 여러분 이거 가져가세요 반응형버전 헤더 햄 아이콘입니다 -->
+                <!-- <button class="ham_icon" aria-label="menu"></button> -->
+                <div class="ham">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <!-- 햄 아이콘 끝 -->
             </div><!-- //.inner -->
         </header>
         <main>
@@ -46,6 +196,9 @@
                 <div class="inner">
         <main>
             <section class="main_visual">
+                <figure class="vid">
+                    <video src="/asset/vid/main_banner.mp4" autoplay muted loop playsinline></video>
+                </figure>
                 <div class="slide">
 
                 </div>
@@ -100,7 +253,7 @@
                             <span class="label">Today</span>
                             <span class="time">10:00 ~ 18:00</span>
                         </div>
-                        <a href="#" class="btn_1">Directions</a>
+                        <a href="/html/information.html" class="btn_1">Directions</a>
                     </div>
                     <div class="right">
                         <div class="fees">
@@ -109,7 +262,7 @@
                                 <p class="note">Charges apply<br>for special exhibitions</p>
                             </div>
                         </div>
-                        <a href="#" class="btn_2">Reservations</a>
+                        <a href="/html/reservation.html" class="btn_2">Reservations</a>
                     </div>
                 </div>
             </div>
@@ -117,42 +270,148 @@
                 <div class="title">
                     <h2>Highlight</h2>
                 </div>
-                <div class="contents">
-                    <div class="top">
-                        <a href="#">
-                            <div class="icon">Special Exhibition</div>
-                            <h3>Tour of National Treasures</h3>
-                        </a>
-                        <a href="#">
-                            <div class="icon">Special Exhibition</div>
-                            <h3>The Collectors of Light</h3>
-                        </a>
-                    </div>
-                    <div class="bottom">
-                        <a href="#">
-                            <div class="icon">Collection</div>
-                        </a>
+                <div class="inner">
+                    <div class="contents">
+                        <div class="top">
+                            <a href="/html/exhibition.html">
+                                <div class="icon">Special Exhibition</div>
+                                <h3>Tour of National Treasures</h3>
+                            </a>
+                            <a href="/html/exhibition.html">
+                                <div class="icon">Special Exhibition</div>
+                                <h3>The Collectors of Light</h3>
+                            </a>
+                        </div>
+                        <div class="bottom">
+                            <a href="/html/collection.html">
+                                <div class="icon">Collection</div>
+                                <h3>Collection Database</h3>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section><!-- //.highlight -->
+            <section class="backimg">
+                <div class="inner">
+                </div>
+            </section><!-- //.backimg -->
             <section class="vision">
-                <div class="title">
-                    <h2>Reflecting the Future</h2>
-                    <h2>by Embracing the Past</h2>
+                <div class="inner">
+                    <div class="title">
+                        <h2>Reflecting the Future</h2>
+                        <h2><img src="/asset/img/v_line.png" alt="line">by Embracing the Past</h2>
+                    </div>
+                </div><!-- //.inner -->
+                <div class="horizontal_all">
+                    <div class="line">
+                        <img src="/asset/img/line_2.png" alt="">
+                    </div>
+                    <div class="v_card track">
+                        <div class="card_item">
+                            <img src="/asset/img/v_img1.png" alt="img">
+                            <div class="card_overlay">
+                                <h3>with Life</h3>
+                                <p>A cultural space that brings<br>inspiration to everyday life</p>
+                                <button class="card_btn">Learn more</button>
+                            </div>
+                        </div>
+                        <div class="card_item">
+                            <img src="/asset/img/v_img3.png" alt="img">
+                            <div class="card_overlay">
+                                <h3>Leading the Future</h3>
+                                <p>Innovating heritage with AI, VR,<br>and digital experiences.</p>
+                                <button class="card_btn">Learn more</button>
+                            </div>
+                        </div>
+                        <div class="card_item">
+                            <img src="/asset/img/v_img2.png" alt="img">
+                            <div class="card_overlay">
+                                <h3>Advancing into the World</h3>
+                                <p>Promoting Korean culture through<br>active international exchange</p>
+                                <button class="card_btn">Learn more</button>
+                            </div>
+                        </div>
+                    </div><!-- //.v_card -->
                 </div>
             </section><!-- //.vision  -->
-            <section class="exhibition">
-                <div class="title">
-                    <h2>NMK Global Exhibition</h2>
-                </div>
+            <section class="exhibition pin_scene" id="showcase">
+                <div class="inner pin_layer">
+                    <div class="pin_bg" id="pin_bg" style="background-image: url('/asset/img/ex_bg.png');">
+                    </div>
+                    <div class="pin_overlay"></div>
+                    <div class="title">
+                        <h2>NMK Global Exhibition</h2>
+                    </div>
+                    <div class="ex_cards float_wrap">
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img1.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img2.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img3.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img4.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img5.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img6.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img7.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img8.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img9.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img10.png" alt="exhibition">
+                        </div>
+                    </div>
+                </div><!-- //inner -->
             </section><!-- //.exhibition -->
+
             <section class="muds">
-                <div class="title">
-                    <h2>MU:DS</h2>
+                <!-- 구름 컨테이너 -->
+                <div class="cloud_container">
+                    <img src="/asset/img/mu_cloud1.png" alt="cloud" class="cloud cloud_1">
+                    <img src="/asset/img/mu_cloud2.png" alt="cloud" class="cloud cloud_2">
+                    <img src="/asset/img/mu_cloud3.png" alt="cloud" class="cloud cloud_3">
+                    <img src="/asset/img/mu_cloud4.png" alt="cloud" class="cloud cloud_4">
+                    <div class="muds_content">
+                        <!-- 배경 이미지 -->
+                        <div class="muds_bg">
+                            <!-- MU:DS 타이틀 - 배경 안에 -->
+                            <div class="title">
+                                <h2>MU:DS</h2>
+                            </div>
+                        </div>
+                        <div class="content_cloud">
+                            <img src="/asset/img/muds_cloud_ti.png" alt="cloud background" class="cloud_bg">
+                            <div class="content_text">
+                                <p class="subtitle">we offer art that enriches your life</p>
+                                <h3>National Museum Goods</h3>
+                                <a href="#" class="discover_btn">
+                                    Discover our goods
+                                    <span class="underline"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section><!-- //.muds -->
+                <!-- 최종 컨텐츠 (배경 + 타이틀 + 텍스트) -->
+
+            </section>
+            <div class="footer_space"></div>
         </main>
-        <footer class="main">
+
+        <footer class="dark">
             <div class="inner">
                 <div class="f_top">
                     <div class="f_txt">
@@ -203,15 +462,15 @@
                                 <li><a href="#">Buyeo National Museum</a></li>
                                 <li><a href="#">Gongju National Museum</a></li>
                                 <li><a href="#">Jinju National Museum</a></li>
-                                <li><a href="#">Cheongju National Museum</a></li>
+                                <li><a href="#">CNM</a></li>
                                 <li><a href="#">Gimhae National Museum</a></li>
                                 <li><a href="#">Jeju National Museum</a></li>
-                                <li><a href="#">Chuncheon National Museum</a></li>
+                                <li><a href="#">CMM</a></li>
                                 <li><a href="#">Naju National Museum</a></li>
                                 <li><a href="#">Iksan National Museum</a></li>
-                                <li><a href="#">Cultural Foundation of National Museum of Korea</a></li>
-                                <li><a href="#">Friends of National Museum of Korea</a></li>
-                                <li><a href="#">The Korean Museum Association</a></li>
+                                <li><a href="#">NMF</a></li>
+                                <li><a href="#">FNMK</a></li>
+                                <li><a href="#">KMA</a></li>
                             </ul>
                         </div><!-- //.select_box -->
                         <div class="select_box">
@@ -230,6 +489,10 @@
                 </div><!-- //.f_bot -->
             </div>
         </footer>
+        <a href="#" class="top-btn">
+            <img src="/asset/img/top.png" alt="top">
+            <span>Top</span>
+        </a>
     </div><!-- //.wrap -->
 </body>
 

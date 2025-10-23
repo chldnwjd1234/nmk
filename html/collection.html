@@ -8,17 +8,26 @@
     <meta name="author" content="일단해보조">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NMK</title>
-    <link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="shortcut icon" href="/asset/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/collection_style.css"><!-- 본인 스타일 -->
+    <link rel="stylesheet" href="/css/common_media.css">
+    <link rel="stylesheet" href="/css/collection_media.css">
+    <!-- 본인 미디어스타일 -->
+    <!-- <script src="/js/common.js"></script>본인 js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="/js/collection.js"></script>
+    <script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="wrap">
         <header>
             <div class="inner">
-                <h1><a href="#">NATIONAL MUSEUM</a></h1>
+                <h1><a href="main.html"><img src="../asset/img/eng_header_logo.png" alt="NMK" class="logo"></a></h1>
                 <nav>
                     <ul>
                         <li><a href="#">VISIT</a></li>
@@ -29,27 +38,1385 @@
                         <li><a href="#">ABOUT US</a></li>
                         <li><a href="#">MUSEUM SHOP</a></li>
                     </ul>
+                    <div class="right">
+                        <a href="#"><img src="../asset/img/icon1.png" alt="global"></a>
+                        <a href="#"><img src="../asset/img/icon2.png" alt="mypage"></a>
+                    </div><!-- //.right -->
                 </nav>
-                <div class="right">
-                    <a href="#"><img src="../asset/img/icon1.png" alt=""></a>
-                    <a href="#"><img src="../asset/img/icon2.png" alt=""></a>
-                </div><!-- //.right -->
+                <button class="ham_icon" aria-label="menu"></button>
             </div><!-- //.inner -->
         </header>
+
+        <main class="bg">
+            <section class="banner_top">
+                <div class="txt inner">Collection Database</div><!-- 배너 타이틀 -->
+            </section><!-- //.banner_top -->
+
+            <div class="sub">
+                <div class="inner">
+                    <a href="/html/main.html"><img class="logo" src="../asset/img_Collection/sub_logo.png" /></a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <a href="/html/collection.html">Collection</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <a class="menu_sub" href="/html/collection.html">Collection Database</a>
+                </div><!-- 각자 맞는 페이지 걸기 -->
+            </div><!-- //.sub -->
+            <section class="search">
+                <div class="search_bar">
+                    <input type="search" placeholder="Search ..." />
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="qr_icon">
+                    <img src="/asset/img_Collection/qr_icon.png" alt="QR">
+                </div>
+                <div class="txt_btn">
+                    <button>Ceramics</button>
+                    <button>Bronze</button>
+                    <button>Ordnance</button>
+                    <button>Metal</button>
+                    <button>Paper</button>
+                    <button>Joseon</button>
+                </div><!-- //.txt_btn -->
+                <div class="view_btns">
+                    <button class="btn2 on" type="button"></button>
+                    <button class="btn1" type="button"></button>
+                </div><!-- //.view_btns -->
+            </section><!-- //.search -->
+
+            <!-- 카드슬라이드 섹션 -->
+            <section class="con">
+                <div class="results">
+                    <span><b>6707</b> Results</span>
+                </div><!-- //.results -->
+                <section class="card_wrap2 card_wrap on">
+                    <div class="card_all2">
+                        <ul>
+                            <li class="card">
+                                <div class="thumb"><img src="../asset/img_Collection/c1_AlbumofGeumgangsanMountain.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Album of Geumgangsan</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1711</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">34.3 × 39.0 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Deoksu903</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="thumb"><img
+                                        src="../asset/img_Collection/c2_Clearingafter RainonMountInwang.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Clearing after Rain on Mount Inwang</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1751</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">79.2 × 138.0 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Kunhee1</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c5_SariraReliquaries.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Sarira Reliquaries</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Unified Silla</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 9.8cm</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure">Sinsu2123</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c7_Gilt-silverCupandStand.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gilt-silver Cup and Stand</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Goryeo,12th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 12.1 cm <br>Diameter: 54.3 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Deoksu130</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/유물.png" alt=""></div>
+                                <div class="txt">
+                                    <div class="title">Amitabha Buddha Stele</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Unified Silla,673</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 40.3 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">National Sinsu550</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c3_PortraitofHeoMok.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Portrait of Heo Mok</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1794</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">72.1 × 57.0 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Deoksu3836</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c8_BhaisajyaguruBuddhaTriad.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bhaisajyaguru Buddha Triad</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1565</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">54.2 × 29.7cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Deoksu3324</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c4_JeongYeochang’sVila.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Jeong Yeochang’s Villa</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1643</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">89.0 × 56.0 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu10579</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c9_BellwithInscription.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bell with Inscription: “Fourth Year of Qingning”</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Goryeo,1058</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 85.4 cm<br>Diameter: 54.3 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu1755</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c10_Gong with Inscription.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gong with Inscription: "Sixth Year of Xiantong"</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Unified Silla,865</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Diameter: 34.5 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Bongwan8616</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c14_SutraonFilialPiety.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Sutra on Filial Piety</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1432</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">33.5 × 11.3 cm</p>
+                                        <!-- <p class="category">Treasure</p>
+                                        <p class="treasure">Jeung3460</p> -->
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/Gilt-bronze Bodhisattva.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gilt-bronze Bodhisattva</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Three Kingdoms period,6th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 12.0 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Deoksu2772</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c11_Gathering of Officials.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gathering of Officials from the ..</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1550</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">93.5 × 58.0 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu2234</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img
+                                        src="../asset/img_Collection/c17_WhitePorcelainJarwithGrapeandMonkeyDesign.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">White Porcelain Jar</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon,late 17th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 30.8 cm</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure">Bongwan2029</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c12_CrownOrnaments.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Crown Ornaments from the Tomb of King Muryeong</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Baekje,sixth century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Length: 30.7cm(King)<br>22.6cm(Queen)</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure">Gongju636, 633</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c15_StupaforStatePreceptorWon.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Stupa for State Preceptor Won ..</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Goryeo,1018-1025</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 2.8 m</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu192</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c18_BronzeRitualObject.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bronze Ritual Object with Farming Scenes</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Early Iron Age</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Width: 12.8 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu1794</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c13_Water-MoonAvalokiteshvara.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Water-Moon Avalokiteshvara</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1730</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">105.7 × 143.5 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Gu9954</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/Gilt-bronze Bodhisattva.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gilt-bronze Buddha Triad </div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Baekje,6th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 8.5 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">M335-2</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/Stone Ksitigarbha Bodhisattva.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Stone Ksitigarbha Bodhisattva</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1515</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 33.4 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu14491</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/Gold_Crown.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gold Crown and Gold Belt</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Silla,5th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 27.3cm<br>Length: 120cm</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure"> Hwangbuk 45</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="../asset/img_Collection/c20_PortraitofSongSiyeol.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Portrait of Song Siyeol</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon,18th-19th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">89.7 × 67.6 cm</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure">Deoksu2828</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img
+                                        src="../asset/img_Collection/c25_BaekjeStoneBuddhaandGilt_bronzeBodhisattva.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Baekje Stone Buddha and Gilt-bronze Bodhisattva</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Baekje,6th-7th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 61.8 cm</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure">Baekje,6th-7th century</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="/asset/img_Collection/c21_BuncheongTurtle_shapedBottle.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Buncheong Turtle-shaped Bottle</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon,15th century</p>
+                                        <!-- <p class="Dimensions">Dimensions/Designation</p>
+                                            <p class="cm">Height: 9.4 cm</p> -->
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Deoksu6231</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img
+                                        src="/asset/img_Collection/Celadon Gourd-shaped Ewer and Bowl with Painted Floral Design.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Celadon Gourd-shaped Ewer a..</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Goryeo,13th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 29.7 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Deoksu6236</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img
+                                        src="/asset/img_Collection/Bronze Bowl with Inscription of King Gwanggaeto the Great.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bronze Bowl with Inscription of ...</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Goguryeo,415 CE</p>
+                                        <!-- <p class="Dimensions">Dimensions/Designation</p>
+                                            <p class="cm">Height: 19.4 cm</p> -->
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu120</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img
+                                        src="/asset/img_Collection/Three-story Stone Pagoda in Beomhak-ri, Sancheong.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Three-story Stone Pagoda</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Goguryeo,415 CE</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 4.2 m</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu18243</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img
+                                        src="/asset/img_Collection/BlacksmithWorkshopfromAlbumofGenrePaintings.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Album of Genre Paintings</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon Dynasty</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">39.7×26.7 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Bongwan6504</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="/asset/img_Collection/GoldEarrings.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gold Earrings from the Double Burial in Bomun-dong</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Silla,mid-6th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Length: 8.6cm</p>
+                                        <!-- <p class="category">Treasure</p>
+                                            <p class="treasure">Bongwan6255</p> -->
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img
+                                        src="/asset/img_Collection/Portrait of Seo Jiksu, Yi Myeonggi.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Portrait of Seo Jiksu</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon Dynasty</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">148.8×72.4cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Deoksu5688</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="/asset/img_Collection/Poems.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bongsa Joseon Changhwa Sigw ..</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon Dynasty</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">133.0×1600.0cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu14149</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="/asset/img_Collection/BaekjeGilt_bronzeIncenseBurner.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Baekje Gilt-bronze Incense Burner</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Baekje,6th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 61.8 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Buyeo5333</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="/asset/img_Collection/CeladonBBB.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Celadon Dragon-shaped Ewer and Celadon Turtle-shaped Ewer
+                                    </div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Goryeo,12th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 24.3cm, 17.3cm</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure">Deoksu 5636</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img src="/asset/img_Collection/Dangling.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Dangling Pendants for Gold Crowns</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Silla,late 5th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Lengths: 31.0 cm</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure">Bongwan 13613</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card ">
+                                <div class="thumb"><img
+                                        src="/asset/img_Collection/Maitreya Bodhisattva and Amitabha Buddha from Gamsansa Temple.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Maitreya Bodhisattva and Amita ..</div>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Unified Silla,719-720</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 270.0 cm</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure">Bongwan1958</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="card_wrap1 card_wrap ">
+                    <div class="card_all swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c1_AlbumofGeumgangsanMountain.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Album of Geumgangsan</div>
+                                    <p>First Trip to Geumgangsan Mountain in 1711</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="conten">Joseon, 1711</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">34.3 × 39.0 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Deoksu903</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img
+                                        src="../asset/img_Collection/c2_Clearingafter RainonMountInwang.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Clearing after Rain on Mount Inwang</div>
+                                    <p>Sense of Space and Reality in Clearing after Rain on Mount Inwang
+                                    </p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1751</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">79.2 × 138.0 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Kunhee1</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c5_SariraReliquaries.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Sarira Reliquaries</div>
+                                    <p>Archaeological Site in Wanggung-ri: From Royal Palace to Buddhist
+                                        Temples</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Unified Silla</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 9.8cm</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure">Sinsu2123</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c7_Gilt-silverCupandStand.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gilt-silver Cup and Stand</div>
+                                    <p>Purpose of Cups with a Stand, Origin of Cups with a Stand</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Goryeo,12th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 12.1 cm <br>Diameter: 54.3 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Deoksu130</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/유물.png" alt=""></div>
+                                <div class="txt">
+                                    <div class="title">Amitabha Buddha Stele</div>
+                                    <p>Buddhist Stele Created by Former Citizens of Baekje</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Unified Silla,673</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 40.3 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">National Sinsu550</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c3_PortraitofHeoMok.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Portrait of Heo Mok</div>
+                                    <p>Masterpiece of Late Joseon Portraiture</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1794</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">72.1 × 57.0 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Deoksu3836</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c8_BhaisajyaguruBuddhaTriad.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bhaisajyaguru Buddha Triad</div>
+                                    <p>Buddhist Stele Created by Former Citizens of Baekje</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1565</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">54.2 × 29.7cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Deoksu3324</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c4_JeongYeochang’sVila.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Jeong Yeochang’s Villa</div>
+                                    <p>Painting the Beauty of Jirisan Mountain and Seomjin Rive</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1643</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">89.0 × 56.0 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu10579</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c9_BellwithInscription.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bell with Inscription: “Fourth Year of Qingning”</div>
+                                    <p>New Flower Design of the Late Goryeo Period</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Goryeo,1058</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 85.4 cm<br>Diameter: 54.3 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu1755</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/GongwithInscription.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gong with Inscription: "Sixth Year of Xiantong"</div>
+                                    <p>The inscription on the side of the gong is embossed in reverse script,
+                                        reading
+                                        from
+                                        left to right</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Unified Silla,865</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Diameter: 34.5 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Bongwan8616</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c14_SutraonFilialPiety.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Sutra on Filial Piety</div>
+                                    <p>Depicting the Ten Maternal Benevolences</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1432</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">33.5 × 11.3 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Jeung3460</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/Gilt-bronze Bodhisattva.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gilt-bronze Bodhisattva</div>
+                                    <p>Icon of Early Buddhist Sculpture of the Three Kingdoms Period</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Three Kingdoms period,6th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 12.0 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Deoksu2772</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c11_Gathering of Officials.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gathering of Officials from the Ministry of Taxation</div>
+                                    <p>Production Date of Gathering of Officials from the Ministry </p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1550</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">93.5 × 58.0 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu2234</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img
+                                        src="../asset/img_Collection/c17_WhitePorcelainJarwithGrapeandMonkeyDesign.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">White Porcelain Jar</div>
+                                    <p>Symbolic Meaning of Grapes and Monkey</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon,late 17th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 30.8 cm</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure">Bongwan2029</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c12_CrownOrnaments.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Crown Ornaments from the Tomb of King Muryeong</div>
+                                    <p>Gold Crown Ornaments Worn by King Muryeong and his Queen Consort</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Baekje,sixth century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Length: 30.7cm(King)<br>22.6cm(Queen)</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure">Gongju636, 633</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c15_StupaforStatePreceptorWon.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Stupa for State Preceptor Wongong</div>
+                                    <p>Life and Faith of State Preceptor Wongong, Jijong</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Goryeo,1018-1025</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 2.8 m</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu192</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c18_BronzeRitualObject.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Bronze Ritual Object with Farming Scenes</div>
+                                    <p>Correlation to Pottery Designs and Bronze Age Fields</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Early Iron Age</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Width: 12.8 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu1794</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c13_Water-MoonAvalokiteshvara.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Water-Moon Avalokiteshvara</div>
+                                    <p>Mount Potalaka, the Pure Land of Avalokiteshvara Bodhisattva</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1730</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">105.7 × 143.5 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Gu9954</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/Gilt-bronze Bodhisattva.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gilt-bronze Buddha Triad </div>
+                                    <p>Buddha Triad Sharing One Halo</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Baekje,6th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 8.5 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">M335-2</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                                \
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/Stone Ksitigarbha Bodhisattva.png"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Stone Ksitigarbha Bodhisattva</div>
+                                    <p>Faith in Ksitigarbha Bodhisattva and Sutras</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon, 1515</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 33.4 cm</p>
+                                        <p class="category">Treasure</p>
+                                        <p class="treasure">Sinsu14491</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/Gold_Crown.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Gold Crown and Gold Belt</div>
+                                    <p>Excavation of Hwangnamdaechong Tomb</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Silla,5th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 27.3cm<br>Length: 120cm</p>
+
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure"> Hwangbuk 45</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img src="../asset/img_Collection/c20_PortraitofSongSiyeol.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Portrait of Song Siyeol</div>
+                                    <p>Simple Clothing as Symbol of a True Neo-Confucianist</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Joseon,18th-19th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">89.7 × 67.6 cm</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure">Deoksu2828</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card swiper-slide">
+                                <div class="thumb"><img
+                                        src="../asset/img_Collection/c25_BaekjeStoneBuddhaandGilt_bronzeBodhisattva.jpg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="title">Baekje Stone Buddha and Gilt-b...</div>
+                                    <p>Sabi Period of Baekje: Great Flourishing of Buddhism</p>
+                                </div>
+                                <div class="card_overlay">
+                                    <div class="overlay_content">
+                                        <p class="category">Nationality/Period</p>
+                                        <p class="period">Baekje,6th-7th century</p>
+                                        <p class="Dimensions">Dimensions/Designation</p>
+                                        <p class="cm">Height: 61.8 cm</p>
+                                        <p class="category">National Treasure</p>
+                                        <p class="treasure">Baekje,6th-7th century</p>
+                                        <button class="viewicon_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section><!-- //.card_wrap1 -->
+            </section><!-- //.con -->
+
+        </main>
+        <footer>
+            <div class="inner">
+                <div class="f_top">
+                    <div class="f_txt">
+                        <h3>Websites</h3>
+                        <ul>
+                            <li><a href="#">Children’s Museum</a></li>
+                            <li><a href="#">Museum Shop</a></li>
+                            <li><a href="#">NMK Magazine</a></li>
+                            <li><a href="#">JKAA</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Learning</h3>
+                        <ul>
+                            <li><a href="#">Learning</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Connect</h3>
+                        <ul>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f_bot">
+                    <div class="bot_txt">
+                        <p>137 Seobinggo-ro, Yongsan-gu, Seoul, 04383, Republic of Korea</p>
+                        <p>Tel : +82-2-2077-9000</p>
+                        <p>© National Museum of Korea.</p>
+                    </div><!-- //.bot_txt -->
+                    <div class="f_right">
+                        <div class="select_box">
+                            <button type="button">Related Site<i class="fa-solid fa-angle-up"></i></button>
+                            <ul>
+                                <li><a href="#">Jeonju National Museum</a></li>
+                                <li><a href="#">Daegu National Museum</a></li>
+                                <li><a href="#">Buyeo National Museum</a></li>
+                                <li><a href="#">Gongju National Museum</a></li>
+                                <li><a href="#">Jinju National Museum</a></li>
+                                <li><a href="#">Cheongju National Museum</a></li>
+                                <li><a href="#">Gimhae National Museum</a></li>
+                                <li><a href="#">Jeju National Museum</a></li>
+                                <li><a href="#">Chuncheon National Museum</a></li>
+                                <li><a href="#">Naju National Museum</a></li>
+                                <li><a href="#">Iksan National Museum</a></li>
+                                <li><a href="#">Cultural Foundation of National Museum of Korea</a></li>
+                                <li><a href="#">Friends of National Museum of Korea</a></li>
+                                <li><a href="#">The Korean Museum Association</a></li>
+                            </ul>
+                        </div><!-- //.select_box -->
+                        <div class="select_box">
+                            <button type="button">Guidebook Download<i class="fa-solid fa-angle-up"></i></button>
+                            <ul>
+                                <li><a href="#">한국어(PDF)</a></li>
+                                <li><a href="#">English(PDF)</a></li>
+                                <li><a href="#">中文(PDF)</a></li>
+                                <li><a href="#">日本語(PDF)</a></li>
+                                <li><a href="#">Français(PDF)</a></li>
+                                <li><a href="#">Deutsche(PDF)</a></li>
+                                <li><a href="#">Español(PDF)</a></li>
+                            </ul>
+                        </div><!-- //.select_box -->
+                    </div><!-- //.f_right -->
+                </div><!-- //.f_bot -->
+            </div>
+        </footer>
     </div><!-- //.wrap -->
-    <main>
-        <div class="banner_top">
-            <img class="banner_img" src="../asset/img_Collection/image 853.png" alt="Collection Banner">
-            <div class="txt">Collection Database</div>
-        </div><!-- //.banner_top -->
-        <div class="sub">
-            <img class="logo" src="../asset/img_Collection/sub_logo.png" />
-            <i class="fa-solid fa-chevron-right"></i>
-            <div class="menu_title">Collection</div>
-            <i class="fa-solid fa-chevron-right"></i>
-            <div class="menu_sub">Collection Database</div>
-        </div><!-- //.sub -->
-    </main>
 </body>
+
 
 </html>
