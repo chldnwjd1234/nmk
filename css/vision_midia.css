@@ -59,6 +59,7 @@
     main .visions .card_set {
         position: relative;
         height: 500px;
+        left: 50px;
     }
 
     main .visions .card1,
@@ -227,6 +228,7 @@
     }
 
     /* Collection_Storage 섹션 */
+
     main .Collection_Storage {
         display: block;
         height: auto;
@@ -261,6 +263,7 @@
         padding-top: 0;
         transform: scale(0.6);
         transform-origin: left top;
+        left: 50px;
 
     }
 
@@ -314,6 +317,7 @@
 }
 
 @media (max-width: 402px) {
+
     /* Welcome 섹션 */
     main .Welcome {
         padding-bottom: 100px;
@@ -355,50 +359,136 @@
         display: none;
     }
 
- 
-/* visions 섹션 */
-main .visions {
-    height: auto;
-    /* padding: 60px 20px; */
-}
-main .visions .card_set {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    height: auto;
-    justify-content: space-between;
-    align-items: flex-start;
-}
+    /* visions */
+    main .visions {
+        padding: 40px 0 0;
+        height: 100%;
+        width: 100%;
+        background: url(/asset/img_Vision/grape2.png) no-repeat;
+    }
 
-main .visions .card1,
-main .visions .card2,
-main .visions .card3 {
-    position: static;
-    flex-direction: column;
-    flex: 1;
-}
+    main .visions .card_set {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+        left: 0;
+        padding: 0 16px;
+    }
 
-main .visions .card1 img,
-main .visions .card2 img,
-main .visions .card3 img {
-    width: 100%;
-}
+    main .visions .card_set>.card1,
+    main .visions .card_set>.card2,
+    main .visions .card_set>.card3 {
+        position: static;
+        flex: 1;
+        transform: none !important;
+        display: grid;
+    }
 
-main .visions .txt_box {
-    position: absolute;
-    bottom: 10px;
-    left: 20%;
-    transform: translateX(-50%);
-}
+    main .visions .card_set>.card1 img,
+    main .visions .card_set>.card2 img,
+    main .visions .card_set>.card3 img {
+        grid-area: 1 / 1;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 
-main .visions .txt_box h4 {
-    font-size: 17px;
-    color: #FFF;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-}
+    main .visions .card3 img {
+        height: 370px !important;
+        width: auto;
+        object-fit: cover;
+    }
 
-main .visions .txt_box p {
-    display: none;
-}
+    main .visions .card_set>.card1 .txt_box,
+    main .visions .card_set>.card2 .txt_box,
+    main .visions .card_set>.card3 .txt_box {
+        grid-area: 1 / 1;
+        align-self: end;
+        justify-self: start;
+        margin-bottom: 12px;
+        margin-left: 10px;
+    }
+
+    main .visions .txt_box h4 {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 16px;
+        color: #fff;
+        margin: 0;
+    }
+
+    main .visions .txt_box p {
+        display: none;
+    }
+
+    /* Architecture */
+    main .Architecture {
+        /* padding: 60px 20px; */
+        height: 100%;
+        background: url(/asset/img_Vision/M_section4-architecture.png);
+    }
+
+    main .Architecture .inner {
+        gap: 15px;
+    }
+
+    main .Architecture .txt_box h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    main .Architecture .txt_box p {
+        font-size: 13px;
+        line-height: 1.7;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.4);
+        padding: 12px 12px;
+        border-radius: 10px;
+
+    }
+
+    main .Architecture .architecture_img .left {
+        display: none;
+    }
+
+    main .Architecture .architecture_img .right img:nth-child(1) {
+        width: 147px;
+        top: -68px;
+    }
+
+    main .Architecture .architecture_img .right img:nth-child(2) {
+        width: 147px;
+    }
+
+    main .Architecture .architecture_img .right img:nth-child(3) {
+        height: 200px;
+        width: 147px;
+    }
+
+    main .Architecture .txt_box p::after {
+        content: none;
+    }
+
+    main .Collection_Storage .inner .txt_box h3 {
+        font-size: 22px;
+    }
+    
+    main .Collection_Storage .collection_label {
+        display: none; 
+    }
+
+    main .Collection_Storage .bg img {
+        z-index: -1;
+    }
+    
+    main .Collection_Storage {
+        background: url("../asset/img_Vision/MMcollection_storage.png") center/contain no-repeat;
+        background-size: 90%; 
+        padding: 60px 0;
+        height: 500px; 
+        min-height: 500px;
+        position: relative; 
+        z-index: 1;  
+    }
 }

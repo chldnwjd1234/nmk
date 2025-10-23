@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "-=0.4"
         );
 
+
 // 📦 Collection Storage 섹션 애니메이션
 const lines = document.querySelectorAll('.Collection_Storage .collection_label ul.line li');
 const labels = document.querySelectorAll('.Collection_Storage .collection_label ul.labels li');
@@ -95,65 +96,83 @@ labels.forEach(label => {
     label.classList.remove('on', 'animated');
 });
 
-ScrollTrigger.create({
-    trigger: ".Collection_Storage",
-    start: "center center",
-    end: `+=${totalSteps * 100}%`,
-    pin: true,
-    pinSpacing: true,
-    scrub: true,
-    // markers: true,
-    onUpdate: (self) => {
-        const progress = self.progress;
-        
-        // progress가 0에 가까우면 아무것도 활성화하지 않음
-        if (progress < 0.01) {
-            lines.forEach((line, index) => {
-                line.classList.remove('on', 'animated');
-                if (labels[index]) {
-                    labels[index].classList.remove('on', 'animated');
-                }
-            });
-            return;
-        }
-        
-        const currentIndex = Math.floor(progress * totalSteps);
-        
-        lines.forEach((line, index) => {
-            if (index < currentIndex) {
-                line.classList.remove('on');
-                line.classList.add('animated');
-                if (labels[index]) {
-                    labels[index].classList.remove('on');
-                    labels[index].classList.add('animated');
-                }
-            } else if (index === currentIndex && progress < 1) {
-                line.classList.add('on');
-                line.classList.remove('animated');
-                if (labels[index]) {
-                    labels[index].classList.add('on');
-                    labels[index].classList.remove('animated');
-                }
-            } else {
-                line.classList.remove('on', 'animated');
-                if (labels[index]) {
-                    labels[index].classList.remove('on', 'animated');
-                }
+// 모바일 체크
+const isMobile = window.innerWidth <= 402;
+
+if (isMobile) {
+    // 모바일: 간단한 이미지 등장 애니메이션
+    gsap.from(".Collection_Storage", {
+        scrollTrigger: {
+            trigger: ".Collection_Storage",
+            start: "top 80%",
+            end: "top 30%",
+            scrub: 1,
+        },
+        y: 100,
+        opacity: 0,
+        ease: "power2.out"
+    });
+} else {
+    // 웹/탭: 기존 인터랙션
+    ScrollTrigger.create({
+        trigger: ".Collection_Storage",
+        start: "center center",
+        end: `+=${totalSteps * 100}%`,
+        pin: true,
+        pinSpacing: true,
+        scrub: true,
+        // markers: true,
+        onUpdate: (self) => {
+            const progress = self.progress;
+            
+            if (progress < 0.01) {
+                lines.forEach((line, index) => {
+                    line.classList.remove('on', 'animated');
+                    if (labels[index]) {
+                        labels[index].classList.remove('on', 'animated');
+                    }
+                });
+                return;
             }
-        });
-        
-        if (progress >= 0.99) {
+            
+            const currentIndex = Math.floor(progress * totalSteps);
+            
             lines.forEach((line, index) => {
-                line.classList.remove('on');
-                line.classList.add('animated');
-                if (labels[index]) {
-                    labels[index].classList.remove('on');
-                    labels[index].classList.add('animated');
+                if (index < currentIndex) {
+                    line.classList.remove('on');
+                    line.classList.add('animated');
+                    if (labels[index]) {
+                        labels[index].classList.remove('on');
+                        labels[index].classList.add('animated');
+                    }
+                } else if (index === currentIndex && progress < 1) {
+                    line.classList.add('on');
+                    line.classList.remove('animated');
+                    if (labels[index]) {
+                        labels[index].classList.add('on');
+                        labels[index].classList.remove('animated');
+                    }
+                } else {
+                    line.classList.remove('on', 'animated');
+                    if (labels[index]) {
+                        labels[index].classList.remove('on', 'animated');
+                    }
                 }
             });
+            
+            if (progress >= 0.99) {
+                lines.forEach((line, index) => {
+                    line.classList.remove('on');
+                    line.classList.add('animated');
+                    if (labels[index]) {
+                        labels[index].classList.remove('on');
+                        labels[index].classList.add('animated');
+                    }
+                });
+            }
         }
-    }
-});
+    });
+}
     // 반응형 대응
     let resizeTimer;
     window.addEventListener('resize', () => {
