@@ -158,40 +158,42 @@ document.addEventListener('DOMContentLoaded', () => {
         return track.scrollWidth - wrap.clientWidth;
     };
 
-    let trackAni = gsap.to(".track", {
-        x: () => total_width(),
+    gsap.to(".track", {
+        x: () => -total_width(),
+        ease: "expo.out",
+        scrollTrigger: {
+            trigger: ".horizontal_all",
+            start: "top top",
+            end: () => "+=" + (total_width() + window.innerWidth),
+            scrub: 1.5,
+            pin: true,
+            anticipatePin: 1,
+            toggleActions: "play none none reset",
+            invalidateOnRefresh: true // ✅ 리사이즈 시 위치 정확히 재계산
+        },
+    });
+    // ==================== SVG Line Drawing (Horizontal Scroll 연동) ====================
+    const svgPath = document.querySelector(".animated_path");
+    const pathLength = svgPath.getTotalLength();
+
+    // 초기값 세팅
+    svgPath.style.strokeDasharray = pathLength;
+    svgPath.style.strokeDashoffset = pathLength;
+
+    gsap.to(svgPath, {
+        strokeDashoffset: 0,
         ease: "none",
         scrollTrigger: {
             trigger: ".horizontal_all",
             start: "top top",
             end: () => "+=" + (total_width() + window.innerWidth),
-            scrub: true,
-            marker: true,
-            pin: true,
-            anticipatePin: 1,
-            toggleActions: "play none none reset",
-        },
+            scrub: 1,
+            // markers: true,  // 디버깅용
+            pin: false
+        }
     });
 
-    window.addEventListener('scroll', () => {
-        const svgCon = document.querySelector('.horizontal_all');
-        const path = document.querySelector('.animated_path');
-        const pathLenght = path.getTotalLength();
-        scrollHandler(svgCon, path, pathLenght);
 
-    })
-    function calcDashOffset(scrollY, element, length) {
-        const ratio = (scrollY - element.offsetTop) / element.offsetHeight; // 스크롤 위치와 요소 높이 비율 계산
-        const value = length - (length * ratio); // 대시 오프셋 값을 계산
-        return Math.max(0, Math.min(value, length)); // 범위 내에서 반환
-    }
-
-    //스크롤 이벤트에 따른 경로 애니메이션 처리
-    function scrollHandler(svgCon, path, pathLenght) {
-        const scrollY = window.scrollY + (window.innerHeight * 0.8);
-        //화면 높이 고려한 스크롤 위치 계산
-        path.style.strokeDashoffset = calcDashOffset(scrollY, svgCon, pathLenght)
-    }
     // ==================== Line Draw Animation ====================
     /*  gsap.to(".animated_path", {
          strokeDashoffset: 0,
