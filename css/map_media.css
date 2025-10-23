@@ -32,6 +32,7 @@
         background: yellow;
         left: 0;
         top: 40px;
+        gap: 12px;
     }
 
     /* ✅ .left와 .map_right 모두 width 100% */
@@ -168,7 +169,7 @@
     /* content 스타일 */
     .content article .info {
         font-size: 16px;
-        background: yellow;
+        /* background: yellow; */
     }
 
     /* 지도 이미지 */
