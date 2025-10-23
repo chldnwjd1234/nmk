@@ -220,19 +220,11 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: ".muds",
             start: "top top",
-            end: "+=4000", //  pin 유지 시간 늘리기
+            end: "+=4000",
             scrub: 2,
-            // toggleActions: "play none none none",
             pin: true,
             anticipatePin: 1,
-            onLeave: () => {
-                // ✅ pin이 끝날 때 footer 등장 애니메이션 실행
-                /*           gsap.fromTo("footer",
-                              { y: 200, opacity: 0 },
-                              { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" }
-                          ); */
-            },
-            pinSpacing: false   // ✅ 자동 패딩 비활성화
+            pinSpacing: false   // ✅ false로 유지
         }
     });
 

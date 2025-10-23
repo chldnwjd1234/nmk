@@ -1,55 +1,37 @@
 @charset "utf-8";
 
-/* 1673px 이하 공통 */
-@media screen and (max-width:1673px) {
+
+@media screen and (max-width:1750px) {
     .inner {
         width: 95%;
     }
 }
 
-/* 1024px 이하 반응형 */
-@media (max-width:1023px) {
-    header {
-        width: 100%;
-        height: 80px;
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: 10;
-        backdrop-filter: blur(15px);
-        background: rgba(226, 218, 215, 0.7);
-    }
 
+/* 1673px 이하 공통 */
+@media screen and (max-width:1673px) {
+    nav ul.gnb {
+        gap: 35px;
+    }
+}
+
+
+@media (max-width:1460px) {
     header .inner {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 20px;
         width: 95%;
     }
 
-    header .inner .logo {
-        width: 210px;
-    }
+
 
 
     header nav {
         display: none;
     }
 
-    /* .ham_icon {
-        display: block;
-        width: 35px;
-        height: 35px;
-        background: url("/asset/img/ham_icon.png") no-repeat center / 24px;
-        border: none;
-        cursor: pointer;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-    } */
 
     .ham {
         width: 40px;
@@ -107,47 +89,43 @@
     header.on .ham ul li:nth-child(3) {
         transform: translateY(-10px) rotate(-45deg);
     }
+
+}
+
+
+
+
+/* 1024px 이하 반응형 */
+@media (max-width:1024px) {
+
+    header .inner .logo {
+        width: 210px;
+    }
+
+    main .banner_top {
+        height: 175px;
+    }
+
+    main .banner_top .txt {
+        font-size: 35px;
+    }
+
 }
 
 /* 402px 이하 반응형 */
-@media (max-width:401px) {
-    header {
-        width: 100%;
-        height: 80px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: rgba(226, 218, 215, 0.8);
-        backdrop-filter: blur(15px);
-        z-index: 10;
-    }
-
-    header .inner .logo {
-        width: 180px;
-    }
-
-    header nav {
-        display: none;
-    }
-
-    /* .ham_icon {
-        display: block;
-        width: 38px;
-        height: 38px;
-        background: url("/asset/img/ham_icon.png") no-repeat center / 24px;
-        border: none;
-        cursor: pointer;
-        position: absolute;
-        right: 16px;
-        top: 50%;
-        transform: translateY(-50%);
-    } */
+@media (max-width:402px) {
 
     .inner .logo {
         width: 110px;
     }
 
-    .inner {
-        width: 95%;
+    main .banner_top {
+        height: 215px;
     }
+
+    main .banner_top .txt {
+        font-size: 28px;
+    }
+
+
 }
