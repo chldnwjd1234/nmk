@@ -123,6 +123,43 @@
         opacity: 1;
         visibility: visible;
     }
+
+    footer {
+        height: auto;
+        padding: 30px 0 50px;
+        background: url(/asset/img/t_footer.png) repeat-y top right var(--bg);
+        position: relative;
+    }
+
+    footer::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: var(--gray-07-footer);
+        z-index: -1;
+    }
+
+    footer::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        background: var(--gray-07-footer);
+        z-index: -1;
+    }
+
+    footer.dark {
+        height: auto;
+        padding: 30px 0 50px;
+        background: url(/asset/img/t_d_footer.png) repeat-y top right #282C34;
+    }
 }
 
 /* 1024px 이하 반응형 */
@@ -211,6 +248,7 @@
         padding: 8px 20px;
         font-size: 0.9rem;
         height: 38px;
+        flex-direction: column;
     }
 
     footer .select_box {

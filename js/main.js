@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return track.scrollWidth - wrap.clientWidth;
     };
 
-    gsap.to(".track", {
+    let trackAni = gsap.to(".track", {
         x: () => total_width(),
         ease: "none",
         scrollTrigger: {
@@ -173,18 +173,37 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
+    window.addEventListener('scroll', () => {
+        const svgCon = document.querySelector('.horizontal_all');
+        const path = document.querySelector('.animated_path');
+        const pathLenght = path.getTotalLength();
+        scrollHandler(svgCon, path, pathLenght);
+
+    })
+    function calcDashOffset(scrollY, element, length) {
+        const ratio = (scrollY - element.offsetTop) / element.offsetHeight; // 스크롤 위치와 요소 높이 비율 계산
+        const value = length - (length * ratio); // 대시 오프셋 값을 계산
+        return Math.max(0, Math.min(value, length)); // 범위 내에서 반환
+    }
+
+    //스크롤 이벤트에 따른 경로 애니메이션 처리
+    function scrollHandler(svgCon, path, pathLenght) {
+        const scrollY = window.scrollY + (window.innerHeight * 0.8);
+        //화면 높이 고려한 스크롤 위치 계산
+        path.style.strokeDashoffset = calcDashOffset(scrollY, svgCon, pathLenght)
+    }
     // ==================== Line Draw Animation ====================
-    gsap.to(".animated_path", {
-        strokeDashoffset: 0,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".horizontal_all",
-            start: "top top",
-            end: () => "+=" + (total_width() + window.innerHeight),
-            scrub: true,
-            pin: false,
-        }
-    });
+    /*  gsap.to(".animated_path", {
+         strokeDashoffset: 0,
+         ease: "none",
+         scrollTrigger: {
+             trigger: ".horizontal_all",
+             start: "top top",
+             end: () => "+=" + (total_width() + window.innerHeight),
+             scrub: true,
+             pin: false,
+         }
+     }); */
     // ==================== Exhibition Title Fade ====================
     gsap.to(".exhibition .title", {
         opacity: 0,

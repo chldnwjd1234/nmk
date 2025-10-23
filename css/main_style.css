@@ -556,12 +556,18 @@ main .vision .line_draw {
     position: absolute;
     top: 314px;
     /* ✅ 위에서 얼마나 떨어질지 */
-    left: -42px;
-    width: 80%;
+    left: 0px;
+    /* width: 80%; */
     /* ✅ 너비 조정 */
     height: auto;
     /* ✅ 비율 유지 */
     z-index: 1;
+}
+
+.animated_path {
+    fill: none;
+    stroke: #f2f2f2;
+    stroke-width: 3px;
 }
 
 /* exhibition */
