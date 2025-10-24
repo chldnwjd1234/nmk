@@ -197,7 +197,7 @@
 }
 
 .bottom .dropdown select:hover {
-    border-color: var(--red-05-point);
+    /* border-color: var(--red-05-point); */
     color: var(--red-05-point);
 }
 
@@ -276,9 +276,11 @@
     font-weight: 450;
     line-height: 1.4;
     color: var(--black);
+    background: yellow;
+    display: block;
 }
 
-.highlighted_artifact 
+.highlighted_artifact
 
 /* 전체 리스트 (층별 묶음) */
 .artall>li {
@@ -304,7 +306,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* 이미지 박스 */
@@ -335,107 +337,107 @@
 
 
 /* 오른쪽 지도 영역 */
-/* .map_right {
-    position: relative;
-    background: #ccc;
-    width: 798px;
-}
-
-.map_right img {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 154px;
-    width: 100%;
-    height: auto;
-    max-width: 798px;
-}
-
-.map_right img .active {
-    display: block;
-} */
+/* ============================
+   🗺️ 지도 영역 (.map_right)
+============================ */
 .map_right {
-    position: relative;
-    background: #ccc;
-    width: 798px;
-    height: 600px;
-    /* ✅ 내부에 콘텐츠가 보이게 높이 확보 */
+  position: relative;
+  background: #ccc;
+  width: 798px;
+  height: 600px; /* 내부 콘텐츠가 보이게 높이 확보 */
 }
 
-/* floor 공통 스타일 */
+/* ============================
+   🔹 기본 표시 제어
+============================ */
 
-
-/* 기본적으로 모든 층 숨기기 */
-
-.map_right ul {
-    display: none;
+/* 모든 층(floor) 숨기기 */
+.map_right .floor > li {
+  display: none;
 }
 
-
-.map_right ul.active {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: relative;
+/* 활성화된 층만 표시 */
+.map_right .floor > li.active {
+  display: block;
 }
 
-.map_right ul li {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+/* 모든 지도 박스(img_box) 숨기기 */
+.map_right .floor > li .img_box {
+  display: none;
 }
 
-.map_right ul.img_box1 li:nth-child(1) {
-    background-image: url(/asset/img_map/mapf1/subtitle/mapf1_1_medieval_and_early_modern_history.png);
+/* 활성화된 지도 박스만 표시 */
+.map_right .floor > li .img_box.active {
+  display: block;
 }
 
-.map_right ul.img_box1 li:nth-child(2) {
-    background-image: url(/asset/img_map/mapf1/subtitle/mapf1_2_prehistory_and_ancient_history.png);
+/* 모든 지도 li 숨기기 */
+.map_right .floor > li .img_box li {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
-.map_right ul.img_box2 li:nth-child(1) {
-    background-image: url(/asset/img_map/mapf2/subtitle/mapf2_1_calligraphy_and_painting.png);
+/* ✅ 활성화된 지도만 표시 */
+.map_right .floor > li .img_box li.active {
+  display: block;
 }
 
-.map_right ul.img_box2 li:nth-child(2) {
-    background-image: url(/asset/img_map/mapf2/subtitle/mapf2_2_donated_collection.png);
+/* ============================
+   🖼️ 층별 지도 이미지 연결
+============================ */
+
+/* 1층 지도 */
+.map_right .floor .f1 .img_box1 li:nth-child(1) {
+  background-image: url(/asset/img_map/mapf1/subtitle/mapf1_1_medieval_and_early_modern_history.png);
 }
 
-.map_right ul.img_box2 li:nth-child(3) {
-    background-image: url(/asset/img_map/mapf2/subtitle/mapf2_3_room_of_quiet_contemplation.png);
+.map_right .floor .f1 .img_box1 li:nth-child(2) {
+  background-image: url(/asset/img_map/mapf1/subtitle/mapf1_2_prehistory_and_ancient_history.png);
 }
 
-.map_right ul.img_box3 li:nth-child(1) {
-    background-image: url(/asset/img_map/mapf3/subtitle/mapf3_1_sculpture_and_crafts.png);
+/* 2층 지도 */
+.map_right .floor .f2 .img_box2 li:nth-child(1) {
+  background-image: url(/asset/img_map/mapf2/subtitle/mapf2_1_calligraphy_and_painting.png);
 }
 
-.map_right ul.img_box3 li:nth-child(2) {
-    background-image: url(/asset/img_map/mapf3/subtitle/mapf3_2_world_art.png);
+.map_right .floor .f2 .img_box2 li:nth-child(2) {
+  background-image: url(/asset/img_map/mapf2/subtitle/mapf2_2_donated_collection.png);
 }
 
-.map_right ul li.active {
-    display: block;
-
+.map_right .floor .f2 .img_box2 li:nth-child(3) {
+  background-image: url(/asset/img_map/mapf2/subtitle/mapf2_3_room_of_quiet_contemplation.png);
 }
 
-/* ✅ 우선순위 높이기 */
-/* .map_right ul.img_box {
-    display: block;
+/* 3층 지도 */
+.map_right .floor .f3 .img_box3 li:nth-child(1) {
+  background-image: url(/asset/img_map/mapf3/subtitle/mapf3_1_sculpture_and_crafts.png);
 }
 
-.map_right ul.floor_1 li:first-child {
-    display: block;
+.map_right .floor .f3 .img_box3 li:nth-child(2) {
+  background-image: url(/asset/img_map/mapf3/subtitle/mapf3_2_world_art.png);
 }
 
-.map_right ul.floor_1 li:first-child img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin-top: 154px;
-} */
+.map_right .product_svg li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 802px;
+  height: 481px;
+  display: none; /* 처음엔 안 보이게 */
+  pointer-events: none; /* 클릭 방지 */
+}
+
+.map_right .product_svg li svg {
+  width: 100%;
+  height: 100%;
+}
+.map_right .product_svg li.active {
+  display: block; /* 활성화된 것만 보이게 */
+}

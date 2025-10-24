@@ -1,143 +1,123 @@
-// 층 탭 클릭 이벤트
+// ============================
+// 🏛 NMK Museum Map JS (HTML 구조 완전 대응)
+// ============================
+
+// 층 탭, 선택, 설명, 지도, 아트리스트 등 선택
 const floorTabs = document.querySelectorAll('.floor_tabs .tab');
-const artLists = document.querySelectorAll('.artall > li');
+const artLists = document.querySelectorAll('.highlighted_artifact .artall > li');
 const selects = document.querySelectorAll('.dropdown select');
 const articles = document.querySelectorAll('.content article');
 const infoBoxes = document.querySelectorAll('.content article .info');
-const mapBoxes = document.querySelectorAll('.map_right ul');
-const mapLis = document.querySelectorAll('.map_right ul li');
 
-// select 변경 이벤트
+// ✅ 지도 관련 요소 (층 기준)
+const mapFloors = document.querySelectorAll('.map_right .floor > li'); // f1, f2, f3
+const mapImages = document.querySelectorAll('.map_right .floor > li .img_box li'); // 지도 이미지 li
+const svgItems = document.querySelectorAll('.map_right .product_svg li'); // SVG 전체
+
+// ============================
+// 🧭 select 변경 시 콘텐츠 + 지도 교체
+// ============================
 selects.forEach((select, index) => {
-    select.addEventListener('change', () => {
-        const selectedValue = select.value;
-        console.log('Selected Value:', selectedValue);
-        
-        // 모든 아트 리스트 숨기기
-        artLists.forEach((art, i) => {
-            articles[i].classList.remove('active');
-            infoBoxes[i].classList.remove('active');
-        });
-        
-        let subIndex = null;
-        switch (selectedValue) {
-            case 'content11': subIndex = 0; break;
-            case 'content12': subIndex = 1; break;
-            case 'content21': subIndex = 0; break;
-            case 'content22': subIndex = 1; break;
-            case 'content23': subIndex = 2; break;
-            case 'content31': subIndex = 0; break;
-            case 'content32': subIndex = 1; break;
-        }
-        
-        articles[index].classList.add('active');
-        
-        // info 박스 활성화
-        if (subIndex !== null) {
-            const infoBoxesInArticle = articles[index].querySelectorAll('.info');
-            infoBoxesInArticle.forEach((infoBox, i) => {
-                infoBox.classList.remove('active');
-                if (i === subIndex) {
-                    infoBox.classList.add('active');
-                }
-            });
-        }
-        
-        // ✅ 지도 변경 함수 호출
-        changeMap(selectedValue);
+  select.addEventListener('change', () => {
+    const val = select.value;
+
+    // 모든 article, info 초기화
+    articles.forEach(a => a.classList.remove('active'));
+    infoBoxes.forEach(i => i.classList.remove('active'));
+    articles[index].classList.add('active');
+
+    // 세부 info 선택
+    const infos = articles[index].querySelectorAll('.info');
+    infos.forEach((info, i) => {
+      info.classList.toggle('active', val.endsWith((i + 1).toString()));
     });
+
+    // 지도 변경
+    updateMapBySelect(val);
+  });
 });
 
-// ✅ 지도 변경 함수
-function changeMap(contentValue) {
-    // 모든 지도 li 숨기기
-    mapLis.forEach(li => li.classList.remove('active'));
-    
-    // 선택된 content에 맞는 지도 표시
-    let mapBoxIndex = 0; // img_box1, img_box2, img_box3
-    let liIndex = 0;      // li 번호 (0부터 시작)
-    
-    switch(contentValue) {
-        case 'content11':
-            mapBoxIndex = 0; // img_box1
-            liIndex = 0;     // 첫 번째 li
-            break;
-        case 'content12':
-            mapBoxIndex = 0; // img_box1
-            liIndex = 1;     // 두 번째 li
-            break;
-        case 'content21':
-            mapBoxIndex = 1; // img_box2
-            liIndex = 0;     // 첫 번째 li
-            break;
-        case 'content22':
-            mapBoxIndex = 1; // img_box2
-            liIndex = 1;     // 두 번째 li
-            break;
-        case 'content23':
-            mapBoxIndex = 1; // img_box2
-            liIndex = 2;     // 세 번째 li
-            break;
-        case 'content31':
-            mapBoxIndex = 2; // img_box3
-            liIndex = 0;     // 첫 번째 li
-            break;
-        case 'content32':
-            mapBoxIndex = 2; // img_box3
-            liIndex = 1;     // 두 번째 li
-            break;
-    }
-    
-    // 선택된 지도 박스의 특정 li만 활성화
-    const targetMapBox = mapBoxes[mapBoxIndex];
-    const targetLi = targetMapBox.querySelectorAll('li')[liIndex];
-    
-    if (targetLi) {
-        targetLi.classList.add('active');
-    }
+// ============================
+// 🗺️ 지도 표시 변경 함수
+// ============================
+function updateMapBySelect(value) {
+  // 전체 지도/ SVG 숨김
+  mapImages.forEach(img => img.classList.remove('active'));
+  svgItems.forEach(svg => svg.classList.remove('active'));
+
+  // value에 따라 해당 층, 인덱스 선택
+  let floorIndex = 0, mapIndex = 0;
+
+  switch (value) {
+    case 'content11': floorIndex = 0; mapIndex = 0; break;
+    case 'content12': floorIndex = 0; mapIndex = 1; break;
+    case 'content21': floorIndex = 1; mapIndex = 0; break;
+    case 'content22': floorIndex = 1; mapIndex = 1; break;
+    case 'content23': floorIndex = 1; mapIndex = 2; break;
+    case 'content31': floorIndex = 2; mapIndex = 0; break;
+    case 'content32': floorIndex = 2; mapIndex = 1; break;
+  }
+
+  // 해당 층 안의 지도 li 활성화
+  const targetFloor = mapFloors[floorIndex];
+  const targetMaps = targetFloor.querySelectorAll('.img_box li');
+  if (targetMaps[mapIndex]) {
+    targetMaps[mapIndex].classList.add('active');
+  }
 }
 
-infoBoxes.forEach((info, index) => {
-    info.addEventListener('click', (e) => {
-        e.stopPropagation();
-        
-        infoBoxes.forEach((box) => {
-            box.classList.remove('active');
-        });
-        
-        info.classList.add('active');
-    });
-});
-
-// 층 탭 클릭 이벤트
+// ============================
+// 🏢 층 탭 전환
+// ============================
 floorTabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-        // 모든 것 초기화
-        artLists.forEach((art, i) => {
-            artLists[i].classList.remove('active');
-            floorTabs[i].classList.remove('active');
-            selects[i].classList.remove('active');
-            articles[i].classList.remove('active');
-            infoBoxes[i].classList.remove('active');
-            mapBoxes[i].classList.remove('active'); // ✅ 지도 박스도 초기화
-        });
-        
-        // 모든 지도 li 숨기기
-        mapLis.forEach(li => li.classList.remove('active'));
-        
-        // 선택된 층 활성화
-        artLists[index].classList.add('active');
-        tab.classList.add('active');
-        selects[index].classList.add('active');
-        articles[index].classList.add('active');
-        articles[index].querySelector('.info').classList.add('active');
-        mapBoxes[index].classList.add('active'); // ✅ 해당 층의 지도 박스 활성화
-        
-        // ✅ 해당 층의 첫 번째 지도 표시
-        const firstLi = mapBoxes[index].querySelector('li:first-child');
-        if (firstLi) {
-            firstLi.classList.add('active');
-        }
-    });
+  tab.addEventListener('click', () => {
+    // 전체 초기화
+    floorTabs.forEach(t => t.classList.remove('active'));
+    artLists.forEach(a => a.classList.remove('active'));
+    selects.forEach(s => s.classList.remove('active'));
+    articles.forEach(a => a.classList.remove('active'));
+    infoBoxes.forEach(i => i.classList.remove('active'));
+    mapFloors.forEach(f => f.classList.remove('active'));
+    mapImages.forEach(li => li.classList.remove('active'));
+    svgItems.forEach(svg => svg.classList.remove('active'));
+
+    // 클릭한 층만 활성화
+    tab.classList.add('active');
+    artLists[index].classList.add('active');
+    selects[index].classList.add('active');
+    articles[index].classList.add('active');
+    articles[index].querySelector('.info').classList.add('active');
+    mapFloors[index].classList.add('active');
+
+    // 첫 지도 이미지 표시
+    const firstMap = mapFloors[index].querySelector('.img_box li:first-child');
+    if (firstMap) firstMap.classList.add('active');
+  });
 });
 
+// ============================
+// 🖼️ Highlighted Artifact 클릭 → 해당 SVG 표시
+// ============================
+document.addEventListener("DOMContentLoaded", () => {
+  const artImgs = document.querySelectorAll(".highlighted_artifact .art_1f ul li img");
+  const f1SvgItems = document.querySelectorAll(".map_right .f1 .product_svg li");
+
+  // 처음엔 숨김
+  f1SvgItems.forEach(svg => svg.style.display = "none");
+
+  artImgs.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      f1SvgItems.forEach(svg => svg.style.display = "none");
+      if (f1SvgItems[index]) {
+        f1SvgItems[index].style.display = "block";
+      }
+    });
+  });
+});
+
+// ============================
+// 🚀 초기 로드 시 1층 표시
+// ============================
+window.addEventListener("DOMContentLoaded", () => {
+  floorTabs[0].click();
+});
