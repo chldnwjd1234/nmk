@@ -292,7 +292,7 @@
         margin: 0;
         white-space: nowrap;
         z-index: 2;
-        background: #A67B7B;
+        background: #AA5F5F;
         color: #fff;
         border-radius: 50px;
         align-items: center;
@@ -362,7 +362,6 @@
 
     main .vision .title h2:nth-child(2) {
         margin-top: 20px;
-        /* 30px → 20px로 줄임 */
     }
 
     main .vision .horizontal_all {
@@ -393,8 +392,6 @@
         height: 400px;
         cursor: pointer;
         transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-        border-radius: 0;
-        /* 레디우스 제거 */
         overflow: hidden;
     }
 
@@ -548,16 +545,13 @@
     body main section.muds {
         width: 100%;
         height: 800px;
-        /* auto → 800px */
         max-height: 800px;
         min-height: 800px;
         background: linear-gradient(180deg, #121215 8%, #282C33 64.49%);
         position: relative;
         overflow: hidden;
-        /* visible → hidden */
         margin-top: 0;
         padding: 0;
-        /* 50px 0 → 0 */
     }
 
     body main section.muds .cloud_container {
@@ -685,5 +679,406 @@
         display: none !important;
     }
 
+
+}
+
+
+/* =============================================================== */
+
+
+
+@media (max-width:412px) {
+
+    .main_visual {
+        height: 70vh;
+    }
+
+    .main_visual figure {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .main_visual video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .museum_cta_mobile {
+        height: 100px;
+        /* 64px → 늘림 */
+        padding: 10px 15px;
+    }
+
+    .museum_cta_mobile .cta_content {
+        flex-direction: column;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .museum_cta_mobile .left {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .museum_cta_mobile .today {
+        flex-direction: row;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .museum_cta_mobile .label {
+        font-size: 15px;
+    }
+
+    .museum_cta_mobile .time {
+        font-size: 15px;
+    }
+
+    .museum_cta_mobile .right {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .museum_cta_mobile .btn_1,
+    .museum_cta_mobile .btn_2 {
+        flex: 1;
+        max-width: 170px;
+        height: 36px;
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+
+
+    main .highlight {
+        width: 100%;
+        height: 900px;
+        padding-top: 0;
+        padding-bottom: 20px;
+        background: url(/asset/img/h_mo_left.png) no-repeat bottom 400px left,
+            url(/asset/img/h_mo_right.png) no-repeat top 5px right;
+        position: relative;
+    }
+
+    main .highlight .title {
+        width: 259px;
+        height: 64px;
+        background: url(/asset/img/mo_title.png) no-repeat center;
+        background-size: contain;
+        margin-left: -16px;
+        margin-top: 20px;
+    }
+
+    main .highlight .title h2 {
+        font-size: 23px;
+        padding-left: 20px;
+        padding-top: 8px;
+        text-align: center;
+    }
+
+
+
+    main .highlight .inner {
+        width: 100%;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    main .highlight .contents {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        position: relative;
+        margin-top: 80px;
+    }
+
+    /* top 영역 - 겹침 효과 */
+    main .highlight .contents .top {
+        flex-direction: column;
+        gap: 0;
+        width: 90%;
+        align-items: center;
+        position: relative;
+        height: 550px;
+    }
+
+    /* h_img1 - 위에 배치 */
+    .highlight .contents .top a:first-child {
+        background: url(/asset/img/h_mo_img1.png) no-repeat;
+        background-size: cover;
+        width: 100%;
+        max-width: 280px;
+        height: 350px;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        z-index: 1;
+    }
+
+    /* h_img2 - 아래 겹쳐서 배치 */
+    main .highlight .contents .top a:nth-child(2) {
+        display: block;
+        background: url(/asset/img/h_mo_img2.png) no-repeat;
+        background-size: cover;
+        width: 100%;
+        max-width: 280px;
+        height: 355px;
+        position: absolute;
+        top: 210px;
+        right: -38px;
+        z-index: 2;
+    }
+
+    /* 버튼 스타일 */
+    .highlight .contents .top .icon {
+        width: 180px;
+        height: 32px;
+        padding: 6px 15px;
+        font-size: 17px;
+        top: 15px;
+        left: 100px;
+    }
+
+    /* h_img3 - 모바일 이미지 */
+    main .highlight .contents .bottom {
+        margin-top: 0;
+        margin-right: 0;
+        background: url(/asset/img/h_mo_img3.png) no-repeat;
+        background-size: cover;
+        width: 353px;
+        height: 248px;
+        position: relative;
+        top: 32px;
+        left: 20px;
+    }
+
+    .highlight .contents .bottom .icon {
+        width: 150px;
+        height: 32px;
+        padding: 6px 15px;
+        font-size: 17px;
+        bottom: 15px;
+        top: 15px;
+        left: 100px;
+    }
+
+
+
+    /* main .backimg  */
+
+    main .backimg {
+        background: url(/asset/img/mo_ink.png) no-repeat;
+        background-size: cover;
+    }
+
+
+
+    /* vision */
+
+    main .vision {
+        height: 650px;
+    }
+
+    main .vision .title h2 {
+        font-size: 23px;
+    }
+
+    main .vision .title h2 img {
+        content: url(/asset/img/mo_vi_line.svg);
+    }
+
+
+    main .vision .title h2:nth-child(2) {
+        margin-top: 10px;
+    }
+
+    main .vision .horizontal_all {
+        width: 100%;
+        height: auto;
+        min-height: 500px;
+        padding: 30px 0;
+        background: url(/asset/img/mo_v_bg.svg) no-repeat;
+        background-position: top center;
+        position: relative;
+    }
+
+    /* line 숨기기 */
+    main .vision .line {
+        display: none;
+    }
+
+    main .vision .v_card {
+        width: 100%;
+        height: 550px;
+        padding: 0;
+        position: relative;
+        display: block;
+        margin-top: 40px;
+    }
+
+
+    /* 1번 카드 - 왼쪽 (v_img1) */
+    main .vision .horizontal_all .v_card .card_item:nth-child(1) {
+        position: absolute;
+        left: 52%;
+        top: 30px;
+        width: 207px;
+        transform: translateX(-50%);
+        height: 308px;
+        z-index: 3;
+    }
+
+    /* 2번 카드 - 오른쪽 (v_img3) */
+    main .vision .horizontal_all .v_card .card_item:nth-child(2) {
+        position: absolute;
+        left: 72%;
+        top: 50px;
+        width: 179px;
+        transform: translateX(-50%);
+        height: 266px;
+        z-index: 2;
+    }
+
+    /* 3번 카드 - 가운데 크게 (v_img2) */
+    main .vision .horizontal_all .v_card .card_item:nth-child(3) {
+        position: absolute;
+        left: 28%;
+        top: 50px;
+        transform: translateX(-50%);
+        width: 179px;
+        height: 266px;
+        z-index: 2;
+    }
+
+    main .vision .v_card .card_item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* track_space 숨기기 */
+    main .vision .v_card .track_space {
+        display: none;
+    }
+
+
+
+
+    /* exhibition */
+
+
+    main .exhibition .title {
+        padding: 0;
+    }
+
+    main .exhibition h2 {
+        font-size: 23px;
+        margin-top: 150px;
+    }
+
+
+    /* MUDS */
+
+
+
+
+    body main section.muds {
+        width: 100%;
+        height: 600px;
+        max-height: 600px;
+        min-height: 600px;
+        background: linear-gradient(180deg, #121215 8%, #282C33 64.49%);
+        position: relative;
+        overflow: hidden;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    body main section.muds .cloud_container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
+
+    .muds_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 600px;
+        min-height: 600px;
+        background: url(/asset/img/mo_mu_bg.png) no-repeat;
+        background-size: contain;
+    }
+
+    .muds_content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 50;
+    }
+
+
+    main .muds .muds_bg .title {
+        width: 259px;
+        height: 64px;
+        background: url(/asset/img/mu_title.png) no-repeat center;
+        background-size: contain;
+        margin-left: -30px;
+        margin-top: 20px;
+    }
+
+    main .muds .muds_bg .title h2 {
+        font-size: 23px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .content_cloud {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 485px;
+        height: 150px;
+    }
+
+    .content_cloud .cloud_bg {
+        transform: none;
+    }
+
+
+    .content_cloud .content_text {
+        top: 58%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+
+    .content_cloud .content_text .subtitle {
+        font-size: 14px;
+    }
+
+    .content_cloud .content_text h3 {
+        font-size: 23px;
+        margin-bottom: 0;
+    }
+
+    .discover_btn {
+        font-size: 16px;
+    }
+
+    footer {
+        display: none;
+    }
 
 }

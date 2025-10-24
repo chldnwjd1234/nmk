@@ -668,8 +668,8 @@ main .exhibition .ex_card {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(.9);
-    width: min(40vw, 480px);
-    height: min(52vw, 640px);
+    width: min(60vw, 480px);
+    height: min(72vw, 640px);
     /* 3:4에 가깝게 (원하면 조정) */
     border-radius: 18px;
     background-size: cover;

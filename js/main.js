@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==================== 반응형 1024 js ====================
-    if (window.innerWidth <= 1024) {
+   if (window.innerWidth <= 1024 && window.innerWidth > 412) {
         // vision 카드 펼치기
         ScrollTrigger.create({
             trigger: ".vision .horizontal_all",
@@ -455,5 +455,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
     window.addEventListener("resize", () => ScrollTrigger.refresh());
 });

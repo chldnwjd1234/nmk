@@ -296,10 +296,18 @@
 
 }
 
-/* 402px 이하 반응형 */
-@media (max-width:402px) {
+/* 412px 이하 반응형 */
+@media (max-width:412px) {
+    header .inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+    }
+
     .inner .logo {
-        width: 110px;
+        width: 80px;
     }
 
     .mobile_menu {
