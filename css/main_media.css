@@ -167,20 +167,6 @@
         display: block;
     }
 
-    /* top 오버레이 */
-    .highlight .contents .top a::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        z-index: 1;
-        border-radius: 8px;
-    }
 
     .highlight .contents .top a:hover::before {
         opacity: 1;
@@ -226,25 +212,6 @@
         height: 566px;
         position: relative;
         display: block;
-    }
-
-    /* bottom 오버레이 */
-    .highlight .contents .bottom::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        z-index: 1;
-        border-radius: 8px;
-    }
-
-    .highlight .contents .bottom:hover::before {
-        opacity: 1;
     }
 
     .highlight .contents .bottom .icon {
@@ -610,5 +577,5 @@
         padding-bottom: 10px;
     }
 
-    
+
 }

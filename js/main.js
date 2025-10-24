@@ -352,34 +352,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector(".v_card").classList.remove("spread");
             }
         });
-
-        // 카드 터치 이벤트
-        const cards = document.querySelectorAll(".v_card .card_item");
-
-        cards.forEach((card, index) => {
-            card.addEventListener("click", function (e) {
-                e.stopPropagation();
-                cards.forEach(c => c.classList.remove("active"));
-                this.classList.add("active");
-            });
-        });
-
-        // 배경 클릭시 active 해제
-        document.querySelector(".vision .horizontal_all").addEventListener("click", function (e) {
-            if (e.target === this) {
-                cards.forEach(c => c.classList.remove("active"));
-            }
-        });
-
-        // Highlight 카드 터치 이벤트
-        const highlightCards = document.querySelectorAll('.highlight .contents a');
-
-        highlightCards.forEach(card => {
-            card.addEventListener('click', function (e) {
-                e.preventDefault();
-                this.classList.toggle('active');
-            });
-        });
     }
 
     window.addEventListener("resize", () => ScrollTrigger.refresh());
