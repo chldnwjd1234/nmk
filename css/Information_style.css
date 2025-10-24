@@ -65,6 +65,8 @@
     padding: 44px 53px;
     box-sizing: border-box;
     margin: 0 auto;
+    display: flex; /* Flexbox 레이아웃을 활성화합니다. */
+    align-items: center; /* 내부 콘텐츠(표)를 세로 중앙에 정렬합니다. */
 }
 
 .hours_table {
@@ -82,8 +84,16 @@
     line-height: 1.3;
     text-align: left;
     font-weight: 400;
-    padding: 12px 0;
+    /* padding: 12px 0; */
 
+}
+
+.hours_table .day th {
+    /* 텍스트와 위/아래 구분선 간의 간격(여백)을 조정합니다. */
+    padding-top: 15px; 
+    padding-bottom: 15px; 
+    /* 좌우 패딩은 기존에 설정된 대로, 필요하면 0 대신 적당히 조정 */
+    padding-left: 0; 
 }
 
 .hours_table .day th:first-child {
