@@ -304,7 +304,7 @@
 }
 
 /* 402px 이하 반응형 */
-@media (max-width:402px) {
+@media (max-width:412px) {
     .inner .logo {
         width: 110px;
     }
@@ -320,5 +320,119 @@
 
     main .banner_top .txt {
         font-size: 28px;
+    }
+
+        footer {
+        background: var(--gray-07-footer);
+        padding: 40px 20px;
+    }
+
+    footer .inner {
+        width: 100%;
+    }
+
+    /* 소셜 아이콘 - CSS로 추가 */
+    footer .inner::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 60px;
+        background: 
+            url('../asset/img/icon_x.png') no-repeat 25% center / 24px,
+            url('../asset/img/icon_instagram.png') no-repeat 42% center / 24px,
+            url('../asset/img/icon_youtube.png') no-repeat 58% center / 24px,
+            url('../asset/img/icon_facebook.png') no-repeat 75% center / 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 30px;
+    }
+
+    /* 푸터 상단 메뉴 */
+    footer .f_top {
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    }
+
+    footer .f_txt {
+        margin-top: 0;
+    }
+
+    footer .f_txt h3 {
+        font-size: 1.125rem;
+        margin-bottom: 12px;
+        color: var(--w-color);
+    }
+
+    footer .f_txt ul li {
+        margin-bottom: 8px;
+        font-size: 0.875rem;
+    }
+
+    footer .f_txt ul li a {
+        color: var(--w-color);
+    }
+
+    /* 하단 정보 */
+    footer .f_bot {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer .bot_txt p {
+        font-size: 0.75rem;
+        color: var(--w-color);
+        margin-bottom: 6px;
+    }
+
+    footer .bot_txt p::before {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* 버튼들 */
+    footer .f_right {
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    footer .select_box {
+        width: 100%;
+        height: auto;
+        flex: 1;
+        
+    }
+
+    footer .select_box > button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.875rem;
+        background: var(--gray-08);
+        color: var(--w-color);
+    }
+
+    footer .select_box ul {
+        width: 100%;
+        bottom: auto ;
+        /* bottom: 100% ; */
+        top: auto;
+        margin-top: 5px;
+        max-height: 0;
+        background: var(--gray-05);
+    }
+
+    footer .select_box.on ul {
+        max-height: 250px ;
+    }
+
+    footer .select_box ul li {
+        height: auto ;
+        line-height: 1.3 ;
+        padding: 10px ;
+        font-size: 0.8rem ;
+        color: var(--w-color);
     }
 }

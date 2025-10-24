@@ -1,9 +1,6 @@
 @charset "utf-8";
 
 @media (max-width: 1024px) {
-    footer {
-        display: none;
-    }
 
     main .moon {
         height: 500px;
@@ -14,6 +11,7 @@
         width: 100vw;
         margin-left: calc(-50vw + 50%);
         max-width: none;
+        overflow: hidden
     }
 
     main .moon img {
@@ -340,7 +338,7 @@
 
 }
 
-@media (max-width: 402px) {
+@media (max-width: 412px) {
     main .moon {
         height: 200px;
         overflow: hidden;
@@ -350,6 +348,7 @@
         width: 100vw;
         margin-left: calc(-50vw + 50%);
         max-width: none;
+        overflow: hidden
     }
 
     main .moon img {
