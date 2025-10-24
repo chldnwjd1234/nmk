@@ -218,6 +218,7 @@
         height: auto;
         padding: 30px 0 50px;
         background: url(/asset/img/t_footer.png) repeat-y top right var(--bg);
+        
     }
 
     footer.dark {
@@ -269,29 +270,35 @@
     }
 
     footer .f_right {
-        width: auto;
-        justify-content: space-between;
-        padding: 8px 20px;
-        font-size: 0.9rem;
-        height: 38px;
+        display: flex;
         flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        margin: 0;
     }
 
     footer .select_box {
         width: auto;
         height: 38px;
+        position: relative;
+        z-index: 100;
+        min-width: 250px;
     }
 
     footer .select_box>button {
-        width: auto;
+        width: 100%;
         justify-content: space-between;
         padding: 10px 30px;
+        white-space: nowrap;
+        min-width: 200px;
     }
 
     .select_box ul {
         width: 100%;
         left: 0;
         right: 0;
+        min-width: 250px
+        
     }
 
 }

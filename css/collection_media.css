@@ -50,10 +50,6 @@
 
 @media (max-width: 1024px) {
 
-  header,
-  footer {
-    display: none;
-  }
 
   .inner {
     width: 95%;
