@@ -1,0 +1,975 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+.wrap {
+    overflow-x: hidden;
+    position: relative;
+}
+
+header.maintop {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+main {
+    width: 100%;
+    height: auto;
+    background: url(/asset/img/bg_all.png) #D8C9AF;
+}
+
+.main_visual {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.museum_cta_mobile {
+    display: none;
+}
+
+
+.museum_cta {
+    position: absolute;
+    right: 0;
+    top: 90vh;
+    width: 822px;
+    height: 225px;
+    background: url(/asset/img/cloud_info.png) no-repeat 50px;
+    z-index: 10;
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .12));
+    display: flex;
+    align-items: center;
+    padding: 0 110px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1s ease-out;
+}
+
+.museum_cta.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.museum_cta .cta_content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 2;
+    color: #111;
+}
+
+.museum_cta .left,
+.museum_cta .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.cta_content .today,
+.cta_content .fees {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cta_content .fees {
+    margin-left: 40px;
+}
+
+.fee_wrap {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+
+.cta_content .label {
+    font-size: 14px;
+    color: var(--gray-08)
+}
+
+.cta_content .time,
+.cta_content .free {
+    font-weight: 500;
+    font-size: var(--fspre-20);
+    line-height: 1;
+}
+
+.cta_content .note {
+    font-size: 14px;
+    color: #5a5f66;
+    margin-top: -14px;
+    line-height: 1.25;
+}
+
+.btn_1,
+.btn_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.btn_1 {
+    background: var(--gray-06);
+    color: #fff;
+}
+
+.btn_2 {
+    background: var(--red-05-point);
+    color: #fff;
+}
+
+main .highlight {
+    width: 100%;
+    height: 1700px;
+    padding-top: 30px;
+    background: url(/asset/img/bg_left.png) no-repeat left center, url(/asset/img/bg_right.png) right center no-repeat;
+    position: relative;
+}
+
+.highlight .title,
+.highlight .contents .top a,
+.highlight .contents .bottom {
+    opacity: 0;
+}
+
+main .highlight .title {
+    width: 684px;
+    height: 182px;
+    background: url(/asset/img/cloud.png) -75px center no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h2 {
+    font-family: var(--title-Zen);
+    font-size: var(--fszenT-XL-65);
+    color: var(--w-color);
+}
+
+.highlight .title h2 {
+    color: var(--black);
+}
+
+.highlight .inner {
+    width: 100%;
+    padding-left: 123px;
+    margin-top: 72px;
+}
+
+.highlight .contents {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 90px;
+}
+
+
+.highlight .contents .top {
+    display: flex;
+    gap: 30px;
+}
+
+.highlight .contents .top a {
+    width: 476px;
+    height: 600px;
+    background: url(/asset/img/h_img1.png);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.highlight .contents .top a:nth-child(2) {
+    background: url(/asset/img/h_img2.png);
+}
+
+/* 어두운 오버레이 */
+.highlight .contents .top a::before,
+.highlight .contents .bottom a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.highlight .contents .top a:hover::before,
+.highlight .contents .bottom a:hover::before {
+    opacity: 1;
+}
+
+/* 기존 아이콘 버튼 - 호버 시 숨김 */
+.highlight .contents .top .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 239px;
+    height: 53px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 21px;
+    background: #AA5F5F;
+    color: var(--w-color);
+    margin: 20px 0 0 25px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+    opacity: 1;
+}
+
+.highlight .contents .top a:hover .icon {
+    opacity: 0;
+}
+
+
+.highlight .contents h3 {
+    font-family: var(--title-Zen);
+}
+
+.highlight .contents .top h3 {
+    position: absolute;
+    bottom: 30px;
+    /* 평소엔 아래 고정 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    font-size: 28px;
+    color: black;
+    opacity: 1;
+    /* 평소에 보임 */
+    transition: opacity 0.4s ease, bottom 0.4s ease, top 0.4s ease, transform 0.4s ease;
+    z-index: 2;
+    margin-top: 0;
+}
+
+.highlight .contents .top a:hover h3 {
+    opacity: 1;
+    bottom: auto;
+    top: 50%;
+    color: var(--w-color);
+    transform: translate(-50%, -30px);
+    /* 호버 시 중앙으로 */
+}
+
+/* Learn More 버튼 - top 카드용 */
+.highlight .contents .top a::after {
+    content: 'Learn More';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 15px) translateY(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 35px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 21px;
+    background: #AA5F5F;
+    color: var(--w-color);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.highlight .contents .top a:hover::after {
+    opacity: 1;
+    transform: translate(-50%, 15px) translateY(0);
+}
+
+.highlight .contents .bottom .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 166px;
+    height: 53px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 21px;
+    background: #79895C;
+    color: var(--w-color);
+    margin: 20px 0 0 25px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.highlight .contents .bottom a:hover .icon {
+    opacity: 0;
+}
+
+/* bottom 제목 - 호버 시 나타남 */
+.highlight .contents .bottom h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40px) translateY(20px);
+    width: 90%;
+    text-align: center;
+    font-size: 30px;
+    color: var(--w-color);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 2;
+    margin-top: 0;
+}
+
+.highlight .contents .bottom a:hover h3 {
+    opacity: 1;
+    transform: translate(-50%, -40px) translateY(0);
+}
+
+/* bottom Learn More 버튼 */
+.highlight .contents .bottom a::after {
+    content: 'Learn More';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 15px) translateY(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 35px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 21px;
+    background: #79895C;
+    color: var(--w-color);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.highlight .contents .bottom a:hover::after {
+    opacity: 1;
+    transform: translate(-50%, 15px) translateY(0);
+}
+
+.highlight .contents .bottom {
+    width: 1284px;
+    height: 526px;
+    background: url(/asset/img/h_img3.png);
+    margin-left: auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+
+/* 먹 이미지 backimg */
+
+main .backimg {
+    width: 100%;
+    height: 800px;
+    background: url(/asset/img/ink-brush.png) no-repeat;
+    background-size: cover;
+    background-position: center 15px;
+    opacity: 0;
+    position: relative;
+    z-index: 10;
+}
+
+main .backimg::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(to bottom, transparent, #1F2523);
+    pointer-events: none;
+}
+
+main .vision {
+    padding-top: 100px;
+    width: 100%;
+    background:
+        linear-gradient(180deg, #1F2523 0%, #1C1D1F 100%);
+    position: relative;
+    overflow: hidden;
+    top: -10px;
+    /* margin-top: -1px; */
+    /* 경계선 제거 */
+}
+
+main .vision .title h2 {
+    opacity: 0;
+    /* 처음엔 안 보이게 */
+}
+
+main .vision .title h2 img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+main .vision .title h2:nth-child(2) {
+    margin-top: 30px;
+}
+
+main .vision .horizontal_all {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: url(/asset/img/v_bg2.png) no-repeat;
+
+}
+
+main .vision .v_card {
+    width: max-content;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-left: 600px;
+    position: relative;
+    z-index: 3;
+}
+
+/* 카드 아이템 스타일 추가 */
+main .vision .v_card .card_item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* 오른쪽 여백 영역 */
+.track_space {
+    width: 200px;
+    /* 여기 숫자 조절 */
+    flex-shrink: 0;
+}
+
+main .vision .v_card .card_item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease;
+}
+
+/* 오버레이 스타일 */
+main .vision .v_card .card_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+/* 호버 시 오버레이 표시 */
+main .vision .v_card .card_item:hover .card_overlay {
+    opacity: 1;
+}
+
+/* 호버 시 이미지 확대 */
+main .vision .v_card .card_item:hover img {
+    transform: scale(1.08);
+}
+
+/* 오버레이 텍스트 스타일 */
+main .vision .card_overlay h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+main .vision .card_overlay p {
+    font-size: 25px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    font-weight: 200;
+}
+
+/* 버튼 스타일 */
+main .vision .card_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 45px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 21px;
+    background: var(--gray-06);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main .vision .card_btn:hover {
+    background: var(--red-05-point);
+    opacity: 0.85;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+main .vision .line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+main .vision .line_left {
+    position: absolute;
+    left: 60px;
+    top: 100px;
+    height: auto;
+    z-index: 10;
+}
+
+main .vision .line_right {
+    position: absolute;
+    right: 100px;
+    bottom: -70px;
+    height: auto;
+    z-index: 10;
+    background:
+        linear-gradient(180deg, #1F2523 0%, #1C1D1F 100%);
+}
+
+main .vision .line_draw {
+    position: absolute;
+    top: 314px;
+    /* ✅ 위에서 얼마나 떨어질지 */
+    left: 0px;
+    /* width: 80%; */
+    /* ✅ 너비 조정 */
+    height: auto;
+    /* ✅ 비율 유지 */
+    z-index: 1;
+}
+
+.animated_path {
+    fill: none;
+    stroke: #f2f2f2;
+    stroke-width: 3px;
+}
+
+/* exhibition */
+
+main .exhibition {
+    width: 100%;
+    height: 100vh;
+    background: url(/asset/img/ex_bg.png) no-repeat center/cover;
+    overflow: hidden;
+    margin-bottom: 0
+}
+
+main .exhibition .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pin_bg {
+    position: absolute;
+    inset: -2px;
+    /* 1~2px 확장해서 경계 숨김 */
+    background-size: cover;
+    background-position: center;
+    will-change: transform, filter;
+    transform: translateZ(0);
+    /* 티어링 줄이기 */
+}
+
+.pin_overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .45));
+    z-index: 1;
+    pointer-events: none;
+}
+
+main .exhibition .title {
+    text-align: center;
+    padding-top: 100px;
+    position: relative;
+    z-index: 10;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+main .exhibition .ex_cards {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+
+main .exhibition .ex_card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: min(40vw, 480px);
+    height: min(52vw, 640px);
+    /* 3:4에 가깝게 (원하면 조정) */
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+    opacity: 0;
+    filter: blur(6px);
+    will-change: transform, filter, opacity;
+}
+
+main .exhibition .ex_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ex_card.glitch::before,
+.ex_card.glitch::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    mix-blend-mode: screen;
+    opacity: .6;
+    pointer-events: none;
+}
+
+.ex_card.glitch::before {
+    transform: translate(2px, 0);
+    filter: hue-rotate(30deg) saturate(1.2);
+}
+
+.ex_card.glitch::after {
+    transform: translate(-2px, 0);
+    filter: hue-rotate(-30deg) saturate(1.2);
+}
+
+@keyframes glitch_slices {
+    0% {
+        clip-path: inset(0 0 90% 0);
+        transform: translateX(-1px);
+    }
+
+    20% {
+        clip-path: inset(10% 0 70% 0);
+        transform: translateX(2px);
+    }
+
+    40% {
+        clip-path: inset(40% 0 40% 0);
+        transform: translateX(-2px);
+    }
+
+    60% {
+        clip-path: inset(65% 0 20% 0);
+        transform: translateX(1px);
+    }
+
+    80% {
+        clip-path: inset(80% 0 5% 0);
+        transform: translateX(-1px);
+    }
+
+    100% {
+        clip-path: inset(0 0 90% 0);
+        transform: translateX(0);
+    }
+}
+
+.ex_card.glitch::before {
+    animation: glitch_slices .35s steps(6) both;
+}
+
+.ex_card.glitch::after {
+    animation: glitch_slices .35s steps(6) reverse both;
+}
+
+/* MU:DS */
+
+main .muds {
+    width: 100%;
+    height: 100vh;
+    padding-top: 0;
+    background: linear-gradient(180deg, #121215 8%, #282C33 64.49%);
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.cloud_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+}
+
+.cloud_container img {
+    pointer-events: none;
+}
+
+/* 구름 공통 스타일 */
+.cloud {
+    position: absolute;
+    object-fit: contain;
+    opacity: 0;
+}
+
+/* 1번 구름 - 제일 위 */
+.cloud_1 {
+    width: 55%;
+    height: auto;
+    top: 0%;
+    left: -10%;
+    z-index: 11;
+}
+
+/* 2번 구름 - 1번과 살짝 겹침 */
+.cloud_2 {
+    width: 60%;
+    height: auto;
+    top: 12%;
+    right: 0;
+    z-index: 12;
+}
+
+/* 3번 구름 - 2번과 더 많이 겹침 */
+.cloud_3 {
+    width: 80%;
+    height: auto;
+    top: 28%;
+    left: -80%;
+    z-index: 13;
+}
+
+/* 4번 구름 - 3번과 겹치며 가장 크고 아래쪽 */
+.cloud_4 {
+    width: 70%;
+    height: auto;
+    top: 48%;
+    right: -100%;
+    z-index: 14;
+}
+
+/* 최종 컨텐츠 */
+.muds_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    z-index: 50;
+}
+
+/* 배경 이미지 */
+.muds_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/asset/img/muds_bg.png) bottom no-repeat;
+    background-size: cover;
+}
+
+/* 타이틀 - 배경 안에 */
+.muds_bg .title {
+    position: absolute;
+    top: 127px;
+    left: 0;
+    width: 684px;
+    height: 182px;
+    background: url(/asset/img/cloud.png) -75px center no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.muds_bg .title h2 {
+    color: var(--black);
+    margin-top: 10px;
+    font-family: var(--title-Zen);
+    font-size: 65px;
+}
+
+/* 텍스트 컨텐츠 */
+
+
+.content_cloud {
+    position: absolute;
+    top: 50%;
+    right: -120px;
+    transform: translateY(-50%);
+    width: 1600px;
+    height: auto;
+    z-index: 10;
+}
+
+
+.content_cloud .cloud_bg {
+    width: 80%;
+    right: -80px;
+    height: auto;
+    display: block;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+
+.content_cloud .content_text {
+    position: absolute;
+    top: 58%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 55%;
+    line-height: 1.4;
+    z-index: 5;
+}
+
+.content_cloud .content_text .subtitle {
+    font-size: 32px;
+    color: #585758;
+    font-weight: 200;
+    line-height: 0.3;
+}
+
+.content_cloud .content_text h3 {
+    font-family: var(--title-Zen);
+    font-size: 3.75rem;
+    color: var(--black);
+    margin-bottom: 15px;
+    padding-left: 100px;
+}
+
+
+.discover_btn {
+    position: relative;
+    display: inline-block;
+    color: var(--red-05-point);
+    font-size: 35px;
+    font-family: "Lora", serif;
+    text-decoration: none;
+    cursor: pointer;
+    padding-bottom: 10px;
+    /* 밑줄 공간 확보 */
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    /* -6px → 0으로 변경 */
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 2px;
+    background-color: var(--red-05-point);
+}
+
+/* footer */
+footer {
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+}
+
+footer .select_box>button {
+    background: var(--gray-06);
+}
+
+.top-btn {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 90px;
+    height: 90px;
+    background: var(--red-05-point);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.top-btn img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 5px;
+}
+
+.top-btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.top-btn:hover {
+    background: var(--blue-06);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 스크롤 시 나타나기 */
+.top-btn {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.top-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
