@@ -379,10 +379,6 @@
     display: block;
 }
 
-/* 활성화된 지도 박스만 표시 */
-/* .map_right .floor > li .img_box.active {
-  display: block;
-} */
 
 /* 모든 지도 li 숨기기 */
 .map_right .floor>li ul li {
