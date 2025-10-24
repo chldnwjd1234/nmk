@@ -98,22 +98,32 @@ floorTabs.forEach((tab, index) => {
 // ============================
 // 🖼️ Highlighted Artifact 클릭 → 해당 SVG 표시
 // ============================
-document.addEventListener("DOMContentLoaded", () => {
-  const artImgs = document.querySelectorAll(".highlighted_artifact .art_1f ul li img");
-  const f1SvgItems = document.querySelectorAll(".map_right .f1 .product_svg li");
 
-  // 처음엔 숨김
-  f1SvgItems.forEach(svg => svg.style.display = "none");
+const artImgsGroup = document.querySelectorAll(".highlighted_artifact .artall > li"); // 층별 아트리스트 그룹
+const svgFloors = document.querySelectorAll(".map_right .product_svg"); // 각 층의 SVG 그룹 컨테이너
 
-  artImgs.forEach((img, index) => {
+// 모든 SVG 숨김
+svgFloors.forEach(floor => {
+  const svgs = floor.querySelectorAll("li");
+  svgs.forEach(svg => (svg.style.display = "none"));
+});
+
+// 각 층별 아트리스트 세트에 클릭 이벤트 연결
+artImgsGroup.forEach((floorGroup, floorIndex) => {
+  const imgs = floorGroup.querySelectorAll("img");
+  const svgItems = svgFloors[floorIndex]?.querySelectorAll("li") || [];
+
+  imgs.forEach((img, artIndex) => {
     img.addEventListener("click", () => {
-      f1SvgItems.forEach(svg => svg.style.display = "none");
-      if (f1SvgItems[index]) {
-        f1SvgItems[index].style.display = "block";
+      // 현재 층 SVG만 갱신
+      svgItems.forEach(svg => (svg.style.display = "none"));
+      if (svgItems[artIndex]) {
+        svgItems[artIndex].style.display = "block";
       }
     });
   });
 });
+
 
 // ============================
 // 🚀 초기 로드 시 1층 표시
