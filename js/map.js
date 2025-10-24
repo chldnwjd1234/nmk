@@ -18,81 +18,81 @@ const svgItems = document.querySelectorAll('.map_right .product_svg li'); // SVG
 // 🧭 select 변경 시 콘텐츠 + 지도 교체
 // ============================
 selects.forEach((select, index) => {
-  select.addEventListener('change', () => {
-    const val = select.value;
+    select.addEventListener('change', () => {
+        const val = select.value;
 
-    // 모든 article, info 초기화
-    articles.forEach(a => a.classList.remove('active'));
-    infoBoxes.forEach(i => i.classList.remove('active'));
-    articles[index].classList.add('active');
+        // 모든 article, info 초기화
+        articles.forEach(a => a.classList.remove('active'));
+        infoBoxes.forEach(i => i.classList.remove('active'));
+        articles[index].classList.add('active');
 
-    // 세부 info 선택
-    const infos = articles[index].querySelectorAll('.info');
-    infos.forEach((info, i) => {
-      info.classList.toggle('active', val.endsWith((i + 1).toString()));
+        // 세부 info 선택
+        const infos = articles[index].querySelectorAll('.info');
+        infos.forEach((info, i) => {
+            info.classList.toggle('active', val.endsWith((i + 1).toString()));
+        });
+
+        // 지도 변경
+        updateMapBySelect(val);
     });
-
-    // 지도 변경
-    updateMapBySelect(val);
-  });
 });
 
 // ============================
 // 🗺️ 지도 표시 변경 함수
 // ============================
 function updateMapBySelect(value) {
-  // 전체 지도/ SVG 숨김
-  mapImages.forEach(img => img.classList.remove('active'));
-  svgItems.forEach(svg => svg.classList.remove('active'));
+    // 전체 지도/ SVG 숨김
+    mapImages.forEach(img => img.classList.remove('active'));
+    svgItems.forEach(svg => svg.classList.remove('active'));
 
-  // value에 따라 해당 층, 인덱스 선택
-  let floorIndex = 0, mapIndex = 0;
+    // value에 따라 해당 층, 인덱스 선택
+    let floorIndex = 0, mapIndex = 0;
 
-  switch (value) {
-    case 'content11': floorIndex = 0; mapIndex = 0; break;
-    case 'content12': floorIndex = 0; mapIndex = 1; break;
-    case 'content21': floorIndex = 1; mapIndex = 0; break;
-    case 'content22': floorIndex = 1; mapIndex = 1; break;
-    case 'content23': floorIndex = 1; mapIndex = 2; break;
-    case 'content31': floorIndex = 2; mapIndex = 0; break;
-    case 'content32': floorIndex = 2; mapIndex = 1; break;
-  }
+    switch (value) {
+        case 'content11': floorIndex = 0; mapIndex = 0; break;
+        case 'content12': floorIndex = 0; mapIndex = 1; break;
+        case 'content21': floorIndex = 1; mapIndex = 0; break;
+        case 'content22': floorIndex = 1; mapIndex = 1; break;
+        case 'content23': floorIndex = 1; mapIndex = 2; break;
+        case 'content31': floorIndex = 2; mapIndex = 0; break;
+        case 'content32': floorIndex = 2; mapIndex = 1; break;
+    }
 
-  // 해당 층 안의 지도 li 활성화
-  const targetFloor = mapFloors[floorIndex];
-  const targetMaps = targetFloor.querySelectorAll('.img_box li');
-  if (targetMaps[mapIndex]) {
-    targetMaps[mapIndex].classList.add('active');
-  }
+    // 해당 층 안의 지도 li 활성화
+    const targetFloor = mapFloors[floorIndex];
+    const targetMaps = targetFloor.querySelectorAll('.img_box li');
+    if (targetMaps[mapIndex]) {
+        targetMaps[mapIndex].classList.add('active');
+    }
 }
 
 // ============================
 // 🏢 층 탭 전환
 // ============================
 floorTabs.forEach((tab, index) => {
-  tab.addEventListener('click', () => {
-    // 전체 초기화
-    floorTabs.forEach(t => t.classList.remove('active'));
-    artLists.forEach(a => a.classList.remove('active'));
-    selects.forEach(s => s.classList.remove('active'));
-    articles.forEach(a => a.classList.remove('active'));
-    infoBoxes.forEach(i => i.classList.remove('active'));
-    mapFloors.forEach(f => f.classList.remove('active'));
-    mapImages.forEach(li => li.classList.remove('active'));
-    svgItems.forEach(svg => svg.classList.remove('active'));
+    tab.addEventListener('click', () => {
+        // 전체 초기화
+        floorTabs.forEach(t => t.classList.remove('active'));
+        artLists.forEach(a => a.classList.remove('active'));
+        selects.forEach(s => s.classList.remove('active'));
+        articles.forEach(a => a.classList.remove('active'));
+        infoBoxes.forEach(i => i.classList.remove('active'));
+        mapFloors.forEach(f => f.classList.remove('active'));
+        mapImages.forEach(li => li.classList.remove('active'));
+        svgItems.forEach(svg => svg.classList.remove('active'));
 
-    // 클릭한 층만 활성화
-    tab.classList.add('active');
-    artLists[index].classList.add('active');
-    selects[index].classList.add('active');
-    articles[index].classList.add('active');
-    articles[index].querySelector('.info').classList.add('active');
-    mapFloors[index].classList.add('active');
+        // 클릭한 층만 활성화
+        tab.classList.add('active');
+        artLists[index].classList.add('active');
+        selects[index].classList.add('active');
+        articles[index].classList.add('active');
+        articles[index].querySelector('.info').classList.add('active');
+        mapFloors[index].classList.add('active');
 
-    // 첫 지도 이미지 표시
-    const firstMap = mapFloors[index].querySelector('.img_box li:first-child');
-    if (firstMap) firstMap.classList.add('active');
-  });
+        // 첫 지도 이미지 표시
+        const firstMap = mapFloors[index].querySelector('.img_box li:first-child');
+        if (firstMap) firstMap.classList.add('active');
+    });
 });
 
 // ============================
@@ -104,24 +104,24 @@ const svgFloors = document.querySelectorAll(".map_right .product_svg"); // 각 �
 
 // 모든 SVG 숨김
 svgFloors.forEach(floor => {
-  const svgs = floor.querySelectorAll("li");
-  svgs.forEach(svg => (svg.style.display = "none"));
+    const svgs = floor.querySelectorAll("li");
+    svgs.forEach(svg => (svg.style.display = "none"));
 });
 
 // 각 층별 아트리스트 세트에 클릭 이벤트 연결
 artImgsGroup.forEach((floorGroup, floorIndex) => {
-  const imgs = floorGroup.querySelectorAll("img");
-  const svgItems = svgFloors[floorIndex]?.querySelectorAll("li") || [];
+    const imgs = floorGroup.querySelectorAll("img");
+    const svgItems = svgFloors[floorIndex]?.querySelectorAll("li") || [];
 
-  imgs.forEach((img, artIndex) => {
-    img.addEventListener("click", () => {
-      // 현재 층 SVG만 갱신
-      svgItems.forEach(svg => (svg.style.display = "none"));
-      if (svgItems[artIndex]) {
-        svgItems[artIndex].style.display = "block";
-      }
+    imgs.forEach((img, artIndex) => {
+        img.addEventListener("click", () => {
+            // 현재 층 SVG만 갱신
+            svgItems.forEach(svg => (svg.style.display = "none"));
+            if (svgItems[artIndex]) {
+                svgItems[artIndex].style.display = "block";
+            }
+        });
     });
-  });
 });
 
 
@@ -129,5 +129,21 @@ artImgsGroup.forEach((floorGroup, floorIndex) => {
 // 🚀 초기 로드 시 1층 표시
 // ============================
 window.addEventListener("DOMContentLoaded", () => {
-  floorTabs[0].click();
+    floorTabs[0].click();
 });
+
+
+/* gps 토글 클릭시 파란색 위치 표시 */
+const gpsToggle = document.getElementById('gpsToggle');
+const gpsMarker = document.querySelector('.gps_marker');
+
+gpsToggle.addEventListener('change', () => {
+    if (gpsToggle.checked) {
+        gpsMarker.style.display = 'block';
+    } else {
+        gpsMarker.style.display = 'none';
+    }
+});
+
+
+
