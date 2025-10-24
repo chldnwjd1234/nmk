@@ -13,22 +13,29 @@ main.bg {
     background-color: var(--bg);
 }
 
-
-
+/* moon */
 main .moon {
-    height: 692px;
+    /* height: 900px; */
+    height: 900px;
     overflow: hidden;
-    border-radius: 0 0 1500px 1500px;
+    border-radius: 0;
     position: relative;
     margin-bottom: 100px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    max-width: none;
 }
 
 main .moon img {
     position: absolute;
     left: 50%;
-    bottom: 0;
+    top: 0;
     transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
 
 main .txt_box {
     display: flex;
