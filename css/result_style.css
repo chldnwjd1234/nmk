@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* ===== Header ===== */
 header {
     background: none !important;
     backdrop-filter: none !important;
@@ -7,7 +8,7 @@ header {
     height: 100px;
 }
 
-/* Main */
+/* ===== Main Background ===== */
 main.bg {
     background: url(/asset/img/result_bg.png) no-repeat center center;
     background-size: cover;
@@ -16,7 +17,7 @@ main.bg {
     width: 100%;
 }
 
-/* Slider Container */
+/* ===== Slider Container ===== */
 .slider_container {
     position: relative;
     width: 100%;
@@ -24,22 +25,8 @@ main.bg {
     overflow: hidden;
 }
 
-/* Slide */
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: calc(100vh - 80px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
-    padding: 40px 20px;
-}
-
+/* ===== Slides ===== */
+.slide,
 .slide2 {
     position: absolute;
     top: 0;
@@ -61,25 +48,26 @@ main.bg {
     padding-top: 0;
 }
 
-
 .slide2.active {
     opacity: 1;
     visibility: visible;
 }
 
-/* Content Box */
+/* ===== Content Box ===== */
 .content_box {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 30px;
     padding: 70px 50px 60px 50px;
-    max-width: 1400px;
+    max-width: 1300px;
     width: 90%;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     position: relative;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
 }
 
-
-/* Back Button */
+/* ===== Back Button ===== */
 .back_btn {
     background-color: rgba(255, 255, 255, 0.7);
     border: none;
@@ -98,7 +86,6 @@ main.bg {
     margin-bottom: 0;
 }
 
-
 .back_btn:hover {
     background-color: var(--red-05-point);
     color: var(--w-color);
@@ -109,13 +96,13 @@ main.bg {
     margin-right: 5px;
 }
 
-
-/* Detail Content */
+/* ===== Detail Content ===== */
 .detail_content {
     display: flex;
     gap: 80px;
     align-items: center;
     justify-content: center;
+    flex: 1;
 }
 
 .artifact_image {
@@ -144,7 +131,7 @@ main.bg {
     font-weight: 500;
 }
 
-/* Info List */
+/* ===== Info List ===== */
 .info_list {
     display: flex;
     flex-direction: column;
@@ -170,15 +157,13 @@ main.bg {
     color: var(--gray-09);
     font-size: 19px;
     font-weight: 300;
-
 }
 
-
+/* ===== Detail Section ===== */
 .detail_section {
-    margin-bottom: 30px;
+    margin: 30px 0;
+    padding-top: 30px;
     border-top: 1px dashed #59574D;
-    margin-top: 30px;
-
 }
 
 .detail_section h3 {
@@ -186,7 +171,6 @@ main.bg {
     color: var(--gray-07-footer);
     margin-bottom: 15px;
     font-weight: 600;
-    margin-top: 30px;
 }
 
 .detail_section p {
@@ -196,7 +180,7 @@ main.bg {
     font-weight: 300;
 }
 
-/* Map Button */
+/* ===== Map Button ===== */
 .map_btn {
     background: rgba(255, 255, 255, 0.7);
     color: var(--gray-08);
@@ -209,7 +193,7 @@ main.bg {
     align-items: center;
     gap: 10px;
     transition: all 0.3s;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
 }
 
 .map_btn:hover {
@@ -217,138 +201,33 @@ main.bg {
     color: var(--w-color);
 }
 
-
 .map_btn i {
     font-size: 15px;
     margin-left: 5px;
 }
 
-/* Related Artifacts Section */
+/* ===== Related Artifacts Section ===== */
 .section_title {
     font-size: 2rem;
-    margin-bottom: 40px;
     font-weight: 600;
+    /* margin-bottom: 40px; */
     width: 100%;
+     margin-top: 60px;
+    max-width: calc((176px * 5) + (30px * 4));
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.related_grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
-}
-
-.artifact_card {
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 15px;
-    padding: 20px;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.artifact_card:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.card_image {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.card_image img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.card_title {
-    font-size: 0.9rem;
-    color: var(--gray-09);
-    text-align: center;
-    line-height: 1.4;
-}
-
-/* Arrow Buttons */
-.arrow_btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--w-color);
-    cursor: pointer;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    font-weight: 200;
-    overflow: visible;
-}
-
-
-.arrow_btn::after {
-    content: '';
-    position: absolute;
-    white-space: pre-line;
-    font-size: 18px;
-    font-weight: 400;
-    opacity: 0;
-    transition: opacity 0.3s;
-    flex-direction: column;
-    text-align: center;
-    top: -50px;
-}
-
-.arrow_btn.right::after {
-    content: 'Related\Artifacts';
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: 400;
-}
-
-.arrow_btn:hover::after {
-    opacity: 1;
-}
-
-.arrow_btn.right {
-    right: 40px;
-}
-
-.arrow_btn.left {
-    left: 40px;
-}
-
-/* Pagination */
-.pagination {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 15px;
-    z-index: 10;
-}
-
-
-/* 🔸 Related Artifacts 카드 크기 및 정렬을 첫번째 카드와 동일하게 맞추기 */
 .related_grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     align-items: flex-start;
+    flex: 1;
+    align-content: center;
+    /* max-height: 200px; */
 }
-
 
 .artifact_card {
     background: none;
@@ -358,11 +237,13 @@ main.bg {
     flex-direction: column;
     align-items: center;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
+.artifact_card:hover {
+    transform: translateY(-5px);
+}
 
-
-/* 카드 내부 이미지 */
 .artifact_card .card_image {
     width: 100%;
     height: 280px;
@@ -387,11 +268,69 @@ main.bg {
     line-height: 1.5;
 }
 
+/* ===== Arrow Navigation Buttons ===== */
+.arrow_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--w-color);
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    font-weight: 200;
+}
 
+.arrow_btn::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    white-space: pre-line;
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+}
 
+.arrow_btn.right::after {
+    content: 'Related\A Artifacts';
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+.arrow_btn:hover::after {
+    opacity: 1;
+}
 
+.arrow_btn.left {
+    left: 40px;
+}
 
+.arrow_btn.right {
+    right: 40px;
+}
+
+/* ===== Pagination ===== */
+.pagination {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+/* ===== Footer ===== */
 footer {
     display: none;
 }
