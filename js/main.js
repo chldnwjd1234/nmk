@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* 반응형 1024 js */
+    // ==================== 반응형 1024 js ====================
     if (window.innerWidth <= 1024) {
         // vision 카드 펼치기
         ScrollTrigger.create({
@@ -426,13 +426,34 @@ document.addEventListener('DOMContentLoaded', () => {
             onEnter: () => {
                 setTimeout(() => {
                     document.querySelector(".v_card").classList.add("spread");
-                }, 900);
+                }, 300);
             },
             onLeaveBack: () => {
                 document.querySelector(".v_card").classList.remove("spread");
             }
         });
-    }
 
+        // 카드 클릭 이벤트
+        const cardItems = document.querySelectorAll('.v_card .card_item');
+        cardItems.forEach((card) => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function () {
+                // 모든 카드 원상복구
+                gsap.to(cardItems, {
+                    scale: 1,
+                    zIndex: 1,
+                    duration: 0.03
+                });
+
+                // 클릭한 카드만 앞으로
+                gsap.to(this, {
+                    scale: 1.05,
+                    zIndex: 10,
+                    duration: 0.03,
+                    ease: 'power2.out'
+                });
+            });
+        });
+    }
     window.addEventListener("resize", () => ScrollTrigger.refresh());
 });
