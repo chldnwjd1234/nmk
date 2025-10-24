@@ -198,27 +198,49 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     // ==================== Vision Horizontal Scroll ====================
-    if (window.innerWidth >= 1025) {  // 데스크탑에서만
-        const total_width = () => {
-            const wrap = document.querySelector(".horizontal_all");
-            const track = document.querySelector(".track");
-            return track.scrollWidth - wrap.clientWidth;
-        };
+   if (window.innerWidth >= 1025) {
+    const total_width = () => {
+        const wrap = document.querySelector(".horizontal_all");
+        const track = document.querySelector(".track");
+        return track.scrollWidth - wrap.clientWidth;
+    };
 
-        gsap.to(".track", {
-            x: () => -total_width(),
-            ease: "expo.out",
-            scrollTrigger: {
-                trigger: ".horizontal_all",
-                start: "top top",
-                end: () => "+=" + (total_width() + window.innerWidth),
-                scrub: 1.5,
-                pin: true,
-                anticipatePin: 1,
-                toggleActions: "play none none reset",
-                invalidateOnRefresh: true
-            },
-        });
+    const visionCards = document.querySelectorAll(".v_card .card_item");
+    
+
+    gsap.to(".track", {
+        x: () => -total_width(),
+        ease: "expo.out",
+        scrollTrigger: {
+            trigger: ".horizontal_all",
+            start: "top top",
+            end: () => "+=" + (total_width() + window.innerWidth),
+            scrub: 1.5,
+            pin: true,
+            anticipatePin: 1,
+            toggleActions: "play none none reset",
+            invalidateOnRefresh: true,
+            onUpdate: (self) => {
+                const progress = self.progress;
+                const totalCards = visionCards.length;
+                
+                visionCards.forEach((card, index) => {
+                    const cardStart = index / totalCards;
+                    const cardEnd = (index + 1) / totalCards;
+                    const cardMid = (cardStart + cardEnd) / 2;
+                    
+                    const distanceFromCenter = Math.abs(progress - cardMid);
+                    const threshold = 0.2;
+                    
+                    if (distanceFromCenter < threshold) {
+                        card.classList.add('active');
+                    } else {
+                        card.classList.remove('active');
+                    }
+                });
+            }
+        },
+    });
 
         // SVG Line도 데스크탑에서만
         const svgPath = document.querySelector(".animated_path");
@@ -491,11 +513,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.style.zIndex = '3';
                     card.style.opacity = '1';
                 } else if (index === (currentIndex + 1) % cards.length) {
-                    card.style.transform = 'translate(20%, -50%) scale(0.75)';
+                    card.style.transform = 'translate(-10%, -50%) scale(0.75)';
                     card.style.zIndex = '1';
                     card.style.opacity = '0.8';
                 } else {
-                    card.style.transform = 'translate(-120%, -50%) scale(0.75)';
+                    card.style.transform = 'translate(-90%, -50%) scale(0.75)';
                     card.style.zIndex = '1';
                     card.style.opacity = '0.8';
                 }

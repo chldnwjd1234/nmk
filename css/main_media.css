@@ -982,14 +982,14 @@
 
     /* 두번째 카드 - 오른쪽 뒤 */
     .mobile_card:nth-child(2) {
-        transform: translate(20%, -50%) scale(0.75);
+        transform: translate(-10%, -50%) scale(0.75);
         z-index: 1;
         opacity: 0.8;
     }
 
     /* 세번째 카드 - 왼쪽 뒤 */
     .mobile_card:nth-child(3) {
-        transform: translate(-120%, -50%) scale(0.75);
+        transform: translate(-70%, -50%) scale(0.75);
         z-index: 1;
         opacity: 0.8;
     }
