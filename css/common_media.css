@@ -296,8 +296,8 @@
 
 }
 
-/* 412px 이하 반응형 */
-@media (max-width:412px) {
+/* 414px 이하 반응형 */
+@media (max-width:414px) {
     header .inner {
         position: relative;
         display: flex;

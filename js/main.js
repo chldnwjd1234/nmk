@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ScrollTrigger.create({
                 trigger: ".highlight",
                 start: "top top",
-                end: "bottom bottom", 
+                end: "bottom bottom",
                 invalidateOnRefresh: false,
                 onEnter: () => {
                     desktopCta.classList.add("hide");
@@ -462,7 +462,86 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    // ==================== 모바일 Vision 슬라이더 ====================
+    setTimeout(() => {
+        const cards = document.querySelectorAll('.mobile_slider_wrap .mobile_card');
+        const slider = document.querySelector('.mobile_slider_wrap .mobile_slider');
 
+        console.log('카드 개수:', cards.length);
+        console.log('슬라이더:', slider);
+
+        if (cards.length === 0 || !slider) return;
+
+        let currentIndex = 0;
+        let startX = 0;
+
+        function updateSlider(newIndex) {
+            if (newIndex < 0) newIndex = cards.length - 1;
+            if (newIndex >= cards.length) newIndex = 0;
+
+            currentIndex = newIndex;
+            console.log('카드 전환:', currentIndex);
+
+            cards.forEach(card => card.classList.remove('active'));
+            cards[currentIndex].classList.add('active');
+
+            cards.forEach((card, index) => {
+                if (index === currentIndex) {
+                    card.style.transform = 'translate(-50%, -50%) scale(1)';
+                    card.style.zIndex = '3';
+                    card.style.opacity = '1';
+                } else if (index === (currentIndex + 1) % cards.length) {
+                    card.style.transform = 'translate(20%, -50%) scale(0.75)';
+                    card.style.zIndex = '1';
+                    card.style.opacity = '0.8';
+                } else {
+                    card.style.transform = 'translate(-120%, -50%) scale(0.75)';
+                    card.style.zIndex = '1';
+                    card.style.opacity = '0.8';
+                }
+            });
+        }
+
+        // 마우스 드래그
+        slider.addEventListener('mousedown', (e) => {
+            startX = e.clientX;
+            console.log('마우스 다운:', startX);
+        });
+
+        slider.addEventListener('mouseup', (e) => {
+            const endX = e.clientX;
+            const diff = startX - endX;
+            console.log('마우스 업:', endX, '차이:', diff);
+
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    updateSlider(currentIndex + 1);
+                } else {
+                    updateSlider(currentIndex - 1);
+                }
+            }
+        });
+
+        // 터치 이벤트
+        slider.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        slider.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    updateSlider(currentIndex + 1);
+                } else {
+                    updateSlider(currentIndex - 1);
+                }
+            }
+        });
+
+        updateSlider(0);
+    }, 100);
 
     window.addEventListener("resize", () => ScrollTrigger.refresh());
 });
