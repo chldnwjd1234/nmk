@@ -311,6 +311,21 @@
                     </div>
                 </div>
             </div>
+            <!-- 모바일용 (새로 추가) -->
+            <div class="museum_cta_mobile">
+                <div class="cta_content">
+                    <div class="left">
+                        <div class="today">
+                            <span class="label">Today</span>
+                            <span class="time">10:00 ~ 18:00</span>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <a href="/html/information.html" class="btn_1">Directions</a>
+                        <a href="/html/reservation.html" class="btn_2">Reservations</a>
+                    </div>
+                </div>
+            </div>
             <section class="highlight">
                 <div class="title">
                     <h2>Highlight</h2>
@@ -344,12 +359,21 @@
                 <div class="inner">
                     <div class="title">
                         <h2>Reflecting the Future</h2>
-                        <h2><img src="/asset/img/v_line.png" alt="line">by Embracing the Past</h2>
+                        <h2><img src="/asset/img/v_line.svg" alt="line">by Embracing the Past</h2>
                     </div>
                 </div><!-- //.inner -->
                 <div class="horizontal_all">
                     <div class="line">
-                        <img src="/asset/img/line_2.png" alt="">
+                        <!-- 왼쪽 건물 라인 -->
+                        <img class="line_left" src="/asset/img/line_img.png" alt="left building">
+
+                        <!-- 오른쪽 건물 라인 -->
+                        <img class="line_right" src="/asset/img/line_img2.png" alt="right building">
+
+                        <!-- 애니메이션 라인 -->
+                        <svg class="line_draw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 571">
+                            <path class="animated_path" d="M0 1.5H51.6344V131.615H453.681V427.875H503.812V569.5H1920" />
+                        </svg>
                     </div>
                     <div class="v_card track">
                         <div class="card_item">
@@ -364,7 +388,7 @@
                             <img src="/asset/img/v_img3.png" alt="img">
                             <div class="card_overlay">
                                 <h3>Leading the Future</h3>
-                                <p>Innovating heritage with AI, VR,<br>and digital experiences.</p>
+                                <p>Reimagining heritage through digital innovation</p>
                                 <button class="card_btn">Learn more</button>
                             </div>
                         </div>
@@ -372,10 +396,11 @@
                             <img src="/asset/img/v_img2.png" alt="img">
                             <div class="card_overlay">
                                 <h3>Advancing into the World</h3>
-                                <p>Promoting Korean culture through<br>active international exchange</p>
+                                <p>Bringing Korean culture <br> to the world</p>
                                 <button class="card_btn">Learn more</button>
                             </div>
                         </div>
+                        <div class="track_space"></div>
                     </div><!-- //.v_card -->
                 </div>
             </section><!-- //.vision  -->
@@ -425,10 +450,10 @@
             <section class="muds">
                 <!-- 구름 컨테이너 -->
                 <div class="cloud_container">
-                    <img src="/asset/img/mu_cloud1.png" alt="cloud" class="cloud cloud_1">
-                    <img src="/asset/img/mu_cloud2.png" alt="cloud" class="cloud cloud_2">
-                    <img src="/asset/img/mu_cloud3.png" alt="cloud" class="cloud cloud_3">
-                    <img src="/asset/img/mu_cloud4.png" alt="cloud" class="cloud cloud_4">
+                    <img src="/asset/img/cloud4.svg" alt="cloud" class="cloud cloud_1">
+                    <img src="/asset/img/mu_cloud3.svg" alt="cloud" class="cloud cloud_2">
+                    <img src="/asset/img/mu_cloud5.svg" alt="cloud" class="cloud cloud_3">
+                    <img src="/asset/img/cloud6.svg" alt="cloud" class="cloud cloud_4">
                     <div class="muds_content">
                         <!-- 배경 이미지 -->
                         <div class="muds_bg">
@@ -438,7 +463,7 @@
                             </div>
                         </div>
                         <div class="content_cloud">
-                            <img src="/asset/img/muds_cloud_ti.png" alt="cloud background" class="cloud_bg">
+                            <img src="/asset/img/muds_con.svg" alt="cloud background" class="cloud_bg">
                             <div class="content_text">
                                 <p class="subtitle">we offer art that enriches your life</p>
                                 <h3>National Museum Goods</h3>
@@ -453,7 +478,7 @@
                 <!-- 최종 컨텐츠 (배경 + 타이틀 + 텍스트) -->
 
             </section>
-<!--             <div class="footer_space"></div> -->
+            <!--             <div class="footer_space"></div> -->
         </main>
 
         <footer class="dark">

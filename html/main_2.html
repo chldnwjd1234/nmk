@@ -9,17 +9,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NMK</title>
     <link rel="shortcut icon" href="/asset/favicon.ico" type="image/x-icon">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/test_style.css"><!-- 본인 스타일 -->
+    <link rel="stylesheet" href="/css/main_style2.css"><!-- 본인 스타일 -->
     <link rel="stylesheet" href="/css/common_media.css">
-    <!-- 본인 미디어스타일 -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="/css/main_media.css">
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="/js/common.js"></script>
-    <!-- 본인 js -->
+    <script src="/js/main2.js"></script>
     <script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
 </head>
+
 
 <body>
     <div class="wrap">
@@ -282,32 +285,203 @@
 
         </header>
         <div class="mobile_overlay"></div>
-        <main class="bg" style="height: 3000px;">
-            <section class="banner_top">
-                <div class="txt inner">Banner name</div><!-- 배너 타이틀 -->
-            </section><!-- //.banner_top -->
-
-            <div class="sub">
+        <main>
+            <section class="main_visual">
+                <figure class="vid">
+                    <video src="/asset/vid/main_banner.mp4" autoplay muted loop playsinline></video>
+                </figure>
+            </section><!-- //.main_visual -->
+            <div class="museum_cta">
+                <div class="cta_content">
+                    <div class="left">
+                        <div class="today">
+                            <span class="label">Today</span>
+                            <span class="time">10:00 ~ 18:00</span>
+                        </div>
+                        <a href="/html/information.html" class="btn_1">Directions</a>
+                    </div>
+                    <div class="right">
+                        <div class="fees">
+                            <span class="label">Fees</span>
+                            <div class="fee_wrap"> <span class="free">Free</span>
+                                <p class="note">Charges apply<br>for special exhibitions</p>
+                            </div>
+                        </div>
+                        <a href="/html/reservation.html" class="btn_2">Reservations</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 모바일용 (새로 추가) -->
+            <div class="museum_cta_mobile">
+                <div class="cta_content">
+                    <div class="left">
+                        <div class="today">
+                            <span class="label">Today</span>
+                            <span class="time">10:00 ~ 18:00</span>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <a href="/html/information.html" class="btn_1">Directions</a>
+                        <a href="/html/reservation.html" class="btn_2">Reservations</a>
+                    </div>
+                </div>
+            </div>
+            <section class="highlight">
+                <div class="title">
+                    <h2>Highlight</h2>
+                </div>
                 <div class="inner">
-                    <a href="/html/main.html"><img class="logo" src="/asset/img_Collection/sub_logo.png" /></a>
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <a href="/html/collection.html">Collection</a>
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <a class="menu_sub" href="/html/collection.html">Collection Database</a>
-                </div><!-- 각자 맞는 페이지 걸기 -->
-            </div><!-- //.sub -->
+                    <div class="contents">
+                        <div class="top">
+                            <a href="/html/exhibition.html">
+                                <div class="icon">Special Exhibition</div>
+                                <h3>Tour of National Treasures</h3>
+                            </a>
+                            <a href="/html/exhibition.html">
+                                <div class="icon">Special Exhibition</div>
+                                <h3>The Collectors of Light</h3>
+                            </a>
+                        </div>
+                        <div class="bottom">
+                            <a href="/html/collection.html">
+                                <div class="icon">Collection</div>
+                                <h3>Collection Database</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- //.highlight -->
+            <section class="backimg">
+                <div class="inner">
+                </div>
+            </section><!-- //.backimg -->
+            <section class="vision">
+                <div class="inner">
+                    <div class="title">
+                        <h2>Reflecting the Future</h2>
+                        <h2><img src="/asset/img/v_line.png" alt="line">by Embracing the Past</h2>
+                    </div>
+                </div><!-- //.inner -->
+                <div class="horizontal_all">
+                    <div class="line">
+                        <!-- 왼쪽 건물 라인 -->
+                        <img class="line_left" src="/asset/img/line_img.png" alt="left building">
 
-            <section class="space test inner"> <!--본인 class 이름 걸기 -->
-                <div class="tit"><!-- 본인 타이틀 -->
-                    <h2>Test title</h2>
+                        <!-- 오른쪽 건물 라인 -->
+                        <img class="line_right" src="/asset/img/line_img2.png" alt="right building">
+
+                        <!-- 애니메이션 라인 -->
+                        <svg class="line_draw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 571">
+                            <path class="animated_path" d="M0 1.5H51.6344V131.615H453.681V427.875H503.812V569.5H1920" />
+                        </svg>
+                    </div>
+                    <div class="v_card track">
+                        <div class="card_item">
+                            <img src="/asset/img/v_img1.png" alt="img">
+                            <div class="card_overlay">
+                                <h3>with Life</h3>
+                                <p>A cultural space that brings<br>inspiration to everyday life</p>
+                                <button class="card_btn">Learn more</button>
+                            </div>
+                        </div>
+                        <div class="card_item">
+                            <img src="/asset/img/v_img3.png" alt="img">
+                            <div class="card_overlay">
+                                <h3>Leading the Future</h3>
+                                <p>Innovating heritage with AI, VR,<br>and digital experiences.</p>
+                                <button class="card_btn">Learn more</button>
+                            </div>
+                        </div>
+                        <div class="card_item">
+                            <img src="/asset/img/v_img2.png" alt="img">
+                            <div class="card_overlay">
+                                <h3>Advancing into the World</h3>
+                                <p>Promoting Korean culture through<br>active international exchange</p>
+                                <button class="card_btn">Learn more</button>
+                            </div>
+                        </div>
+                        <div class="track_space"></div>
+                    </div><!-- //.v_card -->
                 </div>
-                <div class="txt_box">
-                    <h3>바디타이틀</h3>
-                    <p>바디 텍스트 내용을 적으면 됩니당당다앙당당</p>
+            </section><!-- //.vision  -->
+            <section class="exhibition pin_scene" id="showcase">
+                <div class="inner pin_layer">
+                    <div class="pin_bg" id="pin_bg" style="background-image: url('/asset/img/ex_bg.png');">
+                    </div>
+                    <div class="pin_overlay"></div>
+                    <div class="title">
+                        <h2>NMK Global Exhibition</h2>
+                    </div>
+                    <div class="ex_cards float_wrap">
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img1.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img2.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img3.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img4.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img5.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img6.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img7.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img8.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img9.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="/asset/img/ex_img10.png" alt="exhibition">
+                        </div>
+                    </div>
+                </div><!-- //inner -->
+            </section><!-- //.exhibition -->
+
+            <section class="muds">
+                <!-- 구름 컨테이너 -->
+                <div class="cloud_container">
+                    <img src="/asset/img/mu_cloud1.png" alt="cloud" class="cloud cloud_1">
+                    <img src="/asset/img/cloud_yul.svg" alt="cloud" class="cloud cloud_2">
+                    <img src="/asset/img/mu_cloud3.png" alt="cloud" class="cloud cloud_3">
+                    <img src="/asset/img/mu_cloud4.png" alt="cloud" class="cloud cloud_4">
+                    <div class="muds_content">
+                        <!-- 배경 이미지 -->
+                        <div class="muds_bg">
+                            <!-- MU:DS 타이틀 - 배경 안에 -->
+                            <div class="title">
+                                <h2>MU:DS</h2>
+                            </div>
+                        </div>
+                        <div class="content_cloud">
+                            <img src="/asset/img/muds_cloud_ti.png" alt="cloud background" class="cloud_bg">
+                            <div class="content_text">
+                                <p class="subtitle">we offer art that enriches your life</p>
+                                <h3>National Museum Goods</h3>
+                                <a href="#" class="discover_btn">
+                                    Discover our goods
+                                    <span class="underline"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- 최종 컨텐츠 (배경 + 타이틀 + 텍스트) -->
+
             </section>
+            <!--             <div class="footer_space"></div> -->
         </main>
-        <footer>
+
+        <footer class="dark">
             <div class="inner">
                 <div class="f_top">
                     <div class="f_txt">
@@ -385,6 +559,10 @@
                 </div><!-- //.f_bot -->
             </div>
         </footer>
+        <a href="#" class="top-btn">
+            <img src="/asset/img/top.png" alt="top">
+            <span>Top</span>
+        </a>
     </div><!-- //.wrap -->
 </body>
 

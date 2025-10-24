@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             opacity: 1,
             x: 0,
-            duration: 0.8,
+            duration: 0.8,           // ✅ scrub 삭제, duration 추가
             ease: "power2.out",
             scrollTrigger: {
                 trigger: ".highlight .title",
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const highlightTL = gsap.timeline({
         scrollTrigger: {
             trigger: ".highlight .contents",
-            start: "top 70%",
+            start: "top 70%",        // ✅ contents 기준
             toggleActions: "play none none none"
         }
     });
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .fromTo(".highlight .contents .bottom",
             { opacity: 0, x: 150 },
             { opacity: 1, x: 0, duration: 0.7, ease: "power2.out" },
-            "-=0.1"
+            "-=0.1"    // ✅ -0.3 → -0.1 (덜 겹치게)
         );
 
 
@@ -152,48 +152,60 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     // ==================== Vision Horizontal Scroll ====================
-    if (window.innerWidth >= 1025) {  // 데스크탑에서만
-        const total_width = () => {
-            const wrap = document.querySelector(".horizontal_all");
-            const track = document.querySelector(".track");
-            return track.scrollWidth - wrap.clientWidth;
-        };
+    const total_width = () => {
+        const wrap = document.querySelector(".horizontal_all");
+        const track = document.querySelector(".track");
+        return track.scrollWidth - wrap.clientWidth;
+    };
 
-        gsap.to(".track", {
-            x: () => -total_width(),
-            ease: "expo.out",
-            scrollTrigger: {
-                trigger: ".horizontal_all",
-                start: "top top",
-                end: () => "+=" + (total_width() + window.innerWidth),
-                scrub: 1.5,
-                pin: true,
-                anticipatePin: 1,
-                toggleActions: "play none none reset",
-                invalidateOnRefresh: true
-            },
-        });
+    gsap.to(".track", {
+        x: () => -total_width(),
+        ease: "expo.out",
+        scrollTrigger: {
+            trigger: ".horizontal_all",
+            start: "top top",
+            end: () => "+=" + (total_width() + window.innerWidth),
+            scrub: 1.5,
+            pin: true,
+            anticipatePin: 1,
+            toggleActions: "play none none reset",
+            invalidateOnRefresh: true // ✅ 리사이즈 시 위치 정확히 재계산
+        },
+    });
+    // ==================== SVG Line Drawing (Horizontal Scroll 연동) ====================
+    const svgPath = document.querySelector(".animated_path");
+    const pathLength = svgPath.getTotalLength();
 
-        // SVG Line도 데스크탑에서만
-        const svgPath = document.querySelector(".animated_path");
-        const pathLength = svgPath.getTotalLength();
+    // 초기값 세팅
+    svgPath.style.strokeDasharray = pathLength;
+    svgPath.style.strokeDashoffset = pathLength;
 
-        svgPath.style.strokeDasharray = pathLength;
-        svgPath.style.strokeDashoffset = pathLength;
+    gsap.to(svgPath, {
+        strokeDashoffset: 0,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".horizontal_all",
+            start: "top top",
+            end: () => "+=" + (total_width() + window.innerWidth),
+            scrub: 1,
+            // markers: true,  // 디버깅용
+            pin: false
+        }
+    });
 
-        gsap.to(svgPath, {
-            strokeDashoffset: 0,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".horizontal_all",
-                start: "top top",
-                end: () => "+=" + (total_width() + window.innerWidth),
-                scrub: 1,
-                pin: false
-            }
-        });
-    }
 
+    // ==================== Line Draw Animation ====================
+    /*  gsap.to(".animated_path", {
+         strokeDashoffset: 0,
+         ease: "none",
+         scrollTrigger: {
+             trigger: ".horizontal_all",
+             start: "top top",
+             end: () => "+=" + (total_width() + window.innerHeight),
+             scrub: true,
+             pin: false,
+         }
+     }); */
     // ==================== Exhibition Title Fade ====================
     gsap.to(".exhibition .title", {
         opacity: 0,
@@ -244,13 +256,14 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: ".muds",
             start: "top top",
-            end: window.innerWidth <= 1024 ? "+=3000" : "+=4000",
+            end: "+=4000",
             scrub: 2,
-            pin: window.innerWidth >= 1024,  // 조건부 pin
+            pin: true,
             anticipatePin: 1,
         }
     });
 
+    // 1. 구름들 좌우에서 부드럽게 나타나기
     mudsTimeline
         .fromTo(".cloud_1",
             { left: "-60%", opacity: 0 },
@@ -275,8 +288,10 @@ document.addEventListener('DOMContentLoaded', () => {
             { right: "0%", opacity: 1, duration: 1.2, ease: "power2.out" }
         )
 
+        // 2. 잠깐 대기
         .to({}, { duration: 0.8 })
 
+        // 3. 구름들 커튼처럼 좌우로 갈라지기
         .to([".cloud_1", ".cloud_3"], {
             left: "-100%",
             opacity: 0,
@@ -290,6 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: "power2.inOut"
         }, "curtain")
 
+        // 4. 최종 컨텐츠 나타나기
         .to(".muds_content", {
             opacity: 1,
             duration: 1,
@@ -301,18 +317,21 @@ document.addEventListener('DOMContentLoaded', () => {
             "<"
         )
 
+        // 5. content_cloud 구름
         .fromTo(".cloud_bg",
             { opacity: 0, x: "100%" },
             { opacity: 1, x: "0%", duration: 1.2, ease: "power2.out" },
             "-=0.3"
         )
 
+        // 6. 텍스트
         .fromTo(".content_text",
             { opacity: 0, y: 20 },
             { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
             "-=0.6"
         )
 
+        // 7. 마지막 대기
         .to({}, { duration: 2 });
 
     // Button underline animation
@@ -334,23 +353,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 0.4,
                 ease: "power2.in"
             });
-        });
-    }
-
-    /* 반응형 1024 js */
-    if (window.innerWidth <= 1024) {
-        // vision 카드 펼치기
-        ScrollTrigger.create({
-            trigger: ".vision .horizontal_all",
-            start: "top 40%",
-            onEnter: () => {
-                setTimeout(() => {
-                    document.querySelector(".v_card").classList.add("spread");
-                }, 900);
-            },
-            onLeaveBack: () => {
-                document.querySelector(".v_card").classList.remove("spread");
-            }
         });
     }
 

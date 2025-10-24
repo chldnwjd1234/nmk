@@ -390,26 +390,29 @@ main .backimg {
     background-position: center 15px;
     opacity: 0;
     position: relative;
+    z-index: 10;
 }
 
 main .backimg::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -100px;
     left: 0;
     width: 100%;
-    height: 200px;
+    height: 500px;
     background: linear-gradient(to bottom, transparent, #1F2523);
     pointer-events: none;
 }
 
 main .vision {
+    padding-top: 100px;
     width: 100%;
     background:
         linear-gradient(180deg, #1F2523 0%, #1C1D1F 100%);
     position: relative;
     overflow: hidden;
-    margin-top: -1px;
+    top: -10px;
+    /* margin-top: -1px; */
     /* 경계선 제거 */
 }
 
@@ -455,7 +458,6 @@ main .vision .v_card .card_item {
     cursor: pointer;
 }
 
-
 /* 오른쪽 여백 영역 */
 .track_space {
     width: 200px;
@@ -463,14 +465,12 @@ main .vision .v_card .card_item {
     flex-shrink: 0;
 }
 
-
 main .vision .v_card .card_item img {
     display: block;
     width: 100%;
     height: auto;
     transition: transform 0.6s ease;
 }
-
 
 /* 오버레이 스타일 */
 main .vision .v_card .card_overlay {
@@ -555,7 +555,7 @@ main .vision .line_left {
     left: 60px;
     top: 100px;
     height: auto;
-    z-index: 2;
+    z-index: 10;
 }
 
 main .vision .line_right {
@@ -563,8 +563,9 @@ main .vision .line_right {
     right: 100px;
     bottom: -70px;
     height: auto;
-    z-index: 2;
-    background: #1C1D1F;
+    z-index: 10;
+    background:
+        linear-gradient(180deg, #1F2523 0%, #1C1D1F 100%);
 }
 
 main .vision .line_draw {
@@ -651,6 +652,8 @@ main .exhibition .ex_card {
     border-radius: 18px;
     background-size: cover;
     background-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
     opacity: 0;
     filter: blur(6px);
     will-change: transform, filter, opacity;
@@ -760,7 +763,7 @@ main .muds {
 
 /* 1번 구름 - 제일 위 */
 .cloud_1 {
-    width: 60%;
+    width: 55%;
     height: auto;
     top: 0%;
     left: -10%;
@@ -769,7 +772,7 @@ main .muds {
 
 /* 2번 구름 - 1번과 살짝 겹침 */
 .cloud_2 {
-    width: 65%;
+    width: 60%;
     height: auto;
     top: 12%;
     right: 0;
@@ -778,16 +781,16 @@ main .muds {
 
 /* 3번 구름 - 2번과 더 많이 겹침 */
 .cloud_3 {
-    width: 70%;
+    width: 80%;
     height: auto;
-    top: 22%;
-    left: 10%;
+    top: 28%;
+    left: -80%;
     z-index: 13;
 }
 
 /* 4번 구름 - 3번과 겹치며 가장 크고 아래쪽 */
 .cloud_4 {
-    width: 75%;
+    width: 70%;
     height: auto;
     top: 48%;
     right: -100%;
