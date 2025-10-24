@@ -24,6 +24,14 @@
         min-width: 100vw;
     }
 
+        main .Welcome,
+    main .visions,
+    main .Architecture,
+    main .Collection_Storage {
+        position: relative;
+        z-index: 1;
+    }
+
 
     /* Welcome 섹션 */
     main .Welcome {
