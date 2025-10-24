@@ -134,14 +134,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 /* gps 토글 클릭시 파란색 위치 표시 */
-const gpsToggle = document.getElementById('gpsToggle');
+const gpsToggle = document.getElementById('gps');
 const gpsMarker = document.querySelector('.gps_marker');
 
 gpsToggle.addEventListener('change', () => {
     if (gpsToggle.checked) {
-        gpsMarker.style.display = 'block';
+        gpsMarker.classList.add('on')
     } else {
-        gpsMarker.style.display = 'none';
+        gpsMarker.classList.remove('on');
     }
 });
 

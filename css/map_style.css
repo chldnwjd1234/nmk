@@ -349,7 +349,7 @@
 ============================ */
 .map_right {
     position: relative;
-    background: #ccc;
+    /* background: #ccc; */
     width: 798px;
     height: 600px;
     /* 내부 콘텐츠가 보이게 높이 확보 */
@@ -385,7 +385,7 @@
 } */
 
 /* 모든 지도 li 숨기기 */
-.map_right .floor>li .img_box li {
+.map_right .floor>li ul li {
     display: none;
     position: absolute;
     left: 0;
@@ -449,6 +449,22 @@
     /* 클릭 방지 */
 }
 
+.map_right li.f1 .product_svg li:nth-child(1) {
+    background-image: url(/asset/img_map/mapf1/line_and_red/art1_red.png);
+}
+
+.map_right li.f1 .product_svg li:nth-child(2) {
+    background-image: url(/asset/img_map/mapf1/line_and_red/art2_red.png);
+}
+
+.map_right li.f1 .product_svg li:nth-child(3) {
+    background-image: url(/asset/img_map/mapf1/line_and_red/art3_red.png);
+}
+
+.map_right li.f1 .product_svg li:nth-child(4) {
+    background-image: url(/asset/img_map/mapf1/line_and_red/art4_red.png);
+}
+
 .map_right .product_svg li svg {
     width: 100%;
     height: 100%;
@@ -461,6 +477,4 @@
 
 
 
-.map_right .floor 
-
-
+/* .map_right .floor  */

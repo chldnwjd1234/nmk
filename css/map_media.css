@@ -25,7 +25,7 @@
         /* display: block; */
         /* flex 해제 */
         flex-direction: column;
-        padding-top: 266px;
+        padding-top: 200px;
         background: #ccc;
         padding-bottom: 60px;
         position: relative;
@@ -225,9 +225,15 @@
         /* 지도 내 위치 조정 */
         transform: translate(-50%, -50%);
         box-shadow: 0 0 8px rgba(30, 94, 255, 0.6);
+        opacity: 0;
+        transition: .6s;
         /* display: none; */
         /* 기본 숨김 */
         z-index: 50;
+    }
+
+    .gps_marker.on {
+        opacity: 1;
     }
 
     .gps_marker::after {
@@ -326,17 +332,14 @@
         background-size: contain;
         width: 650px;
         height: 450px;
-        background-color: blue;
     }
 
     /* 844px에서의 svg라인 조정 */
     .map_right .product_svg li {
-        position: absolute;
         top: 70px;
         left: 20px;
         width: 652px;
         height: 441px;
-        display: none;
         /* 처음엔 안 보이게 */
         pointer-events: none;
         /* 클릭 방지 */
@@ -350,12 +353,10 @@
     /* highlighted_artifact가 about the gallery 아래로 내려가게 */
     .space .left {
         width: 100%;
-
         order: 2;
         flex-direction: column;
         border-radius: 20px;
         overflow: hidden;
-        background: var(--yellow-01);
         padding: 28px 51px 28px 32px;
     }
 
@@ -368,7 +369,6 @@
         background-size: contain;
         width: 500px;
         height: 350px;
-        background-color: blue;
     }
 
 
@@ -406,11 +406,11 @@
     .space .map_right {
         width: 100%;
         height: 340px;
-        position: relative;
+        /* position: relative; */
         /* position: absolute; */
         /* top: 127px; */
         /* absolute 해제 */
-        background: var(--yellow-01);
+        /* background: var(--yellow-01); */
 
         border-radius: 20px;
         margin-bottom: 8px;
@@ -421,17 +421,15 @@
         background-size: contain;
         width: 320px;
         height: 268px;
-        background-color: green;
+        /* background-color: green; */
     }
 
     /* 844px에서의 svg라인 조정 */
     .map_right .product_svg li {
-        position: absolute;
         top: 5px;
         left: 30px;
         width: 320px;
         height: 335px;
-        display: none;
         /* 처음엔 안 보이게 */
         pointer-events: none;
         /* 클릭 방지 */
