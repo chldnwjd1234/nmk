@@ -1,5 +1,92 @@
 @charset "utf-8";
 
+
+/* 데스크탑용 모바일 CTA 스타일 */
+@media (min-width: 1025px) {
+    .museum_cta_mobile {
+        display: flex;
+        position: fixed;
+        bottom: -100px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 64px;
+        background: var(--gray-09);
+        padding: 0 20px;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        transition: bottom 0.5s ease;
+    }
+
+    .museum_cta_mobile.on {
+        bottom: 0;
+    }
+
+    .museum_cta_mobile .cta_content {
+        display: flex;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+    }
+
+    .museum_cta_mobile .left {
+        display: flex;
+    }
+
+    .museum_cta_mobile .right {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .museum_cta_mobile .today {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .museum_cta_mobile .label {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 400;
+    }
+
+    .museum_cta_mobile .time {
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .museum_cta_mobile .btn_1,
+    .museum_cta_mobile .btn_2 {
+        height: 35px;
+        padding: 0 50px;
+        border-radius: 20px;
+        font-size: 17px;
+        font-weight: 400;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .museum_cta_mobile .btn_1 {
+        background: var(--gray-06);
+    }
+
+    .museum_cta_mobile .btn_2 {
+        background: var(--red-05-point);
+    }
+}
+
+
 /* 1024px 이하 */
 @media (max-width: 1024px) {
 
@@ -27,11 +114,12 @@
         display: none;
     }
 
-    /* 모바일용 표시 */
+    /* 모바일용 - 처음엔 숨김 */
     .museum_cta_mobile {
         display: flex;
         position: fixed;
-        bottom: 0;
+        bottom: -100px;
+        /* 숨김 상태 */
         left: 0;
         right: 0;
         width: 100%;
@@ -42,6 +130,12 @@
         align-items: center;
         justify-content: center;
         z-index: 1000;
+        transition: bottom 0.5s ease;
+    }
+
+    /* highlight 도달 시 나타남 */
+    .museum_cta_mobile.on {
+        bottom: 0;
     }
 
     .museum_cta_mobile .cta_content {
@@ -49,7 +143,7 @@
         color: #fff;
         justify-content: center;
         align-items: center;
-        gap: 130px
+        gap: 130px;
     }
 
     .museum_cta_mobile .left {
@@ -58,7 +152,10 @@
 
     .museum_cta_mobile .right {
         display: flex;
+        flex-direction: row;
+        /* 가로 정렬 */
         gap: 10px;
+        align-items: center;
     }
 
     .museum_cta_mobile .today {
@@ -505,6 +602,7 @@
         align-items: center;
         opacity: 0;
         margin-left: -30px;
+        transform: translateX(-100%);
     }
 
     main .muds .muds_bg .title h2 {
@@ -536,6 +634,7 @@
         z-index: 1;
         margin: 0;
         padding: 0;
+        transform: translateX(100%);
     }
 
     .content_cloud .content_text {
@@ -549,6 +648,7 @@
         z-index: 5;
         margin: 0;
         padding: 0;
+        transform: translateY(20px);
     }
 
     .content_cloud .content_text .subtitle {
@@ -575,6 +675,14 @@
         text-decoration: none;
         cursor: pointer;
         padding-bottom: 10px;
+    }
+
+    /* 구름 숨기기 */
+    .cloud_1,
+    .cloud_2,
+    .cloud_3,
+    .cloud_4 {
+        display: none !important;
     }
 
 

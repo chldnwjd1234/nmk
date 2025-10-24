@@ -25,24 +25,65 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // museum_cta 애니메이션 (오른쪽에서 왼쪽으로)
-    gsap.fromTo(".museum_cta",
-        {
-            opacity: 0,
-            x: 200
-        },
-        {
-            opacity: 1,
-            x: 0,
-            duration: 1,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".museum_cta",
-                start: "top 80%",
-                toggleActions: "play none none none"
+    // ==================== Museum CTA Animation ====================
+    if (window.innerWidth > 1024) {
+        // 데스크탑: 초기 슬라이드 애니메이션
+        gsap.fromTo(".museum_cta",
+            {
+                opacity: 0,
+                x: 200
+            },
+            {
+                opacity: 1,
+                x: 0,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".museum_cta",
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                }
             }
+        );
+
+        // highlight 상단 도달 시 CTA 전환
+        const desktopCta = document.querySelector(".museum_cta");
+        const mobileCta = document.querySelector(".museum_cta_mobile");
+
+        if (desktopCta && mobileCta) {
+            ScrollTrigger.create({
+                trigger: ".highlight",
+                start: "top top", // highlight 상단에 도착하면
+                end: "bottom bottom",
+                onEnter: () => {
+                    desktopCta.classList.add("hide"); // 원래 CTA 숨김
+                    mobileCta.classList.add("on"); // 모바일 CTA 하단 fixed로 나타남
+                },
+                onLeaveBack: () => {
+                    desktopCta.classList.remove("hide"); // 원래 CTA 다시 보임
+                    mobileCta.classList.remove("on"); // 모바일 CTA 숨김
+                }
+            });
         }
-    );
+
+    } else {
+        // 1024px 이하: highlight 도달 시 하단 fixed
+        const mobileCta = document.querySelector(".museum_cta_mobile");
+
+        if (mobileCta) {
+            ScrollTrigger.create({
+                trigger: ".highlight",
+                start: "top 80%",
+                end: "bottom bottom",
+                onEnter: () => {
+                    mobileCta.classList.add("on");
+                },
+                onLeaveBack: () => {
+                    mobileCta.classList.remove("on");
+                }
+            });
+        }
+    }
     // ==================== Highlight Animations ====================
     // 1. 타이틀 먼저
     gsap.fromTo(".highlight .title",
@@ -240,80 +281,119 @@ document.addEventListener('DOMContentLoaded', () => {
     pinTl.to(".float_wrap", { yPercent: -6, duration: 0.8, ease: "none" }, ">0.1");
 
     // ==================== MUDS Cloud Animation ====================
-    const mudsTimeline = gsap.timeline({
-        scrollTrigger: {
+    if (window.innerWidth > 1024) {
+        // 데스크탑: 스크롤 애니메이션
+        const mudsTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".muds",
+                start: "top top",
+                end: "+=4000",
+                scrub: 2,
+                pin: true,
+                anticipatePin: 1,
+            }
+        });
+
+        mudsTimeline
+            .fromTo(".cloud_1",
+                { left: "-60%", opacity: 0 },
+                { left: "0%", opacity: 1, duration: 1.2, ease: "power2.out" }
+            )
+            .to({}, { duration: 0.2 })
+
+            .fromTo(".cloud_2",
+                { right: "-50%", opacity: 0 },
+                { right: "0%", opacity: 1, duration: 1.2, ease: "power2.out" }
+            )
+            .to({}, { duration: 0.2 })
+
+            .fromTo(".cloud_3",
+                { left: "-40%", opacity: 0 },
+                { left: "0%", opacity: 1, duration: 1.2, ease: "power2.out" }
+            )
+            .to({}, { duration: 0.2 })
+
+            .fromTo(".cloud_4",
+                { right: "-30%", opacity: 0 },
+                { right: "0%", opacity: 1, duration: 1.2, ease: "power2.out" }
+            )
+
+            .to({}, { duration: 0.8 })
+
+            .to([".cloud_1", ".cloud_3"], {
+                left: "-100%",
+                opacity: 0,
+                duration: 1.2,
+                ease: "power2.inOut"
+            }, "curtain")
+            .to([".cloud_2", ".cloud_4"], {
+                right: "-100%",
+                opacity: 0,
+                duration: 1.2,
+                ease: "power2.inOut"
+            }, "curtain")
+
+            .to(".muds_content", {
+                opacity: 1,
+                duration: 1,
+                ease: "power2.out"
+            }, "-=0.5")
+            .fromTo(".muds_bg .title",
+                { opacity: 0, x: "-100%" },
+                { opacity: 1, x: "0%", duration: 1, ease: "power2.out" },
+                "<"
+            )
+
+            .fromTo(".cloud_bg",
+                { opacity: 0, x: "100%" },
+                { opacity: 1, x: "0%", duration: 1.2, ease: "power2.out" },
+                "-=0.3"
+            )
+
+            .fromTo(".content_text",
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
+                "-=0.6"
+            )
+
+            .to({}, { duration: 2 });
+
+    } else {
+        // 1024px 이하: 쇽쇽 애니메이션
+        ScrollTrigger.create({
             trigger: ".muds",
-            start: "top top",
-            end: window.innerWidth <= 1024 ? "+=3000" : "+=4000",
-            scrub: 2,
-            pin: window.innerWidth >= 1024,  // 조건부 pin
-            anticipatePin: 1,
-        }
-    });
+            start: "top 70%",
+            once: true,
+            onEnter: () => {
+                const mobileTimeline = gsap.timeline();
 
-    mudsTimeline
-        .fromTo(".cloud_1",
-            { left: "-60%", opacity: 0 },
-            { left: "0%", opacity: 1, duration: 1.2, ease: "power2.out" }
-        )
-        .to({}, { duration: 0.2 })
-
-        .fromTo(".cloud_2",
-            { right: "-50%", opacity: 0 },
-            { right: "0%", opacity: 1, duration: 1.2, ease: "power2.out" }
-        )
-        .to({}, { duration: 0.2 })
-
-        .fromTo(".cloud_3",
-            { left: "-40%", opacity: 0 },
-            { left: "0%", opacity: 1, duration: 1.2, ease: "power2.out" }
-        )
-        .to({}, { duration: 0.2 })
-
-        .fromTo(".cloud_4",
-            { right: "-30%", opacity: 0 },
-            { right: "0%", opacity: 1, duration: 1.2, ease: "power2.out" }
-        )
-
-        .to({}, { duration: 0.8 })
-
-        .to([".cloud_1", ".cloud_3"], {
-            left: "-100%",
-            opacity: 0,
-            duration: 1.2,
-            ease: "power2.inOut"
-        }, "curtain")
-        .to([".cloud_2", ".cloud_4"], {
-            right: "-100%",
-            opacity: 0,
-            duration: 1.2,
-            ease: "power2.inOut"
-        }, "curtain")
-
-        .to(".muds_content", {
-            opacity: 1,
-            duration: 1,
-            ease: "power2.out"
-        }, "-=0.5")
-        .fromTo(".muds_bg .title",
-            { opacity: 0, x: "-100%" },
-            { opacity: 1, x: "0%", duration: 1, ease: "power2.out" },
-            "<"
-        )
-
-        .fromTo(".cloud_bg",
-            { opacity: 0, x: "100%" },
-            { opacity: 1, x: "0%", duration: 1.2, ease: "power2.out" },
-            "-=0.3"
-        )
-
-        .fromTo(".content_text",
-            { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
-            "-=0.6"
-        )
-
-        .to({}, { duration: 2 });
+                mobileTimeline
+                    .to(".muds_content", {
+                        opacity: 1,
+                        duration: 0.6,
+                        ease: "power2.out"
+                    })
+                    .to(".muds_bg .title", {
+                        opacity: 1,
+                        x: "0%",
+                        duration: 0.8,
+                        ease: "power2.out"
+                    }, "-=0.3")
+                    .to(".cloud_bg", {
+                        opacity: 1,
+                        x: "0%",
+                        duration: 0.8,
+                        ease: "power2.out"
+                    }, "-=0.5")
+                    .to(".content_text", {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.6,
+                        ease: "power2.out"
+                    }, "-=0.4");
+            }
+        });
+    }
 
     // Button underline animation
     const btn = document.querySelector(".discover_btn");
