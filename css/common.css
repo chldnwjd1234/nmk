@@ -76,6 +76,8 @@ body {
 .wrap {
     width: 100%;
     position: relative;
+    overflow-y: hidden;
+
 }
 
 .inner {
@@ -294,7 +296,7 @@ nav ul.gnb>li:hover .sub_menu {
 }
 
 .sub_right ul li a {
-    font-size:1.125rem ;
+    font-size: 1.125rem;
     color: var(--black);
     transition: .3s;
     display: block;
@@ -356,7 +358,7 @@ nav ul.gnb>li:hover .sub_menu {
     background: none;
     border: none;
     color: var(--black);
-    font-size:1.5rem;
+    font-size: 1.5rem;
     cursor: pointer;
     display: flex;
     align-items: center;

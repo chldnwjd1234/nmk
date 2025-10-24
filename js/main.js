@@ -57,15 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (desktopCta && mobileCta) {
             ScrollTrigger.create({
                 trigger: ".highlight",
-                start: "top top", // highlight 상단에 도착하면
-                end: "bottom bottom",
+                start: "top top",
+                end: "bottom bottom", 
+                invalidateOnRefresh: false,
                 onEnter: () => {
-                    desktopCta.classList.add("hide"); // 원래 CTA 숨김
-                    mobileCta.classList.add("on"); // 모바일 CTA 하단 fixed로 나타남
+                    desktopCta.classList.add("hide");
+                    mobileCta.classList.add("on");
                 },
                 onLeaveBack: () => {
-                    desktopCta.classList.remove("hide"); // 원래 CTA 다시 보임
-                    mobileCta.classList.remove("on"); // 모바일 CTA 숨김
+                    desktopCta.classList.remove("hide");
+                    mobileCta.classList.remove("on");
                 }
             });
         }
@@ -78,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ScrollTrigger.create({
                 trigger: ".highlight",
                 start: "top 80%",
-                end: "bottom bottom",
+                end: "bottom top",
                 onEnter: () => {
                     mobileCta.classList.add("on");
                 },
