@@ -62,7 +62,86 @@
     height: 360px;
     background-color: rgba(255, 255, 255, .5);
     border-radius: 20px;
+    padding: 44px 53px;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
+
+.hours_table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.hours_table thead {
+    border-bottom: 1px solid #333;
+}
+
+.hours_table .day {
+    font-size: 25px;
+    line-height: 1.3;
+    text-align: left;
+    font-weight: 400;
+    padding: 12px 0;
+
+}
+
+.hours_table .day th:first-child {
+    width: 18%;
+    /* padding-left: 0; */
+}
+
+.hours_table .day th:nth-child(2) {
+    width: 38%;
+}
+
+.hours_table .day th:nth-child(3) {
+    width: 28%;
+}
+
+.hours_table .day th:nth-child(4) {
+    width: 16%;
+}
+
+.hours_table tbody td {
+    padding: 16px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+    vertical-align: top;
+}
+
+.hours_table tbody td:first-child {
+    padding-left: 0;
+    /* 첫 번째 열 왼쪽 패딩 제거 */
+}
+
+.hours_table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+.hours_table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.main_museum_row .mid_1,
+.museum_2 .mid_2,
+.museum_3 .mid_3 {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
+
+.hours_table tbody td small {
+    font-size: 16px;
+    line-height: 1.3;
+    display: block;
+    
+}
+
 
 .AdmissionFees h3 {
     margin-top: 20px;
@@ -350,15 +429,16 @@
     background-color: #BF3E3E;
 }
 
-/* di_section */
-.di_section {
-    height: 1000px;
-    background: red;
-}
+
 
 .VisitorTips {
     margin-top: 103px;
     padding-bottom: 120px;
+    background-image: url(/asset/img_information/tree.png);
+    background-repeat: no-repeat;
+     background-position: right bottom; /* 화면 가운데 정렬 */
+    background-size: contain; 
+    background-size: 50%; 
 }
 
 .VisitorTips .tit {
@@ -385,7 +465,7 @@
     /* 육각형 크기에 맞춰 너비 지정 */
     height: 260px;
     /* 육각형 크기에 맞춰 높이 지정 */
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -412,7 +492,7 @@
     /* 육각형 크기에 맞춰 너비 지정 */
     height: 260px;
     /* 육각형 크기에 맞춰 높이 지정 */
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -438,7 +518,7 @@
     /* 육각형 크기에 맞춰 너비 지정 */
     height: 260px;
     /* 육각형 크기에 맞춰 높이 지정 */
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -464,7 +544,7 @@
     /* 육각형 크기에 맞춰 너비 지정 */
     height: 260px;
     /* 육각형 크기에 맞춰 높이 지정 */
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -491,7 +571,7 @@
     /* 육각형 크기에 맞춰 너비 지정 */
     height: 260px;
     /* 육각형 크기에 맞춰 높이 지정 */
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -517,7 +597,7 @@
     /* 육각형 크기에 맞춰 너비 지정 */
     height: 260px;
     /* 육각형 크기에 맞춰 높이 지정 */
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -543,7 +623,7 @@
     /* 육각형 크기에 맞춰 너비 지정 */
     height: 260px;
     /* 육각형 크기에 맞춰 높이 지정 */
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -570,7 +650,7 @@
     /* 육각형 크기에 맞춰 너비 지정 */
     height: 260px;
     /* 육각형 크기에 맞춰 높이 지정 */
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -586,4 +666,54 @@
 .OnlyServiceDogs p {
     align-self: center;
     justify-self: center;
+}
+
+
+/* di_section */
+.di_section {
+    /* height: 1000px;
+    background: red; */
+}
+
+.map {
+    width: 1690px;
+    height: 738px;
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 20px;
+}
+
+.map_info {
+    display: flex;
+    gap: 40px;
+}
+
+.address, .phone {
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    line-height: 1.3;
+    gap: 20px;
+    margin-top: 47px;
+    margin-bottom: 36px;
+    margin-left: 36px;
+}
+
+.Directions_btn {
+    margin-top: 56px;
+    padding-bottom: 72px;
+}
+
+.Directions_btn button {
+    padding: 12px 30px;
+    border-radius: 10px;
+    margin-left: 15px;
+    border: none;
+    cursor: pointer;
+    color: var(--w-color);
+    background-color: var(--gray-05);
+}
+
+.Directions_btn button.on {
+    color: var(--w-color);
+    background-color: var(--red-05-point);
 }
