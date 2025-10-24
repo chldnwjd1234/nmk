@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('header').classList.add('maintop');
     window.addEventListener('scroll', () => {
         const topBtn = document.querySelector('.top-btn');
+        const topBtnQr = document.querySelector('.top-btn_qr');
+
         if (window.scrollY > 0) {
             document.querySelector('header').classList.remove('maintop');
         } else {
@@ -11,8 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (window.scrollY > 300) {
             topBtn.classList.add('show');
+            if (topBtnQr) topBtnQr.classList.add('show');
         } else {
             topBtn.classList.remove('show');
+            if (topBtnQr) topBtnQr.classList.remove('show');
         }
     });
 
@@ -418,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==================== 반응형 1024 js ====================
-   if (window.innerWidth <= 1024 && window.innerWidth > 412) {
+    if (window.innerWidth <= 1024 && window.innerWidth > 412) {
         // vision 카드 펼치기
         ScrollTrigger.create({
             trigger: ".vision .horizontal_all",
@@ -455,6 +459,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+
+
 
     window.addEventListener("resize", () => ScrollTrigger.refresh());
 });

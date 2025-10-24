@@ -921,6 +921,7 @@
     }
 
 
+
     /* 1번 카드 - 왼쪽 (v_img1) */
     main .vision .horizontal_all .v_card .card_item:nth-child(1) {
         position: absolute;
@@ -1080,5 +1081,71 @@
     footer {
         display: none;
     }
+
+    .top-btn_qr {
+        position: fixed;
+        right: 25px;
+        bottom: 180px;
+        width: 65px;
+        height: 65px;
+        background: var(--blue-08);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        opacity: 0;
+        /* ← 추가! */
+        pointer-events: none;
+        /* ← 추가! */
+    }
+
+    .top-btn_qr img {
+        width: 26px;
+        height: 26px;
+        margin-bottom: 5px;
+    }
+
+    .top-btn_qr span {
+        color: white;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .top-btn_qr.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .top-btn_qr:hover {
+        background: var(--red-05-point);
+        transform: translateY(-10px);
+    }
+
+
+
+    .top-btn {
+        right: 25px;
+        bottom: 110px;
+        width: 65px;
+        height: 65px;
+    }
+
+    .top-btn img {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+    }
+
+    .top-btn span {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+
 
 }
