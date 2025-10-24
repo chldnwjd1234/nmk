@@ -1,0 +1,392 @@
+/* Reservation Section - 1674px Container */
+.reservation.inner {
+    max-width: 1674px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* 2 Column Layout */
+.reservation .content_wrap {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* 왼쪽 콘텐츠 - 1080px 고정 */
+.reservation .left_content {
+    width: 1080px;
+    flex-shrink: 0;
+}
+
+/* 오른쪽 가격표 - 나머지 공간 */
+.reservation .right_content {
+    flex: 1;
+    min-width: 360px;
+}
+
+/* Banner Section */
+.reservation .left_content .banner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: url(/asset/img_reservation/banner.png) no-repeat center center;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+.reservation .left_content .banner_tit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.reservation .left_content .banner_tit h2 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    letter-spacing: 1px;
+}
+
+/* Info Section Styles */
+.reservation .info {
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+/* Direction Texts */
+.reservation .info .txt_t,
+.reservation .info .txt_b {
+    margin-bottom: 20px;
+}
+
+.reservation .info .txt_t h3,
+.reservation .info .txt_b h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.reservation .info .txt_t p,
+.reservation .info .txt_b p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--red-05-point);
+    margin-bottom: 8px;
+}
+
+/* Lab (Dropdown) Styles */
+.reservation .info .lab {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.reservation .info .lab_t {
+    width: 100%;
+    padding: 18px 20px;
+    background-color: #fff;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reservation .info .lab_t:hover {
+    background-color: #f9f9f9;
+}
+
+.reservation .info .lab_t span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.reservation .info .lab_t i {
+    font-size: 14px;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+.reservation .info .lab_t.active i {
+    transform: rotate(180deg);
+}
+
+/* Lab Content */
+.reservation .info .lab_txt {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: #fafafa;
+}
+
+.reservation .info .lab_txt.active {
+    max-height: 1000px;
+    padding: 30px 20px;
+}
+
+.reservation .info .lab_s {
+    margin-bottom: 30px;
+}
+
+.reservation .info .lab_s:last-child {
+    margin-bottom: 0;
+}
+
+.reservation .info .lab_s h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--red-05-point);
+}
+
+.reservation .info .lab_s ol {
+    list-style: none;
+    counter-reset: item;
+    padding-left: 0;
+}
+
+.reservation .info .lab_s ol li {
+    counter-increment: item;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.reservation .info .lab_s ol li::before {
+    content: counter(item) ".";
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Form Sections */
+.reservation .form_section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.reservation .form_section h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Total Amount Section (오른쪽) */
+.reservation .total_amount {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 20px;
+}
+
+.reservation .total_amount .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.reservation .total_amount h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.reservation .total_amount .price_wrap {
+    text-align: right;
+}
+
+.reservation .total_amount .price {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--red-05-point);
+    line-height: 1.2;
+    margin-bottom: 3px;
+}
+
+.reservation .total_amount .vat {
+    font-size: 12px;
+    color: #999;
+}
+
+.reservation .total_amount .price_detail {
+    margin-bottom: 30px;
+}
+
+.reservation .total_amount .price_row {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    gap: 10px;
+}
+
+.reservation .total_amount .price_label {
+    font-size: 14px;
+    color: #666;
+    min-width: 60px;
+    flex-shrink: 0;
+}
+
+.reservation .total_amount .price_calc {
+    font-size: 14px;
+    color: #999;
+    white-space: nowrap;
+}
+
+.reservation .total_amount .equal {
+    font-size: 14px;
+    color: #999;
+    margin: 0 8px;
+}
+
+.reservation .total_amount .price_value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    text-align: right;
+    min-width: 90px;
+    flex-shrink: 0;
+}
+
+.reservation .total_amount .btn_reservation {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--red-05-point);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reservation .total_amount .btn_reservation:hover {
+    background-color: #b71c1c;
+}
+
+/* Responsive */
+@media (max-width: 1700px) {
+    .reservation.inner {
+        max-width: 1400px;
+    }
+    
+    .reservation .left_content {
+        width: 900px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .reservation.inner {
+        max-width: 1200px;
+    }
+    
+    .reservation .left_content {
+        width: 750px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .reservation .content_wrap {
+        flex-direction: column;
+    }
+
+    .reservation .left_content {
+        width: 100%;
+    }
+
+    .reservation .right_content {
+        width: 100%;
+        position: static;
+    }
+
+    .reservation .total_amount {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .reservation.inner {
+        padding: 30px 15px;
+    }
+
+    .reservation .left_content .banner {
+        height: 150px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .reservation .left_content .banner_tit h2 {
+        font-size: 24px;
+    }
+
+    .reservation .info,
+    .reservation .form_section,
+    .reservation .total_amount {
+        padding: 20px;
+    }
+
+    .reservation .info .txt_t h3,
+    .reservation .info .txt_b h3 {
+        font-size: 16px;
+    }
+
+    .reservation .info .txt_t p,
+    .reservation .info .txt_b p {
+        font-size: 13px;
+    }
+
+    .reservation .info .lab_t {
+        padding: 15px;
+    }
+
+    .reservation .info .lab_t span {
+        font-size: 15px;
+    }
+
+    .reservation .info .lab_txt.active {
+        padding: 20px 15px;
+    }
+
+    .reservation .info .lab_s h4 {
+        font-size: 15px;
+    }
+
+    .reservation .info .lab_s ol li {
+        font-size: 13px;
+        padding-left: 25px;
+    }
+
+    .reservation .total_amount .price {
+        font-size: 24px;
+    }
+}
