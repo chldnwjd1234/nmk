@@ -155,7 +155,7 @@
 
 
 .AdmissionFees h3 {
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 30px;
     line-height: 1.3;
     font-weight: 600;
@@ -169,7 +169,7 @@
 
 .label_1 {
     margin-bottom: 14px;
-    margin-top: 20px;
+    margin-top: 24px;
 }
 
 .label_1 p,
@@ -447,10 +447,10 @@
     padding-bottom: 120px;
     background-image: url(/asset/img_information/tree.png);
     background-repeat: no-repeat;
-    background-position: right bottom;
+    background-position: right bottom -50px;
     /* 화면 가운데 정렬 */
     background-size: contain;
-    background-size: 50%;
+    background-size: 45%;
 
 }
 
@@ -500,6 +500,30 @@
     justify-self: center;
 }
 
+.do_not_touch:hover {
+    background-image: url(/asset/img_information/6_blue.png);
+}
+
+.do_not_touch:hover .default_icon {
+    display: none;
+}
+
+.do_not_touch:hover .hover_icon {
+    display: block;
+}
+
+.do_not_touch:hover .default_text {
+    display: none;
+}
+
+.do_not_touch:hover .hover_text {
+    display: block;
+}
+
+.do_not_touch:hover p {
+    color: white;
+}
+
 .icon_tips {
     background-size: contain;
     background-repeat: no-repeat;
@@ -514,10 +538,29 @@
     gap: 16px;
 }
 
-.No_Smoking {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
-
+.icon_tips .hover_icon {
+    display: none;
 }
+
+.icon_tips .hover_text {
+    display: none;
+    color: white;
+    /* 호버 시 텍스트 색상 (배경이 어두워지므로 흰색으로 설정) */
+    text-align: center;
+    padding: 10px;
+    /* 텍스트가 육각형 안에 잘 보이도록 패딩 추가 */
+    font-size: 16px;
+    /* 텍스트 크기 조정 */
+}
+
+.icon_tips .default_text {
+    display: block;
+}
+
+.icon_tips .default_icon {
+    display: block;
+}
+
 
 .icon_tips img {
     width: 110px;
@@ -529,25 +572,42 @@
     justify-self: center;
 }
 
-.No_FoodDrinks {
+.No_Smoking {
     background-image: url(/asset/img_information/VisitorTips_6.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 300px;
-    /* 육각형 크기에 맞춰 너비 지정 */
-    height: 260px;
-    /* 육각형 크기에 맞춰 높이 지정 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+}
+
+.No_Smoking p {
+    align-self: center;
+    justify-self: center;
+}
+
+.No_Smoking:hover {
+    background-image: url(/asset/img_information/6_red.png);
+}
+
+.No_Smoking:hover .default_icon {
+    display: none;
+}
+
+.No_Smoking:hover .hover_icon {
+    display: block;
+}
+
+.No_Smoking:hover .default_text {
+    display: none;
+}
+
+.No_Smoking:hover .hover_text {
+    display: block;
+}
+
+.No_Smoking:hover p {
+    color: white;
 }
 
 
-.No_FoodDrinks img {
-    width: 110px;
-    height: auto;
+.No_FoodDrinks {
+    background-image: url(/asset/img_information/VisitorTips_6.png);
 }
 
 .No_FoodDrinks p {
@@ -555,26 +615,34 @@
     justify-self: center;
 }
 
-.NoPhotography {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 300px;
-    /* 육각형 크기에 맞춰 너비 지정 */
-    height: 260px;
-    /* 육각형 크기에 맞춰 높이 지정 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 128px;
+.No_FoodDrinks:hover {
+    background-image: url(/asset/img_information/6_blue.png);
+}
+
+.No_FoodDrinks:hover .default_icon {
+    display: none;
+}
+
+.No_FoodDrinks:hover .hover_icon {
+    display: block;
+}
+
+.No_FoodDrinks:hover .default_text {
+    display: none;
+}
+
+.No_FoodDrinks:hover .hover_text {
+    display: block;
+}
+
+.No_FoodDrinks:hover p {
+    color: white;
 }
 
 
-.NoPhotography img {
-    width: 110px;
-    height: auto;
+.NoPhotography {
+    background-image: url(/asset/img_information/VisitorTips_6.png);
+    margin-bottom: 128px;
 }
 
 .NoPhotography p {
@@ -582,25 +650,35 @@
     justify-self: center;
 }
 
-.SilentMode {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 300px;
-    /* 육각형 크기에 맞춰 너비 지정 */
-    height: 260px;
-    /* 육각형 크기에 맞춰 높이 지정 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+.NoPhotography:hover {
+    background-image: url(/asset/img_information/6_red.png);
+}
+
+.NoPhotography:hover .default_icon {
+    display: none;
+}
+
+.NoPhotography:hover .hover_icon {
+    display: block;
+}
+
+.NoPhotography:hover .default_text {
+    display: none;
+}
+
+.NoPhotography:hover .hover_text {
+    display: block;
+}
+
+.NoPhotography:hover p {
+    color: white;
 }
 
 
-.SilentMode img {
-    width: 110px;
-    height: auto;
+
+
+.SilentMode {
+    background-image: url(/asset/img_information/VisitorTips_6.png);
 }
 
 .SilentMode p {
@@ -608,25 +686,34 @@
     justify-self: center;
 }
 
-.NoBicycles_Skates {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 300px;
-    /* 육각형 크기에 맞춰 너비 지정 */
-    height: 260px;
-    /* 육각형 크기에 맞춰 높이 지정 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+.SilentMode:hover {
+    background-image: url(/asset/img_information/6_blue.png);
+}
+
+.SilentMode:hover .default_icon {
+    display: none;
+}
+
+.SilentMode:hover .hover_icon {
+    display: block;
+}
+
+.SilentMode:hover .default_text {
+    display: none;
+}
+
+.SilentMode:hover .hover_text {
+    display: block;
+}
+
+.SilentMode:hover p {
+    color: white;
 }
 
 
-.NoBicycles_Skates img {
-    width: 110px;
-    height: auto;
+.NoBicycles_Skates {
+    background-image: url(/asset/img_information/VisitorTips_6.png);
+    ;
 }
 
 .NoBicycles_Skates p {
@@ -634,26 +721,34 @@
     justify-self: center;
 }
 
-.Bequiet {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 300px;
-    /* 육각형 크기에 맞춰 너비 지정 */
-    height: 260px;
-    /* 육각형 크기에 맞춰 높이 지정 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 128px;
+.NoBicycles_Skates:hover {
+    background-image: url(/asset/img_information/6_red.png);
+}
+
+.NoBicycles_Skates:hover .default_icon {
+    display: none;
+}
+
+.NoBicycles_Skates:hover .hover_icon {
+    display: block;
+}
+
+.NoBicycles_Skates:hover .default_text {
+    display: none;
+}
+
+.NoBicycles_Skates:hover .hover_text {
+    display: block;
+}
+
+.NoBicycles_Skates:hover p {
+    color: white;
 }
 
 
-.Bequiet img {
-    width: 110px;
-    height: auto;
+.Bequiet {
+    background-image: url(/asset/img_information/VisitorTips_6.png);
+    margin-bottom: 128px;
 }
 
 .Bequiet p {
@@ -661,31 +756,66 @@
     justify-self: center;
 }
 
-.OnlyServiceDogs {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 300px;
-    /* 육각형 크기에 맞춰 너비 지정 */
-    height: 260px;
-    /* 육각형 크기에 맞춰 높이 지정 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+.Bequiet:hover {
+    background-image: url(/asset/img_information/6_blue.png);
+}
+
+.Bequiet:hover .default_icon {
+    display: none;
+}
+
+.Bequiet:hover .hover_icon {
+    display: block;
+}
+
+.Bequiet:hover .default_text {
+    display: none;
+}
+
+.Bequiet:hover .hover_text {
+    display: block;
+}
+
+.Bequiet:hover p {
+    color: white;
 }
 
 
-.OnlyServiceDogs img {
-    width: 110px;
-    height: auto;
+
+.OnlyServiceDogs {
+    background-image: url(/asset/img_information/VisitorTips_6.png);
 }
 
 .OnlyServiceDogs p {
     align-self: center;
     justify-self: center;
 }
+
+.OnlyServiceDogs:hover {
+    background-image: url(/asset/img_information/6_red.png);
+}
+
+.OnlyServiceDogs:hover .default_icon {
+    display: none;
+}
+
+.OnlyServiceDogs:hover .hover_icon {
+    display: block;
+}
+
+.OnlyServiceDogs:hover .default_text {
+    display: none;
+}
+
+.OnlyServiceDogs:hover .hover_text {
+    display: block;
+}
+
+.OnlyServiceDogs:hover p {
+    color: white;
+}
+
+
 
 
 /* di_section */
@@ -719,7 +849,7 @@
     font-size: 23px;
     line-height: 1.3;
     gap: 20px;
-    margin-top: 47px;
+    margin-top: 36px;
     margin-bottom: 36px;
     margin-left: 36px;
 }
@@ -732,7 +862,7 @@
 .Directions_btn button {
     padding: 12px 30px;
     border-radius: 10px;
-    margin-left: 15px;
+    margin-right: 15px;
     border: none;
     cursor: pointer;
     color: var(--w-color);
@@ -752,4 +882,353 @@
 
 .Directions_info .bottom_tab_con.on {
     display: block;
+}
+
+.Public_Bus {
+    display: flex;
+    gap: 130px;
+    align-items: flex-start;
+    padding-bottom: 52px;
+    border-bottom: 1px dashed var(--gray-05);
+}
+
+
+.Public_left {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 36px;
+    flex-wrap: nowrap;
+}
+
+.Public_left h3 {
+    font-size: 35px;
+    line-height: 1.3;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.img_Bus {
+    background-color: var(--yellow-01);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    /* 추가 */
+    justify-content: center;
+    /* 추가 */
+    align-items: center;
+    /* 추가 */
+}
+
+.img_Bus img {
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Public_right {
+    display: flex;
+    /* margin-left: 130px; */
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 16px;
+}
+
+.bus_type {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bus_list ul {}
+
+.bus_list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    line-height: 1.55;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+
+.bus_type span {
+    font-size: 20px;
+    line-height: 1.3;
+
+}
+
+.bus_num {
+    padding: 10px 15px;
+    background-color: #4471CC;
+    color: var(--w-color);
+    border-radius: 5px;
+}
+
+.Publictransport {
+    padding-bottom: 200px;
+}
+
+.Public_Subway {
+    padding-top: 52px;
+    display: flex;
+    gap: 62px;
+    align-items: flex-start;
+}
+
+.Subway_type {
+    display: flex;
+    align-items: center;
+}
+
+.Subway_type img {
+    margin-right: 10px;
+}
+
+.Subway_type span {
+    margin-right: 36px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.img_Subway {
+    background-color: var(--yellow-01);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    /* 추가 */
+    justify-content: center;
+    /* 추가 */
+    align-items: center;
+    /* 추가 */
+
+}
+
+.Subway_list li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.Subway_list li span {
+    padding: 8px 12px;
+    background-color: #000;
+    border-radius: 10px;
+    font-size: 21px;
+    line-height: 1.3;
+    color: var(--w-color);
+}
+
+.Car {
+    display: flex;
+    gap: 130px;
+    align-items: flex-start;
+    padding-bottom: 200px;
+}
+
+.Car_left {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    flex-wrap: nowrap;
+}
+
+.Car_left h3 {
+    font-size: 35px;
+    line-height: 1.3;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.img_Car {
+    background-color: var(--yellow-01);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    /* 추가 */
+    justify-content: center;
+    /* 추가 */
+    align-items: center;
+    /* 추가 */
+}
+
+
+.img_Car img {
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Car_right ul {
+    margin-top: 20px;
+}
+
+.Car_right ul li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.Car_right ul li span {
+    background: #000;
+    color: var(--w-color);
+    /* padding: 10px 20px; */
+    width: 196px;
+    height: 46px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 21px;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Car_right span {
+    color: var(--red-06);
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.parking_all {
+    display: flex;
+    gap: 76px;
+    align-items: flex-start;
+    padding-bottom: 200px;
+}
+
+.parking_left {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 36px;
+    flex-wrap: nowrap;
+}
+
+.parking_left h3 {
+    font-size: 35px;
+    line-height: 1.3;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.img_parking {
+    background-color: var(--yellow-01);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    /* 추가 */
+    justify-content: center;
+    /* 추가 */
+    align-items: center;
+    /* 추가 */
+}
+
+.parking_map {
+    margin-right: 20px;
+}
+
+.parking_right {
+    display: flex;
+}
+
+.parking_right {
+    margin-top: 20px;
+}
+
+.parking_info {
+    width: 700px;
+    height: 488px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    padding: 40px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.parking_info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+
+.parking_table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.parking_table thead {
+    border-bottom: 1px solid #333;
+}
+
+.parking_table th {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 10px;
+    text-align: left;
+}
+
+.parking_table th span {
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    margin-top: 2px;
+}
+
+.parking_table tbody td {
+    padding: 15px;
+    font-size: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.parking_table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.parking_table tbody td:first-child {
+    font-weight: 500;
+}
+
+.parking_table th span {
+    font-size: 12px;
+    font-weight: 400;
+    display: inline-block;
+    margin-top: 2px;
+    color: var(--gray-08);
+}
+
+.parking_notes {
+padding-top: 34px;
+border-top: 1px dashed #999
+}
+
+.parking_notes li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.parking_notes li img {
+    width: 16px;
+    height: 16px;
+}
+
+.parking_notes li p {
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--gray-08);
 }
