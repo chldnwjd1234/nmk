@@ -198,49 +198,49 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     // ==================== Vision Horizontal Scroll ====================
-   if (window.innerWidth >= 1025) {
-    const total_width = () => {
-        const wrap = document.querySelector(".horizontal_all");
-        const track = document.querySelector(".track");
-        return track.scrollWidth - wrap.clientWidth;
-    };
+    if (window.innerWidth >= 1025) {
+        const total_width = () => {
+            const wrap = document.querySelector(".horizontal_all");
+            const track = document.querySelector(".track");
+            return track.scrollWidth - wrap.clientWidth;
+        };
 
-    const visionCards = document.querySelectorAll(".v_card .card_item");
-    
+        const visionCards = document.querySelectorAll(".v_card .card_item");
 
-    gsap.to(".track", {
-        x: () => -total_width(),
-        ease: "expo.out",
-        scrollTrigger: {
-            trigger: ".horizontal_all",
-            start: "top top",
-            end: () => "+=" + (total_width() + window.innerWidth),
-            scrub: 1.5,
-            pin: true,
-            anticipatePin: 1,
-            toggleActions: "play none none reset",
-            invalidateOnRefresh: true,
-            onUpdate: (self) => {
-                const progress = self.progress;
-                const totalCards = visionCards.length;
-                
-                visionCards.forEach((card, index) => {
-                    const cardStart = index / totalCards;
-                    const cardEnd = (index + 1) / totalCards;
-                    const cardMid = (cardStart + cardEnd) / 2;
-                    
-                    const distanceFromCenter = Math.abs(progress - cardMid);
-                    const threshold = 0.2;
-                    
-                    if (distanceFromCenter < threshold) {
-                        card.classList.add('active');
-                    } else {
-                        card.classList.remove('active');
-                    }
-                });
-            }
-        },
-    });
+
+        gsap.to(".track", {
+            x: () => -total_width(),
+            ease: "expo.out",
+            scrollTrigger: {
+                trigger: ".horizontal_all",
+                start: "top top",
+                end: () => "+=" + (total_width() + window.innerWidth),
+                scrub: 1.5,
+                pin: true,
+                anticipatePin: 1,
+                toggleActions: "play none none reset",
+                invalidateOnRefresh: true,
+                onUpdate: (self) => {
+                    const progress = self.progress;
+                    const totalCards = visionCards.length;
+
+                    visionCards.forEach((card, index) => {
+                        const cardStart = index / totalCards;
+                        const cardEnd = (index + 1) / totalCards;
+                        const cardMid = (cardStart + cardEnd) / 2;
+
+                        const distanceFromCenter = Math.abs(progress - cardMid);
+                        const threshold = 0.2;
+
+                        if (distanceFromCenter < threshold) {
+                            card.classList.add('active');
+                        } else {
+                            card.classList.remove('active');
+                        }
+                    });
+                }
+            },
+        });
 
         // SVG Line도 데스크탑에서만
         const svgPath = document.querySelector(".animated_path");
@@ -462,27 +462,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 카드 클릭 이벤트
         const cardItems = document.querySelectorAll('.v_card .card_item');
-        cardItems.forEach((card) => {
+        cardItems.forEach((card, index) => {
             card.style.cursor = 'pointer';
             card.addEventListener('click', function () {
                 // 모든 카드 원상복구
-                gsap.to(cardItems, {
-                    scale: 1,
-                    zIndex: 1,
-                    duration: 0.03
+                cardItems.forEach((item, idx) => {
+                    item.classList.remove('active');
+                    item.style.transform = ''; // 인라인 스타일 제거하여 원래 CSS로 돌아감
+                    item.style.zIndex = '';
                 });
 
-                // 클릭한 카드만 앞으로
-                gsap.to(this, {
-                    scale: 1.05,
-                    zIndex: 10,
-                    duration: 0.03,
-                    ease: 'power2.out'
-                });
+                // 클릭한 카드만 확대 - 현재 위치에서 scale만 적용
+                this.classList.add('active');
+
+                // 각 카드의 원래 transform 값을 가져와서 scale만 추가
+                const currentTransform = window.getComputedStyle(this).transform;
+
+                if (index === 0) {
+                    // 첫 번째 카드 (가운데 위)
+                    this.style.transform = 'translate(-50%, 0) scale(1.35)';
+                } else if (index === 1) {
+                    // 두 번째 카드 (오른쪽)
+                    this.style.transform = 'translate(0, 0) scale(1.35)';
+                } else if (index === 2) {
+                    // 세 번째 카드 (왼쪽)
+                    this.style.transform = 'translate(0, 0) scale(1.35)';
+                }
+
+                this.style.zIndex = '100';
             });
         });
     }
-
 
     // ==================== 모바일 Vision 슬라이더 ====================
     setTimeout(() => {

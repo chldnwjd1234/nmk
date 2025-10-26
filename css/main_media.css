@@ -382,6 +382,7 @@
         justify-content: center;
         position: relative;
         z-index: 3;
+        transform: translateX(-90px);
     }
 
     /* 카드 아이템 */
@@ -679,6 +680,9 @@
     }
 
 
+    footer {
+        margin-bottom: 60px;
+    }
 
     .top-btn_qr {
         position: fixed;
@@ -1157,21 +1161,21 @@
         font-size: 16px;
     }
 
-    footer {
-        display: none;
+    footer .f_bot {
+        flex-direction: column;
+        margin-bottom: 10px;
     }
 
-
     .top-btn_qr {
-        right: 25px;
-        bottom: 180px;
-        width: 60px;
-        height: 60px;
+        right: 3px;
+        bottom: 168px;
+        width: 52px;
+        height: 52px;
     }
 
     .top-btn_qr img {
-        width: 26px;
-        height: 26px;
+        width: 22px;
+        height: 22px;
         margin-bottom: 5px;
     }
 
@@ -1183,15 +1187,15 @@
 
 
     .top-btn {
-        right: 25px;
+        right: 3px;
         bottom: 110px;
-        width: 60px;
-        height: 60px;
+        width: 52px;
+        height: 52px;
     }
 
     .top-btn img {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
         margin-bottom: 5px;
     }
 
@@ -1199,6 +1203,9 @@
         font-size: 13px;
         font-weight: 400;
     }
+
+
+
 
 
 
