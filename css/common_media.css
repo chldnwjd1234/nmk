@@ -196,6 +196,11 @@
         /* 1단계 축소 */
     }
 
+    .inner {
+        width: 884px;
+        margin-inline: auto;
+    }
+
     header .inner .logo {
         width: 210px;
     }
@@ -317,10 +322,23 @@
 
 }
 
-/* 402px 이하 반응형 */
-@media (max-width:412px) {
+/* 414px 이하 반응형 */
+@media (max-width:414px) {
+    .inner {
+        width: 352px;
+        margin-inline: auto;
+    }
+
+    header .inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+    }
+
     .inner .logo {
-        width: 110px;
+        width: 80px;
     }
 
     .mobile_menu {
@@ -341,8 +359,10 @@
     }
 
     footer.dark {
+        padding: 40px 30px;
         background: url(/asset/img/p_footer.png) no-repeat top right var(--gray-07-footer);
         background-size: contain;
+        height: 100%;
     }
 
 
