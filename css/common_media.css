@@ -127,7 +127,7 @@
     footer {
         height: auto;
         padding: 30px 0 50px;
-        background: url(/asset/img/t_footer.png) repeat-y top right var(--bg);
+        background: url(/asset/img/t_footer.png) no-repeat top right var(--bg);
         position: relative;
     }
 
@@ -218,6 +218,7 @@
         height: auto;
         padding: 30px 0 50px;
         background: url(/asset/img/t_footer.png) repeat-y top right var(--bg);
+
     }
 
     footer.dark {
@@ -269,43 +270,55 @@
     }
 
     footer .f_right {
-        width: auto;
-        justify-content: space-between;
-        padding: 8px 20px;
-        font-size: 0.9rem;
-        height: 38px;
+        display: flex;
         flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        margin: 0;
     }
 
     footer .select_box {
         width: auto;
         height: 38px;
+        position: relative;
+        z-index: 100;
+        /* min-width: 250px; */
     }
 
     footer .select_box>button {
-        width: auto;
+        width: 100%;
         justify-content: space-between;
         padding: 10px 30px;
+        white-space: nowrap;
+        min-width: 200px;
     }
 
     .select_box ul {
         width: 100%;
         left: 0;
         right: 0;
+        padding-left: 20px;
+
+    }
+
+    .select_box ul li {
+        font-weight: 400;
+        font-size: 0.875rem;
+        height: 40px;
+        line-height: 40px;
+        transition: all 0.3s;
+        cursor: pointer;
+
+    }
+
+    footer .select_box ul li:hover {
+        color: var(--black);
     }
 
 }
 
-/* 414px 이하 반응형 */
-@media (max-width:414px) {
-    header .inner {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-    }
-
+/* 402px 이하 반응형 */
+@media (max-width:412px) {
     .inner .logo {
         width: 80px;
     }
@@ -319,7 +332,137 @@
         height: 215px;
     }
 
-    main .banner_top .txt {
-        font-size: 28px;
+    /* footer */
+    footer {
+        padding: 40px 30px;
+        background: url(/asset/img/pp_footer.png) no-repeat top right var(--gray-07-footer);
+        background-size: contain !important;
+        height: 100%;
+    }
+
+    footer.dark {
+        background: url(/asset/img/p_footer.png) no-repeat top right var(--gray-07-footer);
+        background-size: contain;
+    }
+
+
+    footer .inner {
+        width: 100%;
+    }
+
+    footer .inner::before {
+        content: '';
+        display: block;
+        width: 75%;
+        height: 60px;
+        background:
+            url('/asset/img/f_icon1.png') no-repeat 5% center / 24px,
+            url('/asset/img/f_icon2.png') no-repeat 25% center / 24px,
+            url('/asset/img/f_icon3.png') no-repeat 45% center / 24px,
+            url('/asset/img/f_icon4.png') no-repeat 63% center / 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 30px;
+    }
+
+    /* 푸터 상단 메뉴 */
+    footer .f_top {
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    }
+
+    footer .f_txt {
+        margin-top: 0;
+    }
+
+    footer .f_txt h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: var(--w-color);
+    }
+
+    footer .f_txt:nth-child(4) {
+        display: none;
+    }
+
+    footer .f_txt ul li {
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+
+    footer .f_txt ul li a {
+        color: var(--w-color);
+    }
+
+    /* 하단 정보 */
+    footer .f_bot {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    footer .bot_txt p {
+        font-size: 13px;
+        color: var(--w-color);
+        margin-bottom: 10px;
+        width: 300px;
+    }
+
+    footer .bot_txt p::before {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* 버튼들 */
+    footer .f_right {
+        flex-direction: row;
+        gap: 8px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    footer .select_box {
+        width: auto;
+        height: 38px;
+        position: relative;
+        z-index: 100;
+    }
+
+    footer .select_box>button {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 14px;
+        background: var(--gray-08);
+        color: var(--w-color);
+        border-radius: 8px;
+        min-width: 135px;
+    }
+
+    footer .select_box {
+        width: auto;
+        height: auto;
+        position: relative;
+        z-index: 100;
+        background: none;
+        border-radius: 0;
+    }
+
+    footer .select_box ul {
+        height: auto;
+        padding-left: 10px;
+    }
+
+    footer .select_box.on ul {
+        max-height: 800px;
+    }
+
+    footer .select_box ul li {
+        height: 100%;
+        line-height: 1.3;
+        padding: 8px 10px;
+        font-size: 12px;
+        color: var(--w-color);
     }
 }

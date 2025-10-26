@@ -40,7 +40,6 @@ function startLoadingAnimation() {
         console.log('로고 표시');
         logo.classList.add('show');
     }, 0);
-
     // 3단계: 전체 화면 페이드아웃
     setTimeout(() => {
         console.log('페이드아웃 시작');

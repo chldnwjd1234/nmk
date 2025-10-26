@@ -96,8 +96,8 @@
 }
 
 .txt_btn button.active {
-  background: var(--gray-08);
-  color: var(--w-color);
+    background: var(--gray-08);
+    color: var(--w-color);
 }
 
 /* 레이아웃 버튼 */
@@ -249,18 +249,20 @@
 
 .card_wrap2 ul li {
     float: left;
-    width: 24%;
+    width: 25%;
     padding: 10px;
-    margin-bottom: 10px;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: var(--r-15);
-    box-shadow: 0 1px 8px rgba(0, 0, 0, .05);
+    overflow: hidden;
+}
+
+.card_wrap2 ul li a {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    box-sizing: border-box;
-    margin-right: 1%;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: var(--r-15);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .05);
     position: relative;
+    padding: 10px;
 }
 
 .card_overlay {

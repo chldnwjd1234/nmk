@@ -688,7 +688,7 @@ footer .select_box>button {
     height: 42px;
     background: var(--gray-08);
     border: 0;
-    padding: 10px 30px;
+    padding: 20px 30px;
     gap: 10px;
     display: flex;
     justify-content: center;
@@ -700,6 +700,7 @@ footer .select_box>button {
     border-radius: var(--r-10);
     font-family: inherit;
     z-index: 10;
+    
 }
 
 .select_box ul {
@@ -729,4 +730,12 @@ footer .select_box>button {
     font-size: 0.875rem;
     height: 40px;
     line-height: 40px;
+    transition: all 0.3s;
+    cursor: pointer;
+
+}
+
+.select_box ul li:hover {
+    color: var(--black);
+    font-weight: 550;
 }

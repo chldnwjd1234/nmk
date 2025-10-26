@@ -1,0 +1,336 @@
+@charset "utf-8";
+
+/* ===== Header ===== */
+header {
+    background: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    height: 100px;
+}
+
+/* ===== Main Background ===== */
+main.bg {
+    background: url(/asset/img/result_bg.png) no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    padding-top: 80px;
+    width: 100%;
+}
+
+/* ===== Slider Container ===== */
+.slider_container {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+/* ===== Slides ===== */
+.slide,
+.slide2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    padding: 40px 20px;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    padding-top: 0;
+}
+
+.slide2.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== Content Box ===== */
+.content_box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    padding: 70px 50px 60px 50px;
+    max-width: 1300px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    position: relative;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Back Button ===== */
+.back_btn {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: var(--fspre-21);
+    color: var(--gray-08);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: all 0.3s;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    margin-bottom: 0;
+}
+
+.back_btn:hover {
+    background-color: var(--red-05-point);
+    color: var(--w-color);
+}
+
+.back_btn i {
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+/* ===== Detail Content ===== */
+.detail_content {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.artifact_image {
+    flex: 0 0 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artifact_image img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    max-height: 500px;
+}
+
+.artifact_info {
+    flex: 1;
+}
+
+.artifact_info .title {
+    font-family: 'Zen Antique', serif;
+    font-size: var(--fszenT-M-42);
+    color: var(--black);
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+/* ===== Info List ===== */
+.info_list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.info_item {
+    display: flex;
+    gap: 10px;
+    padding: 2px 0;
+    align-items: center;
+}
+
+.info_item .label {
+    flex: 0 0 250px;
+    font-weight: 600;
+    color: var(--gray-07-footer);
+    font-size: var(--fspre-21);
+}
+
+.info_item .value {
+    flex: 1;
+    color: var(--gray-09);
+    font-size: 19px;
+    font-weight: 300;
+}
+
+/* ===== Detail Section ===== */
+.detail_section {
+    margin: 30px 0;
+    padding-top: 30px;
+    border-top: 1px dashed #59574D;
+}
+
+.detail_section h3 {
+    font-size: var(--fspre-23);
+    color: var(--gray-07-footer);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.detail_section p {
+    line-height: 1.7;
+    color: var(--gray-09);
+    font-size: 19px;
+    font-weight: 300;
+}
+
+/* ===== Map Button ===== */
+.map_btn {
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--gray-08);
+    border: none;
+    padding: 16px 30px;
+    border-radius: 30px;
+    font-size: var(--fspre-21);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+    margin: 0 auto;
+}
+
+.map_btn:hover {
+    background: var(--red-05-point);
+    color: var(--w-color);
+}
+
+.map_btn i {
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+/* ===== Related Artifacts Section ===== */
+.section_title {
+    font-size: 2rem;
+    font-weight: 600;
+    /* margin-bottom: 40px; */
+    width: 100%;
+     margin-top: 60px;
+    max-width: calc((176px * 5) + (30px * 4));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.related_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    align-items: flex-start;
+    flex: 1;
+    align-content: center;
+    /* max-height: 200px; */
+}
+
+.artifact_card {
+    background: none;
+    border-radius: 30px;
+    width: 176px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.artifact_card:hover {
+    transform: translateY(-5px);
+}
+
+.artifact_card .card_image {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artifact_card .card_image img {
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+    max-height: 360px;
+}
+
+.artifact_card .card_title {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--gray-09);
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* ===== Arrow Navigation Buttons ===== */
+.arrow_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--w-color);
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    font-weight: 200;
+}
+
+.arrow_btn::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    white-space: pre-line;
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+}
+
+.arrow_btn.right::after {
+    content: 'Related\A Artifacts';
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow_btn:hover::after {
+    opacity: 1;
+}
+
+.arrow_btn.left {
+    left: 40px;
+}
+
+.arrow_btn.right {
+    right: 40px;
+}
+
+/* ===== Pagination ===== */
+.pagination {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+/* ===== Footer ===== */
+footer {
+    display: none;
+}
