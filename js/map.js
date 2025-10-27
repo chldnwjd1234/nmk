@@ -15,37 +15,54 @@ const mapImages = document.querySelectorAll('.map_right .floor > li .img_box li'
 const svgItems = document.querySelectorAll('.map_right .product_svg li'); // SVG 전체
 
 // ============================
-// 🎨 SVG Path 애니메이션 함수 (최종 수정)
+// 🎨 SVG Path 애니메이션 함수
 // ============================
 function animateSVGPath(svgElement) {
-    const svg = svgElement.querySelector('svg');
-    if (!svg) return;
-    
-    const path = svg.querySelector('path');
-    if (!path) return;
+  const svg = svgElement.querySelector('svg');
+  if (!svg) return;
+  const path = svg.querySelector('path');
+  if (!path) return;
 
-    // pathLength를 고정값으로 설정
-    path.setAttribute('pathLength', '1');
-    
-    // 초기 상태
-    path.style.strokeDasharray = '1';
-    path.style.strokeDashoffset = '1';
-    path.style.stroke = '#9F140B';
-    path.style.strokeWidth = '2';
-    path.style.fill = 'none';
-    path.style.transition = 'none';
-    
-    // 리플로우 강제
-    path.getBoundingClientRect();
-    
-    // 애니메이션 시작
-    setTimeout(() => {
-        path.style.transition = 'stroke-dashoffset 1.5s linear';
-        path.style.strokeDashoffset = '0';
-    }, 10);
+  const length = path.getTotalLength();
+  const isReverse = svg.dataset.direction === "reverse"; // ✅ 방향 체크
+
+  // 초기 설정
+  path.style.strokeDasharray = length;
+  path.style.strokeDashoffset = isReverse ? -length : length; // ✅ 방향 반전
+  path.style.transition = 'none';
+  path.style.stroke = '#9F140B';
+  path.style.strokeWidth = '2';
+  path.style.fill = 'none';
+
+  // 애니메이션 실행
+  requestAnimationFrame(() => {
+    path.style.transition = 'stroke-dashoffset 1.5s ease-in-out';
+    path.style.strokeDashoffset = '0';
+  });
 }
 
-    
+// ============================
+// 🧭 select 변경 시 콘텐츠 + 지도 교체
+// ============================
+selects.forEach((select, index) => {
+    select.addEventListener('change', () => {
+        const val = select.value;
+
+        // 모든 article, info 초기화
+        articles.forEach(a => a.classList.remove('active'));
+        infoBoxes.forEach(i => i.classList.remove('active'));
+        articles[index].classList.add('active');
+
+        // 세부 info 선택
+        const infos = articles[index].querySelectorAll('.info');
+        infos.forEach((info, i) => {
+            info.classList.toggle('active', val.endsWith((i + 1).toString()));
+        });
+
+        // 지도 변경
+        updateMapBySelect(val);
+    });
+});
 
 // ============================
 // 🗺️ 지도 표시 변경 함수

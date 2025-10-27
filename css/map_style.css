@@ -425,24 +425,6 @@
     width: 100%;
     height: 100%;
 }
-/* SVG path 애니메이션 */
-.map_right .product_svg li svg path {
-    stroke: #9F140B;
-    stroke-width: 2;
-    fill: none;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-}
-
-.map_right .product_svg li.active svg path {
-    animation: drawPath 1.5s linear forwards;
-}
-
-@keyframes drawPath {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
 
 .map_right .product_svg li.active {
     display: block;
