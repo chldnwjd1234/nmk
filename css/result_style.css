@@ -8,7 +8,7 @@ header {
 }
 
 main.bg {
-    background: url(/asset/img/result_bg.png) no-repeat center center;
+    background: url(../asset/img/result_bg.png) no-repeat center center;
     background-size: cover;
     min-height: 100vh;
     padding-top: 80px;
