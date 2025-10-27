@@ -350,6 +350,14 @@
         height: 215px;
     }
 
+    main .banner_top .txt {
+        font-size: 28px;
+    }
+
+    main .sub {
+        font-size: 12px;
+    }
+
     /* footer */
     footer {
         padding: 40px 30px;
