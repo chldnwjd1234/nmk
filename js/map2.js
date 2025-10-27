@@ -30,58 +30,37 @@ function animateSVGPath(svgElement) {
     const path = svg.querySelector('path');
     if (!path) return;
 
-    // pathLength를 고정값으로 설정
-    path.setAttribute('pathLength', '1');
+    const length = path.getTotalLength();
 
-    // 초기 상태
-    path.style.strokeDasharray = '1';
-    path.style.strokeDashoffset = '1';
-    path.style.stroke = '#9F140B';
-    path.style.strokeWidth = '2';
+    // fill="none" 및 선 초기화
     path.style.fill = 'none';
+    path.style.stroke = '#9F140B';
+    path.style.strokeWidth = '2px';
+    path.style.vectorEffect = 'non-scaling-stroke';
+    path.style.shapeRendering = 'geometricPrecision';
+
+    // 💡 왼쪽 → 오른쪽 방향 설정 (기본 방향 유지)
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+
+    // ⚡ 브라우저 렌더링 안정화 (두께 변화 방지)
     path.style.transition = 'none';
+    path.getBoundingClientRect(); // 강제 리플로우
 
-    // 리플로우 강제
-    path.getBoundingClientRect();
-
-    // 애니메이션 시작
-    setTimeout(() => {
-        path.style.transition = 'stroke-dashoffset 1.5s linear';
-        path.style.strokeDashoffset = '0';
-    }, 10);
+    // 🎬 1프레임 뒤에 실행 (깜빡임 제거)
+    requestAnimationFrame(() => {
+        path.style.transition = 'stroke-dashoffset 1.6s ease-out';
+        path.style.strokeDashoffset = 0;
+    });
 }
 
 
 
+
 // ============================
-// 🗺️ 지도 표시 변경 함수 (애니메이션 추가)
+// 🗺️ 지도 표시 변경 함수
 // ============================
 function updateMapBySelect(value) {
-    const isDesktop = window.innerWidth > 1024;
-    
-    // 현재 활성화된 지도 찾기
-    const currentMap = document.querySelector('.map_right .floor > li .img_box li.active');
-    
-    if (isDesktop && currentMap) {
-        // 페이드아웃
-        currentMap.style.transition = 'opacity 0.3s ease-out';
-        currentMap.style.opacity = '0';
-        
-        setTimeout(() => {
-            // 지도 교체
-            changeMap(value);
-        }, 300);
-    } else {
-        // 모바일은 즉시 전환
-        changeMap(value);
-    }
-}
-
-// 지도 교체 함수
-function changeMap(value) {
-    const isDesktop = window.innerWidth > 1024;
-    
-    // 전체 지도/ SVG 숨김
     mapImages.forEach(img => img.classList.remove('active'));
     svgItems.forEach(svg => svg.classList.remove('active'));
 
@@ -101,18 +80,9 @@ function changeMap(value) {
     const targetMaps = targetFloor.querySelectorAll('.img_box li');
     if (targetMaps[mapIndex]) {
         targetMaps[mapIndex].classList.add('active');
-        
-        // 데스크탑에서 페이드인
-        if (isDesktop) {
-            targetMaps[mapIndex].style.opacity = '0';
-            targetMaps[mapIndex].style.transition = 'opacity 0.5s ease-out';
-            
-            setTimeout(() => {
-                targetMaps[mapIndex].style.opacity = '1';
-            }, 50);
-        }
     }
 }
+
 // ============================
 // 🏢 층 탭 전환
 // ============================
