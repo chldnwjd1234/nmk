@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .banner_top {
-    background-image: url(/asset/img_information/sub_banner.png);
+    background-image: url(../asset/img_information/sub_banner.png);
     /* 본인 배너이미지 */
 }
 
@@ -267,7 +267,7 @@
     z-index: 0;
 
     /* 문양 이미지 경로 설정 */
-    background-image: url(/asset/img_information/icon_Wheelchair.png);
+    background-image: url(../asset/img_information/icon_Wheelchair.png);
 
     /* 문양의 위치 설정 (오른쪽 상단) */
     background-position: right -100px top -80px;
@@ -306,7 +306,7 @@
     z-index: 0;
 
     /* 문양 이미지 경로 설정 */
-    background-image: url(/asset/img_information/icon_Museum\ Shops.png);
+    background-image: url(../asset/img_information/icon_Museum\ Shops.png);
 
     /* 문양의 위치 설정 (오른쪽 상단) */
     background-position: right -150px top -80px;
@@ -345,7 +345,7 @@
     z-index: 0;
 
     /* 문양 이미지 경로 설정 */
-    background-image: url(/asset/img_information/icon_Lockers.png);
+    background-image: url(../asset/img_information/icon_Lockers.png);
 
     /* 문양의 위치 설정 (오른쪽 상단) */
     background-position: right -150px top -80px;
@@ -384,7 +384,7 @@
     z-index: 0;
 
     /* 문양 이미지 경로 설정 */
-    background-image: url(/asset/img_information/icon_Lactation\ Room.png);
+    background-image: url(../asset/img_information/icon_Lactation\ Room.png);
 
     /* 문양의 위치 설정 (오른쪽 상단) */
     background-position: right -50px bottom -80px;
@@ -423,7 +423,7 @@
     z-index: 0;
 
     /* 문양 이미지 경로 설정 */
-    background-image: url(/asset/img_information/icon_Coat\ Storage.png);
+    background-image: url(../asset/img_information/icon_Coat\ Storage.png);
 
     /* 문양의 위치 설정 (오른쪽 상단) */
     background-position: right -150px bottom -130px;
@@ -445,7 +445,7 @@
 .VisitorTips {
     margin-top: 103px;
     padding-bottom: 120px;
-    background-image: url(/asset/img_information/tree.png);
+    background-image: url(../asset/img_information/tree.png);
     background-repeat: no-repeat;
     background-position: right bottom -50px;
     /* 화면 가운데 정렬 */
@@ -474,7 +474,7 @@
 
 
 .do_not_touch {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;
@@ -501,7 +501,7 @@
 }
 
 .do_not_touch:hover {
-    background-image: url(/asset/img_information/6_blue.png);
+    background-image: url(../asset/img_information/6_blue.png);
 }
 
 .do_not_touch:hover .default_icon {
@@ -573,7 +573,7 @@
 }
 
 .No_Smoking {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
 }
 
 .No_Smoking p {
@@ -582,7 +582,7 @@
 }
 
 .No_Smoking:hover {
-    background-image: url(/asset/img_information/6_red.png);
+    background-image: url(../asset/img_information/6_red.png);
 }
 
 .No_Smoking:hover .default_icon {
@@ -607,7 +607,7 @@
 
 
 .No_FoodDrinks {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
 }
 
 .No_FoodDrinks p {
@@ -616,7 +616,7 @@
 }
 
 .No_FoodDrinks:hover {
-    background-image: url(/asset/img_information/6_blue.png);
+    background-image: url(../asset/img_information/6_blue.png);
 }
 
 .No_FoodDrinks:hover .default_icon {
@@ -641,7 +641,7 @@
 
 
 .NoPhotography {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
     margin-bottom: 128px;
 }
 
@@ -651,7 +651,7 @@
 }
 
 .NoPhotography:hover {
-    background-image: url(/asset/img_information/6_red.png);
+    background-image: url(../asset/img_information/6_red.png);
 }
 
 .NoPhotography:hover .default_icon {
@@ -678,7 +678,7 @@
 
 
 .SilentMode {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
 }
 
 .SilentMode p {
@@ -687,7 +687,7 @@
 }
 
 .SilentMode:hover {
-    background-image: url(/asset/img_information/6_blue.png);
+    background-image: url(../asset/img_information/6_blue.png);
 }
 
 .SilentMode:hover .default_icon {
@@ -712,7 +712,7 @@
 
 
 .NoBicycles_Skates {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
     ;
 }
 
@@ -722,7 +722,7 @@
 }
 
 .NoBicycles_Skates:hover {
-    background-image: url(/asset/img_information/6_red.png);
+    background-image: url(../asset/img_information/6_red.png);
 }
 
 .NoBicycles_Skates:hover .default_icon {
@@ -747,7 +747,7 @@
 
 
 .Bequiet {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
     margin-bottom: 128px;
 }
 
@@ -757,7 +757,7 @@
 }
 
 .Bequiet:hover {
-    background-image: url(/asset/img_information/6_blue.png);
+    background-image: url(../asset/img_information/6_blue.png);
 }
 
 .Bequiet:hover .default_icon {
@@ -783,7 +783,7 @@
 
 
 .OnlyServiceDogs {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
 }
 
 .OnlyServiceDogs p {
@@ -792,7 +792,7 @@
 }
 
 .OnlyServiceDogs:hover {
-    background-image: url(/asset/img_information/6_red.png);
+    background-image: url(../asset/img_information/6_red.png);
 }
 
 .OnlyServiceDogs:hover .default_icon {
