@@ -253,7 +253,7 @@
     }
 
     main .Architecture .architecture_img .right img:nth-child(3) {
-        content: url('..../asset/img_Vision/Architecture_rightbottom.png');
+        content: url('../asset/img_Vision/Architecture_rightbottom.png');
         width: 170px;
     }
 
