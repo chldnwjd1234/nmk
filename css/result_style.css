@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-/* ===== Header ===== */
 header {
     background: none !important;
     backdrop-filter: none !important;
@@ -8,7 +7,6 @@ header {
     height: 100px;
 }
 
-/* ===== Main Background ===== */
 main.bg {
     background: url(/asset/img/result_bg.png) no-repeat center center;
     background-size: cover;
@@ -17,15 +15,18 @@ main.bg {
     width: 100%;
 }
 
-/* ===== Slider Container ===== */
 .slider_container {
     position: relative;
     width: 100%;
     min-height: calc(100vh - 80px);
     overflow: hidden;
 }
+.pagination {
+    display: none; 
+}
 
-/* ===== Slides ===== */
+
+/* 슬라이드  */
 .slide,
 .slide2 {
     position: absolute;
@@ -39,7 +40,7 @@ main.bg {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.6s ease, visibility 0.6s ease;
-    padding: 40px 20px;
+    padding: 0 20px;
 }
 
 .slide.active {
@@ -51,9 +52,10 @@ main.bg {
 .slide2.active {
     opacity: 1;
     visibility: visible;
+    padding-top: 0;
 }
 
-/* ===== Content Box ===== */
+/*  Content Box  */
 .content_box {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 30px;
@@ -62,12 +64,12 @@ main.bg {
     width: 90%;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     position: relative;
-    min-height: 800px;
+    height: 800px;
     display: flex;
     flex-direction: column;
+    margin-top: -30px;
 }
 
-/* ===== Back Button ===== */
 .back_btn {
     background-color: rgba(255, 255, 255, 0.7);
     border: none;
@@ -222,7 +224,7 @@ main.bg {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     align-items: flex-start;
     flex: 1;
     align-content: center;
@@ -241,7 +243,7 @@ main.bg {
 }
 
 .artifact_card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-15px);
 }
 
 .artifact_card .card_image {
@@ -266,9 +268,18 @@ main.bg {
     color: var(--gray-09);
     text-align: center;
     line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 54px;
+}
+.artifact_card:hover .card_title {
+    overflow: visible;
+    display: block;
+    -webkit-line-clamp: unset;
 }
 
-/* ===== Arrow Navigation Buttons ===== */
 .arrow_btn {
     position: absolute;
     top: 50%;
@@ -301,6 +312,8 @@ main.bg {
     text-align: center;
 }
 
+
+
 .arrow_btn.right::after {
     content: 'Related\A Artifacts';
     left: 50%;
@@ -315,12 +328,18 @@ main.bg {
     left: 40px;
 }
 
+/* 왼쪽 화살표 텍스트  호버*/
+.arrow_btn.left::after {
+    content: 'Collection\A Detail';
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .arrow_btn.right {
     right: 40px;
 }
 
-/* ===== Pagination ===== */
-.pagination {
+/* .pagination {
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -328,9 +347,8 @@ main.bg {
     display: flex;
     gap: 15px;
     z-index: 10;
-}
+} */
 
-/* ===== Footer ===== */
 footer {
     display: none;
 }

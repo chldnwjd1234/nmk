@@ -1,0 +1,182 @@
+@media (max-width: 1024px) {
+    .arrow_btn {
+        display: none;
+    }
+
+    .slider_container {
+        position: relative;
+        min-height: calc(100vh - 80px);
+    }
+
+    .slide,
+    .slide2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pagination {
+        display: flex;
+        position: absolute;
+        bottom: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 15px;
+        z-index: 10;
+    }
+
+    .pagination .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .pagination .dot.active {
+        background-color: var(--red-05-point);
+    }
+
+    .content_box {
+        height: 962px;
+        padding: 50px 100px;
+        gap: 10px;
+        margin-top: -150px;
+        max-width: 898px;
+        width: 898px;
+    }
+
+    .back_btn {
+        top: 30px;
+        left: 40px;
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    /* 첫번째 슬라이드 */
+    .detail_content {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+    .artifact_image {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+
+    .artifact_image img {
+        width: 100%;
+        max-height: 330px;
+    }
+
+    .artifact_info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .artifact_info .title {
+        font-size: 26px;
+        margin-bottom: 25px;
+        text-align: left;
+        font-family: "Pretendard Variable";
+        font-weight: 600;
+    }
+
+    .info_list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 0;
+    }
+
+    .info_item {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 20px;
+        align-items: start;
+    }
+
+    .info_item .label {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--gray-07-footer);
+    }
+
+    .info_item .value {
+        font-size: 16px;
+        font-weight: 300;
+        color: var(--gray-09);
+    }
+
+    .detail_section {
+        width: 100%;
+        padding-top: 10px;
+        border: none;
+    }
+
+    .detail_section h3 {
+        display: none;
+    }
+
+    .detail_section p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .map_btn {
+        font-size: 17px;
+        padding: 14px 26px;
+        margin-top: -10px;
+    }
+
+    /* 두번째 슬라이드 */
+    .section_title {
+        font-size: 24px;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .related_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px 180px;
+        justify-items: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .artifact_card {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .artifact_card:nth-child(5) {
+        display: none;
+    }
+
+    .artifact_card .card_image {
+        height: 280px;
+    }
+
+    .artifact_card .card_image img {
+        max-height: 320px;
+    }
+
+    .artifact_card .card_title {
+        margin-top: 15px;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}
