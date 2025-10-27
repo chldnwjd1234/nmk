@@ -30,26 +30,30 @@ function animateSVGPath(svgElement) {
     const path = svg.querySelector('path');
     if (!path) return;
 
-    // pathLength를 고정값으로 설정
-    path.setAttribute('pathLength', '1');
+    const length = path.getTotalLength();
 
-    // 초기 상태
-    path.style.strokeDasharray = '1';
-    path.style.strokeDashoffset = '1';
-    path.style.stroke = '#9F140B';
-    path.style.strokeWidth = '2';
+    // fill="none" 및 선 초기화
     path.style.fill = 'none';
+    path.style.stroke = '#9F140B';
+    path.style.strokeWidth = '2px';
+    path.style.vectorEffect = 'non-scaling-stroke';
+    path.style.shapeRendering = 'geometricPrecision';
+
+    // 💡 왼쪽 → 오른쪽 방향 설정 (기본 방향 유지)
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+
+    // ⚡ 브라우저 렌더링 안정화 (두께 변화 방지)
     path.style.transition = 'none';
+    path.getBoundingClientRect(); // 강제 리플로우
 
-    // 리플로우 강제
-    path.getBoundingClientRect();
-
-    // 애니메이션 시작
-    setTimeout(() => {
-        path.style.transition = 'stroke-dashoffset 1.5s linear';
-        path.style.strokeDashoffset = '0';
-    }, 10);
+    // 🎬 1프레임 뒤에 실행 (깜빡임 제거)
+    requestAnimationFrame(() => {
+        path.style.transition = 'stroke-dashoffset 1.6s ease-out';
+        path.style.strokeDashoffset = 0;
+    });
 }
+
 
 
 
