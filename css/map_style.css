@@ -304,7 +304,7 @@
     display: block;
 }
 
-/* 모든 지도 li 숨기기 */
+/* 지도 이미지 전환 애니메이션 */
 .map_right .floor>li ul li {
     display: none;
     position: absolute;
@@ -315,9 +315,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    opacity: 1;
+    transition: opacity 0.1s ease-out;
 }
 
-/* ✅ 활성화된 지도만 표시 */
 .map_right .floor>li .img_box li.active {
     display: block;
 }

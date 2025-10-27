@@ -65,9 +65,33 @@ selects.forEach((select, index) => {
 });
 
 // ============================
-// 🗺️ 지도 표시 변경 함수
+// 🗺️ 지도 표시 변경 함수 (애니메이션 추가)
 // ============================
 function updateMapBySelect(value) {
+    const isDesktop = window.innerWidth > 1024;
+    
+    // 현재 활성화된 지도 찾기
+    const currentMap = document.querySelector('.map_right .floor > li .img_box li.active');
+    
+    if (isDesktop && currentMap) {
+        // 페이드아웃
+        currentMap.style.transition = 'opacity 0.3s ease-out';
+        currentMap.style.opacity = '0';
+        
+        setTimeout(() => {
+            // 지도 교체
+            changeMap(value);
+        }, 300);
+    } else {
+        // 모바일은 즉시 전환
+        changeMap(value);
+    }
+}
+
+// 지도 교체 함수
+function changeMap(value) {
+    const isDesktop = window.innerWidth > 1024;
+    
     // 전체 지도/ SVG 숨김
     mapImages.forEach(img => img.classList.remove('active'));
     svgItems.forEach(svg => svg.classList.remove('active'));
@@ -90,9 +114,18 @@ function updateMapBySelect(value) {
     const targetMaps = targetFloor.querySelectorAll('.img_box li');
     if (targetMaps[mapIndex]) {
         targetMaps[mapIndex].classList.add('active');
+        
+        // 데스크탑에서 페이드인
+        if (isDesktop) {
+            targetMaps[mapIndex].style.opacity = '0';
+            targetMaps[mapIndex].style.transition = 'opacity 0.5s ease-out';
+            
+            setTimeout(() => {
+                targetMaps[mapIndex].style.opacity = '1';
+            }, 50);
+        }
     }
 }
-
 // ============================
 // 🏢 층 탭 전환 (애니메이션 추가)
 // ============================
