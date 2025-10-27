@@ -127,7 +127,7 @@
     footer {
         height: auto;
         padding: 30px 0 50px;
-        background: url(/asset/img/t_footer.png) no-repeat top right var(--bg);
+        background: url(../asset/img/t_footer.png) no-repeat top right var(--bg);
         position: relative;
     }
 
@@ -158,7 +158,7 @@
     footer.dark {
         height: auto;
         padding: 30px 0 50px;
-        background: url(/asset/img/t_d_footer.png) repeat-y top right #282C34;
+        background: url(../asset/img/t_d_footer.png) repeat-y top right #282C34;
     }
 
 
@@ -222,14 +222,14 @@
     footer {
         height: auto;
         padding: 30px 0 50px;
-        background: url(/asset/img/t_footer.png) repeat-y top right var(--bg);
+        background: url(../asset/img/t_footer.png) repeat-y top right var(--bg);
 
     }
 
     footer.dark {
         height: auto;
         padding: 30px 0 50px;
-        background: url(/asset/img/t_d_footer.png) repeat-y top right #282C34;
+        background: url(../asset/img/t_d_footer.png) repeat-y top right #282C34;
     }
 
     footer .f_top {
@@ -361,14 +361,14 @@
     /* footer */
     footer {
         padding: 40px 30px;
-        background: url(/asset/img/pp_footer.png) no-repeat top right var(--gray-07-footer);
+        background: url(../asset/img/pp_footer.png) no-repeat top right var(--gray-07-footer);
         background-size: contain !important;
         height: 100%;
     }
 
     footer.dark {
         padding: 40px 30px;
-        background: url(/asset/img/p_footer.png) no-repeat top right var(--gray-07-footer);
+        background: url(../asset/img/p_footer.png) no-repeat top right var(--gray-07-footer);
         background-size: contain;
         height: 100%;
     }
@@ -384,10 +384,10 @@
         width: 75%;
         height: 60px;
         background:
-            url('/asset/img/f_icon1.png') no-repeat 5% center / 24px,
-            url('/asset/img/f_icon2.png') no-repeat 25% center / 24px,
-            url('/asset/img/f_icon3.png') no-repeat 45% center / 24px,
-            url('/asset/img/f_icon4.png') no-repeat 63% center / 24px;
+            url('../asset/img/f_icon1.png') no-repeat 5% center / 24px,
+            url('../asset/img/f_icon2.png') no-repeat 25% center / 24px,
+            url('../asset/img/f_icon3.png') no-repeat 45% center / 24px,
+            url('../asset/img/f_icon4.png') no-repeat 63% center / 24px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         margin-bottom: 30px;
     }

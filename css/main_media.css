@@ -220,15 +220,15 @@
         height: 650px;
         padding-top: 0;
         padding-bottom: 20px;
-        background: url(/asset/img/h_pad_bg2.png) no-repeat bottom -20px left,
-            url(/asset/img/h_pad_bg1.png) no-repeat top 56px right;
+        background: url(../asset/img/h_pad_bg2.png) no-repeat bottom -20px left,
+            url(../asset/img/h_pad_bg1.png) no-repeat top 56px right;
         position: relative;
     }
 
     main .highlight .title {
         width: 420px;
         height: 150px;
-        background: url(/asset/img/pad.png) no-repeat center;
+        background: url(../asset/img/pad.png) no-repeat center;
         background-size: contain;
         margin-left: -30px;
         margin-bottom: -40px;
@@ -255,7 +255,7 @@
 
     /* h_img1 */
     .highlight .contents .top a {
-        background: url(/asset/img/pad_h1.png) no-repeat;
+        background: url(../asset/img/pad_h1.png) no-repeat;
         background-size: contain;
         width: 324px;
         height: 387px;
@@ -302,7 +302,7 @@
     main .highlight .contents .bottom {
         margin-top: -380px;
         margin-right: 40px;
-        background: url(/asset/img/pad_h2.png) no-repeat;
+        background: url(../asset/img/pad_h2.png) no-repeat;
         background-size: contain;
         width: 500px;
         height: 566px;
@@ -333,7 +333,7 @@
     /*  main .backimg */
 
     main .backimg {
-        background: url(/asset/img/pad_ink.png) no-repeat;
+        background: url(../asset/img/pad_ink.png) no-repeat;
         height: 600px;
     }
 
@@ -353,7 +353,7 @@
     }
 
     main .vision .title h2 img {
-        content: url(/asset/img/vi_line.svg);
+        content: url(../asset/img/vi_line.svg);
         display: inline-block;
         vertical-align: middle;
         margin-right: 20px;
@@ -370,7 +370,7 @@
         min-height: 900px;
         position: relative;
         overflow: hidden;
-        background: url(/asset/img/vi_pad_bg.svg) no-repeat center center;
+        background: url(../asset/img/vi_pad_bg.svg) no-repeat center center;
         background-size: 85%;
     }
 
@@ -569,7 +569,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: url(/asset/img/muds_bg.png) bottom no-repeat;
+        background: url(../asset/img/muds_bg.png) bottom no-repeat;
         background-size: cover;
     }
 
@@ -589,7 +589,7 @@
         left: 0;
         width: 430px;
         height: 160px;
-        background: url(/asset/img/pad.png) no-repeat center;
+        background: url(../asset/img/pad.png) no-repeat center;
         background-size: contain;
         display: flex;
         justify-content: center;
@@ -801,15 +801,15 @@
         height: auto;
         padding-top: 0;
         padding-bottom: 20px;
-        background: url(/asset/img/h_mo_left.png) no-repeat bottom 400px left,
-            url(/asset/img/h_mo_right.png) no-repeat top 5px right;
+        background: url(../asset/img/h_mo_left.png) no-repeat bottom 400px left,
+            url(../asset/img/h_mo_right.png) no-repeat top 5px right;
         position: relative;
     }
 
     main .highlight .title {
         width: 259px;
         height: 64px;
-        background: url(/asset/img/mo_title.png) no-repeat center;
+        background: url(../asset/img/mo_title.png) no-repeat center;
         background-size: contain;
         margin-left: -23px;
         margin-top: 20px;
@@ -850,7 +850,7 @@
 
     /* h_img1 - 위에 배치 */
     .highlight .contents .top a:first-child {
-        background: url(/asset/img/h_mo_img1.png) no-repeat;
+        background: url(../asset/img/h_mo_img1.png) no-repeat;
         background-size: cover;
         width: 100%;
         max-width: 280px;
@@ -865,7 +865,7 @@
     /* h_img2 - 아래 겹쳐서 배치 */
     main .highlight .contents .top a:nth-child(2) {
         display: block;
-        background: url(/asset/img/h_mo_img2.png) no-repeat;
+        background: url(../asset/img/h_mo_img2.png) no-repeat;
         background-size: cover;
         width: 100%;
         max-width: 280px;
@@ -890,7 +890,7 @@
     main .highlight .contents .bottom {
         margin-top: 0;
         margin-right: 0;
-        background: url(/asset/img/h_mo_img3.png) no-repeat;
+        background: url(../asset/img/h_mo_img3.png) no-repeat;
         background-size: cover;
         width: 353px;
         height: 248px;
@@ -914,7 +914,7 @@
     /* main .backimg  */
 
     main .backimg {
-        background: url(/asset/img/mo_ink.png) no-repeat;
+        background: url(../asset/img/mo_ink.png) no-repeat;
         background-size: cover;
     }
 
@@ -929,7 +929,7 @@
     }
 
     main .vision .title h2 img {
-        content: url(/asset/img/mo_vi_line.svg);
+        content: url(../asset/img/mo_vi_line.svg);
     }
 
     main .vision .title h2:nth-child(2) {
@@ -1097,7 +1097,7 @@
         height: 100%;
         max-height: 600px;
         min-height: 600px;
-        background: url(/asset/img/mo_mu_bg.png) no-repeat;
+        background: url(../asset/img/mo_mu_bg.png) no-repeat;
         background-size: contain;
     }
 
@@ -1115,7 +1115,7 @@
     main .muds .muds_bg .title {
         width: 259px;
         height: 64px;
-        background: url(/asset/img/mu_title.png) no-repeat center;
+        background: url(../asset/img/mu_title.png) no-repeat center;
         background-size: contain;
         margin-left: -30px;
         margin-top: 20px;
