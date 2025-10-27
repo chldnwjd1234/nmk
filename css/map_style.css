@@ -8,7 +8,6 @@
 }
 
 
-
 /* 왼쪽 박스 전체 */
 .space .left {
     width: 632px;
@@ -24,7 +23,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    border-bottom: 1px dashed #59574D;
+    border-bottom: 2px dashed #59574D;
     /* padding-bottom: 40px; */
 }
 
@@ -99,75 +98,6 @@
 }
 
 /* 드롭다운 컨테이너 */
-/* .dropdown {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.left .bottom .b_title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4px;
-    font-size: var(--fspre-30);
-    letter-spacing: 0.02em;
-    font-weight: 550;
-    color: var(--black);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.left .bottom .b_title:hover {
-    color: var(--red-05-point);
-}
-
-.left .bottom .b_title i {
-    font-size: 14px;
-    color: var(--black);
-    transition: transform 0.3s ease;
-}
-
-
-.dropdown>.b_title.active i {
-    transform: rotate(180deg);
-}
-
-
-.dropdown_menu {
-    display: none;
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 0;
-    width: 100%;
-    background: var(--w-color);
-    border: 1px solid var(--gray-02);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    overflow: hidden;
-}
-
-.dropdown_menu.show {
-    display: block;
-}
-
-.dropdown_menu .b_title {
-    padding: 16px 20px;
-    margin-bottom: 0;
-    border-bottom: 1px solid var(--gray-01);
-    transition: background 0.2s ease;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.dropdown_menu .b_title:last-child {
-    border-bottom: none;
-}
-
-.dropdown_menu .b_title:hover {
-    background: var(--yellow-01);
-} */
-/* 드롭다운 컨테이너 */
 .bottom .dropdown {
     position: relative;
     margin-bottom: 20px;
@@ -239,26 +169,13 @@
     color: var(--black);
     font-size: var(--fspre-25);
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 /* 첫 번째 info만 보이기 */
 .content article .info.active {
     display: block;
 }
-
-/* .content .content_wrapper .info {
-    display: none;
-    width: 100%;
-    color: var(--black);
-    font-size: var(--fspre-25);
-    font-weight: 400;
-    line-height: 1.4;
-}
-
-.content_wrapper .info:nth-child(1) {
-    display: block;
-} */
 
 
 /* ===========================
@@ -281,13 +198,22 @@
 /* img_box의 p 태그 폰트 설정 */
 .highlighted_artifact li p {
     font-weight: 450;
-    line-height: 1.4;
+    line-height: 1.3;
     color: var(--black);
-    background: yellow;
-    display: block;
-}
+    /* background: yellow; */
+    /* display: block; */
 
-.highlighted_artifact
+    display: -webkit-box;
+    /* Flex 유사 구조 */
+    -webkit-line-clamp: 2;
+    /* 표시할 줄 수 */
+    -webkit-box-orient: vertical;
+    /* 세로 방향 */
+    overflow: hidden;
+    /* 넘치는 내용 숨김 */
+    text-overflow: ellipsis;
+    /* ... 표시 */
+}
 
 /* 전체 리스트 (층별 묶음) */
 .artall>li {
@@ -443,8 +369,10 @@
     /* 처음엔 안 보이게 */
     pointer-events: none;
     /* 클릭 방지 */
+    z-index: 10;
 }
 
+/* 1층 유물 빨간면*/
 .map_right li.f1 .product_svg li:nth-child(1) {
     background-image: url(/asset/img_map/mapf1/line_and_red/art1_red.png);
 }
@@ -461,6 +389,41 @@
     background-image: url(/asset/img_map/mapf1/line_and_red/art4_red.png);
 }
 
+
+/* 2층 유물 빨간면*/
+.map_right li.f2 .product_svg li:nth-child(1) {
+    background-image: url(/asset/img_map/mapf2/line_and_red/art1_red.png);
+}
+
+.map_right li.f2 .product_svg li:nth-child(2) {
+    background-image: url(/asset/img_map/mapf2/line_and_red/art2_red.png);
+}
+
+.map_right li.f2 .product_svg li:nth-child(3) {
+    background-image: url(/asset/img_map/mapf2/line_and_red/art3_red.png);
+}
+
+.map_right li.f2 .product_svg li:nth-child(4) {
+    background-image: url(/asset/img_map/mapf2/line_and_red/art4_red.png);
+}
+
+/* 3층 유물 빨간면*/
+.map_right li.f3 .product_svg li:nth-child(1) {
+    background-image: url(/asset/img_map/mapf3/line_and_red/art1and2_red.png);
+}
+
+.map_right li.f3 .product_svg li:nth-child(2) {
+    background-image: url(/asset/img_map/mapf3/line_and_red/art1and2_red.png);
+}
+
+.map_right li.f3 .product_svg li:nth-child(3) {
+    background-image: url(/asset/img_map/mapf3/line_and_red/art3_red.png);
+}
+
+.map_right li.f3 .product_svg li:nth-child(4) {
+    background-image: url(/asset/img_map/mapf3/line_and_red/art4_red.png);
+}
+
 .map_right .product_svg li svg {
     width: 100%;
     height: 100%;
@@ -471,6 +434,17 @@
     /* 활성화된 것만 보이게 */
 }
 
+.map_right .product_svg li svg path {
+    stroke: #9F140B;
+    /* 빨간색 */
+    stroke-width: 2;
+}
 
-
-/* .map_right .floor  */
+/* ============================
+   SVG 애니메이션
+============================ */
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

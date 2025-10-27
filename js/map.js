@@ -15,6 +15,33 @@ const mapImages = document.querySelectorAll('.map_right .floor > li .img_box li'
 const svgItems = document.querySelectorAll('.map_right .product_svg li'); // SVG 전체
 
 // ============================
+// 🎨 SVG Path 애니메이션 함수
+// ============================
+function animateSVGPath(svgElement) {
+  const svg = svgElement.querySelector('svg');
+  if (!svg) return;
+  const path = svg.querySelector('path');
+  if (!path) return;
+
+  const length = path.getTotalLength();
+  const isReverse = svg.dataset.direction === "reverse"; // ✅ 방향 체크
+
+  // 초기 설정
+  path.style.strokeDasharray = length;
+  path.style.strokeDashoffset = isReverse ? -length : length; // ✅ 방향 반전
+  path.style.transition = 'none';
+  path.style.stroke = '#9F140B';
+  path.style.strokeWidth = '2';
+  path.style.fill = 'none';
+
+  // 애니메이션 실행
+  requestAnimationFrame(() => {
+    path.style.transition = 'stroke-dashoffset 1.5s ease-in-out';
+    path.style.strokeDashoffset = '0';
+  });
+}
+
+// ============================
 // 🧭 select 변경 시 콘텐츠 + 지도 교체
 // ============================
 selects.forEach((select, index) => {
@@ -119,11 +146,11 @@ artImgsGroup.forEach((floorGroup, floorIndex) => {
             svgItems.forEach(svg => (svg.style.display = "none"));
             if (svgItems[artIndex]) {
                 svgItems[artIndex].style.display = "block";
+                animateSVGPath(svgItems[artIndex]); // 애니메이션 실행
             }
         });
     });
 });
-
 
 // ============================
 // 🚀 초기 로드 시 1층 표시
@@ -131,7 +158,6 @@ artImgsGroup.forEach((floorGroup, floorIndex) => {
 window.addEventListener("DOMContentLoaded", () => {
     floorTabs[0].click();
 });
-
 
 /* gps 토글 클릭시 파란색 위치 표시 */
 const gpsToggle = document.getElementById('gps');
@@ -144,6 +170,3 @@ gpsToggle.addEventListener('change', () => {
         gpsMarker.classList.remove('on');
     }
 });
-
-
-
