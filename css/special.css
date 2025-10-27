@@ -14,7 +14,7 @@ main.bg {
 }
 
 .banner_top {
-    background-image: url(/asset/img_Special/sub_banner.png);
+    background-image: url(../asset/img_Special/sub_banner.png);
     /* 본인 배너이미지 */
 }
 
@@ -237,7 +237,7 @@ main.bg {
 
 .ExhibitionStructure {
     /* background: #ccc; */
-    background: url(/asset/img_Special/exhibition-bg2.png);
+    background: url(../asset/img_Special/exhibition-bg2.png);
     background-position: left top;
 }
 

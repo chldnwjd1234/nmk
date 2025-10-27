@@ -45,8 +45,8 @@ function startLoadingAnimation() {
         console.log('페이드아웃 시작');
         loadingScreen.classList.add('fade-out');
     }, 1200);
-    
+
     setTimeout(() => {
-        location.href = '/html/main.html';
+        location.href = 'html/main.html';
     }, 2800);
 }
