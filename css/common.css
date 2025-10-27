@@ -197,7 +197,7 @@ header .right img {
     right: 0;
     top: 0;
     height: 3px;
-    background: url('/asset/img/gnb_long.svg') repeat-x center/auto 100%;
+    background: url('../asset/img/gnb_long.svg') repeat-x center/auto 100%;
 }
 
 nav ul.gnb>li:hover .sub_menu {
@@ -260,7 +260,7 @@ nav ul.gnb>li:hover .sub_menu {
     top: -50px;
     width: 280px;
     height: 280px;
-    background: url('/asset/img/gnb_img.png') no-repeat;
+    background: url('../asset/img/gnb_img.png') no-repeat;
     background-position: center;
     background-size: contain;
     pointer-events: none;
@@ -272,7 +272,7 @@ nav ul.gnb>li:hover .sub_menu {
     width: 2px;
     height: auto;
     min-height: 150px;
-    background: url('/asset/img/gnb_short.svg') repeat-y center/100% auto;
+    background: url('../asset/img/gnb_short.svg') repeat-y center/100% auto;
     flex-shrink: 0;
     margin: 0 -30px;
 }
@@ -373,7 +373,7 @@ nav ul.gnb>li:hover .sub_menu {
     width: 50%;
     max-width: 400px;
     height: 100vh;
-    background: url(/asset/img/bg_all2.png), url('/asset/img/mo_img.png') no-repeat, var(--bg);
+    background: url(../asset/img/bg_all2.png), url('../asset/img/mo_img.png') no-repeat, var(--bg);
     background-position: left;
     transform: translateX(100%);
     transition: transform 0.4s ease;
@@ -513,7 +513,7 @@ main {
 }
 
 main.bg {
-    background: url(/asset/img/bg_all2.png) var(--bg);
+    background: url(../asset/img/bg_all2.png) var(--bg);
 }
 
 main .banner_top {
@@ -603,7 +603,7 @@ main .txt_box h3 {
 footer {
     width: 100%;
     height: 771px;
-    background: url(/asset/img/footer_sub.png) no-repeat right top, url(/asset/img/bg_all2.png) no-repeat right top var(--bg);
+    background: url(../asset/img/footer_sub.png) no-repeat right top, url(../asset/img/bg_all2.png) no-repeat right top var(--bg);
     color: var(--w-color);
     font-weight: 300;
     font-size: 1.25rem;
@@ -615,7 +615,7 @@ footer {
 footer.dark {
     width: 100%;
     height: 771px;
-    background: url(/asset/img/footer.png) no-repeat right top#282C34;
+    background: url(../asset/img/footer.png) no-repeat right top#282C34;
     color: var(--w-color);
     font-weight: 300;
     font-size: 1.25rem;
@@ -662,7 +662,7 @@ footer .f_bot p {
 
 footer .f_bot p::before {
     content: '';
-    background: url(/asset/img/icon3.png) no-repeat center / contain;
+    background: url(../asset/img/icon3.png) no-repeat center / contain;
     width: 18px;
     height: 18px;
 }
