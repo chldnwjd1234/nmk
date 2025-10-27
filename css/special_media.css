@@ -173,7 +173,6 @@
         padding-bottom: 160PX;
         background: url(../asset/img_Special/exhibition-bg2_1024.png);
         background-position: center 45%;
-
     }
 
     .articles_all {
@@ -181,7 +180,7 @@
         display: flex;
         justify-content: space-between;
         position: relative;
-        height: 100vh;
+           height: 780px;
         /* background: yellow; */
     }
 
@@ -192,7 +191,7 @@
         background-color: rgba(255, 255, 255, 1);
         /* opacity: 0.4; */
         width: 376px;
-        height: 80vh;
+        height: 500px;
         border-radius: 10px;
         top: 0;
         gap: 0;
@@ -536,9 +535,9 @@
         background: url(../asset/img_Special/exhibition-bg2_402.png) no-repeat;
     }
 
-    .articles_all {
+    /* .articles_all {
         height: 90vh;
-    }
+    } */
 
     .articles_all .Exhibition_1,
     .articles_all .Exhibition_2,
