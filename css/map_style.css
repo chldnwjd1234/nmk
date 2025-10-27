@@ -329,33 +329,33 @@
 
 /* 1층 지도 */
 .map_right .floor .f1 .img_box1 li:nth-child(1) {
-    background-image: url(/asset/img_map/mapf1/subtitle/mapf1_1_medieval_and_early_modern_history.png);
+    background-image: url(../asset/img_map/mapf1/subtitle/mapf1_1_medieval_and_early_modern_history.png);
 }
 
 .map_right .floor .f1 .img_box1 li:nth-child(2) {
-    background-image: url(/asset/img_map/mapf1/subtitle/mapf1_2_prehistory_and_ancient_history.png);
+    background-image: url(../asset/img_map/mapf1/subtitle/mapf1_2_prehistory_and_ancient_history.png);
 }
 
 /* 2층 지도 */
 .map_right .floor .f2 .img_box2 li:nth-child(1) {
-    background-image: url(/asset/img_map/mapf2/subtitle/mapf2_1_calligraphy_and_painting.png);
+    background-image: url(../asset/img_map/mapf2/subtitle/mapf2_1_calligraphy_and_painting.png);
 }
 
 .map_right .floor .f2 .img_box2 li:nth-child(2) {
-    background-image: url(/asset/img_map/mapf2/subtitle/mapf2_2_donated_collection.png);
+    background-image: url(../asset/img_map/mapf2/subtitle/mapf2_2_donated_collection.png);
 }
 
 .map_right .floor .f2 .img_box2 li:nth-child(3) {
-    background-image: url(/asset/img_map/mapf2/subtitle/mapf2_3_room_of_quiet_contemplation.png);
+    background-image: url(../asset/img_map/mapf2/subtitle/mapf2_3_room_of_quiet_contemplation.png);
 }
 
 /* 3층 지도 */
 .map_right .floor .f3 .img_box3 li:nth-child(1) {
-    background-image: url(/asset/img_map/mapf3/subtitle/mapf3_1_sculpture_and_crafts.png);
+    background-image: url(../asset/img_map/mapf3/subtitle/mapf3_1_sculpture_and_crafts.png);
 }
 
 .map_right .floor .f3 .img_box3 li:nth-child(2) {
-    background-image: url(/asset/img_map/mapf3/subtitle/mapf3_2_world_art.png);
+    background-image: url(../asset/img_map/mapf3/subtitle/mapf3_2_world_art.png);
 }
 
 .map_right .product_svg li {
@@ -373,54 +373,54 @@
 
 /* 1층 유물 빨간면*/
 .map_right li.f1 .product_svg li:nth-child(1) {
-    background-image: url(/asset/img_map/mapf1/line_and_red/art1_red.png);
+    background-image: url(../asset/img_map/mapf1/line_and_red/art1_red.png);
 }
 
 .map_right li.f1 .product_svg li:nth-child(2) {
-    background-image: url(/asset/img_map/mapf1/line_and_red/art2_red.png);
+    background-image: url(../asset/img_map/mapf1/line_and_red/art2_red.png);
 }
 
 .map_right li.f1 .product_svg li:nth-child(3) {
-    background-image: url(/asset/img_map/mapf1/line_and_red/art3_red.png);
+    background-image: url(../asset/img_map/mapf1/line_and_red/art3_red.png);
 }
 
 .map_right li.f1 .product_svg li:nth-child(4) {
-    background-image: url(/asset/img_map/mapf1/line_and_red/art4_red.png);
+    background-image: url(../asset/img_map/mapf1/line_and_red/art4_red.png);
 }
 
 
 /* 2층 유물 빨간면*/
 .map_right li.f2 .product_svg li:nth-child(1) {
-    background-image: url(/asset/img_map/mapf2/line_and_red/art1_red.png);
+    background-image: url(../asset/img_map/mapf2/line_and_red/art1_red.png);
 }
 
 .map_right li.f2 .product_svg li:nth-child(2) {
-    background-image: url(/asset/img_map/mapf2/line_and_red/art2_red.png);
+    background-image: url(../asset/img_map/mapf2/line_and_red/art2_red.png);
 }
 
 .map_right li.f2 .product_svg li:nth-child(3) {
-    background-image: url(/asset/img_map/mapf2/line_and_red/art3_red.png);
+    background-image: url(../asset/img_map/mapf2/line_and_red/art3_red.png);
 }
 
 .map_right li.f2 .product_svg li:nth-child(4) {
-    background-image: url(/asset/img_map/mapf2/line_and_red/art4_red.png);
+    background-image: url(../asset/img_map/mapf2/line_and_red/art4_red.png);
 }
 
 /* 3층 유물 빨간면*/
 .map_right li.f3 .product_svg li:nth-child(1) {
-    background-image: url(/asset/img_map/mapf3/line_and_red/art1and2_red.png);
+    background-image: url(../asset/img_map/mapf3/line_and_red/art1and2_red.png);
 }
 
 .map_right li.f3 .product_svg li:nth-child(2) {
-    background-image: url(/asset/img_map/mapf3/line_and_red/art1and2_red.png);
+    background-image: url(../asset/img_map/mapf3/line_and_red/art1and2_red.png);
 }
 
 .map_right li.f3 .product_svg li:nth-child(3) {
-    background-image: url(/asset/img_map/mapf3/line_and_red/art3_red.png);
+    background-image: url(../asset/img_map/mapf3/line_and_red/art3_red.png);
 }
 
 .map_right li.f3 .product_svg li:nth-child(4) {
-    background-image: url(/asset/img_map/mapf3/line_and_red/art4_red.png);
+    background-image: url(../asset/img_map/mapf3/line_and_red/art4_red.png);
 }
 
 .map_right .product_svg li svg {
