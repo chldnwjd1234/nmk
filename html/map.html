@@ -14,10 +14,7 @@
     <link rel="stylesheet" href="/css/common_media.css">
     <link rel="stylesheet" href="/css/map_style.css"><!-- 본인 스타일 -->
     <link rel="stylesheet" href="/css/map_media.css">
-    <!--     <link rel="stylesheet" href="/css/common_media.css">
-    <link rel="stylesheet" href="/css/test_media.css"> --><!-- 본인 미디어스타일 -->
-    <!--     <script src="/js/common.js"></script>
-    <script src="/js/test.js"></script> --><!-- 본인 js -->
+    <script src="/js/common.js"></script>
     <script src="/js/map.js" defer></script>
     <script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
 </head>
@@ -41,17 +38,17 @@
                                     <div class="divider"></div>
                                     <div class="sub_right">
                                         <ul>
-                                            <li><a href="#">Visitor Information</a></li>
+                                            <li><a href="/html/information.html">Visitor Information</a></li>
+                                            <li><a href="/html/map.html">Museum Map</a></li>
                                             <li><a href="#">Guided Tours</a></li>
                                             <li><a href="#">Amenities</a></li>
-                                            <li><a href="#">Museum Map</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
-                            <a href="#">EXHIBITION</a>
+                            <a href="/html/exhibition.html">EXHIBITION</a>
                             <div class="sub_menu">
                                 <div class="sub_inner">
                                     <div class="sub_left">
@@ -62,8 +59,8 @@
                                     <div class="divider"></div>
                                     <div class="sub_right">
                                         <ul>
+                                            <li><a href="/html/exhibition.html">Special Exhibitions</a></li>
                                             <li><a href="#">Permanent Exhibitions</a></li>
-                                            <li><a href="#">Special Exhibitions</a></li>
                                             <li><a href="#">Immersive Digital Gallery</a></li>
                                             <li><a href="#">Exhibits Online</a></li>
                                         </ul>
@@ -72,7 +69,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#">COLLECTION</a>
+                            <a href="/html/collection.html">COLLECTION</a>
                             <div class="sub_menu">
                                 <div class="sub_inner">
                                     <div class="sub_left">
@@ -83,7 +80,7 @@
                                     <div class="divider"></div>
                                     <div class="sub_right">
                                         <ul>
-                                            <li><a href="#">Collection Database</a></li>
+                                            <li><a href="/html/collection.html">Collection Database</a></li>
                                             <li><a href="#">Curator’s Picks</a></li>
                                             <li><a href="#">Highlights</a></li>
                                         </ul>
@@ -123,7 +120,6 @@
                                     <div class="sub_right">
                                         <ul>
                                             <li><a href="#">At a Glance</a></li>
-                                            <li><a href="#">International Organizations</a></li>
                                             <li><a href="#">Global Exhibitions</a></li>
                                             <li><a href="#">Academic Activities</a></li>
                                             <li><a href="#">Exchange Programs</a></li>
@@ -133,7 +129,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#">ABOUT US</a>
+                            <a href="/html/vision.html">ABOUT US</a>
                             <div class="sub_menu">
                                 <div class="sub_inner">
                                     <div class="sub_left">
@@ -144,7 +140,7 @@
                                     <div class="divider"></div>
                                     <div class="sub_right">
                                         <ul>
-                                            <li><a href="#">Vision and Strategy</a></li>
+                                            <li><a href="/html/vision.html">Vision and Strategy</a></li>
                                             <li><a href="#">History</a></li>
                                             <li><a href="#">Builldings</a></li>
                                             <li><a href="#">Contact Us</a></li>
@@ -177,8 +173,7 @@
                         <a href="#"><img src="/asset/img/icon2.png" alt="mypage"></a>
                     </div><!-- //.right -->
                 </nav>
-                <!-- 여러분 이거 가져가세요 반응형버전 헤더 햄 아이콘입니다 -->
-                <!-- <button class="ham_icon" aria-label="menu"></button> -->
+                <!-- 햄 아이콘 시작 -->
                 <div class="ham">
                     <ul>
                         <li></li>
@@ -188,6 +183,101 @@
                 </div>
                 <!-- 햄 아이콘 끝 -->
             </div><!-- //.inner -->
+            <!-- 모바일 메뉴 -->
+
+            <div class="mobile_menu">
+                <!-- 상단 아이콘 -->
+                <div class="mobile_header">
+                    <div class="mobile_icons">
+                        <a href="#"><img src="/asset/img/icon1.png" alt="global"></a>
+                        <a href="#"><img src="/asset/img/icon2.png" alt="mypage"></a>
+                    </div>
+                    <button class="mobile_close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="mobile_inner">
+                    <ul class="mobile_gnb">
+                        <!-- VISIT -->
+                        <li class="has_sub">
+                            <a href="#">VISIT</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="/html/information.html">Visitor Information</a></li>
+                                <li><a href="/html/map.html">Museum Map</a></li>
+                                <li><a href="#">Guided Tours</a></li>
+                                <li><a href="#">Amenities</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- EXHIBITION -->
+                        <li class="has_sub">
+                            <a href="/html/exhibition.html">EXHIBITION</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="#">Special Exhibitions</a></li>
+                                <li><a href="#">Permanent Exhibitions</a></li>
+                                <li><a href="#">Immersive Digital Gallery</a></li>
+                                <li><a href="#">Exhibits Online</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- COLLECTION -->
+                        <li class="has_sub">
+                            <a href="/html/collection.html">COLLECTION</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="#">Collection Database</a></li>
+                                <li><a href="#">Curator's Picks</a></li>
+                                <li><a href="#">Highlights</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- EVENT -->
+                        <li class="has_sub">
+                            <a href="#">EVENT</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="#">Event</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- NMK GLOBAL -->
+                        <li class="has_sub">
+                            <a href="#">NMK GLOBAL</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="#">At a Glance</a></li>
+                                <li><a href="#">Global Exhibitions</a></li>
+                                <li><a href="#">Academic Activities</a></li>
+                                <li><a href="#">Exchange Programs</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- ABOUT US -->
+                        <li class="has_sub">
+                            <a href="/html/vision.html">ABOUT US</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="/html/vision.html">Vision and Strategy</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Buildings</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- MUSEUM SHOP -->
+                        <li class="has_sub">
+                            <a href="https://muds.kr/" target="_blank">MUSEUM SHOP</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="https://muds.kr/" target="_blank">MUSEUM SHOP</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </header>
         <main class="bg">
             <div class="sub">

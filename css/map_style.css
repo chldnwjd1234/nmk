@@ -294,7 +294,6 @@
     display: block;
 }
 
-
 /* 모든 지도 박스(img_box) 숨기기 */
 .map_right .floor>li .img_box {
     display: none;
@@ -304,7 +303,6 @@
 .map_right .floor>li.active .img_box {
     display: block;
 }
-
 
 /* 모든 지도 li 숨기기 */
 .map_right .floor>li ul li {
@@ -323,7 +321,6 @@
 .map_right .floor>li .img_box li.active {
     display: block;
 }
-
 /* ============================
    🖼️ 층별 지도 이미지 연결
 ============================ */
@@ -427,6 +424,24 @@
 .map_right .product_svg li svg {
     width: 100%;
     height: 100%;
+}
+/* SVG path 애니메이션 */
+.map_right .product_svg li svg path {
+    stroke: #9F140B;
+    stroke-width: 2;
+    fill: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+.map_right .product_svg li.active svg path {
+    animation: drawPath 1.5s linear forwards;
+}
+
+@keyframes drawPath {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 .map_right .product_svg li.active {

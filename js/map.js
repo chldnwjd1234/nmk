@@ -15,54 +15,37 @@ const mapImages = document.querySelectorAll('.map_right .floor > li .img_box li'
 const svgItems = document.querySelectorAll('.map_right .product_svg li'); // SVG 전체
 
 // ============================
-// 🎨 SVG Path 애니메이션 함수
+// 🎨 SVG Path 애니메이션 함수 (최종 수정)
 // ============================
 function animateSVGPath(svgElement) {
-  const svg = svgElement.querySelector('svg');
-  if (!svg) return;
-  const path = svg.querySelector('path');
-  if (!path) return;
+    const svg = svgElement.querySelector('svg');
+    if (!svg) return;
+    
+    const path = svg.querySelector('path');
+    if (!path) return;
 
-  const length = path.getTotalLength();
-  const isReverse = svg.dataset.direction === "reverse"; // ✅ 방향 체크
-
-  // 초기 설정
-  path.style.strokeDasharray = length;
-  path.style.strokeDashoffset = isReverse ? -length : length; // ✅ 방향 반전
-  path.style.transition = 'none';
-  path.style.stroke = '#9F140B';
-  path.style.strokeWidth = '2';
-  path.style.fill = 'none';
-
-  // 애니메이션 실행
-  requestAnimationFrame(() => {
-    path.style.transition = 'stroke-dashoffset 1.5s ease-in-out';
-    path.style.strokeDashoffset = '0';
-  });
+    // pathLength를 고정값으로 설정
+    path.setAttribute('pathLength', '1');
+    
+    // 초기 상태
+    path.style.strokeDasharray = '1';
+    path.style.strokeDashoffset = '1';
+    path.style.stroke = '#9F140B';
+    path.style.strokeWidth = '2';
+    path.style.fill = 'none';
+    path.style.transition = 'none';
+    
+    // 리플로우 강제
+    path.getBoundingClientRect();
+    
+    // 애니메이션 시작
+    setTimeout(() => {
+        path.style.transition = 'stroke-dashoffset 1.5s linear';
+        path.style.strokeDashoffset = '0';
+    }, 10);
 }
 
-// ============================
-// 🧭 select 변경 시 콘텐츠 + 지도 교체
-// ============================
-selects.forEach((select, index) => {
-    select.addEventListener('change', () => {
-        const val = select.value;
-
-        // 모든 article, info 초기화
-        articles.forEach(a => a.classList.remove('active'));
-        infoBoxes.forEach(i => i.classList.remove('active'));
-        articles[index].classList.add('active');
-
-        // 세부 info 선택
-        const infos = articles[index].querySelectorAll('.info');
-        infos.forEach((info, i) => {
-            info.classList.toggle('active', val.endsWith((i + 1).toString()));
-        });
-
-        // 지도 변경
-        updateMapBySelect(val);
-    });
-});
+    
 
 // ============================
 // 🗺️ 지도 표시 변경 함수
@@ -94,33 +77,76 @@ function updateMapBySelect(value) {
 }
 
 // ============================
-// 🏢 층 탭 전환
+// 🏢 층 탭 전환 (애니메이션 추가)
 // ============================
 floorTabs.forEach((tab, index) => {
     tab.addEventListener('click', () => {
-        // 전체 초기화
-        floorTabs.forEach(t => t.classList.remove('active'));
-        artLists.forEach(a => a.classList.remove('active'));
-        selects.forEach(s => s.classList.remove('active'));
-        articles.forEach(a => a.classList.remove('active'));
-        infoBoxes.forEach(i => i.classList.remove('active'));
-        mapFloors.forEach(f => f.classList.remove('active'));
-        mapImages.forEach(li => li.classList.remove('active'));
-        svgItems.forEach(svg => svg.classList.remove('active'));
-
-        // 클릭한 층만 활성화
-        tab.classList.add('active');
-        artLists[index].classList.add('active');
-        selects[index].classList.add('active');
-        articles[index].classList.add('active');
-        articles[index].querySelector('.info').classList.add('active');
-        mapFloors[index].classList.add('active');
-
-        // 첫 지도 이미지 표시
-        const firstMap = mapFloors[index].querySelector('.img_box li:first-child');
-        if (firstMap) firstMap.classList.add('active');
+        // 데스크탑에서만 애니메이션 적용
+        const isDesktop = window.innerWidth > 1024;
+        
+        if (isDesktop) {
+            // 현재 활성화된 층 찾기
+            const currentFloor = document.querySelector('.map_right .floor > li.active');
+            
+            if (currentFloor) {
+                // 페이드아웃 애니메이션
+                currentFloor.style.transition = 'opacity 0.3s ease-out';
+                currentFloor.style.opacity = '0';
+                
+                setTimeout(() => {
+                    updateFloorContent(index);
+                }, 300);
+            } else {
+                updateFloorContent(index);
+            }
+        } else {
+            // 모바일에서는 즉시 전환
+            updateFloorContent(index);
+        }
     });
 });
+
+// 층 콘텐츠 업데이트 함수
+function updateFloorContent(index) {
+    const isDesktop = window.innerWidth > 1024;
+    
+    // 전체 초기화
+    floorTabs.forEach(t => t.classList.remove('active'));
+    artLists.forEach(a => a.classList.remove('active'));
+    selects.forEach(s => s.classList.remove('active'));
+    articles.forEach(a => a.classList.remove('active'));
+    infoBoxes.forEach(i => i.classList.remove('active'));
+    mapFloors.forEach(f => f.classList.remove('active'));
+    mapImages.forEach(li => li.classList.remove('active'));
+    svgItems.forEach(svg => svg.classList.remove('active'));
+
+    // 클릭한 층만 활성화
+    floorTabs[index].classList.add('active');
+    artLists[index].classList.add('active');
+    selects[index].classList.add('active');
+    articles[index].classList.add('active');
+    articles[index].querySelector('.info').classList.add('active');
+    mapFloors[index].classList.add('active');
+
+    // 첫 지도 이미지 표시
+    const firstMap = mapFloors[index].querySelector('.img_box li:first-child');
+    if (firstMap) {
+        firstMap.classList.add('active');
+    }
+    
+    // 데스크탑에서 페이드인 애니메이션
+    if (isDesktop) {
+        const newFloor = mapFloors[index];
+        if (newFloor) {
+            newFloor.style.opacity = '0';
+            newFloor.style.transition = 'opacity 0.5s ease-out';
+            
+            setTimeout(() => {
+                newFloor.style.opacity = '1';
+            }, 50);
+        }
+    }
+}
 
 // ============================
 // 🖼️ Highlighted Artifact 클릭 → 해당 SVG 표시
@@ -153,9 +179,45 @@ artImgsGroup.forEach((floorGroup, floorIndex) => {
 });
 
 // ============================
-// 🚀 초기 로드 시 1층 표시
+// 🚀 초기 로드 시 애니메이션
 // ============================
 window.addEventListener("DOMContentLoaded", () => {
+    const leftSection = document.querySelector('.space .left');
+    const mapRight = document.querySelector('.space .map_right');
+    
+    // ✅ 1024px 이상에서만 애니메이션 적용
+    if (window.innerWidth > 1024) {
+        // 초기 숨김 상태 설정
+        if (leftSection) {
+            leftSection.style.opacity = '0';
+            leftSection.style.transform = 'translateY(30px)';
+        }
+        
+        if (mapRight) {
+            mapRight.style.opacity = '0';
+            mapRight.style.transform = 'translateY(30px)';
+        }
+        
+        // .left 먼저 나타남 (0.1초 후)
+        setTimeout(() => {
+            if (leftSection) {
+                leftSection.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+                leftSection.style.opacity = '1';
+                leftSection.style.transform = 'translateY(0)';
+            }
+        }, 100);
+        
+        // .map_right 나중에 나타남 (0.6초 후)
+        setTimeout(() => {
+            if (mapRight) {
+                mapRight.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+                mapRight.style.opacity = '1';
+                mapRight.style.transform = 'translateY(0)';
+            }
+        }, 600);
+    }
+    
+    // 1층 탭 활성화
     floorTabs[0].click();
 });
 
@@ -163,10 +225,12 @@ window.addEventListener("DOMContentLoaded", () => {
 const gpsToggle = document.getElementById('gps');
 const gpsMarker = document.querySelector('.gps_marker');
 
-gpsToggle.addEventListener('change', () => {
-    if (gpsToggle.checked) {
-        gpsMarker.classList.add('on')
-    } else {
-        gpsMarker.classList.remove('on');
-    }
-});
+if (gpsToggle && gpsMarker) {
+    gpsToggle.addEventListener('change', () => {
+        if (gpsToggle.checked) {
+            gpsMarker.classList.add('on');
+        } else {
+            gpsMarker.classList.remove('on');
+        }
+    });
+}
