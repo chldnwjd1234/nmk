@@ -31,7 +31,7 @@
     height: 200px;
     overflow: hidden;
     border-radius: 15px;
-    background: url(/asset/img_reservation/banner.png) no-repeat center center;
+    background: url(../asset/img_reservation/banner.png) no-repeat center center;
     background-size: cover;
     margin-bottom: 30px;
 }
@@ -49,8 +49,8 @@
     color: #fff;
     font-size: 36px;
     font-weight: 700;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
     letter-spacing: 1px;
+    font-family: var(--title-Zen);
 }
 
 /* Info Section Styles */
@@ -59,7 +59,7 @@
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     margin-bottom: 20px;
 }
 
@@ -181,26 +181,37 @@
 
 /* Form Sections */
 .reservation .form_section {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    margin-bottom: 20px;
+    background: url(../asset/img_reservation/re1.png) center;
+    border-radius: 15px;
+    width: 1080px;
+    height: 440px;
 }
 
-.reservation .form_section h3 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
+.reservation .section2 {
+    background: url(../asset/img_reservation/re2.png) center;
+    border-radius: 15px;
+    width: 1080px;
+    height: 430px;
+    margin-top: 20px;
 }
+
+.reservation .section3 {
+    background: url(../asset/img_reservation/re3.png) center;
+    border-radius: 15px;
+    width: 1080px;
+    height: 180px;
+    margin-top: 20px;
+}
+
+
+
 
 /* Total Amount Section (오른쪽) */
 .reservation .total_amount {
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     position: sticky;
     top: 20px;
 }
@@ -295,7 +306,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1700px) {
+/* @media (max-width: 1700px) {
     .reservation.inner {
         max-width: 1400px;
     }
@@ -389,4 +400,4 @@
     .reservation .total_amount .price {
         font-size: 24px;
     }
-}
+} */

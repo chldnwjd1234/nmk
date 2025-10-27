@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .banner_top {
-    background-image: url(/asset/img_information/sub_banner.png);
+    background-image: url(../asset/img_information/sub_banner.png);
     /* 본인 배너이미지 */
 }
 
@@ -18,6 +18,8 @@
     cursor: pointer;
     color: var(--w-color);
     background-color: var(--gray-05);
+    font-size: 21px;
+    line-height: 1.3;
 }
 
 .top_btn button.on {
@@ -199,6 +201,7 @@
     display: flex;
     gap: 20px;
     margin-top: 72px;
+
 }
 
 .services_container .box_left {
@@ -253,6 +256,7 @@
     padding: 184px 61px 45px 63px;
     position: relative;
     overflow: hidden;
+    transition: background-color .6s;
 }
 
 .wheelchair_stroller::before {
@@ -267,7 +271,7 @@
     z-index: 0;
 
     /* 문양 이미지 경로 설정 */
-    background-image: url(/asset/img_information/icon_Wheelchair.png);
+    background-image: url(../asset/img_information/icon_Wheelchair.png);
 
     /* 문양의 위치 설정 (오른쪽 상단) */
     background-position: right -100px top -80px;
@@ -292,6 +296,8 @@
     padding: 184px 39px 45px 39px;
     overflow: hidden;
     position: relative;
+    transition: background-color .6s;
+
 }
 
 .museum_shops::before {
@@ -306,7 +312,7 @@
     z-index: 0;
 
     /* 문양 이미지 경로 설정 */
-    background-image: url(/asset/img_information/icon_Museum\ Shops.png);
+    background-image: url(../asset/img_information/icon_Museum\ Shops.png);
 
     /* 문양의 위치 설정 (오른쪽 상단) */
     background-position: right -150px top -80px;
@@ -331,6 +337,8 @@
     padding: 58px 271px 46px 65px;
     overflow: hidden;
     position: relative;
+    transition: background-color .6s;
+
 }
 
 .lockers::before {
@@ -345,7 +353,7 @@
     z-index: 0;
 
     /* 문양 이미지 경로 설정 */
-    background-image: url(/asset/img_information/icon_Lockers.png);
+    background-image: url(../asset/img_information/icon_Lockers.png);
 
     /* 문양의 위치 설정 (오른쪽 상단) */
     background-position: right -150px top -80px;
@@ -370,6 +378,8 @@
     padding: 46px 413px 45px 68px;
     overflow: hidden;
     position: relative;
+    transition: background-color .6s;
+
 }
 
 .lactation_room::before {
@@ -384,7 +394,7 @@
     z-index: 0;
 
     /* 문양 이미지 경로 설정 */
-    background-image: url(/asset/img_information/icon_Lactation\ Room.png);
+    background-image: url(../asset/img_information/icon_Lactation\ Room.png);
 
     /* 문양의 위치 설정 (오른쪽 상단) */
     background-position: right -50px bottom -80px;
@@ -409,6 +419,8 @@
     padding: 171px 296px 45px 58px;
     overflow: hidden;
     position: relative;
+    transition: background-color .6s;
+
 }
 
 .coat_storage::before {
@@ -423,12 +435,14 @@
     z-index: 0;
 
     /* 문양 이미지 경로 설정 */
-    background-image: url(/asset/img_information/icon_Coat\ Storage.png);
+    background-image: url(../asset/img_information/icon_Coat\ Storage.png);
 
     /* 문양의 위치 설정 (오른쪽 상단) */
     background-position: right -150px bottom -130px;
 
     background-repeat: no-repeat;
+
+
 }
 
 .coat_storage:hover {
@@ -445,7 +459,7 @@
 .VisitorTips {
     margin-top: 103px;
     padding-bottom: 120px;
-    background-image: url(/asset/img_information/tree.png);
+    background-image: url(../asset/img_information/tree.png);
     background-repeat: no-repeat;
     background-position: right bottom -50px;
     /* 화면 가운데 정렬 */
@@ -474,7 +488,7 @@
 
 
 .do_not_touch {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;
@@ -487,6 +501,7 @@
     align-items: center;
     gap: 16px;
     margin-bottom: 128px;
+    transition: .6s;
 }
 
 
@@ -501,7 +516,7 @@
 }
 
 .do_not_touch:hover {
-    background-image: url(/asset/img_information/6_blue.png);
+    background-image: url(../asset/img_information/6_blue.png);
 }
 
 .do_not_touch:hover .default_icon {
@@ -573,7 +588,8 @@
 }
 
 .No_Smoking {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
+    transition: .6s;
 }
 
 .No_Smoking p {
@@ -582,7 +598,7 @@
 }
 
 .No_Smoking:hover {
-    background-image: url(/asset/img_information/6_red.png);
+    background-image: url(../asset/img_information/6_red.png);
 }
 
 .No_Smoking:hover .default_icon {
@@ -607,7 +623,8 @@
 
 
 .No_FoodDrinks {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
+    transition: .6s;
 }
 
 .No_FoodDrinks p {
@@ -616,7 +633,7 @@
 }
 
 .No_FoodDrinks:hover {
-    background-image: url(/asset/img_information/6_blue.png);
+    background-image: url(../asset/img_information/6_blue.png);
 }
 
 .No_FoodDrinks:hover .default_icon {
@@ -641,8 +658,9 @@
 
 
 .NoPhotography {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
     margin-bottom: 128px;
+    transition: .6s;
 }
 
 .NoPhotography p {
@@ -651,7 +669,7 @@
 }
 
 .NoPhotography:hover {
-    background-image: url(/asset/img_information/6_red.png);
+    background-image: url(../asset/img_information/6_red.png);
 }
 
 .NoPhotography:hover .default_icon {
@@ -678,7 +696,8 @@
 
 
 .SilentMode {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
+    transition: .6s;
 }
 
 .SilentMode p {
@@ -687,7 +706,7 @@
 }
 
 .SilentMode:hover {
-    background-image: url(/asset/img_information/6_blue.png);
+    background-image: url(../asset/img_information/6_blue.png);
 }
 
 .SilentMode:hover .default_icon {
@@ -712,8 +731,8 @@
 
 
 .NoBicycles_Skates {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
-    ;
+    background-image: url(../asset/img_information/VisitorTips_6.png);
+    transition: .6s;
 }
 
 .NoBicycles_Skates p {
@@ -722,7 +741,7 @@
 }
 
 .NoBicycles_Skates:hover {
-    background-image: url(/asset/img_information/6_red.png);
+    background-image: url(../asset/img_information/6_red.png);
 }
 
 .NoBicycles_Skates:hover .default_icon {
@@ -747,8 +766,9 @@
 
 
 .Bequiet {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
     margin-bottom: 128px;
+    transition: .6s;
 }
 
 .Bequiet p {
@@ -757,7 +777,7 @@
 }
 
 .Bequiet:hover {
-    background-image: url(/asset/img_information/6_blue.png);
+    background-image: url(../asset/img_information/6_blue.png);
 }
 
 .Bequiet:hover .default_icon {
@@ -783,7 +803,8 @@
 
 
 .OnlyServiceDogs {
-    background-image: url(/asset/img_information/VisitorTips_6.png);
+    background-image: url(../asset/img_information/VisitorTips_6.png);
+    transition: .6s;
 }
 
 .OnlyServiceDogs p {
@@ -792,7 +813,7 @@
 }
 
 .OnlyServiceDogs:hover {
-    background-image: url(/asset/img_information/6_red.png);
+    background-image: url(../asset/img_information/6_red.png);
 }
 
 .OnlyServiceDogs:hover .default_icon {
@@ -857,6 +878,11 @@
 .Directions_btn {
     margin-top: 56px;
     padding-bottom: 72px;
+}
+
+.Directions_btn .Directions {
+    font-size: 21px;
+    line-height: 1.3;
 }
 
 .Directions_btn button {
@@ -1013,7 +1039,7 @@
 }
 
 .Subway_list li span {
-    padding: 8px 12px;
+    padding: 8px 14px;
     background-color: #000;
     border-radius: 10px;
     font-size: 21px;
@@ -1146,7 +1172,7 @@
     height: 488px;
     background-color: rgba(255, 255, 255, .5);
     border-radius: 20px;
-    padding: 40px; 
+    padding: 40px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -1211,11 +1237,11 @@
 }
 
 .parking_notes {
-padding-top: 34px;
-border-top: 1px dashed #999
+    padding-top: 34px;
+    border-top: 1px dashed #999
 }
 
-.parking_notes li{
+.parking_notes li {
     display: flex;
     align-items: center;
     gap: 10px;

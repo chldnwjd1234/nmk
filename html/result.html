@@ -6,19 +6,20 @@
 <meta name="keywords" content="museum,global,koera,박물관">
 <meta name="author" content="일단해보조">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NMK</title>
-<link rel="shortcut icon" href="/asset/favicon.ico" type="image/x-icon">
+<title>NATIONAL MUSEUM OF KOREA</title>
+<link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<link rel="stylesheet" href="/css/reset.css">
-<link rel="stylesheet" href="/css/common.css">
-<link rel="stylesheet" href="/css/result_style.css"><!-- 본인 스타일 -->
-<link rel="stylesheet" href="/css/common_media.css">
-<!-- <link rel="stylesheet" href="/css/result_media_media.css"> -->
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/result_style.css"><!-- 본인 스타일 -->
+<link rel="stylesheet" href="../css/common_media.css">
+<link rel="stylesheet" href="../css/result_media.css">
+<!-- <link rel="stylesheet" href="../css/result_media_media.css"> -->
 <!-- 본인 미디어스타일 -->
-<script src="/js/common.js"></script>
+<script src="../js/common.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-<script src="/js/result.js"></script>
+<script src="../js/result.js"></script>
 <script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
 </head>
 
@@ -26,13 +27,12 @@
     <div class="wrap">
         <header>
             <div class="inner">
-                <img src="/asset/img/eng_header_logo.png" alt="National Museum of Korea" class="logo">
+                <img src="../asset/img/eng_header_logo.png" alt="National Museum of Korea" class="logo">
             </div>
         </header>
         <main class="bg">
             <!-- 카드 -->
             <div class="slider_container">
-                <!-- Slide 1 - Detail View -->
                 <div class="slide active" data-slide="1">
                     <div class="content_box">
                         <button class="back_btn">
@@ -42,7 +42,7 @@
                         <div class="detail_content">
                             <!-- 왼쪽 유물 사진 -->
                             <div class="artifact_image">
-                                <img src="/asset/img_result/main.png" alt="Gilt-bronze Pensive Bodhisattva">
+                                <img src="../asset/img_result/main.png" alt="Gilt-bronze Pensive Bodhisattva">
                             </div><!-- //.artifact_image -->
 
                             <!-- 유물정보 -->
@@ -97,10 +97,10 @@
                         <button class="map_btn">
                             View on Map <i class="fa-solid fa-chevron-right"></i>
                         </button>
-                    </div>
+                    </div><!-- //.content_box -->
 
-                    <!-- Navigation Arrow -->
-                 <button class="arrow_btn right" onclick="nextSlide()"> <i class="fa-solid fa-chevron-right"></i> </button>
+                 <button class="arrow_btn right" onclick="nextSlide()"> 
+                    <i class="fa-solid fa-chevron-right"></i> </button>
                 </div>
 
                 <!-- 두번째 슬라이드 관련유물 -->
@@ -115,35 +115,35 @@
                         <div class="related_grid">
                             <div class="artifact_card">
                                 <div class="card_image">
-                                    <img src="/asset/img_result/1.png" alt="Artifact 1">
+                                    <img src="../asset/img_result/1.png" alt="Artifact 1">
                                 </div>
                                 <p class="card_title">Gilt-bronze Standing Sakyamuni Buddha</p>
                             </div>
 
                             <div class="artifact_card">
                                 <div class="card_image">
-                                    <img src="/asset/img_result/2.png" alt="Artifact 2">
+                                    <img src="../asset/img_result/2.png" alt="Artifact 2">
                                 </div>
                                 <p class="card_title">Gilt-bronze Standing Bhaisajyaguru Buddha</p>
                             </div>
 
                             <div class="artifact_card">
                                 <div class="card_image">
-                                    <img src="/asset/img_result/3.png" alt="Artifact 3">
+                                    <img src="../asset/img_result/3.png" alt="Artifact 3">
                                 </div>
                                 <p class="card_title">Bronze Standing Bodhisattva</p>
                             </div>
 
                             <div class="artifact_card">
                                 <div class="card_image">
-                                    <img src="/asset/img_result/4photo.png" alt="Artifact 4">
+                                    <img src="../asset/img_result/4photo.png" alt="Artifact 4">
                                 </div>
                                 <p class="card_title">Gilt-bronze Standing Bhaisajyaguru Buddha</p>
                             </div>
 
                             <div class="artifact_card">
                                 <div class="card_image">
-                                    <img src="/asset/img_result/5.png" alt="Artifact 5">
+                                    <img src="../asset/img_result/5.png" alt="Artifact 5">
                                 </div>
                                 <p class="card_title">Gilt-bronze Seated Amitabha Buddha</p>
                             </div>
@@ -155,6 +155,10 @@
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
                 </div>
+                        <div class="pagination">
+            <span class="dot active" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
 
 
         </main>

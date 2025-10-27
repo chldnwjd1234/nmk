@@ -633,8 +633,8 @@
 
     .content_cloud .content_text {
         position: absolute;
-        top: 80px;
-        left: 170px;
+        top: 90px;
+        left: 120px;
         transform: none;
         text-align: center;
         width: 400px;
@@ -1072,9 +1072,9 @@
 
     body main section.muds {
         width: 100%;
-        height: 600px;
-        max-height: 600px;
-        min-height: 600px;
+        height: 500px;
+        max-height: 500px;
+        min-height: 500px;
         background: linear-gradient(180deg, #121215 8%, #282C33 64.49%);
         position: relative;
         overflow: hidden;
@@ -1114,7 +1114,7 @@
 
     main .muds .muds_bg .title {
         width: 259px;
-        height: 64px;
+        height: 65px;
         background: url(../asset/img/mu_title.png) no-repeat center;
         background-size: contain;
         margin-left: -30px;
@@ -1125,6 +1125,7 @@
         font-size: 23px;
         padding-left: 20px;
         text-align: center;
+        margin-top: 2px;
     }
 
     .content_cloud {
@@ -1142,9 +1143,8 @@
 
 
     .content_cloud .content_text {
-        top: 58%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 55px;
+        left: 38px;
         width: 80%;
     }
 
@@ -1153,7 +1153,7 @@
     }
 
     .content_cloud .content_text h3 {
-        font-size: 23px;
+        font-size: 21px;
         margin-bottom: 0;
     }
 
@@ -1194,14 +1194,15 @@
     }
 
     .top-btn img {
-        width: 28px;
-        height: 28px;
-        margin-bottom: 5px;
+        width: 26px;
+        height: 26px;
+        margin-bottom: 0;
     }
 
     .top-btn span {
         font-size: 13px;
         font-weight: 400;
+        padding-bottom: 3px;
     }
 
 
