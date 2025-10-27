@@ -171,7 +171,7 @@
 
     .ExhibitionStructure {
         padding-bottom: 160PX;
-        background: url(/asset/img_Special/exhibition-bg2_1024.png);
+        background: url(../asset/img_Special/exhibition-bg2_1024.png);
         background-position: center 45%;
 
     }
@@ -533,7 +533,7 @@
 
     .ExhibitionStructure {
         padding-bottom: 0;
-        background: url(/asset/img_Special/exhibition-bg2_402.png) no-repeat;
+        background: url(../asset/img_Special/exhibition-bg2_402.png) no-repeat;
     }
 
     .articles_all {
