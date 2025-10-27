@@ -332,6 +332,9 @@
     background-image: url(../asset/img_map/mapf1/subtitle/mapf1_1_medieval_and_early_modern_history.png);
 }
 
+/*    background-image: url(../asset/img_map/mapf1/subtitle/mapf1_1_medieval_and_early_modern_history.png);
+}
+ */
 .map_right .floor .f1 .img_box1 li:nth-child(2) {
     background-image: url(../asset/img_map/mapf1/subtitle/mapf1_2_prehistory_and_ancient_history.png);
 }
