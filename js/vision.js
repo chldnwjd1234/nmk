@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             borderRadius: radiusValue,
             scrollTrigger: {
                 trigger: ".moon",
-                start: "top 30%",
+                start: "top 20%",
                 end: "bottom top",
                 scrub: 1,
             }
@@ -113,6 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
             { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" },
             "-=0.4"
         );
+
+        
 
 
     // Collection Storage 섹션 애니메이션
