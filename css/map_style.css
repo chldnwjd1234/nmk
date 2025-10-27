@@ -1,19 +1,472 @@
 @charset "urf-8";
 
-.txt_box {
-    width: 632px;
-    height: 380px;
-    background: yellow;
-}
-.floor {
+.space {
     display: flex;
-    width: 316px;
-    height: 43px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 200px;
 }
-.floor article {
-    flex: 1;
-    background: #fff;
+
+
+/* 왼쪽 박스 전체 */
+.space .left {
+    width: 632px;
+    /* width: 100%; */
+    /* height: 727px; */
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    /* padding-bottom: 50px; */
+}
+
+.space .left .txt_box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-bottom: 2px dashed #59574D;
+    /* padding-bottom: 40px; */
+}
+
+.space .left .txt_box .title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+/* 제목 */
+.space .left .txt_box .title .page_title {
+    font-family: var(--title-Zen);
+    font-size: var(--fszenT-L-50);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.5;
+    color: var(--black);
+}
+
+/* 층 탭 */
+.space .left .txt_box .title .floor_tabs {
+    display: flex;
+    gap: 12px;
+    /* margin-bottom: 40px; */
+    /* background: blue; */
+}
+
+.space .left .txt_box .title .floor_tabs .tab {
+    width: 110px;
+    height: 56px;
+    background: var(--gray-05);
+    color: var(--w-color);
+    border: none;
     border-radius: 10px;
-    padding: 46px 36px;
-    transition: background-color .6s;
+    font-size: var(--fspre-25);
+    font-weight: 400;
+    line-height: 1.3;
+    padding: 8px 34px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    /* 추가 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.space .left .txt_box .title .floor_tabs .tab.active {
+    background: var(--red-05-point);
+    color: var(--w-color);
+}
+
+.space .left .txt_box .title .floor_tabs .tab:hover:not(.active) {
+    background: var(--red-05-point);
+    color: var(--w-color);
+}
+
+
+/* 밑 소개글 */
+
+.left .bottom {
+    width: 100%;
+    height: 222px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 48px 0 0;
+    margin-bottom: 68px;
+    /* background: pink; */
+}
+
+/* 드롭다운 컨테이너 */
+.bottom .dropdown {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.bottom .dropdown select {
+    display: none;
+    width: 100%;
+    height: 60px;
+    /* padding: 16px 20px; */
+    font-family: "pretendard", sans-serif;
+    font-size: var(--fspre-30);
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--black);
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 8px;
+    /* border: 1px solid var(--gray-03); */
+    /* border-radius: 8px; */
+    cursor: pointer;
+    appearance: none;
+    /* 기본 화살표 제거 */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%231D1D1B' d='M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.bottom .dropdown select.active {
+    display: block;
+}
+
+.bottom .dropdown select:hover {
+    /* border-color: var(--red-05-point); */
+    color: var(--red-05-point);
+}
+
+.bottom .dropdown select:focus {
+    outline: none;
+    border-color: var(--red-05-point);
+    color: var(--black);
+}
+
+.gps_toggle {
+    display: none;
+}
+
+/* select에 해당하는 내용 */
+/* 모든 info 숨기기 */
+.content {
+    /* background: yellow; */
+    width: 100%;
+}
+
+.content article {
+    display: none;
+}
+
+.content article.active {
+    display: block;
+}
+
+.content article .info {
+    display: none;
+    width: 100%;
+    color: var(--black);
+    font-size: var(--fspre-25);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* 첫 번째 info만 보이기 */
+.content article .info.active {
+    display: block;
+}
+
+
+/* ===========================
+   Highlighted Artifact
+=========================== */
+.highlighted_artifact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.highlighted_artifact h4 {
+    font-size: var(--fspre-30);
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--black);
+}
+
+/* img_box의 p 태그 폰트 설정 */
+.highlighted_artifact li p {
+    font-weight: 450;
+    line-height: 1.3;
+    color: var(--black);
+    /* background: yellow; */
+    /* display: block; */
+
+    display: -webkit-box;
+    /* Flex 유사 구조 */
+    -webkit-line-clamp: 2;
+    /* 표시할 줄 수 */
+    -webkit-box-orient: vertical;
+    /* 세로 방향 */
+    overflow: hidden;
+    /* 넘치는 내용 숨김 */
+    text-overflow: ellipsis;
+    /* ... 표시 */
+}
+
+/* 전체 리스트 (층별 묶음) */
+.artall>li {
+    display: none;
+    /* 기본은 숨김 */
+}
+
+/* ✅ 1층(art_1f)만 표시 */
+.artall>li.active {
+    display: block;
+}
+
+/* 1층 리스트 내부 구조 */
+.artall>li>ul {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.artall>li>ul li {
+    width: 150px;
+    /* 필요 시 조정 가능 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+/* 이미지 박스 */
+.artall>li>ul li img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: rgba(124, 134, 111, 0.32);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+/* 호버 효과 */
+.artall>li>ul li:hover img {
+    transform: scale(1.05);
+    background: var(--red-03);
+
+}
+
+.art_1f ul li .img_box:hover {
+    background: rgba(200, 150, 0, 0.1);
+
+}
+
+
+
+
+/* 오른쪽 지도 영역 */
+/* ============================
+   🗺️ 지도 영역 (.map_right)
+============================ */
+.map_right {
+    position: relative;
+    /* background: #ccc; */
+    width: 798px;
+    height: 600px;
+    /* 내부 콘텐츠가 보이게 높이 확보 */
+}
+
+/* ============================
+   🔹 기본 표시 제어
+============================ */
+
+/* 모든 층(floor) 숨기기 */
+.map_right .floor>li {
+    display: none;
+}
+
+.map_right .floor>li.active {
+    display: block;
+}
+
+/* 모든 지도 박스(img_box) 숨기기 */
+.map_right .floor>li .img_box {
+    display: none;
+}
+
+/* 활성화된 층만 표시 */
+.map_right .floor>li.active .img_box {
+    display: block;
+}
+
+/* 지도 이미지 전환 애니메이션 */
+.map_right .floor>li ul li {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 1;
+    transition: opacity 0.1s ease-out;
+}
+
+.map_right .floor>li .img_box li.active {
+    display: block;
+}
+
+/* ============================
+   🖼️ 층별 지도 이미지 연결
+============================ */
+
+/* 1층 지도 */
+.map_right .floor .f1 .img_box1 li:nth-child(1) {
+    background-image: url(/asset/img_map/mapf1/subtitle/mapf1_1_medieval_and_early_modern_history.png);
+}
+
+.map_right .floor .f1 .img_box1 li:nth-child(2) {
+    background-image: url(/asset/img_map/mapf1/subtitle/mapf1_2_prehistory_and_ancient_history.png);
+}
+
+/* 2층 지도 */
+.map_right .floor .f2 .img_box2 li:nth-child(1) {
+    background-image: url(/asset/img_map/mapf2/subtitle/mapf2_1_calligraphy_and_painting.png);
+}
+
+.map_right .floor .f2 .img_box2 li:nth-child(2) {
+    background-image: url(/asset/img_map/mapf2/subtitle/mapf2_2_donated_collection.png);
+}
+
+.map_right .floor .f2 .img_box2 li:nth-child(3) {
+    background-image: url(/asset/img_map/mapf2/subtitle/mapf2_3_room_of_quiet_contemplation.png);
+}
+
+/* 3층 지도 */
+.map_right .floor .f3 .img_box3 li:nth-child(1) {
+    background-image: url(/asset/img_map/mapf3/subtitle/mapf3_1_sculpture_and_crafts.png);
+}
+
+.map_right .floor .f3 .img_box3 li:nth-child(2) {
+    background-image: url(/asset/img_map/mapf3/subtitle/mapf3_2_world_art.png);
+}
+
+.map_right .product_svg li {
+    position: absolute;
+    top: 58px;
+    left: -1px;
+    width: 802px;
+    height: 481px;
+    display: none;
+    /* 처음엔 안 보이게 */
+    pointer-events: none;
+    /* 클릭 방지 */
+    z-index: 10;
+}
+
+/* 1층 유물 빨간면*/
+.map_right li.f1 .product_svg li:nth-child(1) {
+    background-image: url(/asset/img_map/mapf1/line_and_red/art1_red.png);
+}
+
+.map_right li.f1 .product_svg li:nth-child(2) {
+    background-image: url(/asset/img_map/mapf1/line_and_red/art2_red.png);
+}
+
+.map_right li.f1 .product_svg li:nth-child(3) {
+    background-image: url(/asset/img_map/mapf1/line_and_red/art3_red.png);
+}
+
+.map_right li.f1 .product_svg li:nth-child(4) {
+    background-image: url(/asset/img_map/mapf1/line_and_red/art4_red.png);
+}
+
+
+/* 2층 유물 빨간면*/
+.map_right li.f2 .product_svg li:nth-child(1) {
+    background-image: url(/asset/img_map/mapf2/line_and_red/art1_red.png);
+}
+
+.map_right li.f2 .product_svg li:nth-child(2) {
+    background-image: url(/asset/img_map/mapf2/line_and_red/art2_red.png);
+}
+
+.map_right li.f2 .product_svg li:nth-child(3) {
+    background-image: url(/asset/img_map/mapf2/line_and_red/art3_red.png);
+}
+
+.map_right li.f2 .product_svg li:nth-child(4) {
+    background-image: url(/asset/img_map/mapf2/line_and_red/art4_red.png);
+}
+
+/* 3층 유물 빨간면*/
+.map_right li.f3 .product_svg li:nth-child(1) {
+    background-image: url(/asset/img_map/mapf3/line_and_red/art1and2_red.png);
+}
+
+.map_right li.f3 .product_svg li:nth-child(2) {
+    background-image: url(/asset/img_map/mapf3/line_and_red/art1and2_red.png);
+}
+
+.map_right li.f3 .product_svg li:nth-child(3) {
+    background-image: url(/asset/img_map/mapf3/line_and_red/art3_red.png);
+}
+
+.map_right li.f3 .product_svg li:nth-child(4) {
+    background-image: url(/asset/img_map/mapf3/line_and_red/art4_red.png);
+}
+
+.map_right .product_svg li svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* SVG path 애니메이션 */
+.map_right .product_svg li svg path {
+    fill: none;
+    stroke: #9F140B;
+    stroke-width: 2px;
+    vector-effect: non-scaling-stroke;
+    /* ✅ 확대/축소 시 두께 유지 */
+    shape-rendering: geometricPrecision;
+    /* ✅ 두께 깜빡임 방지 */
+    transform-origin: center;
+}
+
+
+/* .map_right .product_svg li.active svg path {
+    animation: drawPath 1.5s linear forwards;
+}
+
+@keyframes drawPath {
+    to {
+        stroke-dashoffset: 0;
+    }
+} */
+
+.map_right .product_svg li.active {
+    display: block;
+    /* 활성화된 것만 보이게 */
+}
+
+.map_right .product_svg li svg path {
+    stroke: #9F140B;
+    /* 빨간색 */
+    stroke-width: 2;
+}
+
+/* ============================
+   SVG 애니메이션
+============================ */
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
