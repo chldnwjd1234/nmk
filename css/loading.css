@@ -6,9 +6,10 @@
 
 body {
     overflow-x: hidden;
-    min-height: 300vh; /* 스크롤 테스트용 - 충분히 길게 */
+    min-height: 300vh;
     margin: 0;
     padding: 0;
+    background-color: #DACAB0;
 }
 
 #loading_screen {
@@ -19,7 +20,20 @@ body {
     height: 100vh;
     z-index: 9999;
     overflow: hidden;
-    transition: opacity 0.8s ease;
+    transition: opacity 1.6s ease;
+}
+
+/* 1024px 이하에서 클릭 가능하도록 커서 변경 */
+@media (max-width: 1024px) {
+    #loading_screen {
+        cursor: pointer;
+    }
+}
+
+/* 페이드아웃 상태 */
+#loading_screen.fade-out {
+    opacity: 0.1;
+    pointer-events: none;
 }
 
 .bg {
@@ -37,19 +51,19 @@ body {
     position: absolute;
     top: 0;
     height: 100%;
-    width: 50vw; /* 정확히 화면의 절반 */
+    width: 50vw;
     z-index: 3;
     transition: transform 1.5s ease-in-out;
 }
 
 .door_left {
     left: 0;
-    right: 50%; /* 정확히 중앙까지 */
+    right: 50%;
     transform: translateX(0);
 }
 
 .door_right {
-    left: 50%; /* 정확히 중앙부터 시작 */
+    left: 50%;
     right: 0;
     transform: translateX(0);
 }
@@ -77,8 +91,58 @@ body {
     opacity: 1;
 }
 
-/* 페이드아웃 상태 */
-#loading_screen.fade-out {
+/* 선택사항: 클릭 힌트 텍스트 추가 */
+#loading_screen::after {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    z-index: 4;
     opacity: 0;
-    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-family: pre;
+}
+
+/* 1024px 이하에서만 클릭 힌트 표시 */
+@media (max-width: 1024px) {
+    #loading_screen::after {
+        content: 'CLICK TO ENTER';
+        opacity: 1;
+        animation: pulse 2s ease-in-out infinite;
+    }
+    .logo {
+        width: 80%;
+        max-width: 500px;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 624px) {
+    .logo {
+        width: 60%;
+        max-width: 300px;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }

@@ -1,5 +1,91 @@
 @charset "utf-8";
 
+
+/* 데스크탑용 모바일 CTA 스타일 */
+@media (min-width: 1025px) {
+    .museum_cta_mobile {
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 70px;
+        background: var(--gray-09);
+        padding: 0 20px;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        transition: bottom 0.5s ease;
+    }
+
+    .museum_cta_mobile.on {
+        bottom: 0;
+    }
+
+    .museum_cta_mobile .cta_content {
+        display: flex;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+    }
+
+    .museum_cta_mobile .left {
+        display: flex;
+    }
+
+    .museum_cta_mobile .right {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .museum_cta_mobile .today {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .museum_cta_mobile .label {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 400;
+    }
+
+    .museum_cta_mobile .time {
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .museum_cta_mobile .btn_1,
+    .museum_cta_mobile .btn_2 {
+        height: 35px;
+        padding: 0 50px;
+        border-radius: 20px;
+        font-size: 17px;
+        font-weight: 400;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .museum_cta_mobile .btn_1 {
+        background: var(--gray-06);
+    }
+
+    .museum_cta_mobile .btn_2 {
+        background: var(--red-05-point);
+    }
+}
+
+
 /* 1024px 이하 */
 @media (max-width: 1024px) {
 
@@ -27,21 +113,28 @@
         display: none;
     }
 
-    /* 모바일용 표시 */
+    /* 모바일용 - 처음엔 숨김 */
     .museum_cta_mobile {
         display: flex;
         position: fixed;
-        bottom: 0;
+        bottom: -100px;
+        /* 숨김 상태 */
         left: 0;
         right: 0;
         width: 100%;
-        height: 64px;
+        height: 78px;
         background: var(--gray-09);
         padding: 0 20px;
         box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
         align-items: center;
         justify-content: center;
         z-index: 1000;
+        transition: bottom 0.5s ease;
+    }
+
+    /* highlight 도달 시 나타남 */
+    .museum_cta_mobile.on {
+        bottom: 0;
     }
 
     .museum_cta_mobile .cta_content {
@@ -49,7 +142,7 @@
         color: #fff;
         justify-content: center;
         align-items: center;
-        gap: 130px
+        gap: 130px;
     }
 
     .museum_cta_mobile .left {
@@ -58,7 +151,10 @@
 
     .museum_cta_mobile .right {
         display: flex;
+        flex-direction: row;
+        /* 가로 정렬 */
         gap: 10px;
+        align-items: center;
     }
 
     .museum_cta_mobile .today {
@@ -105,14 +201,14 @@
 
     .top-btn {
         right: 25px;
-        bottom: 80px;
+        bottom: 90px;
         width: 75px;
         height: 75px;
     }
 
     .top-btn img {
-        width: 35px;
-        height: 35px;
+        width: 38px;
+        height: 38px;
         margin-bottom: 5px;
     }
 
@@ -195,7 +291,7 @@
         margin: 0;
         white-space: nowrap;
         z-index: 2;
-        background: #A67B7B;
+        background: #AA5F5F;
         color: #fff;
         border-radius: 50px;
         align-items: center;
@@ -265,7 +361,6 @@
 
     main .vision .title h2:nth-child(2) {
         margin-top: 20px;
-        /* 30px → 20px로 줄임 */
     }
 
     main .vision .horizontal_all {
@@ -287,6 +382,7 @@
         justify-content: center;
         position: relative;
         z-index: 3;
+        transform: translateX(-90px);
     }
 
     /* 카드 아이템 */
@@ -296,8 +392,6 @@
         height: 400px;
         cursor: pointer;
         transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-        border-radius: 0;
-        /* 레디우스 제거 */
         overflow: hidden;
     }
 
@@ -451,16 +545,13 @@
     body main section.muds {
         width: 100%;
         height: 800px;
-        /* auto → 800px */
         max-height: 800px;
         min-height: 800px;
         background: linear-gradient(180deg, #121215 8%, #282C33 64.49%);
         position: relative;
         overflow: hidden;
-        /* visible → hidden */
         margin-top: 0;
         padding: 0;
-        /* 50px 0 → 0 */
     }
 
     body main section.muds .cloud_container {
@@ -505,6 +596,7 @@
         align-items: center;
         opacity: 0;
         margin-left: -30px;
+        transform: translateX(-100%);
     }
 
     main .muds .muds_bg .title h2 {
@@ -536,6 +628,7 @@
         z-index: 1;
         margin: 0;
         padding: 0;
+        transform: translateX(100%);
     }
 
     .content_cloud .content_text {
@@ -549,6 +642,7 @@
         z-index: 5;
         margin: 0;
         padding: 0;
+        transform: translateY(20px);
     }
 
     .content_cloud .content_text .subtitle {
@@ -576,6 +670,543 @@
         cursor: pointer;
         padding-bottom: 10px;
     }
+
+    /* 구름 숨기기 */
+    .cloud_1,
+    .cloud_2,
+    .cloud_3,
+    .cloud_4 {
+        display: none !important;
+    }
+
+
+    footer {
+        margin-bottom: 60px;
+    }
+
+    .top-btn_qr {
+        position: fixed;
+        right: 25px;
+        bottom: 180px;
+        width: 75px;
+        height: 75px;
+        background: var(--blue-08);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .top-btn_qr img {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 5px;
+    }
+
+    .top-btn_qr span {
+        color: white;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .top-btn_qr.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+
+}
+
+
+/* ========================414px 이하 ====================== */
+
+
+
+@media (max-width:414px) {
+
+    .main_visual {
+        height: 70vh;
+    }
+
+    .main_visual figure {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .main_visual video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .museum_cta_mobile {
+        height: 100px;
+        /* 64px → 늘림 */
+        padding: 10px 15px;
+    }
+
+    .museum_cta_mobile .cta_content {
+        flex-direction: column;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .museum_cta_mobile .left {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .museum_cta_mobile .today {
+        flex-direction: row;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .museum_cta_mobile .label {
+        font-size: 15px;
+    }
+
+    .museum_cta_mobile .time {
+        font-size: 15px;
+    }
+
+    .museum_cta_mobile .right {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .museum_cta_mobile .btn_1,
+    .museum_cta_mobile .btn_2 {
+        flex: 1;
+        max-width: 170px;
+        height: 36px;
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+
+
+    main .highlight {
+        width: 100%;
+        height: auto;
+        padding-top: 0;
+        padding-bottom: 20px;
+        background: url(/asset/img/h_mo_left.png) no-repeat bottom 400px left,
+            url(/asset/img/h_mo_right.png) no-repeat top 5px right;
+        position: relative;
+    }
+
+    main .highlight .title {
+        width: 259px;
+        height: 64px;
+        background: url(/asset/img/mo_title.png) no-repeat center;
+        background-size: contain;
+        margin-left: -23px;
+        margin-top: 20px;
+    }
+
+    main .highlight .title h2 {
+        font-size: 23px;
+        padding-left: 20px;
+        padding-top: 8px;
+        text-align: center;
+    }
+
+
+
+    main .highlight .inner {
+        width: 100%;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    main .highlight .contents {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        position: relative;
+        margin-top: 80px;
+    }
+
+    /* top 영역 - 겹침 효과 */
+    main .highlight .contents .top {
+        flex-direction: column;
+        gap: 0;
+        width: 90%;
+        align-items: center;
+        position: relative;
+        height: 550px;
+    }
+
+    /* h_img1 - 위에 배치 */
+    .highlight .contents .top a:first-child {
+        background: url(/asset/img/h_mo_img1.png) no-repeat;
+        background-size: cover;
+        width: 100%;
+        max-width: 280px;
+        height: 350px;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        z-index: 1;
+    }
+
+    /* h_img2 - 아래 겹쳐서 배치 */
+    main .highlight .contents .top a:nth-child(2) {
+        display: block;
+        background: url(/asset/img/h_mo_img2.png) no-repeat;
+        background-size: cover;
+        width: 100%;
+        max-width: 280px;
+        height: 355px;
+        position: absolute;
+        top: 210px;
+        right: -38px;
+        z-index: 2;
+    }
+
+    /* 버튼 스타일 */
+    .highlight .contents .top .icon {
+        width: 180px;
+        height: 32px;
+        padding: 6px 15px;
+        font-size: 17px;
+        top: 15px;
+        left: 100px;
+    }
+
+    /* h_img3 - 모바일 이미지 */
+    main .highlight .contents .bottom {
+        margin-top: 0;
+        margin-right: 0;
+        background: url(/asset/img/h_mo_img3.png) no-repeat;
+        background-size: cover;
+        width: 353px;
+        height: 248px;
+        position: relative;
+        top: 32px;
+        left: 20px;
+    }
+
+    .highlight .contents .bottom .icon {
+        width: 150px;
+        height: 32px;
+        padding: 6px 15px;
+        font-size: 17px;
+        bottom: 15px;
+        top: 15px;
+        left: 100px;
+    }
+
+
+
+    /* main .backimg  */
+
+    main .backimg {
+        background: url(/asset/img/mo_ink.png) no-repeat;
+        background-size: cover;
+    }
+
+
+    /* vision */
+    main .vision {
+        height: 700px;
+    }
+
+    main .vision .title h2 {
+        font-size: 23px;
+    }
+
+    main .vision .title h2 img {
+        content: url(/asset/img/mo_vi_line.svg);
+    }
+
+    main .vision .title h2:nth-child(2) {
+        margin-top: 10px;
+    }
+
+    /* 기존 데스크탑 가로스크롤 숨김 */
+    .vision .horizontal_all {
+        display: none !important;
+    }
+
+    /* 모바일 슬라이더 표시 */
+    .mobile_slider_wrap {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 550px;
+        padding: 40px 20px 60px;
+    }
+
+    .mobile_slider {
+        position: relative;
+        width: 100%;
+        height: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile_card {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 240px;
+        height: 350px;
+        overflow: hidden;
+        transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        cursor: grab;
+    }
+
+    .mobile_card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* 첫번째 카드 - 중앙 앞 (기본 active) */
+    .mobile_card:nth-child(1) {
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 3;
+        opacity: 1;
+    }
+
+    /* 두번째 카드 - 오른쪽 뒤 */
+    .mobile_card:nth-child(2) {
+        transform: translate(-10%, -50%) scale(0.75);
+        z-index: 1;
+        opacity: 0.8;
+    }
+
+    /* 세번째 카드 - 왼쪽 뒤 */
+    .mobile_card:nth-child(3) {
+        transform: translate(-70%, -50%) scale(0.75);
+        z-index: 1;
+        opacity: 0.8;
+    }
+
+    /* active 상태일 때 */
+    .mobile_card.active {
+        transform: translate(-50%, -50%) scale(1) !important;
+        z-index: 3 !important;
+        opacity: 1 !important;
+    }
+
+    /* 오버레이 */
+    .mobile_card .card_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
+    .mobile_card.active .card_overlay {
+        background: rgba(0, 0, 0, 0.65);
+        opacity: 1;
+    }
+
+    main .vision .mobile_card .card_overlay h3 {
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    main .vision .mobile_card .card_overlay p {
+        font-size: 15px;
+        font-weight: 200;
+        color: #fff;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    .mobile_card .card_btn {
+        padding: 10px 25px;
+        border-radius: 25px;
+        font-size: 14px;
+        background: #847E7B;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+
+
+    /* exhibition */
+
+    main .exhibition h2 {
+        font-size: 26px;
+    }
+
+
+
+
+
+    /* MUDS */
+
+
+
+
+    body main section.muds {
+        width: 100%;
+        height: 600px;
+        max-height: 600px;
+        min-height: 600px;
+        background: linear-gradient(180deg, #121215 8%, #282C33 64.49%);
+        position: relative;
+        overflow: hidden;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    body main section.muds .cloud_container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
+
+    .muds_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 600px;
+        min-height: 600px;
+        background: url(/asset/img/mo_mu_bg.png) no-repeat;
+        background-size: contain;
+    }
+
+    .muds_content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 50;
+    }
+
+
+    main .muds .muds_bg .title {
+        width: 259px;
+        height: 64px;
+        background: url(/asset/img/mu_title.png) no-repeat center;
+        background-size: contain;
+        margin-left: -30px;
+        margin-top: 20px;
+    }
+
+    main .muds .muds_bg .title h2 {
+        font-size: 23px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .content_cloud {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 485px;
+        height: 150px;
+    }
+
+    .content_cloud .cloud_bg {
+        transform: none;
+    }
+
+
+    .content_cloud .content_text {
+        top: 58%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+
+    .content_cloud .content_text .subtitle {
+        font-size: 14px;
+    }
+
+    .content_cloud .content_text h3 {
+        font-size: 23px;
+        margin-bottom: 0;
+    }
+
+    .discover_btn {
+        font-size: 16px;
+    }
+
+    footer .f_bot {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .top-btn_qr {
+        right: 3px;
+        bottom: 168px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .top-btn_qr img {
+        width: 22px;
+        height: 22px;
+        margin-bottom: 5px;
+    }
+
+    .top-btn_qr span {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+
+
+    .top-btn {
+        right: 3px;
+        bottom: 110px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .top-btn img {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 5px;
+    }
+
+    .top-btn span {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+
+
+
 
 
 }
