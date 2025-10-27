@@ -63,17 +63,21 @@
     --r-10: 10px;
     --r-15: 15px;
     --r-20: 20px;
-    --r-round: 9999px;
-    /* 완전 둥근 (circle, pill용) */
+    --r-round: 9999px;  
 }
 
 body {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .wrap {
-    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    overflow-y: hidden;
+
 }
 
 .inner {
@@ -121,6 +125,7 @@ nav ul.gnb {
     gap: 55px;
     font-size: var(--fspre-20);
     font-weight: 400;
+    flex-wrap: nowrap;
 }
 
 nav ul.gnb>li {
@@ -136,7 +141,6 @@ nav ul.gnb>li>a {
     position: relative;
 }
 
-/* 메인 메뉴 호버시 밑줄 */
 nav ul.gnb>li>a::after {
     content: '';
     position: absolute;
@@ -171,21 +175,21 @@ header .right img {
     height: 30px;
 }
 
-/* 서브메뉴 배경 - 전체 화면 */
+
 .sub_menu {
     position: fixed;
     left: 0;
     right: 0;
     top: 80px;
     backdrop-filter: blur(15px);
-    background: #E7DFDA;
+    background: #F3EEE7;
     opacity: 0;
     visibility: hidden;
     transition: opacity .4s, visibility .4s;
     padding: 50px 0;
 }
 
-/* 서브메뉴 상단 경계선 (긴 붓 라인) */
+
 .sub_menu::before {
     content: '';
     position: absolute;
@@ -193,7 +197,7 @@ header .right img {
     right: 0;
     top: 0;
     height: 3px;
-    background: url('/asset/img/gnb_long.png') repeat-x center/auto 100%;
+    background: url('/asset/img/gnb_long.svg') repeat-x center/auto 100%;
 }
 
 nav ul.gnb>li:hover .sub_menu {
@@ -201,21 +205,16 @@ nav ul.gnb>li:hover .sub_menu {
     visibility: visible;
 }
 
-/* 서브메뉴 내부 - 왼쪽 정렬 */
 .sub_inner {
     width: 100%;
-    /* max-width 제거 */
     margin: 0;
-    /* margin: 0 auto 제거 */
     padding: 0;
-    /* padding 제거 */
     display: flex;
     align-items: flex-start;
     gap: 60px;
     position: relative;
 }
 
-/* 왼쪽 영역 */
 .sub_left {
     flex: 0 0 300px;
     position: relative;
@@ -224,7 +223,7 @@ nav ul.gnb>li:hover .sub_menu {
     z-index: 1;
     padding-top: 10px;
     margin-left: 120px;
-    /* 로고 위치에 맞춰서 조정 */
+
 }
 
 .sub_left h2 {
@@ -254,7 +253,7 @@ nav ul.gnb>li:hover .sub_menu {
     z-index: 2;
 }
 
-/* 배경 문양 */
+
 .bg_pattern {
     position: absolute;
     left: -120px;
@@ -268,17 +267,17 @@ nav ul.gnb>li:hover .sub_menu {
     z-index: 0;
 }
 
-/* 구분선 (세로 짧은 라인) */
+
 .divider {
     width: 2px;
     height: auto;
     min-height: 150px;
-    background: url('/asset/img/gnb_short.png') repeat-y center/100% auto;
+    background: url('/asset/img/gnb_short.svg') repeat-y center/100% auto;
     flex-shrink: 0;
     margin: 0 -30px;
 }
 
-/* 오른쪽 영역 */
+
 .sub_right {
     flex: 1;
     position: relative;
@@ -297,7 +296,7 @@ nav ul.gnb>li:hover .sub_menu {
 }
 
 .sub_right ul li a {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--black);
     transition: .3s;
     display: block;
@@ -306,7 +305,6 @@ nav ul.gnb>li:hover .sub_menu {
     white-space: nowrap;
 }
 
-/* 서브메뉴 호버시 아래 라인 */
 .sub_right ul li a::after {
     content: '';
     position: absolute;
@@ -326,22 +324,202 @@ nav ul.gnb>li:hover .sub_menu {
     color: var(--red-05-point);
 }
 
+/* 모바일 메뉴 상단 헤더 */
+.mobile_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: transparent;
+    /* ✅ 투명 배경 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* 왼쪽 아이콘들 */
+.mobile_icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.mobile_icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* X 닫기 버튼 */
+.mobile_close {
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    color: var(--black);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 모바일 메뉴 컨테이너 */
+.mobile_menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    max-width: 400px;
+    height: 100vh;
+    background: url(/asset/img/bg_all2.png), url('/asset/img/mo_img.png') no-repeat, var(--bg);
+    background-position: left;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    overflow-y: auto;
+    z-index: 99;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+header.on .mobile_menu {
+    transform: translateX(0);
+}
+
+.mobile_inner {
+    padding: 80px 30px 40px
+}
+
+/* 메인 메뉴 */
+.mobile_gnb>li {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile_gnb>li>a {
+    display: block;
+    padding: 20px 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--black);
+    font-family: var(--title-Zen);
+}
+
+/* 서브메뉴 있는 항목 */
+.mobile_gnb>li.has_sub {
+    position: relative;
+}
+
+.mobile_gnb>li.has_sub>a {
+    color: var(--black);
+    padding-right: 40px;
+    position: relative;
+}
+
+/* 활성화 시 빨간색 */
+.mobile_gnb>li.has_sub.open>a {
+    color: var(--red-05-point);
+}
+
+.mobile_gnb>li.has_sub.open>a::after {
+    content: '';
+    display: block;
+    width: 18%;
+    height: 2px;
+    background: var(--red-05-point);
+    /* ✅ 빨간 라인 */
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+
+/* 토글 버튼 (화살표) */
+.toggle_btn {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.toggle_btn::after {
+    content: '\f107';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--black);
+    transition: transform 0.3s;
+    display: block;
+}
+
+.mobile_gnb>li.has_sub.open .toggle_btn::after {
+    transform: rotate(180deg);
+}
+
+/* 서브메뉴 */
+.mobile_sub {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: rgba(0, 0, 0, 0.03);
+    margin: 0 -30px;
+    padding: 0 30px;
+}
+
+.mobile_gnb>li.has_sub.open .mobile_sub {
+    max-height: 400px;
+    padding: 10px 30px 20px;
+}
+
+.mobile_sub li {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.mobile_sub li a {
+    display: block;
+    padding: 12px 0;
+    color: var(--gray-07-footer);
+}
+
+.mobile_sub li a:hover {
+    color: var(--red-05-point);
+}
+
+/* body 스크롤 방지 */
+body.no_scroll {
+    overflow: hidden;
+}
+
+/* 배경 오버레이 */
+.mobile_overlay {
+    display: none;
+}
+
+/* 메뉴 열렸을 때 오버레이 표시 */
+header.on~.mobile_overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* main */
 
 main {
     padding-top: 80px;
 }
 
-/* 한지배경 */
 main.bg {
-    background: url(/asset/img/bg_all2.png) center no-repeat var(--bg);
+    background: url(/asset/img/bg_all2.png) var(--bg);
 }
 
 main .banner_top {
     position: relative;
     width: 100%;
     height: 265px;
-    /* GNB 높이에 맞춰 조정 */
     overflow: hidden;
     background-color: #1d1d1b;
     display: flex;
@@ -354,7 +532,7 @@ main .banner_top {
 
 main .banner_top .txt {
     color: var(--w-color);
-    font-size: 50px;
+    font-size: var(--fszenT-L-50);
     font-weight: 500;
     font-family: var(--title-Zen);
 }
@@ -378,7 +556,7 @@ main .sub .logo {
 
 main .sub i {
     color: #aaa;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 main .sub .menu_sub {
@@ -386,7 +564,7 @@ main .sub .menu_sub {
     font-weight: 500;
 }
 
-/* 타이틀 윗 간격 */
+
 main .space {
     padding-top: 45px;
 }
@@ -394,11 +572,11 @@ main .space {
 
 main .tit {
     font-family: var(--title-Zen);
-    font-size: 50px;
+    font-size: var(--fszenT-L-50);
     font-weight: 500;
 }
 
-/* 버튼 */
+
 main .btn {
     display: flex;
     align-items: center;
@@ -408,7 +586,7 @@ main .btn {
     padding: 10px 30px;
     border-radius: var(--r-round);
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1.125rem;
     background: var(--red-05-point);
     color: #fff;
 }
@@ -428,10 +606,10 @@ footer {
     background: url(/asset/img/footer_sub.png) no-repeat right top, url(/asset/img/bg_all2.png) no-repeat right top var(--bg);
     color: var(--w-color);
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.3;
     position: relative;
-    /* z-index: 10; */
+    z-index: 1;
 }
 
 footer.dark {
@@ -440,7 +618,7 @@ footer.dark {
     background: url(/asset/img/footer.png) no-repeat right top#282C34;
     color: var(--w-color);
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.3;
 }
 
@@ -460,7 +638,7 @@ footer .f_txt {
 }
 
 footer .f_txt h3 {
-    font-size: 25px;
+    font-size: var(--fspre-25);
     margin-bottom: 24px;
     font-weight: 700;
 }
@@ -498,7 +676,6 @@ footer .f_right {
 .select_box {
     position: relative;
     height: 42px;
-    /* overflow: hidden; */
     border-radius: var(--r-10);
     transition: .6s;
 }
@@ -511,19 +688,19 @@ footer .select_box>button {
     height: 42px;
     background: var(--gray-08);
     border: 0;
-    padding: 10px 30px;
+    padding: 20px 30px;
     gap: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--w-color);
-    font-size: 18px;
+    font-size: 1.125rem;
     cursor: pointer;
     position: relative;
     border-radius: var(--r-10);
-    z-index: 2;
-
-
+    font-family: inherit;
+    z-index: 10;
+    
 }
 
 .select_box ul {
@@ -540,7 +717,7 @@ footer .select_box>button {
     overflow: hidden;
     padding: 10px;
     bottom: 0;
-    z-index: 100;
+    z-index: 1;
 }
 
 .select_box.on ul {
@@ -550,7 +727,15 @@ footer .select_box>button {
 
 .select_box ul li {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     height: 40px;
     line-height: 40px;
+    transition: all 0.3s;
+    cursor: pointer;
+
+}
+
+.select_box ul li:hover {
+    color: var(--black);
+    font-weight: 550;
 }

@@ -7,6 +7,10 @@
     position: relative;
 }
 
+header.maintop {
+    background: rgba(255, 255, 255, 0.7);
+}
+
 main {
     width: 100%;
     height: auto;
@@ -20,7 +24,7 @@ main {
     overflow: hidden;
 }
 
-
+/* 원래 CTA */
 .museum_cta {
     position: absolute;
     right: 0;
@@ -35,7 +39,7 @@ main {
     padding: 0 110px;
     opacity: 0;
     transform: translateX(100%);
-    transition: all 1s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 .museum_cta.slide-in {
@@ -43,7 +47,34 @@ main {
     transform: translateX(0);
 }
 
-.museum_cta .cta_content {
+/* highlight 도달 시 숨김 */
+.museum_cta.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 모바일 CTA - 데스크탑에서도 사용 */
+.museum_cta_mobile {
+    position: fixed;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: bottom 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.museum_cta_mobile.on {
+    bottom: 0;
+}
+
+.museum_cta .cta_content,
+.museum_cta_mobile .cta_content {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -52,13 +83,14 @@ main {
 }
 
 .museum_cta .left,
-.museum_cta .right {
+.museum_cta .right,
+.museum_cta_mobile .left,
+.museum_cta_mobile .right {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
 }
-
 
 .cta_content .today,
 .cta_content .fees {
@@ -76,7 +108,6 @@ main {
     gap: 10px;
     align-items: flex-start;
 }
-
 
 .cta_content .label {
     font-size: 14px;
@@ -144,7 +175,7 @@ main .highlight .title {
 
 .title h2 {
     font-family: var(--title-Zen);
-    font-size: 65px;
+    font-size: var(--fszenT-XL-65);
     color: var(--w-color);
 }
 
@@ -397,8 +428,7 @@ main .backimg::after {
 
 main .vision {
     width: 100%;
-    background:
-        linear-gradient(180deg, #1F2523 0%, #1C1D1F 100%);
+    background: linear-gradient(180deg, #1F2523 44.67%, #1C1D1F 104.04%);
     position: relative;
     overflow: hidden;
     margin-top: -1px;
@@ -434,9 +464,10 @@ main .vision .v_card {
     height: 100vh;
     display: flex;
     align-items: center;
-    gap: 50px;
-    padding-left: 600px;
-
+    gap: 15px;
+    padding-left: 1200px;
+    position: relative;
+    z-index: 3;
 }
 
 /* 카드 아이템 스타일 추가 */
@@ -444,14 +475,28 @@ main .vision .v_card .card_item {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    transform: scale(0.85);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+main .vision .v_card .card_item.active {
+    transform: scale(1.15);
+}
+
+/* 오른쪽 여백 영역 */
+.track_space {
+    width: 200px;
+    /* 여기 숫자 조절 */
+    flex-shrink: 0;
+}
+
 
 main .vision .v_card .card_item img {
     display: block;
     width: 100%;
     height: auto;
-    transition: transform 0.6s ease;
 }
+
 
 /* 오버레이 스타일 */
 main .vision .v_card .card_overlay {
@@ -478,10 +523,10 @@ main .vision .v_card .card_item:hover .card_overlay {
 }
 
 /* 호버 시 이미지 확대 */
-main .vision .v_card .card_item:hover img {
+/* main .vision .v_card .card_item:hover img {
     transform: scale(1.08);
 }
-
+ */
 /* 오버레이 텍스트 스타일 */
 main .vision .card_overlay h3 {
     font-size: 30px;
@@ -521,11 +566,57 @@ main .vision .card_btn:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-main .vision .line img {
+main .vision .line {
     position: absolute;
-    padding: 10px;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
 }
+
+main .vision .line_left {
+    position: absolute;
+    left: 60px;
+    top: 100px;
+    height: auto;
+    z-index: 2;
+}
+
+main .vision .line_right {
+    position: absolute;
+    right: 100px;
+    bottom: -70px;
+    height: auto;
+    z-index: 2;
+    background: #1C1E1F;
+}
+
+main .vision .line_draw {
+    position: absolute;
+    top: 314px;
+    /* ✅ 위에서 얼마나 떨어질지 */
+    left: 0px;
+    /* width: 80%; */
+    /* ✅ 너비 조정 */
+    height: auto;
+    /* ✅ 비율 유지 */
+    z-index: 1;
+}
+
+.animated_path {
+    fill: none;
+    stroke: #f2f2f2;
+    stroke-width: 3px;
+}
+
+
+/* 모바일 슬라이더 - 기본 숨김 */
+.mobile_slider_wrap {
+    display: none;
+}
+
 
 /* exhibition */
 
@@ -534,6 +625,7 @@ main .exhibition {
     height: 100vh;
     background: url(/asset/img/ex_bg.png) no-repeat center/cover;
     overflow: hidden;
+    margin-bottom: 0
 }
 
 main .exhibition .inner {
@@ -586,14 +678,12 @@ main .exhibition .ex_card {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(.9);
-    width: min(40vw, 480px);
-    height: min(52vw, 640px);
+    width: min(60vw, 480px);
+    height: min(72vw, 640px);
     /* 3:4에 가깝게 (원하면 조정) */
     border-radius: 18px;
     background-size: cover;
     background-position: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
     opacity: 0;
     filter: blur(6px);
     will-change: transform, filter, opacity;
@@ -678,6 +768,7 @@ main .muds {
     background: linear-gradient(180deg, #121215 8%, #282C33 64.49%);
     position: relative;
     overflow: hidden;
+    margin-top: 0;
 }
 
 .cloud_container {
@@ -702,34 +793,34 @@ main .muds {
 
 /* 1번 구름 - 제일 위 */
 .cloud_1 {
-    width: 45%;
+    width: 60%;
     height: auto;
     top: 0%;
-    left: -60%;
+    left: -10%;
     z-index: 11;
 }
 
 /* 2번 구름 - 1번과 살짝 겹침 */
 .cloud_2 {
-    width: 60%;
+    width: 65%;
     height: auto;
     top: 12%;
-    right: -70%;
+    right: 0;
     z-index: 12;
 }
 
 /* 3번 구름 - 2번과 더 많이 겹침 */
 .cloud_3 {
-    width: 60%;
+    width: 70%;
     height: auto;
-    top: 28%;
-    left: -80%;
+    top: 22%;
+    left: 10%;
     z-index: 13;
 }
 
 /* 4번 구름 - 3번과 겹치며 가장 크고 아래쪽 */
 .cloud_4 {
-    width: 70%;
+    width: 75%;
     height: auto;
     top: 48%;
     right: -100%;
@@ -794,7 +885,8 @@ main .muds {
 
 
 .content_cloud .cloud_bg {
-    width: 100%;
+    width: 80%;
+    right: -80px;
     height: auto;
     display: block;
     opacity: 0.9;
@@ -805,8 +897,8 @@ main .muds {
 
 .content_cloud .content_text {
     position: absolute;
-    top: 55%;
-    left: 30%;
+    top: 58%;
+    left: 28%;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 55%;
@@ -823,7 +915,7 @@ main .muds {
 
 .content_cloud .content_text h3 {
     font-family: var(--title-Zen);
-    font-size: 64px;
+    font-size: 3.75rem;
     color: var(--black);
     margin-bottom: 15px;
     padding-left: 100px;
@@ -855,6 +947,11 @@ main .muds {
 }
 
 /* footer */
+footer {
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+}
 
 footer .select_box>button {
     background: var(--gray-06);
@@ -862,10 +959,10 @@ footer .select_box>button {
 
 .top-btn {
     position: fixed;
-    right: 50px;
-    bottom: 50px;
-    width: 90px;
-    height: 90px;
+    right: 30px;
+    bottom: 80px;
+    width: 80px;
+    height: 80px;
     background: var(--red-05-point);
     border-radius: 50%;
     display: flex;
@@ -879,8 +976,8 @@ footer .select_box>button {
 }
 
 .top-btn img {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     margin-bottom: 5px;
 }
 
@@ -905,10 +1002,4 @@ footer .select_box>button {
 .top-btn.show {
     opacity: 1;
     pointer-events: auto;
-}
-
-.footer_space {
-    height: 100vh;
-    /* muds pin 구간과 동일한 높이 */
-    background: transparent;
 }

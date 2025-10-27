@@ -1,35 +1,91 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // AOS.init();
     const header = document.querySelector('header');
-    document.querySelector('header').addEventListener('click', () => {
-        header.classList.toggle('on');
-        document.body.classList.toggle('no_scroll');
+    const hamBtn = document.querySelector('.ham');
+
+    // 햄버거 메뉴 토글
+    if (hamBtn) {
+        hamBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            header.classList.toggle('on');
+            document.body.classList.toggle('no_scroll');
+        });
+    }
+
+    // 서브메뉴 토글 - 버튼 클릭
+    const toggleBtns = document.querySelectorAll('.toggle_btn');
+    toggleBtns.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const parentLi = this.closest('li');
+            parentLi.classList.toggle('open');
+        });
     });
 
-    //스크롤 위치를 마지막에 어디까지 했는지 기억하는 변수
-    let lastScrollY = window.scrollY;
+    // 서브메뉴 토글 - 글씨 클릭
+    const hasSubLinks = document.querySelectorAll('.mobile_gnb > li.has_sub > a');
+    hasSubLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
 
-    //스크롤 할 때마다 실행되는 이벤트
+            const parentLi = this.closest('li');
+            parentLi.classList.toggle('open');
+        });
+    });
+
+    // 모바일 메뉴 영역 클릭시 닫히지 않게
+    const mobileMenu = document.querySelector('.mobile_menu');
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
+
+    // 배경 클릭시 메뉴 닫기
+    document.addEventListener('click', (e) => {
+        if (header.classList.contains('on') && !e.target.closest('header')) {
+            header.classList.remove('on');
+            document.body.classList.remove('no_scroll');
+        }
+    });
+
+    // X 버튼 클릭시 메뉴 닫기
+    const mobileClose = document.querySelector('.mobile_close');
+    if (mobileClose) {
+        mobileClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            header.classList.remove('on');
+            document.body.classList.remove('no_scroll');
+        });
+    };
+
+    // 오버레이 클릭시 메뉴 닫기
+    const mobileOverlay = document.querySelector('.mobile_overlay');
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', () => {
+            header.classList.remove('on');
+            document.body.classList.remove('no_scroll');
+        });
+    }
+
+    // 스크롤 이벤트
+    let lastScrollY = window.scrollY;
     window.addEventListener('scroll', () => {
-        //지금 현재 스크롤 위치(세로로 얼만큼 내려왔는지) 저장
         const currentScrollY = window.scrollY;
         if (currentScrollY > lastScrollY) {
-            //지금 스크롤이 이전보다 더 아래 -> 즉 사용자가 아래로 내림
             header.style.top = '-80px'
         } else {
-            //사용자가 위로 올림
             header.style.top = '0'
         }
-
-        //이번 스크롤 위치를 이전 스크롤 위치로 저장
         lastScrollY = currentScrollY;
-    })
+    });
 
+    // 푸터 select box
     document.querySelectorAll('footer .select_box button').forEach(function (button) {
         button.addEventListener('click', function () {
             this.closest('.select_box').classList.toggle('on');
         });
     });
-
-})
-
+});
