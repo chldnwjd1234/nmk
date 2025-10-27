@@ -27,7 +27,7 @@
         flex-direction: column;
         padding-top: 236px;
         /* background: #ccc; */
-        padding-bottom: 60px;
+        padding-bottom: 180px;
         position: relative;
         align-items: center;
         justify-content: flex-start;
@@ -618,6 +618,7 @@
 
     main .space {
         padding-top: 145px;
+        padding-bottom: 170px;
     }
 
     .bottom .dropdown {
