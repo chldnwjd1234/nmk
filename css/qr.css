@@ -9,64 +9,99 @@
 .banner_top .txt {
     letter-spacing: 1px;
 }
-.inner{
-    width: 100%;
-}
 
 /* QR Reader */
 #reader {
     width: 100%;
-    min-width: 320px;
+    max-width: 500px;
+    min-width: 280px;
     margin: 20px auto;
 }
 
 #status {
     margin-block: 15px;
     color: var(--red-05-point);
+    text-align: center;
 }
 
 /* Section */
 .gr_section {
     padding-block: 20px;
-    text-align: center;
+    width: 100%;
+}
+
+.gr_section .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .gr_section h3 {
     font-size: 22px;
+    text-align: center;
+    width: 100%;
 }
 
 /* Sample */
 .sample {
-    margin-block: 30px;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-bottom: 80px;
     align-items: center;
-    /* flex-direction과 align-items는 .gr_section .sample과 충돌하므로 제거 */
-}
-
-.sample img {
-    border: 1px solid #ccc;
-    padding: 8px;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto 80px;
 }
 
 .sample .top {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+.sample .top h3 {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.sample .top p {
+    font-size: 25px;
 }
 
 .sample .btm {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    align-items: center;
+    width: 100%;
+}
+
+.sample img {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
 }
 
 /* Preview Button */
+.preview_btn {
+    width: 100%;
+    text-align: center;
+}
+
 .preview_btn a {
+    display: inline-block;
     padding: 13px 29px;
     border-radius: var(--r-round);
     background: var(--w-color);
@@ -74,4 +109,79 @@
     font-size: var(--fspre-21);
     color: var(--black);
     transition: 0.2s;
+    font-weight: 500;
+}
+
+/* 태블릿 */
+@media screen and (max-width: 1024px) {
+    .gr_section h3 {
+        font-size: 20px;
+    }
+
+    .sample .top h3 {
+        font-size: 30px;
+    }
+
+    .sample .top p {
+        font-size: 22px;
+    }
+
+    .sample img {
+        max-width: 280px;
+    }
+}
+
+/* 모바일 중간 */
+@media screen and (max-width: 768px) {
+    .gr_section h3 {
+        font-size: 18px;
+    }
+
+    .sample .top h3 {
+        font-size: 25px;
+    }
+
+    .sample .top p {
+        font-size: 18px;
+    }
+
+    .sample img {
+        max-width: 250px;
+    }
+}
+
+/* 모바일 작은 화면 */
+@media screen and (max-width: 414px) {
+    .gr_section .inner {
+        padding: 0 15px;
+    }
+
+    .gr_section h3 {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    .sample {
+        gap: 30px;
+        margin: 20px auto 60px;
+    }
+
+    .sample .top h3 {
+        font-size: 20px;
+    }
+
+    .sample .top p {
+        font-size: 13px;
+    }
+
+    .sample img {
+        max-width: 200px;
+    }
+
+    .preview_btn a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .sample .btm {gap: 15px;}
 }
