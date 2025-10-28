@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 🌙 moon 반응형 radius
         let radiusValue;
-        if (window.innerWidth <= 402) {
+        if (window.innerWidth <= 414) {
             radiusValue = "0 0 800px 800px";
         } else if (window.innerWidth <= 1024) {
             radiusValue = "0 0 1200px 1200px";
@@ -91,16 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
         lines.forEach(l => l.classList.remove('on', 'animated'));
         labels.forEach(l => l.classList.remove('on', 'animated'));
 
-        const isMobile = window.innerWidth <= 402;
+        const isMobile = window.innerWidth <= 414;
+        
         if (isMobile) {
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".Collection_Storage",
-                    start: "top 80%",
-                    end: "top 30%",
-                    scrub: 1,
-                }
-            });
+            // 모바일에서는 Collection Storage의 ScrollTrigger를 생성하지 않음
+            return;
         } else {
             ScrollTrigger.create({
                 trigger: ".Collection_Storage",
