@@ -84,7 +84,6 @@ main.bg {
     align-items: center;
 }
 
-.SpecialExhibition .txt_right .box_1 {}
 
 
 .SpecialExhibition .txt_right h2 {
@@ -111,8 +110,8 @@ main.bg {
     color: var(--gray-07-footer);
 }
 
-.data img {
-    width: 29px;
+.data img.meta-icon {
+    width: 24px;
 }
 
 .Exhibition .Exhibition_txt_1 {
