@@ -42,7 +42,7 @@
 
     main .Welcome .flower2 {
         width: 250px;
-        left: 0%;
+        left: -10%;
         top: 180px;
     }
 
@@ -67,7 +67,7 @@
     }
 
     main .Welcome .txt_box .living_space {
-        margin-left: 60px;
+        margin-left: 40px;
         margin-top: -120px;
     }
 
@@ -381,6 +381,7 @@
 
     main .Welcome .flower2 {
         top: 100px;
+        left: -15%;
     }
 
     main .Welcome .flower3 {
@@ -402,7 +403,7 @@
     }
 
     main .Welcome .txt_box .living_space {
-        margin-left: 40px;
+        margin-left: 20px;
         margin-top: -80px;
     }
 
