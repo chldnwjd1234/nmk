@@ -18,6 +18,8 @@
     cursor: pointer;
     color: var(--w-color);
     background-color: var(--gray-05);
+    font-size: 21px;
+    line-height: 1.3;
 }
 
 .top_btn button.on {
@@ -199,6 +201,7 @@
     display: flex;
     gap: 20px;
     margin-top: 72px;
+
 }
 
 .services_container .box_left {
@@ -253,6 +256,7 @@
     padding: 184px 61px 45px 63px;
     position: relative;
     overflow: hidden;
+    transition: background-color .6s;
 }
 
 .wheelchair_stroller::before {
@@ -292,6 +296,8 @@
     padding: 184px 39px 45px 39px;
     overflow: hidden;
     position: relative;
+    transition: background-color .6s;
+
 }
 
 .museum_shops::before {
@@ -331,6 +337,8 @@
     padding: 58px 271px 46px 65px;
     overflow: hidden;
     position: relative;
+    transition: background-color .6s;
+
 }
 
 .lockers::before {
@@ -370,6 +378,8 @@
     padding: 46px 413px 45px 68px;
     overflow: hidden;
     position: relative;
+    transition: background-color .6s;
+
 }
 
 .lactation_room::before {
@@ -409,6 +419,8 @@
     padding: 171px 296px 45px 58px;
     overflow: hidden;
     position: relative;
+    transition: background-color .6s;
+
 }
 
 .coat_storage::before {
@@ -429,6 +441,8 @@
     background-position: right -150px bottom -130px;
 
     background-repeat: no-repeat;
+
+
 }
 
 .coat_storage:hover {
@@ -487,6 +501,7 @@
     align-items: center;
     gap: 16px;
     margin-bottom: 128px;
+    transition: .6s;
 }
 
 
@@ -574,6 +589,7 @@
 
 .No_Smoking {
     background-image: url(../asset/img_information/VisitorTips_6.png);
+    transition: .6s;
 }
 
 .No_Smoking p {
@@ -608,6 +624,7 @@
 
 .No_FoodDrinks {
     background-image: url(../asset/img_information/VisitorTips_6.png);
+    transition: .6s;
 }
 
 .No_FoodDrinks p {
@@ -643,6 +660,7 @@
 .NoPhotography {
     background-image: url(../asset/img_information/VisitorTips_6.png);
     margin-bottom: 128px;
+    transition: .6s;
 }
 
 .NoPhotography p {
@@ -679,6 +697,7 @@
 
 .SilentMode {
     background-image: url(../asset/img_information/VisitorTips_6.png);
+    transition: .6s;
 }
 
 .SilentMode p {
@@ -713,7 +732,7 @@
 
 .NoBicycles_Skates {
     background-image: url(../asset/img_information/VisitorTips_6.png);
-    ;
+    transition: .6s;
 }
 
 .NoBicycles_Skates p {
@@ -749,6 +768,7 @@
 .Bequiet {
     background-image: url(../asset/img_information/VisitorTips_6.png);
     margin-bottom: 128px;
+    transition: .6s;
 }
 
 .Bequiet p {
@@ -784,6 +804,7 @@
 
 .OnlyServiceDogs {
     background-image: url(../asset/img_information/VisitorTips_6.png);
+    transition: .6s;
 }
 
 .OnlyServiceDogs p {
@@ -857,6 +878,11 @@
 .Directions_btn {
     margin-top: 56px;
     padding-bottom: 72px;
+}
+
+.Directions_btn .Directions {
+    font-size: 21px;
+    line-height: 1.3;
 }
 
 .Directions_btn button {
@@ -1013,7 +1039,7 @@
 }
 
 .Subway_list li span {
-    padding: 8px 12px;
+    padding: 8px 14px;
     background-color: #000;
     border-radius: 10px;
     font-size: 21px;
@@ -1146,7 +1172,7 @@
     height: 488px;
     background-color: rgba(255, 255, 255, .5);
     border-radius: 20px;
-    padding: 40px; 
+    padding: 40px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -1211,11 +1237,11 @@
 }
 
 .parking_notes {
-padding-top: 34px;
-border-top: 1px dashed #999
+    padding-top: 34px;
+    border-top: 1px dashed #999
 }
 
-.parking_notes li{
+.parking_notes li {
     display: flex;
     align-items: center;
     gap: 10px;

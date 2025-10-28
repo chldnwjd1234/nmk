@@ -191,7 +191,7 @@
         background-color: rgba(255, 255, 255, 1);
         /* opacity: 0.4; */
         width: 376px;
-        height: 500px;
+        height: 600px;
         border-radius: 10px;
         top: 0;
         gap: 0;
@@ -599,15 +599,16 @@
     }
 
 
-    .articles_all .Exhibition_1 .img_1,
-    .articles_all .Exhibition_2 .img_2,
-    .articles_all .Exhibition_3 .img_3,
-    .articles_all .Exhibition_4 .img_4,
-    .articles_all .Exhibition_5 .img_5 {
+    .articles_all .Exhibition_1 img.img_1,
+    .articles_all .Exhibition_2 img.img_2,
+    .articles_all .Exhibition_3 img.img_3,
+    .articles_all .Exhibition_4 img.img_4,
+    .articles_all .Exhibition_5 img.img_5 {
         width: 100%;
         height: 203px;
         border-radius: 10px 10px 0 0;
     }
+
 
     .Exhibition_txt i {
         display: none;

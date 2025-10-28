@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="국립중앙박물관 글로벌 사이트 입니다">
@@ -6,15 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NATIONAL MUSEUM OF KOREA</title>
     <link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/reservation_style.css"><!-- 본인 스타일 -->
+    <link rel="stylesheet" href="../css/main_style.css"><!-- 본인 스타일 -->
     <link rel="stylesheet" href="../css/common_media.css">
-    <!-- 본인 미디어스타일 -->
+    <link rel="stylesheet" href="../css/main_media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="../js/common.js"></script>
-    <!-- 본인 js -->
+    <script src="../js/main.js"></script>
     <script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
 </head>
+
 
 <body>
     <div class="wrap">
@@ -200,7 +209,7 @@
                             <a href="#">VISIT</a>
                             <button class="toggle_btn"></button>
                             <ul class="mobile_sub">
-                                <li><a href="./vision.html">Visitor Information</a></li>
+                                <li><a href="./information.html">Visitor Information</a></li>
                                 <li><a href="./map.html">Museum Map</a></li>
                                 <li><a href="#">Guided Tours</a></li>
                                 <li><a href="#">Amenities</a></li>
@@ -277,132 +286,234 @@
 
         </header>
         <div class="mobile_overlay"></div>
-        <main class="bg">
-            <div class="sub">
-                <div class="inner">
-                    <a href="./main.html"><img class="logo" src="../asset/img_Collection/sub_logo.png" /></a>
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <a href="./information.html">Visit</a>
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <a class="menu_sub" href="./reservation.html">Reservation</a>
-                </div><!-- 각자 맞는 페이지 걸기 -->
-            </div><!-- //.sub -->
-
-
-
-            <section class="reservation inner">
-                <div class="content_wrap">
-                    <!-- 왼쪽: 배너 + 예약 폼 (1080px) -->
-                    <div class="left_content">
-                        <!-- 배너 -->
-                        <div class="banner">
-                            <div class="banner_tit">
-                                <h2>Collectors of Light</h2>
+        <main>
+            <section class="main_visual">
+                <figure class="vid">
+                    <video src="../asset/vid/main_banner.mp4" autoplay muted loop playsinline></video>
+                </figure>
+            </section><!-- //.main_visual -->
+            <div class="museum_cta">
+                <div class="cta_content">
+                    <div class="left">
+                        <div class="today">
+                            <span class="label">Today</span>
+                            <span class="time">10:00 ~ 18:00</span>
+                        </div>
+                        <a href="./information.html" class="btn_1">Directions</a>
+                    </div>
+                    <div class="right">
+                        <div class="fees">
+                            <span class="label">Fees</span>
+                            <div class="fee_wrap"> <span class="free">Free</span>
+                                <p class="note">Charges apply<br>for special exhibitions</p>
                             </div>
                         </div>
-
-                        <!-- 안내사항 -->
-                        <div class="info">
-                            <div class="txt_t">
-                                <h3>Directions</h3>
-                                <p>The reservation will be automatically canceled if you do not enter the museum 30
-                                    minutes after the session starts.</p>
-                                <p>(*Cancelled tickets will become available for individual online reservation.)</p>
-                            </div>
-                            <div class="txt_b">
-                                <h3>[No-show Policy]</h3>
-                                <p>If you have not entered by 30 minutes after the start of the session without
-                                    cancellation, visiting of the children's museum will be restricted for 60 days from
-                                    the date of a no-show, and all reservations within the restricted period will be
-                                    cancelled.</p>
-                            </div>
-                            <div class="lab">
-                                <button class="lab_t">
-                                    <span>Visitor Information</span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </button>
-                                <div class="lab_txt">
-                                    <div class="lab_s">
-                                        <h4>Reservation Guide</h4>
-                                        <ol>
-                                            <li>Visitors are required to make reservations online (telephone
-                                                reservations are not accepted).</li>
-                                            <li>Reservation for up to five people can be made at once, and reservations
-                                                can only be made once per day (including individual and group).</li>
-                                            <li>Online reservations are available from 00:00 14 days before the date of
-                                                visit to 50 minutes after the start of each session.</li>
-                                        </ol>
-                                    </div>
-                                    <div class="lab_s">
-                                        <h4>Admission Guide</h4>
-                                        <ol>
-                                            <li>On-site ticketing is not available. Reserved mobile tickets must be
-                                                checked at the entrance to the museum.</li>
-                                            <li>Admission of visitors without children or children without adult
-                                                guardians is restricted.</li>
-                                            <li>Reservations need to be made for toddlers under 36 months old.</li>
-                                        </ol>
-                                    </div>
-                                    <div class="lab_s">
-                                        <h4>Additional Information</h4>
-                                        <ol>
-                                            <li>Private docent tours (e.g. field trips) and lectures are prohibited.
-                                            </li>
-                                            <li>If you wish to visit the museum for a field survey, you must receive
-                                                permission in advance over the phone and in written form. Refer to the
-                                                Children's Museum website.</li>
-                                            <li>For further information, Contact +82-2-2077-9647, 9648.</li>
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 날짜/시간/인원/결제 폼 -->
-                        <div class="form_section">
-
-                        </div>
-
-                        <div class="section2">
-
-                        </div>
-
-                        <div class="section3">
-
+                        <a href="./reservation.html" class="btn_2">Reservations</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 모바일용 (새로 추가) -->
+            <div class="museum_cta_mobile">
+                <div class="cta_content">
+                    <div class="left">
+                        <div class="today">
+                            <span class="label">Today</span>
+                            <span class="time">10:00 ~ 18:00</span>
                         </div>
                     </div>
-
-                    <!-- 오른쪽: Total Amount -->
-                    <div class="right_content">
-                        <div class="total_amount">
-                            <div class="header">
-                                <h3>Total Amount</h3>
-                                <div class="price_wrap">
-                                    <div class="price">₩ 13,000</div>
-                                    <div class="vat">(VAT included)</div>
-                                </div>
-                            </div>
-                            <div class="price_detail">
-                                <div class="price_row">
-                                    <span class="price_label">Adult</span>
-                                    <span class="price_calc">( 2 × ₩5,000 )</span>
-                                    <span class="equal">=</span>
-                                    <span class="price_value">₩ 10,000</span>
-                                </div>
-                                <div class="price_row">
-                                    <span class="price_label">Children</span>
-                                    <span class="price_calc">( 2 × ₩3,000 )</span>
-                                    <span class="equal">=</span>
-                                    <span class="price_value">₩ 3,000</span>
-                                </div>
-                            </div>
-                            <button class="btn_reservation">Make a reservation</button>
+                    <div class="right">
+                        <a href="./information.html" class="btn_1">Directions</a>
+                        <a href="./reservation.html" class="btn_2">Reservations</a>
+                    </div>
+                </div>
+            </div>
+            <section class="highlight">
+                <div class="title">
+                    <h2>Highlight</h2>
+                </div>
+                <div class="inner">
+                    <div class="contents">
+                        <div class="top">
+                            <a href="./exhibition.html">
+                                <div class="icon">Special Exhibition</div>
+                                <h3>Tour of National Treasures</h3>
+                            </a>
+                            <a href="./exhibition.html">
+                                <div class="icon">Special Exhibition</div>
+                                <h3>The Collectors of Light</h3>
+                            </a>
+                        </div>
+                        <div class="bottom">
+                            <a href="./collection.html">
+                                <div class="icon">Collection</div>
+                                <h3>Collection Database</h3>
+                            </a>
                         </div>
                     </div>
                 </div>
+            </section><!-- //.highlight -->
+            <section class="backimg">
+                <div class="inner">
+                </div>
+            </section><!-- //.backimg -->
+            <section class="vision">
+                <div class="inner">
+                    <div class="title">
+                        <h2>Reflecting the Future</h2>
+                        <h2><img src="../asset/img/v_line.svg" alt="line">by Embracing the Past</h2>
+                    </div>
+                </div><!-- //.inner -->
+                <div class="horizontal_all">
+                    <div class="line">
+                        <!-- 왼쪽 건물 라인 -->
+                        <img class="line_left" src="../asset/img/line_img.png" alt="left building">
+
+                        <!-- 오른쪽 건물 라인 -->
+                        <img class="line_right" src="../asset/img/line_img2.png" alt="right building">
+
+                        <!-- 애니메이션 라인 -->
+                        <svg class="line_draw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 571">
+                            <path class="animated_path" d="M0 1.5H51.6344V131.615H453.681V427.875H503.812V569.5H1920" />
+                        </svg>
+                    </div>
+                    <div class="v_card track">
+                        <div class="card_item">
+                            <img src="../asset/img/v_img1.png" alt="img">
+                            <div class="card_overlay">
+                                <h3>with Life</h3>
+                                <p>A cultural space that brings<br>inspiration to everyday life</p>
+                                <a href="./vision.html" class="card_btn">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="card_item">
+                            <img src="../asset/img/v_img3.png" alt="img">
+                            <div class="card_overlay">
+                                <h3>Leading the Future</h3>
+                                <p>Reimagining heritage through digital innovation</p>
+                                <a href="./vision.html" class="card_btn">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="card_item">
+                            <img src="../asset/img/v_img2.png" alt="img">
+                            <div class="card_overlay">
+                                <h3>Advancing into the World</h3>
+                                <p>Bringing Korean culture <br> to the world</p>
+                                <a href="./vision.html" class="card_btn">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="track_space"></div>
+                    </div><!-- //.v_card -->
+                </div>
+
+                <!-- 모바일 카드 슬라이더 -->
+                <div class="mobile_slider_wrap">
+                    <div class="mobile_slider">
+                        <div class="mobile_card active">
+                            <img src="../asset/img/v_img1.png" alt="with Life">
+                            <div class="card_overlay">
+                                <h3>with Life</h3>
+                                <p>A cultural space that brings<br>inspiration to everyday life</p>
+                                <a href="./vision.html" class="card_btn">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="mobile_card">
+                            <img src="../asset/img/v_img3.png" alt="Leading the Future">
+                            <div class="card_overlay">
+                                <h3>Leading the Future</h3>
+                                <p>Transforming heritage digitally</p>
+                                <a href="./vision.html" class="card_btn">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="mobile_card">
+                            <img src="../asset/img/v_img2.png" alt="Advancing">
+                            <div class="card_overlay">
+                                <h3>Into the World</h3>
+                                <p>Bringing Korean culture <br> to the world</p>
+                                <a href="./vision.html" class="card_btn">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- //.vision  -->
+
+            <section class="exhibition pin_scene" id="showcase">
+                <div class="inner pin_layer">
+                    <div class="pin_bg" id="pin_bg" style="background-image: url('../asset/img/ex_bg.png');">
+                    </div>
+                    <div class="pin_overlay"></div>
+                    <div class="title">
+                        <h2>NMK Global Exhibition</h2>
+                    </div>
+                    <div class="ex_cards float_wrap">
+                        <div class="ex_card">
+                            <img src="../asset/img/ex_img1.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="../asset/img/ex_img2.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="../asset/img/ex_img3.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="../asset/img/ex_img4.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="../asset/img/ex_img5.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="../asset/img/ex_img6.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="../asset/img/ex_img7.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="../asset/img/ex_img8.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="../asset/img/ex_img9.png" alt="exhibition">
+                        </div>
+                        <div class="ex_card">
+                            <img src="../asset/img/ex_img10.png" alt="exhibition">
+                        </div>
+                    </div>
+                </div><!-- //inner -->
+            </section><!-- //.exhibition -->
+
+            <section class="muds">
+                <!-- 구름 컨테이너 -->
+                <div class="cloud_container">
+                    <img src="../asset/img/cloud4.svg" alt="cloud" class="cloud cloud_1">
+                    <img src="../asset/img/mu_cloud3.svg" alt="cloud" class="cloud cloud_2">
+                    <img src="../asset/img/mu_cloud5.svg" alt="cloud" class="cloud cloud_3">
+                    <img src="../asset/img/cloud6.svg" alt="cloud" class="cloud cloud_4">
+                    <div class="muds_content">
+                        <!-- 배경 이미지 -->
+                        <div class="muds_bg">
+                            <!-- MU:DS 타이틀 - 배경 안에 -->
+                            <div class="title">
+                                <h2>MU:DS</h2>
+                            </div>
+                        </div>
+                        <div class="content_cloud">
+                            <img src="../asset/img/muds_con.svg" alt="cloud background" class="cloud_bg">
+                            <div class="content_text">
+                                <p class="subtitle">we offer art that enriches your life</p>
+                                <h3>National Museum Goods</h3>
+                                <a href="https://muds.kr/" target="_blank" class="discover_btn">
+                                    Discover our goods
+                                    <span class="underline"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 최종 컨텐츠 (배경 + 타이틀 + 텍스트) -->
+
             </section>
+            <!--             <div class="footer_space"></div> -->
         </main>
-        <footer>
+
+        <footer class="dark">
             <div class="inner">
                 <div class="f_top">
                     <div class="f_txt">
@@ -454,7 +565,7 @@
                                 <li><a href="#">Gongju National Museum</a></li>
                                 <li><a href="#">Jinju National Museum</a></li>
                                 <li><a href="#">CNM</a></li>
-                                <li><a href="#">Gimhae National Museum</a></li>
+                                <li><a href="#">GNM</a></li>
                                 <li><a href="#">Jeju National Museum</a></li>
                                 <li><a href="#">CMM</a></li>
                                 <li><a href="#">Naju National Museum</a></li>
@@ -480,6 +591,15 @@
                 </div><!-- //.f_bot -->
             </div>
         </footer>
+
+        <a href="#" class="top-btn">
+            <img src="../asset/img/top_svg.svg" alt="top">
+            <span>Top</span>
+        </a>
+        <a href="../html/result.html" class="top-btn_qr">
+            <img src="../asset/img/qr_icon.svg" alt="top">
+            <span>QR</span>
+        </a>
     </div><!-- //.wrap -->
 </body>
 

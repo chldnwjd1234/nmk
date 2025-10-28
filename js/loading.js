@@ -15,12 +15,21 @@ window.addEventListener('scroll', () => {
 });
 
 // 클릭 이벤트 리스너 (1024px 이하일 때만)
-document.getElementById('loading_screen').addEventListener('click', () => {
+document.getElementById('loading_screen').addEventListener('click', (e) => {
+    // 스킵 버튼 클릭 시에는 반응하지 않음
+    if (e.target.id === 'skip_button') return;
+    
     if (isMobile() && !hasAnimated) {
         console.log('클릭 감지 - 애니메이션 시작');
         hasAnimated = true;
         startLoadingAnimation();
     }
+});
+
+// 스킵 버튼 클릭 이벤트
+document.getElementById('skip_button').addEventListener('click', () => {
+    console.log('스킵 버튼 클릭 - 즉시 이동');
+    location.href = 'html/main.html';
 });
 
 function startLoadingAnimation() {
@@ -40,6 +49,7 @@ function startLoadingAnimation() {
         console.log('로고 표시');
         logo.classList.add('show');
     }, 0);
+    
     // 3단계: 전체 화면 페이드아웃
     setTimeout(() => {
         console.log('페이드아웃 시작');

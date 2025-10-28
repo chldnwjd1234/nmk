@@ -47,9 +47,7 @@ main .txt_box {
 main .Welcome {
     width: 100%;
     background: url(../asset/img_Vision/section2-welcome-bg.png) no-repeat center;
-    /* height: 1337px; */
     position: relative;
-    /* overflow-x: hidden; */
     padding-bottom: 250px;
 }
 
@@ -98,7 +96,6 @@ main .txt_box h3.big {
 main .Welcome .txt_box h3:last-child {
     text-align: right;
     margin-right: 0;
-    /* margin-bottom: 100px; */
 }
 
 /* living_space */
@@ -140,7 +137,6 @@ main .visions .card_set {
     margin: 0 auto;
 }
 
-/* 각 카드를 absolute로 자유롭게 배치 */
 main .visions .card1,
 main .visions .card2,
 main .visions .card3 {
@@ -151,7 +147,7 @@ main .visions .card3 {
     align-items: flex-start;
 }
 
-/* Create Life - 왼쪽에 바싹 */
+/* Create Life  */
 main .visions .card1 {
     top: 0;
     left: 0;
@@ -176,7 +172,6 @@ main .visions .card2 img {
     flex-shrink: 0;
 }
 
-/* Make the World - 오른쪽 하단 */
 main .visions .card3 {
     top: 500px;
     left: 36.5%;
@@ -188,7 +183,6 @@ main .visions .card3 img {
     flex-shrink: 0;
 }
 
-/* 텍스트 박스 */
 main .visions .txt_box {
     padding: 0;
     flex: 1;
@@ -254,7 +248,6 @@ main .Architecture .architecture_img .left {
 
 main .Architecture .architecture_img .left .top {
     transform-origin: right top;
-    /* left top에서 right top으로 변경 */
     rotate: 90deg;
     display: flex;
     flex-direction: column;
@@ -262,11 +255,7 @@ main .Architecture .architecture_img .left .top {
     position: absolute;
     right: 0;
     bottom: -5%;
-    /* bottom: -4.33% */
-    /* margin-bottom: 30px; */
-    /*     position: absolute;
-    right: 0;
-    bottom: -5%; */
+
 }
 
 main .Architecture .architecture_img .left p {
@@ -308,7 +297,6 @@ main .Collection_Storage {
     position: relative;
     padding-top: 216px;
     height: 1303px;
-    /* margin-bottom: 216px; */
 }
 
 main .Collection_Storage .bg {
@@ -344,13 +332,13 @@ main .Collection_Storage .collection_label ul.line li svg path {
     transition: stroke-dashoffset 1s ease;
 }
 
-/* on 또는 animated 클래스가 있으면 선 그려짐 */
+
 main .Collection_Storage .collection_label ul.line li.on svg path,
 main .Collection_Storage .collection_label ul.line li.animated svg path {
     stroke-dashoffset: 0;
 }
 
-/* line before (원) */
+
 main .Collection_Storage .collection_label ul.line li::before {
     content: '';
     width: 25px;
@@ -408,7 +396,7 @@ main .Collection_Storage .collection_label ul.line li:nth-child(7) {
     top: 18%;
 }
 
-/* line before (원) 각각의 위치 */
+
 main .Collection_Storage .collection_label ul.line li:nth-child(1)::before {
     left: 0;
     bottom: -15%;
