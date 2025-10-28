@@ -123,7 +123,7 @@
 
     .gr_section h3 {
         font-size: 20px;
-        margin-bottom: -40px;
+        margin-bottom: -30px;
     }
 
     .sample .top h3 {
@@ -170,6 +170,7 @@
         font-size: 15px;
         width: 270px;
         max-width: 100%;
+                margin-bottom: -20px;
     }
 
     .sample {
