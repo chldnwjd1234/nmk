@@ -46,7 +46,6 @@
     font-size: 22px;
     text-align: center;
     width: 100%;
-    margin: 40px 0 -40px 0;
 }
 
 /* Sample */
@@ -63,18 +62,21 @@
 .sample .top {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 15px;  /* gap 값 조정 */
     text-align: center;
     width: 100%;
 }
 
 .sample .top h3 {
-    font-size: 35px;
+    font-size: 28px;  /* 크기 조정 */
     font-weight: 600;
+    width: auto;  /* width: 100% 제거 */
+    margin: 0;  /* 기본 margin 제거 */
 }
 
 .sample .top p {
-    font-size: 25px;
+    font-size: 18px;  /* 크기 조정 */
+    margin: 0;  /* 기본 margin 제거 */
 }
 
 .sample .btm {
@@ -115,8 +117,13 @@
 
 /* 태블릿 */
 @media screen and (max-width: 1024px) {
+    .gr_section {
+        padding-top: 40px;
+    }
+
     .gr_section h3 {
         font-size: 20px;
+        margin-bottom: -40px;
     }
 
     .sample .top h3 {
@@ -130,6 +137,8 @@
     .sample img {
         max-width: 280px;
     }
+
+
 }
 
 /* 모바일 중간 */
@@ -159,6 +168,7 @@
 
     .gr_section h3 {
         font-size: 15px;
+        width: 270px;
         max-width: 100%;
     }
 
@@ -184,5 +194,7 @@
         font-size: 16px;
     }
 
-    .sample .btm {gap: 15px;}
+    .sample .btm {
+        gap: 15px;
+    }
 }
