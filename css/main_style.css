@@ -578,8 +578,9 @@ main .vision .line {
 
 main .vision .line_left {
     position: absolute;
-    left: 60px;
-    top: 100px;
+    scale: 99%;
+    left: 42px;
+    top: 133px;
     height: auto;
     z-index: 2;
 }
