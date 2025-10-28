@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: ".backimg",
                 start: "top 80%",
                 end: "bottom 100%",
-                scrub: 5,
+                scrub: 1,
                 markers: false
             }
         }
