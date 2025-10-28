@@ -9,6 +9,9 @@
 .banner_top .txt {
     letter-spacing: 1px;
 }
+.inner{
+    width: 100%;
+}
 
 /* QR Reader */
 #reader {
