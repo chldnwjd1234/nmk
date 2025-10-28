@@ -7,6 +7,25 @@
     scroll-behavior: smooth;
 }
 
+.t {
+    position: relative;
+}
+
+.t::before {
+    content: '';
+    background: var(--red-05-point);
+    opacity: .7;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: -8px;
+    top: -4px;
+    display: block;
+    z-index: -1;
+
+}
+
 :root {
     --w-color: #FFFFFF;
     --black: #1D1D1B;
@@ -63,7 +82,7 @@
     --r-10: 10px;
     --r-15: 15px;
     --r-20: 20px;
-    --r-round: 9999px;  
+    --r-round: 9999px;
 }
 
 body {
@@ -140,6 +159,13 @@ nav ul.gnb>li>a {
     transition: .3s;
     position: relative;
 }
+
+.gnb>li:nth-child(4)>a,
+.gnb>li:nth-child(5)>a {
+    color: rgba(0, 0, 0, 0.2);
+    /* 검은색에 30% 투명도 */
+}
+
 
 nav ul.gnb>li>a::after {
     content: '';
@@ -406,6 +432,11 @@ header.on .mobile_menu {
     font-family: var(--title-Zen);
 }
 
+.mobile_gnb li.has_sub:nth-child(4)>a,
+.mobile_gnb li.has_sub:nth-child(5)>a {
+    color: rgba(0, 0, 0, 0.2);
+}
+
 /* 서브메뉴 있는 항목 */
 .mobile_gnb>li.has_sub {
     position: relative;
@@ -445,6 +476,12 @@ header.on .mobile_menu {
     border: none;
     cursor: pointer;
     z-index: 10;
+}
+
+
+.mobile_gnb li.has_sub:nth-child(4) .toggle_btn,
+.mobile_gnb li.has_sub:nth-child(5) .toggle_btn {
+   opacity: .2;
 }
 
 .toggle_btn::after {
@@ -700,7 +737,7 @@ footer .select_box>button {
     border-radius: var(--r-10);
     font-family: inherit;
     z-index: 10;
-    
+
 }
 
 .select_box ul {
