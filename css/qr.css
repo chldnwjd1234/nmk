@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.banner_top {
+    background-image: url(../asset/img_Collection/image\ 853.png);
+    /* 본인 배너이미지 */
+}
+
+.banner_top .txt{
+    letter-spacing: 1px;
+}
