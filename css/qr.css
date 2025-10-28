@@ -1,10 +1,74 @@
 @charset "utf-8";
 
+/* Banner */
 .banner_top {
-    background-image: url(../asset/img_Collection/image\ 853.png);
-    /* 본인 배너이미지 */
+    background-image: url(../asset/img_qr/banner.png);
+    background-size: cover;
 }
 
-.banner_top .txt{
+.banner_top .txt {
     letter-spacing: 1px;
+}
+
+/* QR Reader */
+#reader {
+    width: 100%;
+    min-width: 320px;
+    margin: 20px auto;
+}
+
+#status {
+    margin-block: 15px;
+    color: var(--red-05-point);
+}
+
+/* Section */
+.gr_section {
+    padding-block: 20px;
+    text-align: center;
+}
+
+.gr_section h3 {
+    font-size: 22px;
+}
+
+/* Sample */
+.sample {
+    margin-block: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 80px;
+    align-items: center;
+    /* flex-direction과 align-items는 .gr_section .sample과 충돌하므로 제거 */
+}
+
+.sample img {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 300px;
+    height: 300px;
+}
+
+.sample .top {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sample .btm {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Preview Button */
+.preview_btn a {
+    padding: 13px 29px;
+    border-radius: var(--r-round);
+    background: var(--w-color);
+    opacity: 0.9;
+    font-size: var(--fspre-21);
+    color: var(--black);
+    transition: 0.2s;
 }

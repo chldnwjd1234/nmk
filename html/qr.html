@@ -16,60 +16,6 @@
     <script src="../js/common.js"></script>
     <script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/html5-qrcode/html5-qrcode.min.js"></script>
-    <style>
-        .banner_top {
-            background-image: url(../asset/img/muds_bg.png);
-            background-size: cover;
-            /* 본인 배너이미지 */
-        }
-
-        #reader {
-            width: 100%;
-            min-width: 320px;
-            margin: 20px auto;
-        }
-
-        #status {
-            margin-block: 15px;
-            color: var(--red-05-point)
-        }
-
-        .sample {
-            margin-block: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        .sample img {
-            border: 1px solid #ccc;
-            padding: 8px;
-            max-width: 900px;
-            width: 50vw;
-            height: 50vw;
-            margin-block: 10px;
-        }
-
-        .gr_section {
-            padding-block: 20px;
-            text-align: center;
-        }
-
-        .preview_btn {}
-
-        .preview_btn a {
-            padding: 13px 29px;
-            border-radius: var(--r-round);
-            background: var(--w-color);
-            opacity: 0.9;
-            font-size: var(--fspre-21);
-            color: var(--black);
-            transition: 0.2s;
-        }
-    </style>
 </head>
 
 <body>
@@ -242,6 +188,7 @@
                 <!-- 상단 아이콘 -->
                 <div class="mobile_header">
                     <div class="mobile_icons">
+                        <a href="./result.html"><img src="../asset/img/QR_icon.png" alt="qr"></a>
                         <a href="#"><img src="../asset/img/icon1.png" alt="global"></a>
                         <a href="#"><img src="../asset/img/icon2.png" alt="mypage"></a>
                     </div>
@@ -256,8 +203,8 @@
                             <a href="#">VISIT</a>
                             <button class="toggle_btn"></button>
                             <ul class="mobile_sub">
-                                <li><a href="./vision.html">Visitor Information</a></li>
-                                <li><a href="./map.html">Museum Map</a></li>
+                                <li><a href="./information.html" class="t">Visitor Information</a></li>
+                                <li><a href="./map.html" class="t">Museum Map</a></li>
                                 <li><a href="#">Guided Tours</a></li>
                                 <li><a href="#">Amenities</a></li>
                             </ul>
@@ -268,7 +215,7 @@
                             <a href="./exhibition.html">EXHIBITION</a>
                             <button class="toggle_btn"></button>
                             <ul class="mobile_sub">
-                                <li><a href="./exhibition.html">Special Exhibitions</a></li>
+                                <li><a href="./exhibition.html" class="t">Special Exhibitions</a></li>
                                 <li><a href="#">Permanent Exhibitions</a></li>
                                 <li><a href="#">Immersive Digital Gallery</a></li>
                                 <li><a href="#">Exhibits Online</a></li>
@@ -280,7 +227,7 @@
                             <a href="./collection.html">COLLECTION</a>
                             <button class="toggle_btn"></button>
                             <ul class="mobile_sub">
-                                <li><a href="./collection.html">Collection Database</a></li>
+                                <li><a href="./collection.html" class="t">Collection Database</a></li>
                                 <li><a href="#">Curator's Picks</a></li>
                                 <li><a href="#">Highlights</a></li>
                             </ul>
@@ -312,7 +259,7 @@
                             <a href="./vision.html">ABOUT US</a>
                             <button class="toggle_btn"></button>
                             <ul class="mobile_sub">
-                                <li><a href="./vision.html">Vision and Strategy</a></li>
+                                <li><a href="./vision.html" class="t">Vision and Strategy</a></li>
                                 <li><a href="#">History</a></li>
                                 <li><a href="#">Buildings</a></li>
                                 <li><a href="#">Contact Us</a></li>
@@ -324,7 +271,7 @@
                             <a href="https://muds.kr/" target="_blank">MUSEUM SHOP</a>
                             <button class="toggle_btn"></button>
                             <ul class="mobile_sub">
-                                <li><a href="https://muds.kr/" target="_blank">MUSEUM SHOP</a></li>
+                                <li><a href="https://muds.kr/" class="t" target="_blank">MUSEUM SHOP</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -354,11 +301,15 @@
 
                     <!-- 샘플 QR 표시 -->
                     <div class="sample">
-                        <h3>QR code for testing</h3>
-                        <p>Try scanning the QR code below with another device.</p>
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=900x900&data=https://chldnwjd1234.github.io/nmk/html/result.html"
-                            alt="샘플 QR 코드">
-                        <p class="preview_btn"><a href="./result.html">result preview</a></p>
+                        <div class="top">
+                            <h3>QR code for testing</h3>
+                            <p>Try scanning the QR code below with another device.</p>
+                        </div>
+                        <div class="btm">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=900x900&data=https://chldnwjd1234.github.io/nmk/html/result.html"
+                                alt="샘플 QR 코드">
+                            <p class="preview_btn"><a href="./result.html">result preview</a></p>
+                        </div>
                     </div>
                 </div>
             </section>
