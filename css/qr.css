@@ -62,21 +62,27 @@
 .sample .top {
     display: flex;
     flex-direction: column;
-    gap: 15px;  /* gap 값 조정 */
+    gap: 15px;
+    /* gap 값 조정 */
     text-align: center;
     width: 100%;
 }
 
 .sample .top h3 {
-    font-size: 28px;  /* 크기 조정 */
+    font-size: 28px;
+    /* 크기 조정 */
     font-weight: 600;
-    width: auto;  /* width: 100% 제거 */
-    margin: 0;  /* 기본 margin 제거 */
+    width: auto;
+    /* width: 100% 제거 */
+    margin: 0;
+    /* 기본 margin 제거 */
 }
 
 .sample .top p {
-    font-size: 18px;  /* 크기 조정 */
-    margin: 0;  /* 기본 margin 제거 */
+    font-size: 18px;
+    /* 크기 조정 */
+    margin: 0;
+    /* 기본 margin 제거 */
 }
 
 .sample .btm {
@@ -162,6 +168,12 @@
 
 /* 모바일 작은 화면 */
 @media screen and (max-width: 414px) {
+    .banner_top {
+        background-image: url(../asset/img_qr/banner2.png);
+        background-size: cover;
+    }
+
+
     .gr_section .inner {
         padding: 0 15px;
     }
@@ -170,7 +182,7 @@
         font-size: 15px;
         width: 270px;
         max-width: 100%;
-                margin-bottom: 10px;
+        margin-bottom: 10px;
     }
 
     .sample {
