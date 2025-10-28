@@ -709,11 +709,11 @@
         height: 10px;
         background: #1E5EFF;
         border-radius: 50%;
-        top: 55%;
+        top: 54%;
         /* 지도 내 위치 조정 */
         /* 수정.. */
         /* left: 9%; */
-        left: 7%;
+        left: 6%;
         /* 지도 내 위치 조정 */
         transform: translate(-50%, -50%);
         box-shadow: 0 0 8px rgba(30, 94, 255, 0.6);
