@@ -186,12 +186,25 @@ artImgsGroup.forEach((floorGroup, floorIndex) => {
 });
 
 // ============================
-// 🚀 초기 로드 시 애니메이션
+// 🚀 초기 로드 애니메이션 함수
 // ============================
-window.addEventListener("DOMContentLoaded", () => {
+function initLoadAnimation() {
     const leftSection = document.querySelector('.space .left');
     const mapRight = document.querySelector('.space .map_right');
     
+    // 기존 스타일 초기화
+    if (leftSection) {
+        leftSection.style.opacity = '';
+        leftSection.style.transform = '';
+        leftSection.style.transition = '';
+    }
+    if (mapRight) {
+        mapRight.style.opacity = '';
+        mapRight.style.transform = '';
+        mapRight.style.transition = '';
+    }
+    
+    // 데스크톱에서만 애니메이션
     if (window.innerWidth > 1024) {
         if (leftSection) {
             leftSection.style.opacity = '0';
@@ -219,7 +232,38 @@ window.addEventListener("DOMContentLoaded", () => {
             }
         }, 600);
     }
+}
+
+// ============================
+// 🔄 리사이즈 이벤트 처리
+// ============================
+let resizeTimer;
+let lastWidth = window.innerWidth;
+
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
     
+    resizeTimer = setTimeout(() => {
+        const currentWidth = window.innerWidth;
+        
+        // 1024px 브레이크포인트를 넘나들 때만 애니메이션 재적용
+        const crossedBreakpoint = 
+            (lastWidth <= 1024 && currentWidth > 1024) ||
+            (lastWidth > 1024 && currentWidth <= 1024);
+        
+        if (crossedBreakpoint) {
+            initLoadAnimation();
+        }
+        
+        lastWidth = currentWidth;
+    }, 300);
+});
+
+// ============================
+// 🎬 초기 로드
+// ============================
+window.addEventListener("DOMContentLoaded", () => {
+    initLoadAnimation();
     floorTabs[0].click();
 });
 
