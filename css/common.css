@@ -372,10 +372,17 @@ nav ul.gnb>li:hover .sub_menu {
     align-items: center;
 }
 
-.mobile_icons img {
-    width: 30px;
-    height: 30px;
+.mobile_icons a:nth-child(2) img,
+.mobile_icons a:nth-child(3) img{
+    width: 29px;
+    height: 29px;
 }
+
+.mobile_icons img:nth-child(1){
+    width: 25px;
+    height: 25px;
+}
+
 
 /* X 닫기 버튼 */
 .mobile_close {
