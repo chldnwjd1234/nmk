@@ -7,10 +7,6 @@
 body {
     overflow-x: hidden;
     min-height: 300vh;
-<<<<<<< HEAD
-    /* 스크롤 테스트용 - 충분히 길게 */
-=======
->>>>>>> origin/index
     margin: 0;
     padding: 0;
     background-color: #DACAB0;
@@ -49,10 +45,6 @@ body {
     top: 0;
     height: 100%;
     width: 50vw;
-<<<<<<< HEAD
-    /* 정확히 화면의 절반 */
-=======
->>>>>>> origin/index
     z-index: 3;
     transition: transform 1.5s ease-in-out;
 }
@@ -60,19 +52,11 @@ body {
 .door_left {
     left: 0;
     right: 50%;
-<<<<<<< HEAD
-    /* 정확히 중앙까지 */
-=======
->>>>>>> origin/index
     transform: translateX(0);
 }
 
 .door_right {
     left: 50%;
-<<<<<<< HEAD
-    /* 정확히 중앙부터 시작 */
-=======
->>>>>>> origin/index
     right: 0;
     transform: translateX(0);
 }
@@ -98,8 +82,6 @@ body {
 
 .logo.show {
     opacity: 1;
-<<<<<<< HEAD
-=======
 }
 
 /* 스크롤 안내 화살표 (1024px 초과에서만 표시) */
@@ -292,5 +274,4 @@ body {
         padding: 2px 5px;
         font-size: 14px;
     }
->>>>>>> origin/index
 }

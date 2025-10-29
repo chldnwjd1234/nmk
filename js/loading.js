@@ -40,11 +40,6 @@ function startLoadingAnimation() {
     const logo = document.querySelector('.logo');
     const loadingScreen = document.getElementById('loading_screen');
 
-<<<<<<< HEAD
-    // console.log('요소들:', doorLeft, doorRight, logo, loadingScreen);
-
-=======
->>>>>>> origin/index
     // 1단계: 문 열리기 시작
     doorLeft.classList.add('open');
     doorRight.classList.add('open');
@@ -59,16 +54,9 @@ function startLoadingAnimation() {
     setTimeout(() => {
         console.log('페이드아웃 시작');
         loadingScreen.classList.add('fade-out');
-<<<<<<< HEAD
-        // loadingScreen.style.display = 'none';
-    }, 2000);
-    setTimeout(() => {
-        location.href = '/html/main.html';
-=======
     }, 1200);
 
     setTimeout(() => {
         location.href = 'html/main.html';
->>>>>>> origin/index
     }, 2800);
 }
