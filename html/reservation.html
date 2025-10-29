@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="../css/common_media.css">
     <!-- 본인 미디어스타일 -->
     <script src="../js/common.js"></script>
-    
-    <!-- 본인 js -->
+
+    <script src="../js/reservation.js" defer></script>
     <script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
 </head>
 
@@ -173,7 +173,7 @@
                         </li>
                     </ul>
                     <div class="right">
-                        <a href="./qr.html"  class="t"><img src="../asset/img/QR_icon.png" alt="qr"></a>
+                        <a href="./qr.html" class="t"><img src="../asset/img/QR_icon.png" alt="qr"></a>
                         <a href="#"><img src="../asset/img/icon1.png" alt="global"></a>
                         <a href="#"><img src="../asset/img/icon2.png" alt="mypage"></a>
                     </div><!-- //.right -->
@@ -312,24 +312,24 @@
 
                         <!-- 안내사항 -->
                         <div class="info">
-                            <div class="txt_t">
-                                <h3>Directions</h3>
-                                <p>The reservation will be automatically canceled if you do not enter the museum 30
-                                    minutes after the session starts.</p>
-                                <p>(*Cancelled tickets will become available for individual online reservation.)</p>
-                            </div>
-                            <div class="txt_b">
-                                <h3>[No-show Policy]</h3>
-                                <p>If you have not entered by 30 minutes after the start of the session without
+                            <h3>Directions</h3>
+                            <ul class="txt_t">
+                                <li>The reservation will be automatically canceled <br> if you do not enter the museum
+                                    30
+                                    minutes after the session starts.<br>
+                                    (*Cancelled tickets will become available for individual online reservation.)</li>
+                            </ul>
+                            <ul class="txt_b">
+                                <li>[No-show Policy]<br>
+                                    If you have not entered by 30 minutes after the start of the session without
                                     cancellation, visiting of the children's museum will be restricted for 60 days from
                                     the date of a no-show, and all reservations within the restricted period will be
-                                    cancelled.</p>
-                            </div>
+                                    cancelled.</li>
+                            </ul>
                             <div class="lab">
-                                <button class="lab_t">
-                                    <span>Visitor Information</span>
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </button>
+                                <select class="lab_t">
+                                    <option selected><span>Visitor
+                                            Information</span><!-- <i class="fa-solid fa-chevron-down"></i> --></option>
                                 <div class="lab_txt">
                                     <div class="lab_s">
                                         <h4>Reservation Guide</h4>
@@ -363,24 +363,55 @@
                                             <li>For further information, Contact +82-2-2077-9647, 9648.</li>
                                         </ol>
                                     </div>
-                                </div>
+                                </select>
                             </div>
                         </div>
 
-                        <!-- 날짜/시간/인원/결제 폼 -->
+                        <!-- 날짜/시간/인원 폼 -->
                         <div class="form_section">
+                            <!-- Date -->
+                            <div class="form_group">
+                                <label class="form_label">Date</label>
+                                <input type="date" class="date_input" value="2025-01-13">
+                            </div>
 
-                        </div>
+                            <!-- Select Time -->
+                            <div class="form_group">
+                                <label class="form_label">Select Time</label>
+                                <div class="time_buttons">
+                                    <button type="button" class="time_btn">10:00 ~ 11:15</button>
+                                    <button type="button" class="time_btn">12:00 ~ 13:00</button>
+                                    <button type="button" class="time_btn">13:30 ~ 15:00</button>
+                                    <button type="button" class="time_btn">15:00 ~ 16:00</button>
+                                    <button type="button" class="time_btn">16:00 ~ 17:00</button>
+                                </div>
+                            </div>
 
-                        <div class="section2">
-
-                        </div>
-
-                        <div class="section3">
-
+                            <!-- Number of Visitors -->
+                            <div class="form_group">
+                                <label class="form_label">Number of Visitors</label>
+                                <div class="visitor_controls">
+                                    <div class="visitor_row">
+                                        <span class="visitor_label">Adult</span>
+                                        <div class="counter">
+                                            <button type="button" class="counter_btn minus">-</button>
+                                            <input type="number" class="counter_input" value="0" min="0" max="5">
+                                            <button type="button" class="counter_btn plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="visitor_row">
+                                        <span class="visitor_label">Child</span>
+                                        <div class="counter">
+                                            <button type="button" class="counter_btn minus">-</button>
+                                            <input type="number" class="counter_input" value="0" min="0" max="5">
+                                            <button type="button" class="counter_btn plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
+                   
                     <!-- 오른쪽: Total Amount -->
                     <div class="right_content">
                         <div class="total_amount">
