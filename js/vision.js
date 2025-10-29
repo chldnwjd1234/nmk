@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (window.innerWidth <= 1024) {
             radiusValue = "0 0 1200px 1200px";
         } else {
-            radiusValue = "0 0 2000px 2000px";
+            radiusValue = "0 0 2500px 2500px";
         }
         gsap.fromTo(".moon",
             {
