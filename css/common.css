@@ -194,6 +194,7 @@ header .right {
     display: flex;
     gap: 26px;
     padding-left: 100px;
+
 }
 
 header .right img {
@@ -201,6 +202,12 @@ header .right img {
     height: 30px;
 }
 
+header .right a:nth-child(1) img {
+    position: relative;
+    top: 1.5px;
+    width: 27px;
+    height: 27px;
+}
 
 .sub_menu {
     position: fixed;
@@ -373,12 +380,12 @@ nav ul.gnb>li:hover .sub_menu {
 }
 
 .mobile_icons a:nth-child(2) img,
-.mobile_icons a:nth-child(3) img{
+.mobile_icons a:nth-child(3) img {
     width: 29px;
     height: 29px;
 }
 
-.mobile_icons img:nth-child(1){
+.mobile_icons img:nth-child(1) {
     width: 25px;
     height: 25px;
 }
@@ -488,7 +495,7 @@ header.on .mobile_menu {
 
 .mobile_gnb li.has_sub:nth-child(4) .toggle_btn,
 .mobile_gnb li.has_sub:nth-child(5) .toggle_btn {
-   opacity: .2;
+    opacity: .2;
 }
 
 .toggle_btn::after {

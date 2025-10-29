@@ -201,7 +201,7 @@
 
     .top-btn {
         right: 25px;
-        bottom: 90px;
+        bottom: 180px;
         width: 75px;
         height: 75px;
     }
@@ -687,7 +687,7 @@
     .top-btn_qr {
         position: fixed;
         right: 25px;
-        bottom: 180px;
+        bottom: 90px;
         width: 75px;
         height: 75px;
         background: var(--blue-08);
@@ -1167,8 +1167,8 @@
     }
 
     .top-btn_qr {
-        right: 3px;
-        bottom: 168px;
+        right: 10px;
+        bottom: 110px;
         width: 52px;
         height: 52px;
     }
@@ -1187,8 +1187,8 @@
 
 
     .top-btn {
-        right: 3px;
-        bottom: 110px;
+        right: 10px;
+        bottom: 168px;
         width: 52px;
         height: 52px;
     }
