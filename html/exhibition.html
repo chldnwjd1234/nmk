@@ -7,55 +7,317 @@
     <meta name="keywords" content="museum,global,koera,박물관">
     <meta name="author" content="일단해보조">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NMK</title>
+    <title>NATIONAL MUSEUM OF KOREA</title>
     <link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="National Museum of Korea">
+    <meta property="og:description"
+        content="Experience the beauty of Korean history and culture through inspiring exhibitions.">
+    <meta property="og:image" content="https://chldnwjd1234.github.io/nmk/asset/img/link.png">
+    <meta property="og:url" content="https://chldnwjd1234.github.io/nmk/">
+    <meta property="og:type" content="website">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/special.css">
+    <link rel="stylesheet" href="../css/common_media.css">
+    <link rel="stylesheet" href="../css/special.css"><!-- 본인 스타일 -->
+    <link rel="stylesheet" href="../css/special_media.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="../js/special.js"></script>
+    <link rel="stylesheet" href="../css/common_media.css">
+    <script src="../js/common.js"></script>
+    <!-- 
+    <link rel="stylesheet" href="../css/test_media.css"> --><!-- 본인 미디어스타일 -->
+    <!--     <script src="../js/common.js"></script>
+    --><!-- 본인 js -->
+
+    <script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="wrap">
-        <header>
+      <header>
             <div class="inner">
-                <img src="../asset/img/eng_header_logo.png" alt="logo">
-                <h1><a href="#">NMK</a></h1>
+                <h1><a href="./main.html"><img src="../asset/img/eng_header_logo.png" alt="NMK" class="logo"></a></h1>
                 <nav>
-                    <ul>
-                        <li><a href="#">VISIT</a></li>
-                        <li><a href="#">EXHIBITION</a></li>
-                        <li><a href="#">COLLECTION</a></li>
-                        <li><a href="#">EVENT</a></li>
-                        <li><a href="#">NMK GLOBAL</a></li>
-                        <li><a href="#">ABOUT US</a></li>
-                        <li><a href="#">MUSEUM SHOP</a></li>
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">VISIT</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>VISIT</h2>
+                                        <p>Learn more about visiting the<br>National Museum of Korea.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="./information.html" class="t">Visitor Information</a></li>
+                                            <li><a href="./map.html" class="t">Museum Map</a></li>
+                                            <li><a href="#">Guided Tours</a></li>
+                                            <li><a href="#">Amenities</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./exhibition.html">EXHIBITION</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>EXHIBITION</h2>
+                                        <p>Discover current and upcoming exhibitions.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="./exhibition.html" class="t">Special Exhibitions</a></li>
+                                            <li><a href="#">Permanent Exhibitions</a></li>
+                                            <li><a href="#">Immersive Digital Gallery</a></li>
+                                            <li><a href="#">Exhibits Online</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./collection.html">COLLECTION</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>COLLECTION</h2>
+                                        <p>Explore the museum’s treasured artifacts.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="./collection.html" class="t">Collection Database</a></li>
+                                            <li><a href="#">Curator’s Picks</a></li>
+                                            <li><a href="#">Highlights</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">EVENT</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>EVENT</h2>
+                                        <p>Join cultural programs <br> and special events.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="#">Event</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">NMK GLOBAL</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>NMK GLOBAL</h2>
+                                        <p>Experience the museum’s world outreach.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="#">At a Glance</a></li>
+                                            <li><a href="#">Global Exhibitions</a></li>
+                                            <li><a href="#">Academic Activities</a></li>
+                                            <li><a href="#">Exchange Programs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./vision.html">ABOUT US</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>ABOUT US</h2>
+                                        <p>Learn about the museum’s history and vision.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="./vision.html" class="t">Vision and Strategy</a></li>
+                                            <li><a href="#">History</a></li>
+                                            <li><a href="#">Builldings</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://muds.kr/">MUSEUM SHOP</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>MUSEUM SHOP</h2>
+                                        <p>Find unique gifts inspired <br> by our collection.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="https://muds.kr/" class="t">Museum shop</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
+                    <div class="right">
+                        <a href="./qr.html"  class="t"><img src="../asset/img/QR_icon.png" alt="qr"></a>
+                        <a href="#"><img src="../asset/img/icon1.png" alt="global"></a>
+                        <a href="#"><img src="../asset/img/icon2.png" alt="mypage"></a>
+                    </div><!-- //.right -->
                 </nav>
-                <div class="right">
-                    <a href="#"><img src="../asset/img/icon1.png" alt=""></a>
-                    <a href="#"><img src="../asset/img/icon2.png" alt=""></a>
-                </div><!-- //.right -->
+                <!-- 햄 아이콘 시작 -->
+                <div class="ham">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <!-- 햄 아이콘 끝 -->
             </div><!-- //.inner -->
+            <!-- 모바일 메뉴 -->
+
+            <div class="mobile_menu">
+                <!-- 상단 아이콘 -->
+                <div class="mobile_header">
+                    <div class="mobile_icons">
+                        <a href="./qr.html"><img src="../asset/img/QR_icon.png" alt="qr"></a>
+                        <a href="#"><img src="../asset/img/icon1.png" alt="global"></a>
+                        <a href="#"><img src="../asset/img/icon2.png" alt="mypage"></a>
+                    </div>
+                    <button class="mobile_close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="mobile_inner">
+                    <ul class="mobile_gnb">
+                        <!-- VISIT -->
+                        <li class="has_sub">
+                            <a href="#">VISIT</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="./information.html" class="t">Visitor Information</a></li>
+                                <li><a href="./map.html" class="t">Museum Map</a></li>
+                                <li><a href="#">Guided Tours</a></li>
+                                <li><a href="#">Amenities</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- EXHIBITION -->
+                        <li class="has_sub">
+                            <a href="./exhibition.html">EXHIBITION</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="./exhibition.html" class="t">Special Exhibitions</a></li>
+                                <li><a href="#">Permanent Exhibitions</a></li>
+                                <li><a href="#">Immersive Digital Gallery</a></li>
+                                <li><a href="#">Exhibits Online</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- COLLECTION -->
+                        <li class="has_sub">
+                            <a href="./collection.html">COLLECTION</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="./collection.html" class="t">Collection Database</a></li>
+                                <li><a href="#">Curator's Picks</a></li>
+                                <li><a href="#">Highlights</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- EVENT -->
+                        <li class="has_sub">
+                            <a href="#">EVENT</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="#">Event</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- NMK GLOBAL -->
+                        <li class="has_sub">
+                            <a href="#">NMK GLOBAL</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="#">At a Glance</a></li>
+                                <li><a href="#">Global Exhibitions</a></li>
+                                <li><a href="#">Academic Activities</a></li>
+                                <li><a href="#">Exchange Programs</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- ABOUT US -->
+                        <li class="has_sub">
+                            <a href="./vision.html">ABOUT US</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="./vision.html" class="t">Vision and Strategy</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Buildings</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- MUSEUM SHOP -->
+                        <li class="has_sub">
+                            <a href="https://muds.kr/" target="_blank">MUSEUM SHOP</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="https://muds.kr/" class="t" target="_blank">MUSEUM SHOP</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </header>
+        <main class="bg">
+            <section class="banner_top">
+                <div class="txt inner">Special Exhibition</div><!-- 배너 타이틀 -->
+            </section><!-- //.banner_top -->
 
-
-        <main>
-            <div class="banner_top">
-                <img class="banner_img" src="../asset/img_Collection/image 853.png" alt="Collection Banner">
-                <div class="txt">Collection Database</div>
-            </div><!-- //.banner_top -->
             <div class="sub">
-                <img class="logo" src="../asset/img_Collection/sub_logo.png" />
-                <i class="fa-solid fa-chevron-right"></i>
-                <div class="menu_title">Collection</div>
-                <i class="fa-solid fa-chevron-right"></i>
-                <div class="menu_sub">Collection Database</div>
+                <div class="inner">
+                    <a href="./html/main.html"><img class="logo" src="../asset/img_Collection/sub_logo.png" /></a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <a href="./html/collection.html">Collection</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <a class="menu_sub" href="./html/collection.html">Collection Database</a>
+                </div><!-- 각자 맞는 페이지 걸기 -->
             </div><!-- //.sub -->
 
             <section class="SpecialExhibition">
                 <div class="inner">
                     <div class="img_left">
-                        <img src="../asset/img_Special/img_모자를 쓴 소녀 2.png" alt="">
+                        <img src="../asset/img_Special/img_poster.png" alt="">
                     </div><!-- //.img_left -->
 
                     <div class="txt_right">
@@ -64,7 +326,7 @@
                                 <span class="label_1">Upcoming</span>
                                 <span class="label_2">Special</span>
                             </div><!-- //.box_1 -->
-                            <div class="title">
+                            <div class="tit">
                                 <h2>Collectors of Light</h2>
                             </div><!-- //.title -->
                             <div class="data">
@@ -94,12 +356,12 @@
                             </div>
                         </div><!-- //.Exhibition -->
 
-                        <div class="btn">
+                        <div class="btn_all">
                             <div class="btn_left">
-                                <button class="QR"><img src="../asset/img_Special/Icon_QR.png" alt="QR"></button>
-                                <button class="PRINT"><img src="../asset/img_Special/Icon_Print.png"
+                                <button class="QR"><img src="../asset/img_Special/QRicon_1.png" alt="QR"></button>
+                                <button class="PRINT"><img src="../asset/img_Special/Printicon_2.png"
                                         alt="PRINT"></button>
-                                <button class="SHARE"><img src="../asset/img_Special/Icon_share.png"
+                                <button class="SHARE"><img src="../asset/img_Special/Shareicon_3.png"
                                         alt="SHARE"></button>
                             </div><!-- //.btn_left -->
                             <div class="btn_right">
@@ -112,89 +374,294 @@
                 </div><!-- //.inner -->
             </section><!-- //.SpecialExhibition -->
 
-            <div class="ExhibitionVisual">
+            <section class="ExhibitionVisual">
                 <div class="inner">
-                    <div class="Exhibition_mini_banner">
-                        <div class="Exhibition_right">
-                            <h3>Collectors of Light </h3>
-                            <p>From Impressionism to early Modernism, artists redefined vision itself through the study
+                    <div class="txt_all">
+                        <h3>Collectors of Light </h3>
+                        <div class="contents">
+                            <p>From Impressionism to early Modernism,<br> artists redefined vision itself through the
+                                study
                                 of
                                 light.
-                                <br>
-                                <br>
-                                The Collectors of Light presents 81 works from The Met’s Robert Lehman Collection,
+                            </p>
+                            <p>
+                                The Collectors of Light presents 81 works from <br> The Met’s Robert Lehman
+                                Collection,<br>
                                 celebrating both
-                                the painters who captured light and the collector who devoted his life to preserving it.
-                                <br>
-                                <br>
-                                Once seen as radical, Impressionism became the language that opened the path to modern
-                                art —
+                                the painters who captured light <br>and the collector who devoted his life to preserving
+                                it.
+                            </p>
+                            <p>
+                                Once seen as radical, Impressionism became<br> the language that opened the path to
+                                modern
+                                art —<br>
                                 inviting us to reflect on how the act of seeing transforms creation.
                             </p>
-                        </div><!-- //.Exhibition_right -->
-                    </div><!-- //.Exhibition_mini_banner -->
+                        </div>
+
+                        <div class="contents_short">
+                            <p>"The Collectors of Light" at The Met showcases 81 works from the Robert Lehman
+                                Collection, tracing how Impressionist and early Modernist artists redefined vision
+                                through light — and how one collector preserved their legacy.</p>
+                        </div>
+                    </div>
                 </div><!-- //.inner -->
 
-                <div class="ExhibitionStructure">
-                    <div class="inner">
-                        <div class="title">
-                            <h2>Exhibition Structure</h2>
-                        </div>
-                        <div class="Exhibition_1" data-aos="fade-up">
-                            <img src="../asset/img_Special/img_1.png" alt="img_1" class="img_1">
-                            <div class="Exhibition_txt">
-                                <h2>01</h2>
-                                <h3>The Human Body, Human Nature</h3>
-                                <p>This section explores how depictions of the human body—long at the center of
-                                    art—shifted in the 19th century toward a human-centered way of thinking.</p>
-                                <span>Paul Cézanne<br>(The Bathers / Les Baigneuses)</The></span>
-                            </div><!-- //.Exhibition_txt -->
-                        </div><!-- //.Exhibition_1 -->
+            </section>
 
-                        <div class="Exhibition_2" data-aos="fade-down">
-                            <div class="Exhibition_txt">
-                                <h2>02</h2>
-                                <h3>Ourselves Today: Portraits and Individuality</h3>
-                                <p>Focusing on 19th-century portraiture that reflected both individuality and social
-                                    identity, this section highlights the diverse faces and characters that defined the
-                                    era.</p>
-                                <span>Mary Cassatt<br>(Spring: Margot Standing in a Garden)</The></span>
-                            </div><!-- //.Exhibition_txt -->
-                            <img src="../asset/img_Special/img_2.png" alt="img_2" class="img_2">
-                        </div><!-- //.Exhibition_2 -->
+            <section class="ExhibitionStructure">
+                <div class="title inner">
+                    <h2>Exhibition Structure</h2>
+                </div>
+                <div class="inner articles_all">
+                    <article class="Exhibition_1" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                        <img src="../asset/img_Special/img_1.png" alt="img_1" class="img_1">
+                        <div class="Exhibition_txt">
+                            <i>01</i>
+                            <h3>The Human Body, Human Nature</h3>
+                            <p class="long">This section explores how depictions of the human body—long at the center of
+                                art—shifted in the 19th century toward a human-centered way of thinking.</p>
 
-                        <div class="Exhibition_3" data-aos="fade-up">
-                            <img src="../asset/img_Special/img_3.png" alt="img_3" class="img_3">
-                            <div class="Exhibition_txt">
-                                <h2>03</h2>
-                                <h3>Eternal Moments in Nature</h3>
-                                <p>Amid the transformations of industrialization, artists sought new ways to capture
-                                    nature. This section examines their attempts to portray landscapes encountered
-                                    directly outdoors from fresh perspectives. </p>
-                                <span>Vincent van Gogh<br>(Flowering Orchard)</The></span>
-                            </div><!-- //.Exhibition_txt -->
-                        </div><!-- //.Exhibition_3 -->
+                            <p class="short">This section shows how 19th-century art reimagined the human body with a
+                                new human-centered vision.
+                            </p>
+                            <span>Paul Cézanne<br>(The Bathers / Les Baigneuses)</span>
+                        </div><!-- //.Exhibition_txt -->
+                    </article><!-- //.Exhibition_1 -->
 
-                        <div class="Exhibition_4">
-                            <div class="Exhibition_txt">
-                                <h2>04</h2>
-                                <h3>Ourselves Today: Portraits and Individuality</h3>
-                                <p>Focusing on 19th-century portraiture that reflected both individuality and social
-                                    identity, this section highlights the diverse faces and characters that defined the
-                                    era.</p>
-                                <span>Mary Cassatt<br>(Spring: Margot Standing in a Garden)</The></span>
-                            </div><!-- //.Exhibition_txt -->
-                            <img src="../asset/img_Special/img_4.png" alt="img_4" class="img_4">
-                        </div><!-- //.Exhibition_4 -->
+                    <article class="Exhibition_2" data-aos="fade-down" data-aos-delay="500"
+                        data-aos-anchor-placement="bottom-bottom">
+                        <div class="Exhibition_txt">
+                            <i>02</i>
+                            <h3>Ourselves Today: Portraits and Individuality</h3>
+                            <p class="long">Focusing on 19th-century portraiture that reflected both individuality and
+                                social
+                                identity, this section highlights the diverse faces and characters that defined the
+                                era.</p>
 
-                        <div class="Exhibition_5">
+                            <p class="short">This section highlights 19th-century portraits that captured individuality
+                                and social identity.
+                            </p>
+                            <span>Mary Cassatt<br>(Spring: Margot Standing in a Garden)</span>
+                        </div><!-- //.Exhibition_txt -->
+                        <img src="../asset/img_Special/img_2.png" alt="img_2" class="img_2">
+                    </article><!-- //.Exhibition_2 -->
 
-                        </div><!-- //.Exhibition_5 -->
+                    <article class="Exhibition_3" data-aos="fade-up" data-aos-delay="1000"
+                        data-aos-anchor-placement="bottom-bottom">
+                        <img src="../asset/img_Special/img_3.png" alt="img_3" class="img_3">
+                        <div class="Exhibition_txt">
+                            <i>03</i>
+                            <h3>Eternal Moments in Nature</h3>
+                            <p class="long">Amid the transformations of industrialization, artists sought new ways to
+                                capture
+                                nature. This section examines their attempts to portray landscapes encountered
+                                directly outdoors from fresh perspectives. </p>
+
+                            <p class="short">This section explores how artists redefined nature through fresh, outdoor
+                                perspectives.
+                            </p>
+                            <span>Auguste Renoir<br>(Figures on the Beach)</span>
+                        </div><!-- //.Exhibition_txt -->
+                    </article><!-- //.Exhibition_3 -->
+
+                    <article class="Exhibition_4" data-aos="fade-down" data-aos-delay="1500"
+                        data-aos-anchor-placement="bottom-bottom">
+                        <div class="Exhibition_txt">
+                            <i>04</i>
+                            <h3>Ourselves Today: Portraits and Individuality</h3>
+                            <p class="long">Focusing on 19th-century portraiture that reflected both individuality and
+                                social
+                                identity, this section highlights the diverse faces and characters that defined the
+                                era.</p>
+
+                            <p class="short">This section highlights portraits capturing 19th-century individuality and
+                                identity.
+                            </p>
+                            <span>Mary Cassatt<br>(Spring: Margot Standing in a Garden)</span>
+                        </div><!-- //.Exhibition_txt -->
+                        <img src="../asset/img_Special/img_4.png" alt="img_4" class="img_4">
+                    </article><!-- //.Exhibition_4 -->
+
+                    <article class="Exhibition_5" data-aos="fade-up" data-aos-delay="2000"
+                        data-aos-anchor-placement="bottom-bottom">
+                        <img src="../asset/img_Special/img_5.png" alt="img_5" class="img_5">
+                        <div class="Exhibition_txt">
+                            <i>05</i>
+                            <h3>Reflections in Rippling Water</h3>
+                            <p class="long">Through riverside and waterside scenes that allowed for experiments with
+                                light and color,
+                                this section sheds light on the Impressionists’ innovative approaches to perception and
+                                representation. </p>
+
+                            <p class="short">This section explores how riverside scenes inspired Impressionists’
+                                experiments with light and color.
+                            </p>
+                            <span>Vincent van Gogh<br>(Flowering Orchard)</span>
+                        </div><!-- //.Exhibition_txt -->
+                    </article><!-- //.Exhibition_5 -->
+                </div>
+            </section><!-- //.ExhibitionStructure -->
+
+
+            <section class="MajorExhibition">
+                <div class="horizontal_section">
+                    <div class="tit inner">
+                        <h2>Major Exhibition</h2>
                     </div>
-                </div><!-- //.ExhibitionStructure -->
-            </div><!-- //.ExhibitionVisual -->
+                    <div class="slide_box track">
+                        <article class="img">
+                            <span>Georges Seurat<br>(A Sunday Afternoon on the Island of La Grande Jatte)</span>
+                            <img src="../asset/img_Special/slide_1.png" alt="1">
+                        </article>
+                        <article class="img">
+                            <img src="../asset/img_Special/slide_2.png" alt="2">
+                            <span>Van Gogh<br>(Flowering Orchards)</span>
+                        </article>
+                        <article class="img">
+                            <span>Albert Marquet<br>(The Port of Bougie, Algeria, in Sunlight)</span>
+                            <img src="../asset/img_Special/slide_3.png" alt="1">
+                        </article>
+                        <article class="img">
+                            <img src="../asset/img_Special/slide_4.png" alt="1">
+                            <span>Raimundo de Madrazo y Garreta<br>(The Masks)</span>
+                        </article>
+                        <article class="img">
+                            <span>Paul Cézanne<br>(Trees and Houses near the Jas de Bouffan)</span>
+                            <img src="../asset/img_Special/slide_5.png" alt="1">
+                        </article>
+                    </div>
+                </div>
+            </section><!-- //.MajorExhibition -->
+
+            <div class="RecommendedExhibition">
+                <div class="tit inner">
+                    <h2>Recommended Exhibition</h2>
+                </div>
+                <div class="Recommended swiper">
+                    <div class="swiper-wrapper">
+                        <article class="poster_1 swiper-slide">
+                            <img src="../asset/img_Special/Recommend_1.png" alt="1">
+                        </article>
+
+                        <article class="poster_2 swiper-slide">
+                            <img src="../asset/img_Special/Recommend_2.png" alt="1">
+                        </article>
+
+                        <article class="poster_3 swiper-slide">
+                            <img src="../asset/img_Special/Recommend_3.png" alt="1">
+                        </article>
+
+                        <article class="poster_4 swiper-slide">
+                            <img src="../asset/img_Special/Recommend_4.png" alt="1">
+                        </article>
+
+                        <article class="poster_5 swiper-slide">
+                            <img src="../asset/img_Special/Recommend_5.png" alt="5">
+                        </article>
+                        <article class="poster_6 swiper-slide">
+                            <img src="../asset/img_Special/Recommend_6.png" alt="6">
+                        </article>
+
+                        <article class="poster_7 swiper-slide">
+                            <img src="../asset/img_Special/Recommend_7.png" alt="7">
+                        </article>
+
+                        <article class="poster_8 swiper-slide">
+                            <img src="../asset/img_Special/Recommend_8.png" alt="8">
+                        </article>
+
+                        <article class="poster_9 swiper-slide">
+                            <img src="../asset/img_Special/Recommend_9.png" alt="9">
+                        </article>
+
+                        <article class="poster_10 swiper-slide">
+                            <img src="../asset/img_Special/Recommend_10.png" alt="10">
+                        </article>
+                    </div>
+                </div><!-- //.Recommended inner -->
+            </div>
+
         </main>
 
+        <footer>
+            <div class="inner">
+                <div class="f_top">
+                    <div class="f_txt">
+                        <h3>Websites</h3>
+                        <ul>
+                            <li><a href="#">Children’s Museum</a></li>
+                            <li><a href="#">Museum Shop</a></li>
+                            <li><a href="#">NMK Magazine</a></li>
+                            <li><a href="#">JKAA</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Learning</h3>
+                        <ul>
+                            <li><a href="#">Learning</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Connect</h3>
+                        <ul>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f_bot">
+                    <div class="bot_txt">
+                        <p>137 Seobinggo-ro, Yongsan-gu, Seoul, 04383, Republic of Korea</p>
+                        <p>Tel : +82-2-2077-9000</p>
+                        <p>© National Museum of Korea.</p>
+                    </div><!-- //.bot_txt -->
+                    <div class="f_right">
+                        <div class="select_box">
+                            <button type="button">Related Site<i class="fa-solid fa-angle-up"></i></button>
+                            <ul>
+                                <li><a href="#">Jeonju National Museum</a></li>
+                                <li><a href="#">Daegu National Museum</a></li>
+                                <li><a href="#">Buyeo National Museum</a></li>
+                                <li><a href="#">Gongju National Museum</a></li>
+                                <li><a href="#">Jinju National Museum</a></li>
+                                <li><a href="#">Cheongju National Museum</a></li>
+                                <li><a href="#">Gimhae National Museum</a></li>
+                                <li><a href="#">Jeju National Museum</a></li>
+                                <li><a href="#">Chuncheon National Museum</a></li>
+                                <li><a href="#">Naju National Museum</a></li>
+                                <li><a href="#">Iksan National Museum</a></li>
+                                <li><a href="#">Cultural Foundation of National Museum of Korea</a></li>
+                                <li><a href="#">Friends of National Museum of Korea</a></li>
+                                <li><a href="#">The Korean Museum Association</a></li>
+                            </ul>
+                        </div><!-- //.select_box -->
+                        <div class="select_box">
+                            <button type="button">Guidebook Download<i class="fa-solid fa-angle-up"></i></button>
+                            <ul>
+                                <li><a href="#">한국어(PDF)</a></li>
+                                <li><a href="#">English(PDF)</a></li>
+                                <li><a href="#">中文(PDF)</a></li>
+                                <li><a href="#">日本語(PDF)</a></li>
+                                <li><a href="#">Français(PDF)</a></li>
+                                <li><a href="#">Deutsche(PDF)</a></li>
+                                <li><a href="#">Español(PDF)</a></li>
+                            </ul>
+                        </div><!-- //.select_box -->
+                    </div><!-- //.f_right -->
+                </div><!-- //.f_bot -->
+            </div>
+        </footer>
     </div><!-- //.wrap -->
 </body>
 

@@ -1,0 +1,424 @@
+@charset "utf-8";
+
+
+.banner_top {
+    background-image: url(../asset/img_Collection/banner_collection.png);
+    /* 본인 배너이미지 */
+}
+
+
+.search {
+    /* padding: 45px 80px; */
+    padding-top: 45px;
+    text-align: center;
+}
+
+/* 검색창 */
+.search_bar {
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 11px;
+    width: 442px;
+    position: relative;
+}
+
+.search_bar input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-size: var(--fspre-21);
+    color: var(--gray-07-footer);
+    margin-left: 10px;
+    padding-right: 50px;
+    outline: none;
+}
+
+.search_bar input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>');
+    cursor: pointer;
+    background-size: contain;
+}
+
+/* 돋보기 아이콘 */
+.search_bar button {
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+    border: none;
+    border-radius: var(--r-round);
+    background: var(--w-color);
+    opacity: 0.8;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    margin: 0;
+}
+
+.search_bar button i {
+    font-size: 20px;
+    color: var(--black);
+}
+
+.qr_icon {
+    display: none;
+}
+
+/* search btn */
+.txt_btn {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.txt_btn button {
+    padding: 13px 29px;
+    border: none;
+    border-radius: var(--r-round);
+    background: var(--w-color);
+    opacity: 0.9;
+    font-size: var(--fspre-21);
+    color: var(--black);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.txt_btn button:hover {
+    background: var(--gray-08);
+    color: var(--w-color);
+}
+
+.txt_btn button.active {
+    background: var(--gray-08);
+    color: var(--w-color);
+}
+
+/* 레이아웃 버튼 */
+.view_btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 72px;
+}
+
+.view_btns button {
+    width: 62px;
+    height: 56px;
+    background-size: 38px;
+    padding: 8px;
+    border-radius: var(--r-10);
+    cursor: pointer;
+    transition: 0.25s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--yellow-02);
+    border: none;
+}
+
+.view_btns button.btn1 {
+    background-image: url(../asset/img_Collection/icon2_on.png);
+}
+
+.view_btns button.btn2 {
+
+    background-image: url(../asset/img_Collection/icon1_on.png);
+}
+
+.view_btns button.btn1.on {
+    background-image: url(../asset/img_Collection/icon2_off.png);
+
+}
+
+.view_btns button.btn2.on {
+    background-image: url(../asset/img_Collection/icon1_off.png);
+}
+
+.view_btns button.on {
+    background-color: var(--gray-07-footer);
+}
+
+/* 카드 슬라이드 섹션 */
+.con {
+    padding: 0px 100px 200px 100px;
+    width: 100%;
+}
+
+.con .results {
+    margin-bottom: 12px;
+}
+
+.con span {
+    font-size: var(--fspre-20);
+    color: var(--black);
+}
+
+.con span b {
+    color: var(--red-06);
+}
+
+
+/* 카드 공통 */
+.card_wrap.on {
+    display: block;
+}
+
+.card_wrap {
+    display: none;
+}
+
+.card_wrap1 ul {
+    display: flex;
+    width: 100%;
+    /* gap: 20px; */
+    height: 600px;
+    margin: 0;
+}
+
+.card_wrap1 ul li.card {
+    width: fit-content;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: var(--r-15);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .05);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+/* 이미지 영역 */
+.card_wrap1 .card .thumb {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 20px 20px 10px 20px;
+}
+
+.card .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--r-20);
+    display: block;
+}
+
+/* 텍스트 */
+.card .txt {
+    padding: 20px;
+    text-align: left;
+    display: block;
+}
+
+.card .title {
+    font-size: var(--fspre-23);
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 2px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+.card p {
+    font-size: var(--fspre-20);
+    color: var(--gray-06);
+    line-height: 1.4;
+    -webkit-line-clamp: 2;
+}
+
+.card_wrap2::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.card_wrap2 ul {}
+
+.card_wrap2 ul li {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.card_wrap2 ul li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: var(--r-15);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .05);
+    position: relative;
+    padding: 10px;
+}
+
+.card_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: var(--r-15);
+}
+
+.card:hover .card_overlay {
+    opacity: 1;
+}
+
+/* 오버레이 컨텐츠 */
+/* --.card_wrap1-- */
+.card_wrap1 .overlay_content {
+    text-align: center;
+    color: var(--w-color);
+    padding: 20px;
+}
+
+.card_wrap1 .overlay_content .category,
+.card_wrap1 .overlay_content .Dimensions {
+    font-size: var(--fspre-20);
+    color: var(--gray-04);
+    /* margin-bottom: 3px; */
+    font-weight: 200;
+}
+
+.card_wrap1 .overlay_content .period,
+.card_wrap1 .overlay_content .treasure,
+.card_wrap1 .overlay_content .cm {
+    font-size: var(--fspre-25);
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: var(--w-color);
+    /* background-color: aqua; */
+}
+
+/* --.card_wrap2-- */
+
+.card_wrap2 .overlay_content {
+    text-align: center;
+    color: var(--w-color);
+    padding: 20px;
+}
+
+.card_wrap2 .overlay_content .category,
+.card_wrap2 .overlay_content .Dimensions {
+    font-size: 15px;
+    color: var(--gray-04);
+    /* margin-bottom: 3px; */
+    font-weight: 200;
+}
+
+.card_wrap2 .overlay_content .period,
+.card_wrap2 .overlay_content .treasure,
+.card_wrap2 .overlay_content .cm {
+    /* font-size: var(--fspre-25); */
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: var(--w-color);
+}
+
+/* mini */
+.card_wrap2 .mini_overlay_content {
+    text-align: center;
+    color: var(--w-color);
+    padding: 20px;
+}
+
+.card_wrap2 .mini_overlay_content .category,
+.card_wrap2 .mini_overlay_content .Dimensions {
+    font-size: 15px;
+    color: var(--gray-04);
+    /* margin-bottom: 3px; */
+    font-weight: 200;
+}
+
+.card_wrap2 .mini_overlay_content .period,
+.card_wrap2 .mini_overlay_content .treasure,
+.card_wrap2 .mini_overlay_content .cm {
+    /* font-size: var(--fspre-25); */
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: var(--w-color);
+}
+
+/* 그리드 형식의 호버 뷰버튼 */
+.card_wrap2 .card_overlay .overlay_content .viewicon_btn {
+    margin-top: 20px;
+    padding: 13px 30px;
+    background: var(--w-color);
+    color: var(--black);
+    border: none;
+    border-radius: var(--r-round);
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    background: var(--yellow-03);
+}
+
+/* View Details 버튼 */
+.viewicon_btn {
+    margin-top: 30px;
+    padding: 18px 50px;
+    background: var(--w-color);
+    color: var(--black);
+    border: none;
+    border-radius: var(--r-round);
+    font-size: var(--fspre-20);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    background: var(--yellow-03);
+}
+
+.view_btn i {
+    font-size: 16px;
+}
+
+.card_wrap2 ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.card_wrap2 ul li .thumb {
+    width: 100%;
+}
+
+.card_wrap2 ul li .thumb img {
+    width: 100%;
+}
+
+/* 카드 애니메이션 */
+.card_wrap2 .card {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.card_wrap2 .card.show {
+    transform: translateY(0);
+    opacity: 1;
+}

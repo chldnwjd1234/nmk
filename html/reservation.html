@@ -1,16 +1,494 @@
-<!DOCTYPE html>
-<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="국립중앙박물관 글로벌 사이트 입니다">
     <meta name="keywords" content="museum,global,koera,박물관">
     <meta name="author" content="일단해보조">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NMK</title>
+    <title>NATIONAL MUSEUM OF KOREA</title>
+    <meta property="og:title" content="National Museum of Korea">
+    <meta property="og:description"
+        content="Experience the beauty of Korean history and culture through inspiring exhibitions.">
+    <meta property="og:image" content="https://chldnwjd1234.github.io/nmk/asset/img/link.png">
+    <meta property="og:url" content="https://chldnwjd1234.github.io/nmk/">
+    <meta property="og:type" content="website">
     <link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/reservation_style.css"><!-- 본인 스타일 -->
+    <link rel="stylesheet" href="../css/common_media.css">
+    <!-- 본인 미디어스타일 -->
+    <script src="../js/common.js"></script>
+    <!-- 본인 js -->
+    <script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+    <div class="wrap">
+        <header>
+            <div class="inner">
+                <h1><a href="./main.html"><img src="../asset/img/eng_header_logo.png" alt="NMK" class="logo"></a></h1>
+                <nav>
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">VISIT</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>VISIT</h2>
+                                        <p>Learn more about visiting the<br>National Museum of Korea.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="./information.html" class="t">Visitor Information</a></li>
+                                            <li><a href="./map.html" class="t">Museum Map</a></li>
+                                            <li><a href="#">Guided Tours</a></li>
+                                            <li><a href="#">Amenities</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./exhibition.html">EXHIBITION</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>EXHIBITION</h2>
+                                        <p>Discover current and upcoming exhibitions.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="./exhibition.html" class="t">Special Exhibitions</a></li>
+                                            <li><a href="#">Permanent Exhibitions</a></li>
+                                            <li><a href="#">Immersive Digital Gallery</a></li>
+                                            <li><a href="#">Exhibits Online</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./collection.html">COLLECTION</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>COLLECTION</h2>
+                                        <p>Explore the museum’s treasured artifacts.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="./collection.html" class="t">Collection Database</a></li>
+                                            <li><a href="#">Curator’s Picks</a></li>
+                                            <li><a href="#">Highlights</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">EVENT</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>EVENT</h2>
+                                        <p>Join cultural programs <br> and special events.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="#">Event</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">NMK GLOBAL</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>NMK GLOBAL</h2>
+                                        <p>Experience the museum’s world outreach.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="#">At a Glance</a></li>
+                                            <li><a href="#">Global Exhibitions</a></li>
+                                            <li><a href="#">Academic Activities</a></li>
+                                            <li><a href="#">Exchange Programs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./vision.html">ABOUT US</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>ABOUT US</h2>
+                                        <p>Learn about the museum’s history and vision.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="./vision.html" class="t">Vision and Strategy</a></li>
+                                            <li><a href="#">History</a></li>
+                                            <li><a href="#">Builldings</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://muds.kr/">MUSEUM SHOP</a>
+                            <div class="sub_menu">
+                                <div class="sub_inner">
+                                    <div class="sub_left">
+                                        <h2>MUSEUM SHOP</h2>
+                                        <p>Find unique gifts inspired <br> by our collection.</p>
+                                        <div class="bg_pattern"></div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="sub_right">
+                                        <ul>
+                                            <li><a href="https://muds.kr/" class="t">Museum shop</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="right">
+                        <a href="./qr.html"  class="t"><img src="../asset/img/QR_icon.png" alt="qr"></a>
+                        <a href="#"><img src="../asset/img/icon1.png" alt="global"></a>
+                        <a href="#"><img src="../asset/img/icon2.png" alt="mypage"></a>
+                    </div><!-- //.right -->
+                </nav>
+                <!-- 햄 아이콘 시작 -->
+                <div class="ham">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <!-- 햄 아이콘 끝 -->
+            </div><!-- //.inner -->
+            <!-- 모바일 메뉴 -->
+
+            <div class="mobile_menu">
+                <!-- 상단 아이콘 -->
+                <div class="mobile_header">
+                    <div class="mobile_icons">
+                        <a href="./qr.html"><img src="../asset/img/QR_icon.png" alt="qr"></a>
+                        <a href="#"><img src="../asset/img/icon1.png" alt="global"></a>
+                        <a href="#"><img src="../asset/img/icon2.png" alt="mypage"></a>
+                    </div>
+                    <button class="mobile_close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="mobile_inner">
+                    <ul class="mobile_gnb">
+                        <!-- VISIT -->
+                        <li class="has_sub">
+                            <a href="#">VISIT</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="./information.html" class="t">Visitor Information</a></li>
+                                <li><a href="./map.html" class="t">Museum Map</a></li>
+                                <li><a href="#">Guided Tours</a></li>
+                                <li><a href="#">Amenities</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- EXHIBITION -->
+                        <li class="has_sub">
+                            <a href="./exhibition.html">EXHIBITION</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="./exhibition.html" class="t">Special Exhibitions</a></li>
+                                <li><a href="#">Permanent Exhibitions</a></li>
+                                <li><a href="#">Immersive Digital Gallery</a></li>
+                                <li><a href="#">Exhibits Online</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- COLLECTION -->
+                        <li class="has_sub">
+                            <a href="./collection.html">COLLECTION</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="./collection.html" class="t">Collection Database</a></li>
+                                <li><a href="#">Curator's Picks</a></li>
+                                <li><a href="#">Highlights</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- EVENT -->
+                        <li class="has_sub">
+                            <a href="#">EVENT</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="#">Event</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- NMK GLOBAL -->
+                        <li class="has_sub">
+                            <a href="#">NMK GLOBAL</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="#">At a Glance</a></li>
+                                <li><a href="#">Global Exhibitions</a></li>
+                                <li><a href="#">Academic Activities</a></li>
+                                <li><a href="#">Exchange Programs</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- ABOUT US -->
+                        <li class="has_sub">
+                            <a href="./vision.html">ABOUT US</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="./vision.html" class="t">Vision and Strategy</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Buildings</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- MUSEUM SHOP -->
+                        <li class="has_sub">
+                            <a href="https://muds.kr/" target="_blank">MUSEUM SHOP</a>
+                            <button class="toggle_btn"></button>
+                            <ul class="mobile_sub">
+                                <li><a href="https://muds.kr/" class="t" target="_blank">MUSEUM SHOP</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+        <div class="mobile_overlay"></div>
+        <main class="bg">
+            <div class="sub">
+                <div class="inner">
+                    <a href="./main.html"><img class="logo" src="../asset/img_Collection/sub_logo.png" /></a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <a href="./information.html">Visit</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <a class="menu_sub" href="./reservation.html">Reservation</a>
+                </div><!-- 각자 맞는 페이지 걸기 -->
+            </div><!-- //.sub -->
+
+
+
+            <section class="reservation inner">
+                <div class="content_wrap">
+                    <!-- 왼쪽: 배너 + 예약 폼 (1080px) -->
+                    <div class="left_content">
+                        <!-- 배너 -->
+                        <div class="banner">
+                            <div class="banner_tit">
+                                <h2>Collectors of Light</h2>
+                            </div>
+                        </div>
+
+                        <!-- 안내사항 -->
+                        <div class="info">
+                            <div class="txt_t">
+                                <h3>Directions</h3>
+                                <p>The reservation will be automatically canceled if you do not enter the museum 30
+                                    minutes after the session starts.</p>
+                                <p>(*Cancelled tickets will become available for individual online reservation.)</p>
+                            </div>
+                            <div class="txt_b">
+                                <h3>[No-show Policy]</h3>
+                                <p>If you have not entered by 30 minutes after the start of the session without
+                                    cancellation, visiting of the children's museum will be restricted for 60 days from
+                                    the date of a no-show, and all reservations within the restricted period will be
+                                    cancelled.</p>
+                            </div>
+                            <div class="lab">
+                                <button class="lab_t">
+                                    <span>Visitor Information</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div class="lab_txt">
+                                    <div class="lab_s">
+                                        <h4>Reservation Guide</h4>
+                                        <ol>
+                                            <li>Visitors are required to make reservations online (telephone
+                                                reservations are not accepted).</li>
+                                            <li>Reservation for up to five people can be made at once, and reservations
+                                                can only be made once per day (including individual and group).</li>
+                                            <li>Online reservations are available from 00:00 14 days before the date of
+                                                visit to 50 minutes after the start of each session.</li>
+                                        </ol>
+                                    </div>
+                                    <div class="lab_s">
+                                        <h4>Admission Guide</h4>
+                                        <ol>
+                                            <li>On-site ticketing is not available. Reserved mobile tickets must be
+                                                checked at the entrance to the museum.</li>
+                                            <li>Admission of visitors without children or children without adult
+                                                guardians is restricted.</li>
+                                            <li>Reservations need to be made for toddlers under 36 months old.</li>
+                                        </ol>
+                                    </div>
+                                    <div class="lab_s">
+                                        <h4>Additional Information</h4>
+                                        <ol>
+                                            <li>Private docent tours (e.g. field trips) and lectures are prohibited.
+                                            </li>
+                                            <li>If you wish to visit the museum for a field survey, you must receive
+                                                permission in advance over the phone and in written form. Refer to the
+                                                Children's Museum website.</li>
+                                            <li>For further information, Contact +82-2-2077-9647, 9648.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 날짜/시간/인원/결제 폼 -->
+                        <div class="form_section">
+
+                        </div>
+
+                        <div class="section2">
+
+                        </div>
+
+                        <div class="section3">
+
+                        </div>
+                    </div>
+
+                    <!-- 오른쪽: Total Amount -->
+                    <div class="right_content">
+                        <div class="total_amount">
+                            <div class="header">
+                                <h3>Total Amount</h3>
+                                <div class="price_wrap">
+                                    <div class="price">₩ 13,000</div>
+                                    <div class="vat">(VAT included)</div>
+                                </div>
+                            </div>
+                            <div class="price_detail">
+                                <div class="price_row">
+                                    <span class="price_label">Adult</span>
+                                    <span class="price_calc">( 2 × ₩5,000 )</span>
+                                    <span class="equal">=</span>
+                                    <span class="price_value">₩ 10,000</span>
+                                </div>
+                                <div class="price_row">
+                                    <span class="price_label">Children</span>
+                                    <span class="price_calc">( 2 × ₩3,000 )</span>
+                                    <span class="equal">=</span>
+                                    <span class="price_value">₩ 3,000</span>
+                                </div>
+                            </div>
+                            <button class="btn_reservation">Make a reservation</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="inner">
+                <div class="f_top">
+                    <div class="f_txt">
+                        <h3>Websites</h3>
+                        <ul>
+                            <li><a href="#">Children’s Museum</a></li>
+                            <li><a href="#">Museum Shop</a></li>
+                            <li><a href="#">NMK Magazine</a></li>
+                            <li><a href="#">JKAA</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Learning</h3>
+                        <ul>
+                            <li><a href="#">Learning</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Connect</h3>
+                        <ul>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f_bot">
+                    <div class="bot_txt">
+                        <p>137 Seobinggo-ro, Yongsan-gu, Seoul, 04383, Republic of Korea</p>
+                        <p>Tel : +82-2-2077-9000</p>
+                        <p>© National Museum of Korea.</p>
+                    </div><!-- //.bot_txt -->
+                    <div class="f_right">
+                        <div class="select_box">
+                            <button type="button">Related Site<i class="fa-solid fa-angle-up"></i></button>
+                            <ul>
+                                <li><a href="#">Jeonju National Museum</a></li>
+                                <li><a href="#">Daegu National Museum</a></li>
+                                <li><a href="#">Buyeo National Museum</a></li>
+                                <li><a href="#">Gongju National Museum</a></li>
+                                <li><a href="#">Jinju National Museum</a></li>
+                                <li><a href="#">CNM</a></li>
+                                <li><a href="#">Gimhae National Museum</a></li>
+                                <li><a href="#">Jeju National Museum</a></li>
+                                <li><a href="#">CMM</a></li>
+                                <li><a href="#">Naju National Museum</a></li>
+                                <li><a href="#">Iksan National Museum</a></li>
+                                <li><a href="#">NMF</a></li>
+                                <li><a href="#">FNMK</a></li>
+                                <li><a href="#">KMA</a></li>
+                            </ul>
+                        </div><!-- //.select_box -->
+                        <div class="select_box">
+                            <button type="button">Guidebook Download<i class="fa-solid fa-angle-up"></i></button>
+                            <ul>
+                                <li><a href="#">한국어(PDF)</a></li>
+                                <li><a href="#">English(PDF)</a></li>
+                                <li><a href="#">中文(PDF)</a></li>
+                                <li><a href="#">日本語(PDF)</a></li>
+                                <li><a href="#">Français(PDF)</a></li>
+                                <li><a href="#">Deutsche(PDF)</a></li>
+                                <li><a href="#">Español(PDF)</a></li>
+                            </ul>
+                        </div><!-- //.select_box -->
+                    </div><!-- //.f_right -->
+                </div><!-- //.f_bot -->
+            </div>
+        </footer>
+    </div><!-- //.wrap -->
 </body>
+
 </html>

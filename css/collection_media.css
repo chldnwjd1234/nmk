@@ -1,0 +1,289 @@
+@media (max-width:1440px) {
+  .con {
+    padding: 0 40px 200px 40px;
+  }
+
+  .card_wrap2 ul li {
+    width: 33.33%;
+  }
+
+  /* 카드 이미지 */
+  .card_wrap2 .card .thumb {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card_wrap2 .card .txt {
+    /* padding: 8px; */
+    /* background-color: #ccc; */
+    padding: 8px 8px 4px;
+  }
+
+  .card_wrap2 .card .title {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  /* 카드 hover */
+  .card_wrap2 .overlay_content .category {
+    font-size: 13px;
+  }
+
+  .card_wrap2 .overlay_content .Dimensions,
+  .card_wrap2 .overlay_content .cm {
+    display: none;
+  }
+
+  .card_wrap2 .overlay_content .period,
+  .card_wrap2 .overlay_content .treasure {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .card_wrap2 .card_overlay .overlay_content .viewicon_btn {
+    margin-top: 5px;
+    padding: 10px 20px;
+    font-size: 15px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+
+  .inner {
+    width: 95%;
+  }
+
+  .search {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .search_bar {
+    width: 100%;
+    max-width: 312px;
+    padding-bottom: 8px;
+  }
+
+  .search_bar input {
+    font-size: 17px;
+    padding-right: 50px;
+  }
+
+  /* 돋보기 아이콘 */
+  .search_bar button {
+    transform: translateX(0);
+    position: absolute;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    opacity: 1;
+  }
+
+  .search_bar button i {
+    font-size: 16px;
+    color: var(--gray-07-footer);
+  }
+
+  .qr_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background-color: var(--w-color);
+    border-radius: 50%;
+    opacity: 0.9;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+
+  .qr_icon img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* 검색 txt 버튼들 */
+  .txt_btn {
+    margin-top: 5px;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .txt_btn button {
+    padding: 8px 16px;
+    font-size: 17px;
+    border-radius: var(--r-20);
+  }
+
+  .view_btns {
+    display: none;
+  }
+
+  /* Results 텍스트 */
+  .con .results {
+    margin-bottom: 12px;
+  }
+
+  .con span {
+    font-size: 18px;
+  }
+
+  /* 카드 */
+  .con {
+    padding: 40px 70px;
+  }
+
+  .card_wrap1 {
+    display: none !important;
+  }
+
+  .card_wrap2 {
+    display: block !important;
+  }
+
+  .card_wrap2 ul li {
+    width: 50%;
+  }
+
+}
+
+@media (max-width: 414px) {
+
+  .search {
+    padding: 30px 20px 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .search_bar {
+    width: 100%;
+    max-width: 250px;
+    padding: 11px 5px;
+    border-radius: 8px;
+    border-bottom: none;
+    background-color: var(--w-color);
+    display: flex;
+    align-items: center;
+    height: 38px;
+  }
+
+  .search_bar input {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .search_bar button {
+    width: 32px;
+    height: 32px;
+    background-color: none;
+    right: 8px;
+  }
+
+  .search_bar button i {
+    font-size: 14px;
+  }
+
+  .qr_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: var(--w-color);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .txt_btn {
+    display: none;
+  }
+
+  .txt_btn button {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .view_btns {
+    display: none;
+  }
+
+  .con {
+    padding: 20px 23px;
+  }
+
+  .con span {
+    font-size: 16px;
+  }
+
+  .card_wrap1 {
+    display: none !important;
+  }
+
+  .card_wrap2 {
+    display: block !important;
+  }
+
+  .card_wrap2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card_wrap2 ul li {
+    width: 100%;
+    float: none;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .card_wrap2 .card .thumb {
+    height: 240px;
+    padding: 0;
+  }
+
+  .card_wrap2 .card .txt {
+    padding: 12px 8px 8px;
+  }
+
+  .card_wrap2 .card .title {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* 
+  .card_wrap2 .overlay_content .Dimensions,
+  .card_wrap2 .overlay_content .cm {
+    display: none;
+  } */
+
+  .card_wrap2 .overlay_content .category {
+    font-size: 12px;
+  }
+
+  .card_wrap2 .overlay_content .period,
+  .card_wrap2 .overlay_content .treasure {
+    font-size: 14px;
+  }
+
+  .card_wrap2 .card_overlay .overlay_content .viewicon_btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .viewicon_btn {
+    font-size: 17px;
+  }
+
+}

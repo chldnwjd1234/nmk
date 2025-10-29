@@ -1,19 +1,252 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="국립중앙박물관 글로벌 사이트 입니다">
-    <meta name="keywords" content="museum,global,koera,박물관">
-    <meta name="author" content="일단해보조">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NMK</title>
-    <link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/reset.css">
+<meta charset="UTF-8">
+<meta name="description" content="국립중앙박물관 글로벌 사이트 입니다">
+<meta name="keywords" content="museum,global,koera,박물관">
+<meta name="author" content="일단해보조">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NATIONAL MUSEUM OF KOREA</title>
+<meta property="og:title" content="National Museum of Korea">
+<meta property="og:description"
+    content="Experience the beauty of Korean history and culture through inspiring exhibitions.">
+<meta property="og:image" content="https://chldnwjd1234.github.io/nmk/asset/img/link.png">
+<meta property="og:url" content="https://chldnwjd1234.github.io/nmk/">
+<meta property="og:type" content="website">
+<link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/result_style.css"><!-- 본인 스타일 -->
+<link rel="stylesheet" href="../css/common_media.css">
+<link rel="stylesheet" href="../css/result_media.css">
+<!-- <link rel="stylesheet" href="../css/result_media_media.css"> -->
+<!-- 본인 미디어스타일 -->
+<script src="../js/common.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<script src="../js/result.js"></script>
+<script src="https://kit.fontawesome.com/538f2dd5fa.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div class="wrap">
+        <header>
+            <div class="inner">
+                <img src="../asset/img/eng_header_logo.png" alt="National Museum of Korea" class="logo">
+            </div>
+        </header>
+        <main class="bg">
+            <!-- 카드 -->
+            <div class="slider_container">
+                <div class="slide active" data-slide="1">
+                    <div class="content_box">
+                        <a class="back_btn" href="./collection.html">
+                            <i class="fa-solid fa-chevron-left"></i> List
+                        </a>
 
+                        <div class="detail_content">
+                            <!-- 왼쪽 유물 사진 -->
+                            <div class="artifact_image">
+                                <img src="../asset/img_result/main.png" alt="Gilt-bronze Pensive Bodhisattva">
+                            </div><!-- //.artifact_image -->
+
+                            <!-- 유물정보 -->
+                            <div class="artifact_info">
+                                <h1 class="title">Gilt-bronze Pensive Bodhisattva</h1>
+
+                                <div class="info_list">
+                                    <div class="info_item">
+                                        <span class="label">Exhibition Name</span>
+                                        <span class="value">Pensive Bodhisattva in Three-kingdom period</span>
+                                    </div>
+                                    <div class="info_item">
+                                        <span class="label">Nationality/Period</span>
+                                        <span class="value">Three Kingdoms Period</span>
+                                    </div>
+                                    <div class="info_item">
+                                        <span class="label">Materials</span>
+                                        <span class="value">Metal - Gilt-bronze</span>
+                                    </div>
+                                    <div class="info_item">
+                                        <span class="label">Category</span>
+                                        <span class="value">religion - Buddhism - adoration - image of Buddha</span>
+                                    </div>
+                                    <div class="info_item">
+                                        <span class="label">Dimensions</span>
+                                        <span class="value">H. 20.9cm</span>
+                                    </div>
+                                    <div class="info_item">
+                                        <span class="label">Accession Number</span>
+                                        <span class="value">Deoksu3200</span>
+                                    </div>
+                                    <div class="info_item">
+                                        <span class="label">Location</span>
+                                        <span class="value">Buddhist Sculpture</span>
+                                    </div>
+                                </div>
+
+                                <div class="detail_section">
+                                    <h3>Detail</h3>
+                                    <p>This gilt-bronze standing Bhaisajyaguru Buddha is larger than most of the
+                                        gilt-bronze
+                                        Buddha statues dating back to the Unified Silla Period. It holds a medicine
+                                        casket
+                                        in the left hand, and raises the right hand.The voluminous body and the embossed
+                                        folds of the robe are typical features of the gilt-bronze Buddhist statues made
+                                        during the cultural zenith of Unified Silla.</p>
+                                </div>
+
+
+                            </div><!-- //.artifact_info -->
+                        </div><!-- //.detail_content -->
+                        <a class="map_btn" href="./map.html">
+                            View on Map <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div><!-- //.content_box -->
+
+                    <button class="arrow_btn right" onclick="nextSlide()">
+                        <i class="fa-solid fa-chevron-right"></i> </button>
+                </div>
+
+                <!-- 두번째 슬라이드 관련유물 -->
+                <div class="slide2" data-slide="2">
+                    <div class="content_box">
+                        <a class="back_btn" href="./collection.html">
+                            <i class="fa-solid fa-chevron-left"></i> List
+                        </a>
+
+                        <h2 class="section_title">Related Artifacts</h2>
+
+                        <div class="related_grid">
+                            <div class="artifact_card">
+                                <div class="card_image">
+                                    <img src="../asset/img_result/1.png" alt="Artifact 1">
+                                </div>
+                                <p class="card_title">Gilt-bronze Standing Sakyamuni Buddha</p>
+                            </div>
+
+                            <div class="artifact_card">
+                                <div class="card_image">
+                                    <img src="../asset/img_result/2.png" alt="Artifact 2">
+                                </div>
+                                <p class="card_title">Gilt-bronze Standing Bhaisajyaguru Buddha</p>
+                            </div>
+
+                            <div class="artifact_card">
+                                <div class="card_image">
+                                    <img src="../asset/img_result/3.png" alt="Artifact 3">
+                                </div>
+                                <p class="card_title">Bronze Standing Bodhisattva</p>
+                            </div>
+
+                            <div class="artifact_card">
+                                <div class="card_image">
+                                    <img src="../asset/img_result/4photo.png" alt="Artifact 4">
+                                </div>
+                                <p class="card_title">Gilt-bronze Standing Bhaisajyaguru Buddha</p>
+                            </div>
+
+                            <div class="artifact_card">
+                                <div class="card_image">
+                                    <img src="../asset/img_result/5.png" alt="Artifact 5">
+                                </div>
+                                <p class="card_title">Gilt-bronze Seated Amitabha Buddha</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <button class="arrow_btn left" onclick="prevSlide()">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="pagination">
+                    <span class="dot active" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                </div>
+
+
+        </main>
+        <footer>
+            <div class="inner">
+                <div class="f_top">
+                    <div class="f_txt">
+                        <h3>Websites</h3>
+                        <ul>
+                            <li><a href="#">Children’s Museum</a></li>
+                            <li><a href="#">Museum Shop</a></li>
+                            <li><a href="#">NMK Magazine</a></li>
+                            <li><a href="#">JKAA</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Learning</h3>
+                        <ul>
+                            <li><a href="#">Learning</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_txt">
+                        <h3>Connect</h3>
+                        <ul>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f_bot">
+                    <div class="bot_txt">
+                        <p>137 Seobinggo-ro, Yongsan-gu, Seoul, 04383, Republic of Korea</p>
+                        <p>Tel : +82-2-2077-9000</p>
+                        <p>© National Museum of Korea.</p>
+                    </div><!-- //.bot_txt -->
+                    <div class="f_right">
+                        <div class="select_box">
+                            <button type="button">Related Site<i class="fa-solid fa-angle-up"></i></button>
+                            <ul>
+                                <li><a href="#">Jeonju National Museum</a></li>
+                                <li><a href="#">Daegu National Museum</a></li>
+                                <li><a href="#">Buyeo National Museum</a></li>
+                                <li><a href="#">Gongju National Museum</a></li>
+                                <li><a href="#">Jinju National Museum</a></li>
+                                <li><a href="#">CNM</a></li>
+                                <li><a href="#">GNM</a></li>
+                                <li><a href="#">Jeju National Museum</a></li>
+                                <li><a href="#">CMM</a></li>
+                                <li><a href="#">Naju National Museum</a></li>
+                                <li><a href="#">Iksan National Museum</a></li>
+                                <li><a href="#">NMF</a></li>
+                                <li><a href="#">FNMK</a></li>
+                                <li><a href="#">KMA</a></li>
+                            </ul>
+                        </div><!-- //.select_box -->
+                        <div class="select_box">
+                            <button type="button">Guidebook Download<i class="fa-solid fa-angle-up"></i></button>
+                            <ul>
+                                <li><a href="#">한국어(PDF)</a></li>
+                                <li><a href="#">English(PDF)</a></li>
+                                <li><a href="#">中文(PDF)</a></li>
+                                <li><a href="#">日本語(PDF)</a></li>
+                                <li><a href="#">Français(PDF)</a></li>
+                                <li><a href="#">Deutsche(PDF)</a></li>
+                                <li><a href="#">Español(PDF)</a></li>
+                            </ul>
+                        </div><!-- //.select_box -->
+                    </div><!-- //.f_right -->
+                </div><!-- //.f_bot -->
+            </div>
+        </footer>
+    </div><!-- //.wrap -->
 </body>
 
 </html>

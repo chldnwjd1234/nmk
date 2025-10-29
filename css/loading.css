@@ -7,9 +7,13 @@
 body {
     overflow-x: hidden;
     min-height: 300vh;
+<<<<<<< HEAD
     /* 스크롤 테스트용 - 충분히 길게 */
+=======
+>>>>>>> origin/index
     margin: 0;
     padding: 0;
+    background-color: #DACAB0;
 }
 
 #loading_screen {
@@ -45,7 +49,10 @@ body {
     top: 0;
     height: 100%;
     width: 50vw;
+<<<<<<< HEAD
     /* 정확히 화면의 절반 */
+=======
+>>>>>>> origin/index
     z-index: 3;
     transition: transform 1.5s ease-in-out;
 }
@@ -53,13 +60,19 @@ body {
 .door_left {
     left: 0;
     right: 50%;
+<<<<<<< HEAD
     /* 정확히 중앙까지 */
+=======
+>>>>>>> origin/index
     transform: translateX(0);
 }
 
 .door_right {
     left: 50%;
+<<<<<<< HEAD
     /* 정확히 중앙부터 시작 */
+=======
+>>>>>>> origin/index
     right: 0;
     transform: translateX(0);
 }
@@ -85,4 +98,199 @@ body {
 
 .logo.show {
     opacity: 1;
+<<<<<<< HEAD
+=======
+}
+
+/* 스크롤 안내 화살표 (1024px 초과에서만 표시) */
+.scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    display: none;
+    /* 기본적으로 숨김 */
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    animation: fadeInHint 1s ease 0.5s forwards;
+}
+
+@keyframes fadeInHint {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 안내 텍스트 */
+.scroll-hint-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+}
+
+/* 화살표 컨테이너 */
+.arrow-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* 화살표 스타일 */
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 15px solid rgba(255, 255, 255, 0.8);
+    animation: arrowBounce 2s ease-in-out infinite;
+}
+
+.arrow:nth-child(2) {
+    animation-delay: 0.2s;
+    opacity: 0.7;
+}
+
+.arrow:nth-child(3) {
+    animation-delay: 0.4s;
+    opacity: 0.4;
+}
+
+/* 화살표 바운스 애니메이션 */
+@keyframes arrowBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+}
+
+/* 1024px 초과: 스크롤 안내 화살표 표시 */
+@media (min-width: 1025px) {
+    .scroll-hint {
+        display: flex;
+    }
+
+    .scroll-hint-text::after {
+        content: 'SCROLL DOWN';
+    }
+}
+
+/* 1024px 이하: 클릭 안내만 표시 (기존 동작 유지) */
+@media (max-width: 1024px) {
+    #loading_screen {
+        cursor: pointer;
+    }
+
+    /* 클릭 힌트 텍스트 */
+    #loading_screen::after {
+        content: 'CLICK TO ENTER';
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 20px;
+        letter-spacing: 2px;
+        z-index: 4;
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    .logo {
+        width: 80%;
+        max-width: 500px;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 624px) {
+    #loading_screen::after {
+        font-size: 15px;
+    }
+
+    .logo {
+        width: 60%;
+        max-width: 300px;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* 스킵 버튼 스타일 */
+.skip-btn {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    z-index: 5;
+    padding: 4px 8px;
+    background: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skip-btn:hover {
+    background-color: rgba(255, 255, 255, .4);
+    transform: translateY(-2px);
+}
+
+.skip-btn:active {
+    transform: translateY(0);
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+    .skip-btn {
+        top: 20px;
+        right: 30px;
+        padding: 3px 6px;
+        font-size: 15px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 624px) {
+    .skip-btn {
+        top: 15px;
+        right: 15px;
+        padding: 2px 5px;
+        font-size: 14px;
+    }
+>>>>>>> origin/index
 }

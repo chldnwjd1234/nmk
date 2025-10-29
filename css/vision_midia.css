@@ -1,7 +1,558 @@
 @charset "utf-8";
+
 @media (max-width: 1024px) {
 
-}
-@media (max-width: 402px) {
+    main .moon {
+        height: 500px;
+        overflow: hidden;
+        border-radius: 0;
+        position: relative;
+        margin-bottom: 80px;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        max-width: none;
+        overflow: hidden
+    }
 
+    main .moon img {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        min-width: 100vw;
+    }
+
+        main .Welcome,
+    main .visions,
+    main .Architecture,
+    main .Collection_Storage {
+        position: relative;
+        z-index: 1;
+    }
+
+
+    /* Welcome 섹션 */
+    main .Welcome {
+        padding-bottom: 150px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    main .Welcome .flower2 {
+        width: 250px;
+        left: -10%;
+        top: 180px;
+    }
+
+    main .Welcome .flower3 {
+        width: 250px;
+        right: -10%;
+        bottom: -160px;
+    }
+
+    main .Welcome .txt_box {
+        gap: 150px;
+    }
+
+    main .Welcome .txt_box h3,
+    main .Welcome .txt_box h3.big,
+    main .Welcome .txt_box h3.bottom {
+        font-size: 45px;
+    }
+
+    main .Welcome .txt_box .living_space h3 {
+        font-size: 35px;
+    }
+
+    main .Welcome .txt_box .living_space {
+        margin-left: 40px;
+        margin-top: -120px;
+    }
+
+    main .Welcome .txt_box .living_space::after {
+        width: 120px;
+    }
+
+    /* visions 섹션 */
+    main .visions {
+        padding: 0;
+        height: auto;
+        min-height: 800px;
+        width: 100%;
+        background: url(..../asset/img_Vision/section3-3visions-bg.png) no-repeat center bottom;
+        background-size: cover;
+    }
+
+    main .visions .card_set {
+        position: relative;
+        height: 700px;
+        left: 50px;
+    }
+
+
+    main .visions .card1,
+    main .visions .card2,
+    main .visions .card3 {
+        position: absolute;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    main .visions .card1 {
+        flex-direction: column;
+        top: 200px;
+        left: 0;
+    }
+
+    main .visions .card1 img {
+        width: 150px;
+    }
+
+    main .visions .card1 .txt_box p {
+        font-size: 0;
+    }
+
+    main .visions .card1 .txt_box p::after {
+        content: 'Inclusive access through barrier-free design, clear \A guides, community engagement, and open data.';
+        font-size: 14px;
+        white-space: pre-line;
+    }
+
+    main .visions .card2 {
+        flex-direction: row;
+        width: 550px;
+        top: 80px;
+        left: 434px;
+    }
+
+    main .visions .card2 img {
+        width: 100px;
+    }
+
+    main .visions .card2 .txt_box {
+        margin-top: 60px;
+    }
+
+    main .visions .card2 .txt_box p {
+        font-size: 0;
+    }
+
+    main .visions .card2 .txt_box p::after {
+        content: 'Smart exhibitions and preservation through AI \A and digital technology, with a focus on sustainability.';
+        font-size: 14px;
+        white-space: pre-line;
+    }
+
+    main .visions .card3 {
+        top: 230px;
+        left: 268px;
+    }
+
+    main .visions .card3 img {
+        width: 180px;
+    }
+
+    main .visions .card3 .txt_box {
+        margin-top: 10px;
+    }
+
+    main .visions .card3 .txt_box p {
+        font-size: 0;
+    }
+
+    main .visions .card3 .txt_box p::after {
+        content: 'A global museum bridging \A cultures through diversity, \A innovation, and heritage.';
+        font-size: 14px;
+        white-space: pre-line;
+    }
+
+    main .visions .txt_box h4 {
+        font-size: 26px;
+        margin-bottom: 4px;
+    }
+
+    /* Architecture 섹션 */
+    main .Architecture {
+        height: 600px;
+    }
+
+    main .Architecture .inner {
+        height: auto;
+        display: flex;
+        align-items: flex-end;
+    }
+
+
+    main .Architecture .txt_box h3 {
+        font-size: 45px;
+        margin-bottom: 150px;
+    }
+
+    main .Architecture .txt_box p {
+        font-size: 0;
+        width: 350px;
+    }
+
+    main .Architecture .txt_box p::after {
+        content: 'The National Museum of Korea blends traditional Korean architecture with modern design, emphasizing harmony, simplicity, and minimal ornamentation. \A Set between Namsan Mountain and Mirror Pond, it reflects the balance of yin and yang. \A The open plaza, inspired by maru, connects exhibition and performance spaces while integrating with nature and gardens. \A Located at the southern gateway of Yongsan Park, the museum serves as a central cultural landmark in Seoul.';
+        font-size: 18px;
+        white-space: pre-line;
+    }
+
+    main .Architecture .architecture_img {
+        position: relative;
+        display: flex;
+        gap: 12px;
+    }
+
+    main .Architecture .architecture_img .left {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    main .Architecture .architecture_img .left .top {
+        bottom: -20px;
+    }
+
+    main .Architecture .architecture_img .left .top p,
+    main .Architecture .architecture_img .left .bottom p {
+        display: none;
+    }
+
+
+    main .Architecture .architecture_img .left .bottom img {
+        width: 330px;
+    }
+
+    main .Architecture .architecture_img .left .top img {
+        width: 295px;
+    }
+
+
+    main .Architecture .architecture_img .right {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        position: relative;
+    }
+
+    main .Architecture .architecture_img .right img:nth-child(1) {
+        position: absolute;
+        top: -90px;
+        right: 0;
+        width: 210px;
+    }
+
+    main .Architecture .architecture_img .right img:nth-child(2) {
+        width: 170px;
+
+    }
+
+    main .Architecture .architecture_img .right img:nth-child(3) {
+        content: url('../asset/img_Vision/Architecture_rightbottom.png');
+        width: 170px;
+    }
+
+    /* Collection_Storage 섹션 */
+
+    main .Collection_Storage {
+        display: block;
+        height: auto;
+        /* padding: 80px 40px; */
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    main .Collection_Storage .bg {
+        position: absolute;
+        top: 22%;
+        left: -60%;
+        /* transform: translate(-50%); */
+        z-index: 0;
+    }
+
+    main .Collection_Storage .bg img {
+        width: 100%;
+    }
+
+    main .Collection_Storage .inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    main .Collection_Storage .txt_box h3 {
+        font-size: 45px;
+        margin-bottom: 60px;
+    }
+
+    main .Collection_Storage .collection_label {
+        padding-top: 0;
+        transform: scale(0.6);
+        transform-origin: left top;
+        left: 50px;
+
+    }
+
+    main .Collection_Storage .collection_label img {
+        padding-left: 40px;
+    }
+
+
+
+    main .Collection_Storage .collection_label ul.labels li {
+        font-size: 20px;
+        padding: 10px 25px;
+        white-space: nowrap;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(1) {
+        top: 2%;
+        left: 800px;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(2) {
+        top: 14%;
+        left: 800px;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(3) {
+        top: 28.5%;
+        left: 800px;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(4) {
+        top: 39%;
+        left: 800px;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(5) {
+        top: 49.5%;
+        right: -380px;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(6) {
+        top: 63%;
+        left: 725px;
+    }
+
+    main .Collection_Storage .collection_label ul.labels li:nth-child(7) {
+        bottom: -3%;
+        left: 770px;
+    }
+
+}
+
+@media (max-width: 414px) {
+    main .moon {
+        height: 200px;
+        overflow: hidden;
+        border-radius: 0;
+        position: relative;
+        margin-bottom: 60px;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        max-width: none;
+        overflow: hidden
+    }
+
+    main .moon img {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        min-width: 100vw;
+    }
+
+    /* Welcome 섹션 */
+    main .Welcome {
+        padding-bottom: 100px;
+    }
+
+    main .Welcome .flower2,
+    main .Welcome .flower3 {
+        width: 150px;
+    }
+
+    main .Welcome .flower2 {
+        top: 100px;
+        left: -15%;
+    }
+
+    main .Welcome .flower3 {
+        bottom: -100px;
+    }
+
+    main .Welcome .txt_box {
+        gap: 100px;
+    }
+
+    main .Welcome .txt_box h3,
+    main .Welcome .txt_box h3.big,
+    main .Welcome .txt_box h3.bottom {
+        font-size: 23px;
+    }
+
+    main .Welcome .txt_box .living_space h3 {
+        font-size: 20px;
+    }
+
+    main .Welcome .txt_box .living_space {
+        margin-left: 20px;
+        margin-top: -80px;
+    }
+
+    main .Welcome .txt_box .living_space::after {
+        display: none;
+    }
+
+    /* visions */
+    main .visions {
+        width: 100%;
+        height: 500px;
+        background: url(../asset/img_Vision/grape2.png) no-repeat center 60%;
+        background-size: 100%;
+        min-height: 0;
+
+    }
+
+    main .visions .card_set {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+        left: 0;
+        padding: 0 16px;
+        margin-top: 80px;
+    }
+
+    main .visions .card_set>.card1,
+    main .visions .card_set>.card2,
+    main .visions .card_set>.card3 {
+        position: static;
+        flex: 1;
+        transform: none !important;
+        display: grid;
+    }
+
+    main .visions .card_set>.card1 img,
+    main .visions .card_set>.card2 img,
+    main .visions .card_set>.card3 img {
+        grid-area: 1 / 1;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    main .visions .card3 img {
+        height: 370px !important;
+        width: auto;
+        object-fit: cover;
+    }
+
+    main .visions .card_set>.card1 .txt_box,
+    main .visions .card_set>.card2 .txt_box,
+    main .visions .card_set>.card3 .txt_box {
+        grid-area: 1 / 1;
+        align-self: end;
+        justify-self: start;
+        margin-bottom: 12px;
+        margin-left: 10px;
+    }
+
+    main .visions .txt_box h4 {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 16px;
+        color: #fff;
+        margin: 0;
+    }
+
+    main .visions .txt_box p {
+        display: none;
+    }
+
+    /* Architecture */
+    main .Architecture {
+        /* padding: 60px 20px; */
+        height: 100%;
+        background: url(../asset/img_Vision/M_section4-architecture.png) no-repeat;
+    }
+
+    main .Architecture .inner {
+        gap: 15px;
+        padding-bottom: 60px;
+    }
+
+    main .Architecture .txt_box h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    main .Architecture .txt_box p {
+        font-size: 13px;
+        line-height: 1.7;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.4);
+        padding: 12px 12px;
+        border-radius: 10px;
+
+    }
+
+    main .Architecture .architecture_img .left {
+        display: none;
+    }
+
+    main .Architecture .architecture_img .right img:nth-child(1) {
+        width: 147px;
+        top: -68px;
+    }
+
+    main .Architecture .architecture_img .right img:nth-child(2) {
+        width: 147px;
+    }
+
+    main .Architecture .architecture_img .right img:nth-child(3) {
+        height: 200px;
+        width: 147px;
+    }
+
+    main .Architecture .txt_box p::after {
+        content: none;
+    }
+
+    /* Collection_Storage */
+    main .Collection_Storage .inner .txt_box h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    main .Collection_Storage .collection_label {
+        display: none;
+    }
+
+    main .Collection_Storage .bg {
+        display: none;
+    }
+
+    main .Collection_Storage {
+        background-size: 100%;
+        padding: 60px 0;
+        margin-top: 10px;
+    }
+
+    main .Collection_Storage .inner::after {
+        content: '';
+        display: block;
+        width: 90%;
+        height: 300px;
+        background: url("../asset/img_Vision/MMcollection_storage.png") center/contain no-repeat;
+        background-size: 100%;
+        margin: 0 auto;
+    }
 }
