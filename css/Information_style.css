@@ -74,11 +74,17 @@
     /* 내부 콘텐츠(표)를 세로 중앙에 정렬합니다. */
 }
 
+
 .hours_table {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
+    display: block;
 }
+
+          .hours_2 {
+        display: none;
+    }
 
 .hours_table thead {
     border-bottom: 1px solid #333;
