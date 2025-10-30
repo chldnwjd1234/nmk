@@ -236,7 +236,7 @@
     font-size: var(--fspre-20);
     color: var(--gray-06);
     line-height: 1.4;
-    -webkit-line-clamp: 2;
+    /* -webkit-line-clamp: 2; */
 }
 
 .card_wrap2::after {
@@ -245,7 +245,7 @@
     clear: both;
 }
 
-.card_wrap2 ul {}
+/* .card_wrap2 ul {} */
 
 .card_wrap2 ul li {
     float: left;
