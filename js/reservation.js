@@ -1,13 +1,13 @@
 /* dropdown */
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // 기존 가격 계산 코드...
-    
+
     // Visitor Information 드롭다운 기능
     const labButton = document.querySelector('.lab_t');
     const labContent = document.querySelector('.lab_txt');
 
     if (labButton && labContent) {
-        labButton.addEventListener('click', function() {
+        labButton.addEventListener('click', function () {
             // active 클래스 토글
             labButton.classList.toggle('active');
             labContent.classList.toggle('active');
@@ -15,35 +15,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 기존 updatePrice 함수와 버튼 이벤트들...
+
+
 });
-                        // 인원 수 카운터 기능
-                        document.querySelectorAll('.counter').forEach(counter => {
-                            const minusBtn = counter.querySelector('.counter_btn.minus');
-                            const plusBtn = counter.querySelector('.counter_btn.plus');
-                            const inputField = counter.querySelector('.counter_input');
+// 인원 수 카운터 기능
 
-                            minusBtn.addEventListener('click', () => {
-                                let currentValue = parseInt(inputField.value);
-                                if (currentValue > parseInt(inputField.min)) {
-                                    inputField.value = currentValue - 1;
-                                }
-                            });
+/* document.querySelectorAll('.counter').forEach(counter => {
 
-                            plusBtn.addEventListener('click', () => {
-                                let currentValue = parseInt(inputField.value);
-                                if (currentValue < parseInt(inputField.max)) {
-                                    inputField.value = currentValue + 1;
-                                }
-                            });
-                        });
-                    
+    const minusBtn = counter.querySelector('.counter_btn.minus');
+    const plusBtn = counter.querySelector('.counter_btn.plus');
+    const inputField = counter.querySelector('.counter_input');
+
+    minusBtn.addEventListener('click', () => {
+        let currentValue = parseInt(inputField.value);
+        if (currentValue > parseInt(inputField.min)) {
+            inputField.value = currentValue - 1;
+        }
+    });
+
+    plusBtn.addEventListener('click', () => {
+        let currentValue = parseInt(inputField.value);
+        if (currentValue < parseInt(inputField.max)) {
+            inputField.value = currentValue + 1;
+        }
+    });
+}); */
 // reservation.js
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+
     // 가격 설정
     const PRICE_ADULT = 5000;
     const PRICE_CHILD = 3000;
-
     // 요소 선택
     const adultCounterInput = document.querySelector('.visitor_row:nth-child(1) .counter_input');
     const childCounterInput = document.querySelector('.visitor_row:nth-child(2) .counter_input');
@@ -54,11 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Total Amount 영역 요소들
     const totalPrice = document.querySelector('.total_amount .price');
-    
+
     // Adult 관련
     const adultMany = document.querySelector('.price_row:nth-child(1) .many');
     const adultResultNumber = document.querySelector('.price_row:nth-child(1) .price_label_3 .number');
-    
+
     // Child 관련
     const childMany = document.querySelector('.price_row:nth-child(2) .many');
     const childResultNumber = document.querySelector('.price_row:nth-child(2) .price_label_3 .number');
@@ -86,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Adult + 버튼 클릭
-    adultPlusBtn.addEventListener('click', function() {
+    adultPlusBtn.addEventListener('click', function () {
         let value = parseInt(adultCounterInput.value) || 0;
         const max = parseInt(adultCounterInput.max) || 5;
         if (value < max) {
@@ -96,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Adult - 버튼 클릭
-    adultMinusBtn.addEventListener('click', function() {
+    adultMinusBtn.addEventListener('click', function () {
         let value = parseInt(adultCounterInput.value) || 0;
         const min = parseInt(adultCounterInput.min) || 0;
         if (value > min) {
@@ -106,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Child + 버튼
-    childPlusBtn.addEventListener('click', function() {
+    childPlusBtn.addEventListener('click', function () {
         let value = parseInt(childCounterInput.value) || 0;
         const max = parseInt(childCounterInput.max) || 5;
         if (value < max) {
@@ -116,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Child - 버튼
-    childMinusBtn.addEventListener('click', function() {
+    childMinusBtn.addEventListener('click', function () {
         let value = parseInt(childCounterInput.value) || 0;
         const min = parseInt(childCounterInput.min) || 0;
         if (value > min) {
