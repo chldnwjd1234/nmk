@@ -1,0 +1,125 @@
+/* 1024px 반응형 */
+@media (max-width: 1024px) {
+    /* Container */
+    /* .reservation.inner {
+        padding: 30px 15px;
+    } */
+
+    /* 2단 레이아웃 → 1단 레이아웃 */
+    .reservation .content_wrap {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* 왼쪽 콘텐츠 */
+    .reservation .left_content {
+        width: 100%;
+        gap: 10px;
+    }
+
+    /* 오른쪽 콘텐츠 */
+    .reservation .right_content {
+        width: 100%;
+        position: static;  /* sticky 해제 */
+    }
+
+    /* Banner */
+    .reservation .left_content .banner {
+        height: 180px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .reservation .left_content .banner_tit h2 {
+        font-size: 36px;
+    }
+
+    /* Info Section */
+    .reservation .info {
+        padding: 24px 30px;
+    }
+
+    .reservation .info h3 {
+        font-size: 22px;
+    }
+
+    .reservation .info ul li {
+        font-size: 14px;
+    }
+
+    /* Form Section */
+    .reservation .form_section {
+        padding: 24px 40px;
+    }
+
+    .reservation .form_label {
+        font-size: 22px;
+    }
+
+    .reservation .date_input {
+        width: 100%;
+        max-width: 490px;
+    }
+
+    .reservation .time_buttons {
+        gap: 20px;
+    }
+
+    .reservation .time_btn {
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+
+    /* Payment Section */
+    .reservation .payment_section {
+        padding: 24px 40px;
+    }
+
+    /* Checkbox Section */
+    .reservation .checkbox_section {
+        padding: 24px 40px;
+    }
+
+    .reservation .checkbox_label {
+        font-size: 14px;
+    }
+
+    /* Total Amount */
+    .reservation .total_amount {
+        border-radius: 15px;  /* 전체 둥글게 */
+        position: static;  /* sticky 해제 */
+    }
+
+    .reservation .total_amount h3 {
+        font-size: 20px;
+    }
+
+    .reservation .total_amount .price {
+        font-size: 22px;
+    }
+
+    .reservation .total_amount .price_row {
+        gap: 6px;
+    }
+
+    .reservation .total_amount .price_row .price_label_1 {
+        font-size: 14px;
+        min-width: 70px;
+    }
+
+    .reservation .total_amount .price_row .many,
+    .reservation .total_amount .price_row .number_1,
+    .reservation .total_amount .price_row .number_2 {
+        font-size: 14px;
+    }
+
+    /* 버튼 */
+    .reservation .reservation_button_wrap {
+        padding: 16px 32px 24px 32px;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .reservation .btn_reservation {
+        font-size: 16px;
+        padding: 14px 36px;
+    }
+}
