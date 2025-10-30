@@ -152,7 +152,7 @@ main.bg {
 .btn_all .btn_left .button {
     width: 60px;
     height: 60px;
-    border-radius: 50px;
+    border-radius: 50%;
     border: none;
     background: var(--gray-05);
     

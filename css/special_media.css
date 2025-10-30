@@ -106,6 +106,24 @@
         z-index: 10;
     }
 
+    .btn_all .btn_left .button {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: none;
+        background: var(--gray-05);
+
+
+    }
+
+    .btn_all .btn_left .button img {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        left: 8px;
+        top: 8px;
+    }
+
     .btn_all .btn_right {
         grid-column: 1;
         grid-row: 2;
@@ -420,7 +438,7 @@
         /* 수직 중앙 정렬 (선택 사항) */
     }
 
-    .SpecialExhibition .txt_right .top{
+    .SpecialExhibition .txt_right .top {
         margin-bottom: 0;
     }
 
@@ -459,6 +477,7 @@
         line-height: 1.5;
         margin-bottom: 4px;
     }
+
     .data {
         gap: 6px;
         font-size: 11px;
