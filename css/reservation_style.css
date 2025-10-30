@@ -1,5 +1,6 @@
+footer{display: none;}
 .wrap {
-    overflow: auto;
+    /* overflow: auto; */
     /* 추후에 overflow: hidden 걸어주기/..? */
 }
 
@@ -8,7 +9,6 @@
     /*     max-width: 1674px;
     margin: 0 auto; */
     padding: 40px 20px;
-    background: yellow;
     height: auto;
 }
 
@@ -17,7 +17,7 @@
     display: flex;
     gap: 30px;
     position: relative;
-    background: #ccc;
+    /* background: #ccc; */
     align-items: flex-start;
     overflow: auto;
     height: auto;
@@ -85,15 +85,15 @@
     width: 100%;
     background-color: #fff;
     padding: 32px 40px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 3px 2px 60.6px 0px rgba(179, 51, 44, 0.1);
 }
 
 /* Direction Texts */
-.info {
+/* .info {
     display: flex;
     flex-direction: column;
     gap: 12px;
-}
+} */
 
 /* .reservation .info .txt_t,
 .reservation .info .txt_b {
@@ -130,7 +130,17 @@
     border: 1px solid var(--gray-04);
     border-radius: 10px;
     padding: 18px 20px;
-    /* 추가 */
+    transition: background-color 0.3s ease;
+    transition: border-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reservation .info .lab:hover {
+    background-color: var(--yellow-01);
+    border-color: var(--red-05-point);
+
 }
 
 .reservation .info .lab_t {
@@ -151,11 +161,7 @@
     position: relative;
 }
 
-.reservation .info .lab_t:hover {
-    background-color: var(--yellow-01);
-    border-color: var(--red-05-point);
 
-}
 
 
 .reservation .info .lab_t i {
@@ -318,9 +324,10 @@
     border-color: var(--red-05-point);
     background-color: var(--red-05-point);
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
 }
 
+/* number of visitors */
 /* Visitor Controls */
 .reservation .visitor_controls {
     display: flex;
@@ -630,14 +637,20 @@
 
 /* Checkbox Label */
 .reservation .checkbox_label {
-    font-size: var(--fspre-20);
+    font-size: var(--fspre-21);
+    line-height: 1.5;
+    color: var(--gray-09);
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+}
+.reservation .checkbox_label_2 {
     line-height: 1.5;
     color: var(--gray-09);
     font-weight: 400;
     cursor: pointer;
     user-select: none;
 }
-
 /* Required Mark */
 .reservation .required {
     color: var(--red-05-point);
@@ -676,7 +689,7 @@
     text-align: right;
 }
 
-.reservation .total_amount .price {
+#total_price {
     font-size: var(--fspre-30);
     font-weight: 700;
     color: var(--red-05-point);
@@ -684,7 +697,9 @@
     margin-bottom: 4px;
 }
 
+
 .reservation .total_amount .vat {
+  font-weight: 300;
     color: var(--gray-05);
 }
 
@@ -718,10 +733,25 @@
     color: var(--gray-09);
 }
 
-.reservation .total_amount .price_row .many {
+#how_1,
+#how_2 {
+    display: inline-block;
+    min-width: 25px;  /* 고정 너비 */
+    text-align: center;  /* 중앙 정렬 */
+    font-size: var(--fspre-20);
     font-size: var(--fspre-21);
     font-weight: 500;
     color: var(--blue-07);
+}
+
+#adult_price,
+#child_price {
+     display: inline-block;
+    min-width: 60px;  /* 고정 너비 */
+    text-align: right;  /* 오른쪽 정렬 */
+    font-size: var(--fspre-20);
+    font-weight: 500;
+    color: var(--gray-09);
 }
 
 .reservation .total_amount .price_row .x {
@@ -737,16 +767,13 @@
 
 }
 
-.reservation .total_amount .price_row .number_1 {
-    font-size: var(--fspre-20);
-    font-weight: 500;
-    color: var(--gray-09);
-}
 
 .reservation .total_amount .price_row .price_label_2 {
     display: flex;
     align-items: center;
     gap: 4px;
+    min-width: 150px;
+    /* 고정 너비 추가 */
 }
 
 .reservation .total_amount .price_row .eq {
@@ -755,7 +782,11 @@
     color: var(--gray-09);
 }
 
-.reservation .total_amount .price_row .number_2 {
+#adult_price_total,
+#child_price_total {
+    display: inline-block;
+    min-width: 70px;  /* 고정 너비 */
+    text-align: right;  /* 오른쪽 정렬 */
     font-size: var(--fspre-23);
     font-weight: 600;
     color: var(--gray-09);
@@ -779,6 +810,7 @@
     color: #fff;
     border: none;
     border-radius: 15px;
+    font-family: 'pretendard', sans-serif;
     font-size: var(--fspre-25);
     font-weight: 300;
     cursor: pointer;

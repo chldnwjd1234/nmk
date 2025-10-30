@@ -1,53 +1,35 @@
-/* dropdown */
-document.addEventListener('DOMContentLoaded', function () {
-    // 기존 가격 계산 코드...
+document.addEventListener('DOMContentLoaded', function() {
+    // ===== 1. Time Button 클릭 이벤트 =====
+    const timeButtons = document.querySelectorAll('.time_btn');
+    
+    timeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // 모든 버튼에서 active 클래스 제거
+            timeButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // 클릭한 버튼에만 active 클래스 추가
+            this.classList.add('active');
+        });
+    });
 
-    // Visitor Information 드롭다운 기능
+    // ===== 2. Visitor Information 드롭다운 =====
     const labButton = document.querySelector('.lab_t');
     const labContent = document.querySelector('.lab_txt');
 
     if (labButton && labContent) {
-        labButton.addEventListener('click', function () {
-            // active 클래스 토글
+        labButton.addEventListener('click', function() {
             labButton.classList.toggle('active');
             labContent.classList.toggle('active');
         });
     }
 
-    // 기존 updatePrice 함수와 버튼 이벤트들...
-
-
-});
-// 인원 수 카운터 기능
-
-/* document.querySelectorAll('.counter').forEach(counter => {
-
-    const minusBtn = counter.querySelector('.counter_btn.minus');
-    const plusBtn = counter.querySelector('.counter_btn.plus');
-    const inputField = counter.querySelector('.counter_input');
-
-    minusBtn.addEventListener('click', () => {
-        let currentValue = parseInt(inputField.value);
-        if (currentValue > parseInt(inputField.min)) {
-            inputField.value = currentValue - 1;
-        }
-    });
-
-    plusBtn.addEventListener('click', () => {
-        let currentValue = parseInt(inputField.value);
-        if (currentValue < parseInt(inputField.max)) {
-            inputField.value = currentValue + 1;
-        }
-    });
-}); */
-// reservation.js
-
-document.addEventListener('DOMContentLoaded', function () {
-
-    // 가격 설정
+    // ===== 3. 가격 계산 기능 =====
     const PRICE_ADULT = 5000;
     const PRICE_CHILD = 3000;
-    // 요소 선택
+
+    // 요소 선택 - Counter Input
     const adultCounterInput = document.querySelector('.visitor_row:nth-child(1) .counter_input');
     const childCounterInput = document.querySelector('.visitor_row:nth-child(2) .counter_input');
     const adultMinusBtn = document.querySelector('.visitor_row:nth-child(1) .counter_btn.minus');
@@ -55,16 +37,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const childMinusBtn = document.querySelector('.visitor_row:nth-child(2) .counter_btn.minus');
     const childPlusBtn = document.querySelector('.visitor_row:nth-child(2) .counter_btn.plus');
 
-    // Total Amount 영역 요소들
-    const totalPrice = document.querySelector('.total_amount .price');
-
-    // Adult 관련
-    const adultMany = document.querySelector('.price_row:nth-child(1) .many');
-    const adultResultNumber = document.querySelector('.price_row:nth-child(1) .price_label_3 .number');
-
-    // Child 관련
-    const childMany = document.querySelector('.price_row:nth-child(2) .many');
-    const childResultNumber = document.querySelector('.price_row:nth-child(2) .price_label_3 .number');
+    // Total Amount 영역 요소들 (ID로 선택)
+    const totalPrice = document.getElementById('total_price');
+    const adultHow = document.getElementById('how_1');
+    const childHow = document.getElementById('how_2');
+    const adultPriceTotal = document.getElementById('adult_price_total');
+    const childPriceTotal = document.getElementById('child_price_total');
 
     // 가격 계산 및 업데이트 함수
     function updatePrice() {
@@ -77,19 +55,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const totalAmount = adultTotal + childTotal;
 
         // Adult 업데이트
-        adultMany.textContent = adultCount;
-        adultResultNumber.textContent = adultTotal.toLocaleString();
+        adultHow.textContent = adultCount;
+        adultPriceTotal.textContent = adultTotal.toLocaleString();
 
         // Child 업데이트
-        childMany.textContent = childCount;
-        childResultNumber.textContent = childTotal.toLocaleString();
+        childHow.textContent = childCount;
+        childPriceTotal.textContent = childTotal.toLocaleString();
 
         // Total 업데이트
         totalPrice.textContent = `₩ ${totalAmount.toLocaleString()}`;
     }
 
     // Adult + 버튼 클릭
-    adultPlusBtn.addEventListener('click', function () {
+    adultPlusBtn.addEventListener('click', function() {
         let value = parseInt(adultCounterInput.value) || 0;
         const max = parseInt(adultCounterInput.max) || 5;
         if (value < max) {
@@ -99,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Adult - 버튼 클릭
-    adultMinusBtn.addEventListener('click', function () {
+    adultMinusBtn.addEventListener('click', function() {
         let value = parseInt(adultCounterInput.value) || 0;
         const min = parseInt(adultCounterInput.min) || 0;
         if (value > min) {
@@ -109,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Child + 버튼
-    childPlusBtn.addEventListener('click', function () {
+    childPlusBtn.addEventListener('click', function() {
         let value = parseInt(childCounterInput.value) || 0;
         const max = parseInt(childCounterInput.max) || 5;
         if (value < max) {
@@ -119,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Child - 버튼
-    childMinusBtn.addEventListener('click', function () {
+    childMinusBtn.addEventListener('click', function() {
         let value = parseInt(childCounterInput.value) || 0;
         const min = parseInt(childCounterInput.min) || 0;
         if (value > min) {
