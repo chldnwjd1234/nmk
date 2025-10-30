@@ -47,6 +47,11 @@
     .notice {
         margin-top: 12px;
         margin-bottom: 12px;
+        display: flex;
+    }
+
+    .notice_2 {
+        display: none;
     }
 
     .hours_table {
@@ -327,6 +332,32 @@
 
 @media screen and (max-width:414px) {
 
+    .top_btn button {
+        padding: 8px 20px;
+        border-radius: 300px;
+        margin-right: 8px;
+        border: none;
+        cursor: pointer;
+        color: var(--w-color);
+        background-color: var(--gray-05);
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .top_btn {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .OpeningHours {
+        padding-bottom: 60px;
+    }
+
+    .OpeningHours .tit {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
     .hours_table {
         display: none;
     }
@@ -342,5 +373,192 @@
 
     .notice {
         display: none;
+    }
+
+    .notice_2 {
+        padding-top: 12px;
+        display: block;
+
+    }
+
+    .notice_3 {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+    }
+
+    .notice_3 img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .notice_3 p {
+        font-size: 12px;
+        line-height: 1.4;
+        color: var(--red-05-point);
+    }
+
+    .hours_box {
+        padding: 18px 37px 26px 24px;
+        margin-top: 20px;
+    }
+
+    .hours_2 {
+        width: 100%;
+    }
+
+    .hours_card {
+        width: 100%;
+        padding: 16px 0;
+        border-bottom: 1px dashed var(--gray-05);
+    }
+
+    .hours_card:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .hours_card .tit_2 {
+        display: flex;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.3;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 4px;
+    }
+
+    .hours_card p {
+        font-size: 12px;
+        line-height: 1.4;
+        gap: 4px;
+    }
+
+    .hours_card .tit_2 img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .AdmissionFees .AdmissionFees_1 {
+        display: none;
+    }
+
+
+    .AdmissionFees .AdmissionFees_2 {
+        display: block;
+    }
+
+    .label_1 p,
+    .label_2 p {
+        padding: 4px 10px;
+        background-color: black;
+        color: var(--w-color);
+        border-radius: 5px;
+        margin-right: 12px;
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    .label_1 span,
+    .label_2 span {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+
+    .label_1 {
+        margin-bottom: 8px;
+        margin-top: 12px;
+    }
+
+    .service_card {
+        width: 352px;
+        height: 86px;
+        padding: 15px 24px;
+    }
+
+    .VisitorServices .services_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .VisitorServices .box_left,
+    .VisitorServices .box_top,
+    .VisitorServices .box_right {
+        display: contents;
+    }
+
+    /* 카드: 내부 2열 그리드 (아이콘 / 텍스트) */
+    .VisitorServices .service_card {
+        width: 352px;
+        /* 고정 유지 */
+        height: 86px;
+        /* 고정 유지 */
+        padding: 15px 24px;
+        /* 고정 유지 */
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        grid-auto-rows: auto;
+        column-gap: 12px;
+        align-items: center;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    /* 아이콘 셀 */
+    .VisitorServices .service_card .icon {
+        grid-column: 1;
+        grid-row: 1 / span 3;
+        /* 제목+문단 옆에 세로 중앙 */
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, .9);
+        margin: 0;
+    }
+
+    .VisitorServices .service_card .icon img {
+        width: 24px;
+        height: auto;
+    }
+
+    /* 텍스트들을 각각의 '행'에 고정 */
+    .VisitorServices .service_card h3,
+    .VisitorServices .service_card p {
+        grid-column: 2;
+        /* 모두 오른쪽 컬럼 */
+        position: static;
+        /* 혹시 다른 곳에서 absolute 준 경우 무력화 */
+        min-width: 0;
+        /* 줄바꿈 제대로 되도록 */
+        margin: 0;
+    }
+
+    .VisitorServices .service_card h3 {
+        grid-row: 1;
+        margin-bottom: 4px;
+        line-height: 1.2;
+    }
+
+    .VisitorServices .service_card p:nth-of-type(1) {
+        grid-row: 2;
+    }
+
+    .VisitorServices .service_card p:nth-of-type(2) {
+        grid-row: 3;
+    }
+
+    /* 높이(86px) 안에 깔끔히 들어가게 문단은 1줄로 클램프 */
+    .VisitorServices .service_card p {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.35;
     }
 }
