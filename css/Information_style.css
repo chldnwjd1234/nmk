@@ -53,6 +53,11 @@
     justify-content: flex-end;
     margin-top: 42px;
     margin-bottom: 22px;
+    display: flex;
+}
+
+.notice_2 {
+    display: none;
 }
 
 .notice p {
@@ -82,9 +87,9 @@
     display: block;
 }
 
-          .hours_2 {
-        display: none;
-    }
+.hours_2 {
+    display: none;
+}
 
 .hours_table thead {
     border-bottom: 1px solid #333;
@@ -167,6 +172,10 @@
     font-size: 30px;
     line-height: 1.3;
     font-weight: 600;
+}
+
+.AdmissionFees .AdmissionFees_2 {
+    display: none;
 }
 
 .label_1,
@@ -463,7 +472,7 @@
 
 
 .VisitorTips {
-    margin-top: 103px;
+    padding-top: 103px;
     padding-bottom: 120px;
     background-image: url(../asset/img_information/tree.png);
     background-repeat: no-repeat;
@@ -483,66 +492,21 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    /* background: #ccc; */
+}
 
+.Visitorcontainer .left,
+.Visitorcontainer .middle,
+.Visitorcontainer .right {
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
 }
 
 .Visitorcontainer p {
     font-size: 20px;
     line-height: 1.4;
 
-}
-
-
-.do_not_touch {
-    background-image: url(../asset/img_information/VisitorTips_6.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 300px;
-    /* 육각형 크기에 맞춰 너비 지정 */
-    height: 260px;
-    /* 육각형 크기에 맞춰 높이 지정 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 128px;
-    transition: .6s;
-}
-
-
-.do_not_touch .icon img {
-    width: 110px;
-    height: auto;
-}
-
-.do_not_touch p {
-    align-self: center;
-    justify-self: center;
-}
-
-.do_not_touch:hover {
-    background-image: url(../asset/img_information/6_blue.png);
-}
-
-.do_not_touch:hover .default_icon {
-    display: none;
-}
-
-.do_not_touch:hover .hover_icon {
-    display: block;
-}
-
-.do_not_touch:hover .default_text {
-    display: none;
-}
-
-.do_not_touch:hover .hover_text {
-    display: block;
-}
-
-.do_not_touch:hover p {
-    color: white;
 }
 
 .icon_tips {
@@ -557,7 +521,36 @@
     justify-content: center;
     align-items: center;
     gap: 16px;
+    flex-shrink: 0;
+    background-image: url(../asset/img_information/VisitorTips_6.png);
+    transition: .6s;
 }
+
+.icon_tips:hover {
+    background-image: url(../asset/img_information/6_blue.png);
+}
+
+.icon_tips:hover .default_icon {
+    display: none;
+}
+
+.icon_tips:hover .hover_icon {
+    display: block;
+}
+
+.icon_tips:hover .default_text {
+    display: none;
+}
+
+.icon_tips:hover .hover_text {
+    display: block;
+}
+
+.icon_tips:hover p {
+    color: var(--w-color);
+}
+
+
 
 .icon_tips .hover_icon {
     display: none;
@@ -568,7 +561,7 @@
     color: white;
     /* 호버 시 텍스트 색상 (배경이 어두워지므로 흰색으로 설정) */
     text-align: center;
-    padding: 10px;
+    /* padding: 10px; */
     /* 텍스트가 육각형 안에 잘 보이도록 패딩 추가 */
     font-size: 16px;
     /* 텍스트 크기 조정 */
@@ -591,255 +584,6 @@
 .icon_tips p {
     align-self: center;
     justify-self: center;
-}
-
-.No_Smoking {
-    background-image: url(../asset/img_information/VisitorTips_6.png);
-    transition: .6s;
-}
-
-.No_Smoking p {
-    align-self: center;
-    justify-self: center;
-}
-
-.No_Smoking:hover {
-    background-image: url(../asset/img_information/6_red.png);
-}
-
-.No_Smoking:hover .default_icon {
-    display: none;
-}
-
-.No_Smoking:hover .hover_icon {
-    display: block;
-}
-
-.No_Smoking:hover .default_text {
-    display: none;
-}
-
-.No_Smoking:hover .hover_text {
-    display: block;
-}
-
-.No_Smoking:hover p {
-    color: white;
-}
-
-
-.No_FoodDrinks {
-    background-image: url(../asset/img_information/VisitorTips_6.png);
-    transition: .6s;
-}
-
-.No_FoodDrinks p {
-    align-self: center;
-    justify-self: center;
-}
-
-.No_FoodDrinks:hover {
-    background-image: url(../asset/img_information/6_blue.png);
-}
-
-.No_FoodDrinks:hover .default_icon {
-    display: none;
-}
-
-.No_FoodDrinks:hover .hover_icon {
-    display: block;
-}
-
-.No_FoodDrinks:hover .default_text {
-    display: none;
-}
-
-.No_FoodDrinks:hover .hover_text {
-    display: block;
-}
-
-.No_FoodDrinks:hover p {
-    color: white;
-}
-
-
-.NoPhotography {
-    background-image: url(../asset/img_information/VisitorTips_6.png);
-    margin-bottom: 128px;
-    transition: .6s;
-}
-
-.NoPhotography p {
-    align-self: center;
-    justify-self: center;
-}
-
-.NoPhotography:hover {
-    background-image: url(../asset/img_information/6_red.png);
-}
-
-.NoPhotography:hover .default_icon {
-    display: none;
-}
-
-.NoPhotography:hover .hover_icon {
-    display: block;
-}
-
-.NoPhotography:hover .default_text {
-    display: none;
-}
-
-.NoPhotography:hover .hover_text {
-    display: block;
-}
-
-.NoPhotography:hover p {
-    color: white;
-}
-
-
-
-
-.SilentMode {
-    background-image: url(../asset/img_information/VisitorTips_6.png);
-    transition: .6s;
-}
-
-.SilentMode p {
-    align-self: center;
-    justify-self: center;
-}
-
-.SilentMode:hover {
-    background-image: url(../asset/img_information/6_blue.png);
-}
-
-.SilentMode:hover .default_icon {
-    display: none;
-}
-
-.SilentMode:hover .hover_icon {
-    display: block;
-}
-
-.SilentMode:hover .default_text {
-    display: none;
-}
-
-.SilentMode:hover .hover_text {
-    display: block;
-}
-
-.SilentMode:hover p {
-    color: white;
-}
-
-
-.NoBicycles_Skates {
-    background-image: url(../asset/img_information/VisitorTips_6.png);
-    transition: .6s;
-}
-
-.NoBicycles_Skates p {
-    align-self: center;
-    justify-self: center;
-}
-
-.NoBicycles_Skates:hover {
-    background-image: url(../asset/img_information/6_red.png);
-}
-
-.NoBicycles_Skates:hover .default_icon {
-    display: none;
-}
-
-.NoBicycles_Skates:hover .hover_icon {
-    display: block;
-}
-
-.NoBicycles_Skates:hover .default_text {
-    display: none;
-}
-
-.NoBicycles_Skates:hover .hover_text {
-    display: block;
-}
-
-.NoBicycles_Skates:hover p {
-    color: white;
-}
-
-
-.Bequiet {
-    background-image: url(../asset/img_information/VisitorTips_6.png);
-    margin-bottom: 128px;
-    transition: .6s;
-}
-
-.Bequiet p {
-    align-self: center;
-    justify-self: center;
-}
-
-.Bequiet:hover {
-    background-image: url(../asset/img_information/6_blue.png);
-}
-
-.Bequiet:hover .default_icon {
-    display: none;
-}
-
-.Bequiet:hover .hover_icon {
-    display: block;
-}
-
-.Bequiet:hover .default_text {
-    display: none;
-}
-
-.Bequiet:hover .hover_text {
-    display: block;
-}
-
-.Bequiet:hover p {
-    color: white;
-}
-
-
-
-.OnlyServiceDogs {
-    background-image: url(../asset/img_information/VisitorTips_6.png);
-    transition: .6s;
-}
-
-.OnlyServiceDogs p {
-    align-self: center;
-    justify-self: center;
-}
-
-.OnlyServiceDogs:hover {
-    background-image: url(../asset/img_information/6_red.png);
-}
-
-.OnlyServiceDogs:hover .default_icon {
-    display: none;
-}
-
-.OnlyServiceDogs:hover .hover_icon {
-    display: block;
-}
-
-.OnlyServiceDogs:hover .default_text {
-    display: none;
-}
-
-.OnlyServiceDogs:hover .hover_text {
-    display: block;
-}
-
-.OnlyServiceDogs:hover p {
-    color: white;
 }
 
 
@@ -1190,6 +934,10 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+}
+
+.parking_info_2 {
+    display: none;
 }
 
 

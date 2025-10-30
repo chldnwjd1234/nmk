@@ -47,6 +47,11 @@
     .notice {
         margin-top: 12px;
         margin-bottom: 12px;
+        display: flex;
+    }
+
+    .notice_2 {
+        display: none;
     }
 
     .hours_table {
@@ -322,10 +327,357 @@
         height: 80px;
     }
 
+    .di_section iframe {
+        width: 100%;
+        height: 380px;
+
+    }
+
+    .map_img {
+        height: 472px;
+        background-color: rgba(255, 255, 255, .4);
+        border-radius: 20px;
+    }
+
+    .map_img img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .map_img p {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .map_info {
+        flex-direction: column;
+        gap: 10px;
+        padding: 18px 36px;
+    }
+
+    .address,
+    .phone {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    .Directions_btn {
+        margin-top: 24px;
+        padding-bottom: 40px;
+    }
+
+    .Directions_btn .Directions {
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    .Directions_btn button {
+        padding: 8px 30px;
+        border-radius: 10px;
+        margin-right: 12px;
+        border: none;
+        cursor: pointer;
+        color: var(--w-color);
+        background-color: var(--gray-05);
+    }
+
+    .Publictransport {
+        padding-bottom: 160px;
+    }
+
+    .Public_Bus {
+        gap: 40px;
+        flex-direction: column;
+        gap: 8px;
+        padding-bottom: 28px;
+    }
+
+
+    .Public_left {
+        gap: 12px;
+    }
+
+    .Public_left h3 {
+        font-size: 24px;
+        line-height: 1.3;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .Public_right {
+        display: flex;
+        /* margin-left: 130px; */
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 0;
+        margin-left: 60px;
+    }
+
+    .bus_list li {
+        margin-bottom: 12px;
+    }
+
+    .img_Bus {
+        background-color: var(--yellow-01);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        /* 추가 */
+        justify-content: center;
+        /* 추가 */
+        align-items: center;
+        /* 추가 */
+    }
+
+    .img_Bus img {
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+    }
+
+    .bus_type span {
+        font-size: 16px;
+        line-height: 1.4;
+
+    }
+
+
+    .bus_type p {
+        font-size: 15px;
+        line-height: 1.3;
+
+    }
+
+    .bus_num {
+        padding: 8px 15px;
+        background-color: #4471CC;
+        color: var(--w-color);
+        border-radius: 5px;
+    }
+
+
+    .img_Subway {
+        background-color: var(--yellow-01);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        /* 추가 */
+        justify-content: center;
+        /* 추가 */
+        align-items: center;
+        /* 추가 */
+    }
+
+    .img_Subway img {
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+    }
+
+    .Public_Subway {
+        padding-top: 52px;
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .Public_Subway .Public_right {
+        margin-left: 60px;
+    }
+
+    .Public_Subway span {
+        font-size: 16px;
+        line-height: 1.4;
+
+    }
+
+
+    .Public_Subway p {
+        font-size: 15px;
+        line-height: 1.3;
+
+    }
+
+    .Subway_list .Subway_num {
+        padding: 8px 18px;
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+    .Car {
+        flex-direction: column;
+        gap: 8px;
+        padding-bottom: 160px;
+    }
+
+    .img_Car {
+        background-color: var(--yellow-01);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        /* 추가 */
+        justify-content: center;
+        /* 추가 */
+        align-items: center;
+        /* 추가 */
+    }
+
+    .img_Car img {
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+    }
+
+    .Car_left h3 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .Car_left {
+        gap: 12px;
+    }
+
+    .Car_right ul li {
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+    }
+
+    .Car_right ul li span {
+        display: inline-flex;
+        /* ← 여기서 width/height 활성화 */
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+
+        width: 174px;
+        height: 38px;
+        font-size: 17px;
+        line-height: 1.3;
+        flex: 0 0 auto;
+        /* 부모가 flex여도 자동 늘어남 방지 */
+        white-space: nowrap;
+    }
+
+    .Car_right ul li p {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .parking_all {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .parking_left {
+        gap: 12px;
+    }
+
+    .parking_left h3 {
+        font-size: 24px;
+        line-height: 1.3;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .parking_right {
+        margin-top: 0;
+    }
+
+
+    .img_parking {
+        background-color: var(--yellow-01);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        /* 추가 */
+        justify-content: center;
+        /* 추가 */
+        align-items: center;
+        /* 추가 */
+    }
+
+    .img_parking img {
+        width: 24px;
+        height: 24px;
+
+    }
+
+    .parking_map img {
+        width: 464px;
+        height: 350px;
+        margin-right: 12px;
+    }
+
+    .parking_info_2 {
+        width: 464px;
+        height: 350px;
+        background-color: rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        padding: 28px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .parking_info {
+        display: none;
+    }
+
+
+    .parking_info_2 {
+        display: block;
+    }
+
+    .parking_notes {
+        padding-top: 20px;
+        /* padding-bottom: 20px; */
+        border-top: 1px dashed #999
+    }
+
+
+
+
 }
 
 
 @media screen and (max-width:414px) {
+
+    .top_btn button {
+        padding: 8px 20px;
+        border-radius: 300px;
+        margin-right: 8px;
+        border: none;
+        cursor: pointer;
+        color: var(--w-color);
+        background-color: var(--gray-05);
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .top_btn {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .OpeningHours {
+        padding-bottom: 60px;
+    }
+
+    .OpeningHours .tit {
+        font-size: 20px;
+        line-height: 1.5;
+    }
 
     .hours_table {
         display: none;
@@ -335,7 +687,690 @@
         display: block;
     }
 
+    .hours_2 h3 {
+        font-size: 14px;
+    }
+
     .notice {
         display: none;
     }
+
+    .notice_2 {
+        padding-top: 12px;
+        display: block;
+
+    }
+
+    .notice_3 {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+    }
+
+    .notice_3 img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .notice_3 p {
+        font-size: 12px;
+        line-height: 1.4;
+        color: var(--red-05-point);
+    }
+
+    .hours_box {
+        padding: 18px 37px 26px 24px;
+        margin-top: 20px;
+    }
+
+    .hours_2 {
+        width: 100%;
+    }
+
+    .hours_card {
+        width: 100%;
+        padding: 16px 0;
+        border-bottom: 1px dashed var(--gray-05);
+    }
+
+    .hours_card:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .hours_card .tit_2 {
+        display: flex;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.3;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 4px;
+    }
+
+    .hours_card p {
+        font-size: 12px;
+        line-height: 1.4;
+        gap: 4px;
+    }
+
+    .hours_card .tit_2 img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .AdmissionFees .AdmissionFees_1 {
+        display: none;
+    }
+
+
+    .AdmissionFees .AdmissionFees_2 {
+        display: block;
+    }
+
+    .label_1 p,
+    .label_2 p {
+        padding: 4px 10px;
+        background-color: black;
+        color: var(--w-color);
+        border-radius: 5px;
+        margin-right: 12px;
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    .label_1 span,
+    .label_2 span {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+
+    .label_1 {
+        margin-bottom: 8px;
+        margin-top: 12px;
+    }
+
+    .service_card {
+        width: 352px;
+        height: 86px;
+        padding: 15px 24px;
+    }
+
+    .VisitorServices {
+        margin-top: 60px;
+        padding-bottom: 80px;
+    }
+
+
+    .VisitorServices h2 {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .VisitorServices .services_container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .VisitorServices .box_left,
+    .VisitorServices .box_right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .VisitorServices .box_top {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+    }
+
+    /* 카드: 내부 2열 그리드 (아이콘 / 텍스트) */
+    .VisitorServices .service_card {
+        width: 100%;
+        /* 고정 유지 */
+        height: 86px;
+        /* 고정 유지 */
+        padding: 15px 24px;
+        /* 고정 유지 */
+        margin: 0;
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        grid-auto-rows: auto;
+        column-gap: 12px;
+        align-items: center;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    /* 아이콘 셀 */
+    .VisitorServices .service_card .icon {
+        grid-column: 1;
+        grid-row: 1 / span 3;
+        /* 제목+문단 옆에 세로 중앙 */
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, .9);
+        margin: 0;
+    }
+
+    .VisitorServices .service_card .icon img {
+        width: 26px;
+        height: auto;
+    }
+
+    /* 텍스트들을 각각의 '행'에 고정 */
+    .VisitorServices .service_card h3,
+    .VisitorServices .service_card p {
+        grid-column: 2;
+        /* 모두 오른쪽 컬럼 */
+        position: static;
+        /* 혹시 다른 곳에서 absolute 준 경우 무력화 */
+        min-width: 0;
+        /* 줄바꿈 제대로 되도록 */
+        margin: 0;
+    }
+
+    .VisitorServices .service_card h3 {
+        grid-row: 1;
+        margin-bottom: 4px;
+        line-height: 1.2;
+        font-size: 16px;
+        line-height: 1.3;
+    }
+
+    .VisitorServices .service_card p:nth-of-type(1) {
+        grid-row: 2;
+    }
+
+    .VisitorServices .service_card p:nth-of-type(2) {
+        grid-row: 3;
+    }
+
+    /* 높이(86px) 안에 깔끔히 들어가게 문단은 1줄로 클램프 */
+    .VisitorServices .service_card p {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.35;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .services_container {
+        margin-top: 20px;
+    }
+
+    .wheelchair_stroller::before {
+        background-image: url(../asset/img_information/8_2_1.png);
+
+        background-position: right -55px top -90px;
+    }
+
+    .museum_shops::before {
+        background-image: url(../asset/img_information/8_2_2.png);
+
+        background-position: right -55px top -90px;
+    }
+
+    .lactation_room::before {
+        background-image: url(../asset/img_information/8_2_3.png);
+
+        background-position: right -55px top -90px;
+    }
+
+    .lockers::before {
+        background-image: url(../asset/img_information/8_2_4.png);
+
+        background-position: right -55px top -90px;
+    }
+
+    .coat_storage::before {
+        background-image: url(../asset/img_information/8_2_5.png);
+
+        background-position: right -55px top -90px;
+    }
+
+    .VisitorTips {
+        padding-top: 70px;
+        padding-bottom: 100px;
+        background-image: url(../asset/img_information/tree.png);
+        background-repeat: no-repeat;
+        background-position: right bottom -10px;
+        /* 화면 가운데 정렬 */
+        background-size: contain;
+        background-size: 55%;
+    }
+
+    .VisitorTips h2 {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .VisitorTips .tit {
+        margin-bottom: 50px;
+    }
+
+    .icon_tips {
+        width: 126px;
+        height: 110px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+        gap: 4px;
+    }
+
+    .icon_tips:hover .default_text {
+        display: block;
+        order: 3;
+        font-size: 10px;
+    }
+
+    .icon_tips:hover .hover_text {
+        display: none;
+    }
+
+    .Visitorcontainer img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .Visitorcontainer p {
+        font-size: 10px;
+        line-height: 1.2;
+        margin-top: 6px;
+        text-align: center;
+    }
+
+    .VisitorTips .Visitorcontainer {
+        display: grid;
+        grid-template-columns: repeat(3, 116px);
+        /* 3열, 각 116px */
+        grid-auto-rows: 100px;
+        /* 각 행 100px */
+        gap: 18px 22px;
+        /* 행/열 간격 */
+        justify-content: center;
+        /* 가운데 정렬 */
+        /* padding-bottom: 60px; */
+        /* 스태거 내려감 여유 */
+    }
+
+    /* 래퍼 평탄화 */
+    .VisitorTips .left,
+    .VisitorTips .middle,
+    .VisitorTips .right {
+        display: contents;
+    }
+
+    /* 좌/우 컬럼 고정 위치 */
+    .VisitorTips .do_not_touch {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .VisitorTips .NoPhotography {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .VisitorTips .Bequiet {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .VisitorTips .No_Smoking {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .VisitorTips .SilentMode {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .VisitorTips .OnlyServiceDogs {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    /* 가운데 컬럼: 반 칸(행 높이+간격의 1/2) 내려서 스태거 효과 */
+    /* 행 높이 100px + 행 간격 18px => 59px */
+    .VisitorTips .No_FoodDrinks {
+        grid-column: 2;
+        grid-row: 1;
+        transform: translateY(calc((100px + 18px)/2));
+        /* ≈ 59px */
+    }
+
+    .VisitorTips .NoBicycles_Skates {
+        grid-column: 2;
+        grid-row: 2;
+        transform: translateY(calc((100px + 18px)/2));
+    }
+
+    /* 아이템 내부 여백/정렬 보정(선택) */
+    .VisitorTips .icon_tips p {
+        margin-top: 6px;
+    }
+
+    .di_section iframe {
+        width: 100%;
+        height: 225px;
+
+    }
+
+    .map_img {
+        height: 337px;
+        background-color: rgba(255, 255, 255, .4);
+        border-radius: 20px;
+    }
+
+    .map_img img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .map_img p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .Directions_btn {
+        margin-top: 29px;
+        padding-bottom: 12px;
+    }
+
+    .Directions_btn .Directions {
+        font-size: 14px;
+        line-height: 1.3;
+
+    }
+
+    .Directions_btn button {
+        padding: 6px 20px;
+        border-radius: 5px;
+        margin-right: 4px;
+        border: none;
+        cursor: pointer;
+        color: var(--w-color);
+        background-color: var(--gray-05);
+    }
+
+    .Publictransport h3 {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+
+    .bus_type {
+        display: none;
+    }
+
+    .img_Bus {
+        background-color: var(--yellow-01);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        /* 추가 */
+        justify-content: center;
+        /* 추가 */
+        align-items: center;
+        /* 추가 */
+    }
+
+    .img_Bus img {
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 18px;
+    }
+
+
+    .bus_list li {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .bus_list li {
+        display: flex;
+        flex-direction: column;
+        /* ← 핵심 */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* 배지 고정폭, 위 라인에 맞춤 */
+    .bus_list .bus_num {
+        flex: 0 0 auto;
+        align-self: flex-start;
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    /* 설명 문장: 오른쪽 영역 채우며 줄바꿈 */
+    .bus_list p {
+        flex: 1;
+        margin: 0;
+        line-height: 1.5;
+        min-width: 0;
+        /* 긴 줄도 자연스럽게 줄바꿈 */
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+
+
+    .img_Subway {
+        background-color: var(--yellow-01);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        /* 추가 */
+        justify-content: center;
+        /* 추가 */
+        align-items: center;
+        /* 추가 */
+    }
+
+    .img_Subway img {
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 18px;
+    }
+
+    /* 1) 세로쌓기 강제하던 규칙을 덮고 grid로 전환 */
+    .Public_right .Subway_type {
+        display: grid;
+        /* ← flex column 대신 grid */
+        grid-template-columns: auto 1fr;
+        column-gap: 0;
+        row-gap: 12px;
+        align-items: center;
+        justify-items: start;
+    }
+
+    /* 1행: 파란 원 + '4 Line' */
+    .Public_right .Subway_type>img:first-of-type {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .Public_right .Subway_type>span:first-of-type {
+        grid-row: 1;
+        grid-column: 2;
+        white-space: nowrap;
+    }
+
+    /* 2행: 초록 칩(전체 폭) */
+    .Public_right .Subway_type>img:nth-of-type(2) {
+        grid-row: 2;
+        grid-column: 1 / -1;
+        /* 전체 칼럼 차지 */
+        justify-self: start;
+    }
+
+    /* 3행: 긴 노선명(전체 폭) */
+    .Public_right .Subway_type>span:nth-of-type(2) {
+        grid-row: 3;
+        grid-column: 1 / -1;
+        /* 전체 칼럼 차지 */
+        line-height: 1.4;
+    }
+
+    /* 4행: 역 배지 + 안내문 가로 정렬 */
+    .Public_right .Subway_list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 8px;
+    }
+
+    .Public_right .Subway_num {
+        flex: 0 0 auto;
+        align-self: flex-start;
+    }
+
+    .Public_right .Subway_list p {
+        flex: 1;
+        margin: 0;
+        line-height: 1.5;
+        min-width: 0;
+    }
+
+    .Subway_type {
+        /* margin-right: 0; */
+    }
+
+
+    .Subway_type span {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .Subway_type .blue_line {
+        width: 24px;
+        height: 24px;
+
+    }
+
+    .Subway_type .Gyeongui {
+        width: 136px;
+        height: 26px;
+
+    }
+
+    .Subway_list li {
+        flex-direction: column;
+    }
+
+    .Subway_list li p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .Subway_list .Subway_num {
+        padding: 4px 13px;
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+
+    .Car_left {
+        display: none;
+    }
+
+    .Car_right ul li{
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 12px;
+    }
+
+        .Car_right ul li span {
+        display: inline-flex;
+        /* ← 여기서 width/height 활성화 */
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+
+        width: 122px;
+        height: 26px;
+        font-size: 12px;
+        line-height: 1.3;
+        flex: 0 0 auto;
+        /* 부모가 flex여도 자동 늘어남 방지 */
+        white-space: nowrap;
+        align-self: flex-start;
+    }
+
+     .Car_right ul li p {
+        font-size: 12px;
+        line-height: 1.4;
+     }
+
+     .Car_right span {
+        font-size: 12px;
+        line-height: 1.4;
+     }
+ 
+ 
+
+    .parking_all .parking_left {
+        display: none;
+    }
+    
+    .parking_right {
+        flex-direction: column;
+    }
+
+    .parking_map img {
+        width: 390px;
+        height: 280px;
+    }
+
+        .parking_info_2 {
+        width: 390px;
+        height: 340px;
+        background-color: rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        padding: 28px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .parking_info_2 thead {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .parking_info_2 .parking_notes img {
+        width: 12px;
+        height: 12px;
+
+    }
+
+    .parking_info_2 .parking_notes p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
 }
