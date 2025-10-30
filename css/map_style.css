@@ -241,22 +241,27 @@
     /* overflow: hidden; */
 }
 
-.artall>li>ul li.img_box {
+.artall>li>ul li .img_box {
     width: 150px;
     height: 150px;
-    background: #9F140B;
+    background: #ffffff;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    /* 가로 중앙 */
+    align-items: center;
 }
 
 /* 이미지 박스 */
 .artall>li>ul li img {
     width: 100%;
-    aspect-ratio: 1 / 1;
+/*     aspect-ratio: 1 / 1; */
     background: rgba(134, 119, 111, 0.32);
     border-radius: 8px;
     margin-bottom: 8px;
     transition: transform 0.3s ease;
     cursor: pointer;
-    object-fit: cover;
+    /* object-fit: cover; */
     /* background: aqua; */
 }
 
