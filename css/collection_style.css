@@ -236,7 +236,7 @@
     font-size: var(--fspre-20);
     color: var(--gray-06);
     line-height: 1.4;
-    -webkit-line-clamp: 2;
+    /* -webkit-line-clamp: 2; */
 }
 
 .card_wrap2::after {
@@ -245,7 +245,7 @@
     clear: both;
 }
 
-.card_wrap2 ul {}
+/* .card_wrap2 ul {} */
 
 .card_wrap2 ul li {
     float: left;
@@ -412,13 +412,13 @@
 }
 
 /* 카드 애니메이션 */
+
+
 .card_wrap2 .card {
-    transform: translateY(100px);
-    opacity: 0;
-    transition: transform 0.8s ease, opacity 0.8s ease;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .card_wrap2 .card.show {
-    transform: translateY(0);
     opacity: 1;
 }
