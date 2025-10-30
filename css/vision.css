@@ -83,23 +83,15 @@ main .Welcome .txt_box {
 main .txt_box h3 {
     font-family: 'Zen Antique';
     font-size: var(--fszenT-XL-65);
-    font-weight: 200;
+    font-weight: 500;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
-main .Welcome .txt_box h3{
-    font-size: 55px;
-    font-weight: 100;
-} 
-
 main .txt_box h3.big {
     font-size: 5.625rem;
     margin-bottom: 20px;
-    font-weight: 500;
 }
-
-
 
 main .Welcome .txt_box h3:last-child {
     text-align: right;
@@ -370,8 +362,8 @@ main .Collection_Storage .collection_label ul.line li.on::before {
 
 /* line 각각의 위치 */
 main .Collection_Storage .collection_label ul.line li:nth-child(1) {
-    left: -35%;
-    top: 5%;
+    left: -25%;
+    top: 7%;
 }
 
 main .Collection_Storage .collection_label ul.line li:nth-child(2) {
@@ -380,17 +372,17 @@ main .Collection_Storage .collection_label ul.line li:nth-child(2) {
 }
 
 main .Collection_Storage .collection_label ul.line li:nth-child(3) {
-    left: -22%;
+    left: -20%;
     top: -7%;
 }
 
 main .Collection_Storage .collection_label ul.line li:nth-child(4) {
-    left: -19%;
+    left: -18%;
     top: -5%;
 }
 
 main .Collection_Storage .collection_label ul.line li:nth-child(5) {
-    left: -5%;
+    left: -4.5%;
     top: 0%;
 }
 
@@ -400,8 +392,8 @@ main .Collection_Storage .collection_label ul.line li:nth-child(6) {
 }
 
 main .Collection_Storage .collection_label ul.line li:nth-child(7) {
-    left: -38%;
-    top: 18%;
+    left: -30%;
+    top: 16%;
 }
 
 
@@ -472,7 +464,7 @@ main .Collection_Storage .collection_label ul.labels li.on {
 
 /* labels 각각의 위치 */
 main .Collection_Storage .collection_label ul.labels li:nth-child(1) {
-    top: 11%;
+    top: 13%;
     left: 50%;
 }
 
@@ -502,6 +494,6 @@ main .Collection_Storage .collection_label ul.labels li:nth-child(6) {
 }
 
 main .Collection_Storage .collection_label ul.labels li:nth-child(7) {
-    bottom: -3%;
+    bottom: -2%;
     left: 50%;
 }
