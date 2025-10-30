@@ -936,6 +936,10 @@
     gap: 25px;
 }
 
+.parking_info_2 {
+    display: none;
+}
+
 
 
 .parking_table {
