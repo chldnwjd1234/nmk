@@ -1,9 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
     document.querySelector('header').classList.add('maintop');
+
+    // QR 버튼을 처음부터 표시
+    const topBtnQr = document.querySelector('.top-btn_qr');
+    if (topBtnQr) topBtnQr.classList.add('show');
+
     window.addEventListener('scroll', () => {
         const topBtn = document.querySelector('.top-btn');
-        const topBtnQr = document.querySelector('.top-btn_qr');
 
         if (window.scrollY > 0) {
             document.querySelector('header').classList.remove('maintop');
@@ -13,13 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (window.scrollY > 300) {
             topBtn.classList.add('show');
-            if (topBtnQr) topBtnQr.classList.add('show');
         } else {
             topBtn.classList.remove('show');
-            if (topBtnQr) topBtnQr.classList.remove('show');
         }
     });
-
     // 클릭 시 부드럽게 맨 위로
     document.querySelector('.top-btn').addEventListener('click', (e) => {
         e.preventDefault();
@@ -153,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: ".backimg",
                 start: "top 80%",
                 end: "bottom 100%",
-                scrub: 5,
+                scrub: 1,
                 markers: false
             }
         }

@@ -7,6 +7,12 @@
 <meta name="author" content="일단해보조">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NATIONAL MUSEUM OF KOREA</title>
+<meta property="og:title" content="National Museum of Korea">
+<meta property="og:description"
+    content="Experience the beauty of Korean history and culture through inspiring exhibitions.">
+<meta property="og:image" content="https://chldnwjd1234.github.io/nmk/asset/img/link.png">
+<meta property="og:url" content="https://chldnwjd1234.github.io/nmk/">
+<meta property="og:type" content="website">
 <link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link rel="stylesheet" href="../css/reset.css">
@@ -35,9 +41,9 @@
             <div class="slider_container">
                 <div class="slide active" data-slide="1">
                     <div class="content_box">
-                        <button class="back_btn">
+                        <a class="back_btn" href="./collection.html">
                             <i class="fa-solid fa-chevron-left"></i> List
-                        </button>
+                        </a>
 
                         <div class="detail_content">
                             <!-- 왼쪽 유물 사진 -->
@@ -94,21 +100,21 @@
 
                             </div><!-- //.artifact_info -->
                         </div><!-- //.detail_content -->
-                        <button class="map_btn">
+                        <a class="map_btn" href="./map.html">
                             View on Map <i class="fa-solid fa-chevron-right"></i>
-                        </button>
+                        </a>
                     </div><!-- //.content_box -->
 
-                 <button class="arrow_btn right" onclick="nextSlide()"> 
-                    <i class="fa-solid fa-chevron-right"></i> </button>
+                    <button class="arrow_btn right" onclick="nextSlide()">
+                        <i class="fa-solid fa-chevron-right"></i> </button>
                 </div>
 
                 <!-- 두번째 슬라이드 관련유물 -->
                 <div class="slide2" data-slide="2">
                     <div class="content_box">
-                        <button class="back_btn">
+                        <a class="back_btn" href="./collection.html">
                             <i class="fa-solid fa-chevron-left"></i> List
-                        </button>
+                        </a>
 
                         <h2 class="section_title">Related Artifacts</h2>
 
@@ -155,10 +161,10 @@
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
                 </div>
-                        <div class="pagination">
-            <span class="dot active" onclick="goToSlide(1)"></span>
-            <span class="dot" onclick="goToSlide(2)"></span>
-        </div>
+                <div class="pagination">
+                    <span class="dot active" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                </div>
 
 
         </main>

@@ -20,12 +20,24 @@
 </head>
 
 <body>
-    <div id="loading_screen">
-        <img src="./asset/img_loading/bg.png" alt="bg" class="bg">
-        <img src="./asset/img_loading/door_left.png" alt="door_left" class="door_left">
-        <img src="./asset/img_loading/door_right.png" alt="door_right" class="door_right">
-        <img src="./asset/img_loading/logo.png" alt="logo" class="logo">
+<div id="loading_screen">
+    <img src="./asset/img_loading/bg.png" alt="bg" class="bg">
+    <img src="./asset/img_loading/door_left.png" alt="door_left" class="door_left">
+    <img src="./asset/img_loading/door_right.png" alt="door_right" class="door_right">
+    <img src="./asset/img_loading/logo.png" alt="logo" class="logo">
+    
+    <button id="skip_button" class="skip-btn">SKIP</button>
+    
+    <!-- 스크롤/클릭 안내 추가 -->
+    <div class="scroll-hint">
+        <p class="scroll-hint-text"></p>
+        <div class="arrow-container">
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <!-- <div class="arrow"></div> -->
+        </div>
     </div>
+</div>
 
     <script src="./js/loading.js"></script>
 </body>

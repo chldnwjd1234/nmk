@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('header');
+    const header = document.querySelector('header')
+    
     const hamBtn = document.querySelector('.ham');
 
     // 햄버거 메뉴 토글

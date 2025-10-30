@@ -102,7 +102,7 @@
     border-radius: 50%;
     opacity: 0.9;
     cursor: pointer;
-    margin-top: 8px;
+    /* margin-top: 8px; */
   }
 
   .qr_icon img {
@@ -285,5 +285,7 @@
   .viewicon_btn {
     font-size: 17px;
   }
+
+  
 
 }
