@@ -69,4 +69,20 @@ document.addEventListener('DOMContentLoaded', () => {
             pauseOnMouseEnter: true
         },
     });
+
+            //SHARE
+        document.querySelector('.reserve_btn').addEventListener('click', async (e) => {
+            e.preventDefault();
+            if (navigator.share) {
+                await navigator.share({
+                    title: document.title,
+                    text: '이 페이지를 공유합니다',
+                    url: window.location.href
+                });
+            } else {
+                // 공유 미지원 시 링크 복사 fallback
+                await navigator.clipboard.writeText(window.location.href);
+                alert('링크가 복사되었습니다!');
+            }
+        });
 })
