@@ -335,6 +335,11 @@
         display: block;
     }
 
+    .hours_2 h3 {
+        font-size: 14px;
+        li
+    }
+
     .notice {
         display: none;
     }
