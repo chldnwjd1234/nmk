@@ -24,17 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (window.innerWidth <= 1024) {
             radiusValue = "0 0 1200px 1200px";
         } else {
-            radiusValue = "0 0 2000px 2000px";
+            radiusValue = "0 0 2500px 2500px";
         }
-        gsap.to(".moon", {
-            borderRadius: radiusValue,
-            scrollTrigger: {
-                trigger: ".moon",
-                start: "top 20%",
-                end: "bottom top",
-                scrub: 1,
+        gsap.fromTo(".moon",
+            {
+                filter: "saturate(0.5) brightness(1.2)"  // 시작: 연하고 밝게
+            },
+            {
+                borderRadius: radiusValue,
+                filter: "saturate(1.5) brightness(0.8)",  // 끝: 채도 높이고 어둡게
+                scrollTrigger: {
+                    trigger: ".moon",
+                    start: "top 20%",
+                    end: "bottom top",
+                    scrub: 1,
+                }
             }
-        });
+        );
 
         // ✨ 텍스트 fade-in
         const textTl = gsap.timeline({
@@ -92,7 +98,27 @@ document.addEventListener('DOMContentLoaded', () => {
         labels.forEach(l => l.classList.remove('on', 'animated'));
 
         const isMobile = window.innerWidth <= 414;
-        
+
+        // 🎨 muk.svg 애니메이션 추가 (모바일/데스크탑 공통)
+        gsap.fromTo(".Collection_Storage .bg img",
+            {
+                x: -200,
+                opacity: 0
+            },
+            {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".Collection_Storage",
+                    start: "top 20%",      // 변경: 80% → 20% (더 늦게 시작)
+                    end: "center center",   // 변경: top 50% → center center (첫 번째 원이 나올 즈음 완료)
+                    scrub: 1,
+                }
+            }
+        );
+
         if (isMobile) {
             // 모바일에서는 Collection Storage의 ScrollTrigger를 생성하지 않음
             return;
@@ -126,12 +152,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // ✅ 초기 실행
     createAnimations();
 
-    // ✅ 리사이즈 시 전체 리셋 + 재생성
+    // ✅ 리사이즈 시 페이지 새로고침
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
-            createAnimations();
+            location.reload(); // 페이지 새로고침
         }, 400);
     });
 });
