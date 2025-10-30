@@ -49,6 +49,14 @@
         margin-bottom: 12px;
     }
 
+    .hours_table {
+        display: block;
+    }
+
+    .hours_2 {
+        display: none;
+    }
+
     .hours_table th,
     .hours_table td {
         /* white-space: nowrap; */
@@ -290,11 +298,17 @@
         margin-bottom: 50px;
     }
 
+
     .icon_tips {
         width: 196px;
         /* 육각형 크기에 맞춰 너비 지정 */
         height: 170px;
         /* 육각형 크기에 맞춰 높이 지정 */
+    }
+
+    .icon_tips:hover p {
+        font-size: 12px;
+        line-height: 1.3;
     }
 
 
@@ -311,4 +325,17 @@
 }
 
 
-@media screen and (max-width:414px) {}
+@media screen and (max-width:414px) {
+
+    .hours_table {
+        display: none;
+    }
+
+    .hours_2 {
+        display: block;
+    }
+
+    .notice {
+        display: none;
+    }
+}
