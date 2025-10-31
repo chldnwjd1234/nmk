@@ -230,6 +230,8 @@
     gap: 20px;
 }
 
+
+
 .box_right .lockers {
     margin-bottom: 20px;
 }
@@ -244,6 +246,7 @@
     align-items: center;
     margin-bottom: 12px;
 }
+
 
 .services_container .icon img {
     width: 50px;
@@ -300,8 +303,13 @@
 }
 
 .wheelchair_stroller:hover .icon {
-    background-color: #BF3E3E;
+   background-color: #BF3E3E;
 }
+
+.wheelchair_stroller:hover .icon img {
+    content: url('../asset/img_information/icon_hover_1.png');
+}
+
 
 .museum_shops {
     width: 334px;
@@ -342,6 +350,10 @@
 
 .museum_shops:hover .icon {
     background-color: #BF3E3E;
+}
+
+.museum_shops:hover .icon img {
+    content: url('../asset/img_information/icon_hover_2.png');
 }
 
 .lockers {
@@ -385,6 +397,10 @@
     background-color: #BF3E3E;
 }
 
+.lockers:hover .icon img {
+    content: url('../asset/img_information/icon_hover_4.png');
+}
+
 .lactation_room {
     width: 898px;
     height: 288px;
@@ -424,6 +440,10 @@
 
 .lactation_room:hover .icon {
     background-color: #BF3E3E;
+}
+
+.lactation_room:hover .icon img {
+    content: url('../asset/img_information/icon_hover_3.png');
 }
 
 .coat_storage {
@@ -467,6 +487,10 @@
 
 .coat_storage:hover .icon {
     background-color: #BF3E3E;
+}
+
+.coat_storage:hover .icon img {
+    content: url('../asset/img_information/icon_hover_5.png');
 }
 
 
