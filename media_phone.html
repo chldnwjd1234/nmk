@@ -6,16 +6,41 @@
     <link rel="shortcut icon" href="./asset/favicon.ico" type="image/x-icon">
     <title>NATIONAL MUSEUM OF KOREA</title>
     <style>
-        html,
-        body {
+        html {
+            width: 100%;
             height: 100%;
             margin: 0;
-            background: #111;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ✅ 배경 이미지에만 blur 적용 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(./asset/img/pad_bg.png) no-repeat center center;
+            background-size: cover;
+            filter: blur(3px);
+            /* ✅ blur 강도 조절 (5px ~ 15px) */
+            z-index: -1;
+            /* ✅ 다른 요소들 뒤로 */
         }
 
         /* 버튼 영역 */
@@ -26,21 +51,25 @@
             position: fixed;
             left: 100px;
             top: 100px;
+            z-index: 10;
+            /* ✅ 배경보다 앞에 */
         }
 
+
+
         button {
-            padding: 10px 18px;
+            padding: 10px 30px;
             border: none;
             border-radius: 8px;
-            background: #333;
+            background: #B3332C;
             color: #fff;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 20px;
             transition: background 0.3s;
         }
 
         button.active {
-            background: #007aff;
+            background: #B3332C;
         }
 
         /* 디바이스 프레임 */
@@ -52,6 +81,8 @@
             background: black;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
             touch-action: none;
+            z-index: 1;
+            /* ✅ 배경보다 앞에 */
         }
 
         iframe {
