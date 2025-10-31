@@ -1,16 +1,31 @@
 @charset "UTF-8";
 /* 1024px 반응형 */
 @media (max-width: 1024px) {
-    /* Container */
-    /* .reservation.inner {
-        padding: 30px 15px;
-    } */
+
+    /* reservation.inner의 padding 제거 */
+    .reservation.inner {
+        padding: 0;
+    }
+
+    /* 다른 섹션들은 padding 유지 */
+    .reservation .info,
+    .reservation .form_section,
+    .reservation .payment_section,
+    .reservation .checkbox_section {
+        margin: 0;
+        /* 기존 margin 제거 */
+    }
+
 
     /* 2단 레이아웃 → 1단 레이아웃 */
     .reservation .content_wrap {
+        /* padding: 0 20px; */
         flex-direction: column;
-        /* overflow: hidden; */
         gap: 12px;
+        margin-top: 0;
+        /* 배너와 붙이기 */
+        padding-bottom: 100px;
+        padding-top: 0;
     }
 
     /* 왼쪽 콘텐츠 */
@@ -21,19 +36,26 @@
 
     /* 오른쪽 콘텐츠 */
     .reservation .right_content {
+        margin: 0;
         width: 100%;
         position: static;
         /* sticky 해제 */
-        border-radius: 0 0 15px 15px;
+        border-radius: 0;
         flex: none;
         height: 227px;
     }
 
-    /* Banner */
+    /* Banner  - 화면 전체 너비 */
     .reservation .left_content .banner {
-        width: 100%;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
         height: 180px;
-        border-radius: 15px 15px 0 0;
+        border-radius: 0;
+        /* 둥근 모서리 제거 */
     }
 
     .reservation .left_content .banner_tit h2 {
@@ -57,6 +79,10 @@
     /* .reservation .form_section {
         padding: 24px 40px;
     } */
+    .reservation .form_section {
+        box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.05);
+        /* 약하게 */
+    }
 
     .reservation .form_label {
         font-size: 22px;
@@ -77,6 +103,12 @@
         padding: 8px 15px;
     }
 
+    .reservation .info {
+        box-shadow: 0 2px 8px 0px rgba(179, 51, 44, 0.05);
+        /* 약하게 */
+        margin-top: 28px;
+    }
+
     .reservation .info .lab_t {
         font-size: 17px;
     }
@@ -87,6 +119,11 @@
     }
 
     /* Payment Section */
+    .reservation .payment_section {
+        box-shadow: 0 2px 8px 0px rgba(0, 57, 100, 0.05);
+        /* 약하게 */
+    }
+
     .reservation .card_text {
         font-size: 14px;
     }
@@ -97,6 +134,11 @@
 
     /* Checkbox Section */
     .reservation .checkbox_section {
+        box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.05);
+        /* 약하게 */
+    }
+
+    .reservation .checkbox_section {
         border-radius: 0;
         padding: 24px 40px;
     }
@@ -106,6 +148,11 @@
     }
 
     /* Total Amount */
+    .reservation .right_content {
+        box-shadow: 0 2px 8px 0px rgba(0, 57, 100, 0.05);
+        /* 약하게 */
+    }
+
     .reservation .total_amount {
         border-radius: 15px;
         /* 전체 둥글게 */
@@ -167,7 +214,10 @@
 }
 
 @media (max-width: 414px) {
-
+    body main section.reservation .inner {
+        width: 100%;
+        padding: 0;
+    }
     /* Form Section Padding 조정 */
     .reservation .form_section {
         padding: 24px 20px;
@@ -198,7 +248,60 @@
     .reservation .info ul li {
         font-size: 13px;
     }
+     /* Lab (Dropdown) - 414px 조정 */
+    .reservation .info .lab {
+        padding: 15px;
+    }
 
+    .reservation .info .lab_t {
+        font-size: 14px;
+    }
+
+    /* Lab Content - width 100%로 */
+    .reservation .info .lab_txt {
+        position: absolute;
+        top: 100%;  /* lab 바로 아래 */
+        left: 0;  
+        width: calc(100% + 2px);  /* 양쪽 padding 포함 */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.01s ease;
+        background-color: var(--yellow-01);
+        border-left: 1px solid var(--gray-04);
+        border-right: 1px solid var(--gray-04);
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        opacity: 0;
+    }
+
+    .reservation .info .lab_txt.active {
+        max-height: 1000px;
+        border-bottom: 1px solid var(--gray-04);
+        padding: 20px 15px;
+        opacity: 1;
+    }
+
+    /* Lab Section */
+    .reservation .info .lab_s {
+        margin-bottom: 20px;
+    }
+
+    .reservation .info .lab_s h4 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .reservation .info .lab_s ol li {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 8px;
+        padding-left: 20px;
+    }
+
+    .reservation .info .lab_s ol li::before {
+        font-size: 12px;
+    }
     .reservation .info .lab_t {
         font-size: 14px;
     }
@@ -232,6 +335,7 @@
         font-size: 14px;
     }
 
+
     .reservation .checkbox_label {
         font-size: 14px;
     }
@@ -239,52 +343,101 @@
     .reservation .checkbox_label_2 {
         font-size: 12px;
     }
+
     /* total_abmount */
-    .reservation .total_amount h3{
+    /* Right Content - 너비 조정 */
+    .reservation .right_content {
+        width: 100%;
+        min-width: 0;
+        /* min-width 제거 */
+        padding: 20px 15px;
+        /* padding 줄이기 */
+        box-sizing: border-box;
+        /* 추가 */
+        margin: 0;
+        /* margin 제거 */
+    }
+
+    /* Total Amount padding 조정 */
+    /* .reservation .total_amount {
+        padding: 0;
+    }
+
+    .reservation .total_amount .header {
+        padding: 0 5px 15px 5px;
+    }
+
+    .reservation .total_amount .price_detail {
+        padding: 8px 5px;
+    } */
+
+    /* 버튼 wrapper padding 조정 */
+    /* .reservation .reservation_button_wrap {
+        padding: 16px 15px;
+    } */
+    .reservation .total_amount h3 {
         font-size: 18px;
     }
+
     #total_price {
         font-size: 18px;
     }
+
     .reservation .total_amount .vat {
         font-size: 12px;
     }
+
     .reservation .total_amount .price_row {
         display: flex;
         align-items: center;
         gap: 6px;
-        font-size: 14px;  /* 전체 기본 폰트 크기 */
+        font-size: 14px;
+        /* 전체 기본 폰트 크기 */
     }
+
     .reservation .total_amount .price_row .price_label_1 {
         font-size: 12px;
         min-width: 60px;
     }
+
     .reservation .total_amount .price_row .price_label_2 {
-        min-width: auto;  /* 고정 너비 제거 */
+        min-width: auto;
+        /* 고정 너비 제거 */
         gap: 6px;
     }
-    .reservation .total_amount .price_row .parentheses{
+
+    .reservation .total_amount .price_row .parentheses {
         font-size: 12px;
     }
-    #how_1, #how_2 {
+
+    #how_1,
+    #how_2 {
         min-width: auto;
         font-size: 21px;
     }
+
     .reservation .total_amount .price_row .x_many {
         font-size: 12px;
     }
-    .reservation .total_amount .price_row .won{
+
+    .reservation .total_amount .price_row .won {
         font-size: 12px;
     }
-    #adult_price, #child_price{
-         min-width: auto;
+
+    #adult_price,
+    #child_price {
+        min-width: auto;
         font-size: 15px;
     }
-    .reservation .total_amount .price_row .eq{
+
+    .reservation .total_amount .price_row .eq {
         font-size: 25px;
     }
-    #adult_price_total, #child_price_total{
+
+    #adult_price_total,
+    #child_price_total {
         font-size: 18px;
         min-width: auto;
     }
+
 }

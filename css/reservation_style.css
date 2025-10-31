@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/* reservation_style.css 맨 위에 추가 */
+.wrap {
+    overflow-y: visible !important;
+}
+
+main.bg {
+    overflow: visible !important;
+}
 footer{display: none;}
 .wrap {
     /* overflow: auto; */
@@ -18,12 +26,11 @@ footer{display: none;}
     display: flex;
     gap: 30px;
     position: relative;
-    /* background: #ccc; */
     align-items: flex-start;
-    overflow: auto;
     height: auto;
+    padding-top: 45px;
+    padding-bottom: 200px;
 }
-
 
 /* 왼쪽 콘텐츠 - 1080px 고정 */
 .reservation .left_content {
@@ -37,16 +44,14 @@ footer{display: none;}
 /* 오른쪽 가격표 - 나머지 공간 */
 .reservation .right_content {
     flex: 1;
-    /*     height: 50vh; */
     min-width: 360px;
     background-color: #fff;
     padding: 28px 32px;
     border-radius: 0 15px 15px 0;
     box-shadow: 2px 8px 60.6px 0px rgba(0, 57, 100, 0.1);
     position: sticky;
-    top: 20px;
-    /*     position: fixed;
-    z-index: 100; */
+    top: 0;
+    align-self: flex-start;
 }
 
 /* Total Amount Section (오른쪽) */
@@ -249,7 +254,7 @@ footer{display: none;}
     width: 100%;
     background-color: #fff;
     padding: 32px 64px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 3px 2px 60.6px 0px rgba(0, 57, 100, 0.1);
 }
 
 
@@ -421,7 +426,7 @@ footer{display: none;}
     gap: 12px;
     background-color: #fff;
     padding: 32px 64px;
-    box-shadow: 0 2px 8px 60.6px 0px rgba(0, 57, 100, 0.1);
+    box-shadow: 3px 2px 60.6px 0px rgba(179, 51, 44, 0.1);
 }
 
 /* Payment Header */
@@ -582,7 +587,9 @@ footer{display: none;}
     background-color: #fff;
     border-radius: 0 0 15px 15px;
     padding: 32px 64px;
-    box-shadow: 0 2px 8px 60.6px 0px rgba(0, 57, 100, 0.1);
+    /* box-shadow:  2px 60.6px 0px rgba(0, 57, 100, 0.1); */
+    /* box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.08);  */
+    box-shadow: 3px 2px 60.6px 0px rgba(0, 57, 100, 0.1);
 
 }
 
@@ -821,150 +828,3 @@ footer{display: none;}
 .reservation .btn_reservation:hover {
     background-color: var(--red-05-point);
 }
-
-/* Responsive */
-/* @media (max-width: 1700px) {
-    .reservation.inner {
-        max-width: 1400px;
-    }
-    
-    .reservation .left_content {
-        width: 900px;
-    }
-}
-
-@media (max-width: 1400px) {
-    .reservation.inner {
-        max-width: 1200px;
-    }
-    
-    .reservation .left_content {
-        width: 750px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .reservation .content_wrap {
-        flex-direction: column;
-    }
-
-    .reservation .left_content {
-        width: 100%;
-    }
-
-    .reservation .right_content {
-        width: 100%;
-        position: static;
-    }
-
-    .reservation .total_amount {
-        position: static;
-    }
-}
-
-@media (max-width: 768px) {
-    .reservation.inner {
-        padding: 30px 15px;
-    }
-
-    .reservation .left_content .banner {
-        height: 150px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-
-    .reservation .left_content .banner_tit h2 {
-        font-size: 24px;
-    }
-
-    .reservation .info,
-    .reservation .form_section,
-    .reservation .total_amount {
-        padding: 20px;
-    }
-
-    .reservation .info .txt_t h3,
-    .reservation .info .txt_b h3 {
-        font-size: 16px;
-    }
-
-    .reservation .info .txt_t p,
-    .reservation .info .txt_b p {
-        font-size: 13px;
-    }
-
-    .reservation .info .lab_t {
-        padding: 15px;
-    }
-
-    .reservation .info .lab_t span {
-        font-size: 15px;
-    }
-
-    .reservation .info .lab_txt.active {
-        padding: 20px 15px;
-    }
-
-    .reservation .info .lab_s h4 {
-        font-size: 15px;
-    }
-
-    .reservation .info .lab_s ol li {
-        font-size: 13px;
-        padding-left: 25px;
-    }
-
-    .reservation .total_amount .price {
-        font-size: 24px;
-    }
-} */
-
-/* 동의 체크박스 media.css */
-/* @media (max-width: 1024px) {
-    .reservation .checkbox_section {
-        padding: 24px 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .reservation .checkbox_section {
-        padding: 20px 24px;
-    }
-
-    .reservation .checkbox_label {
-        font-size: 14px;
-    }
-
-    .reservation .checkbox_row input[type="checkbox"] {
-        width: 18px;
-        height: 18px;
-        min-width: 18px;
-        min-height: 18px;
-    }
-
-    .reservation .nested_checkbox {
-        margin-left: 28px;
-    }
-}
-
-@media (max-width: 480px) {
-    .reservation .checkbox_section {
-        padding: 16px 20px;
-    }
-
-    .reservation .checkbox_label {
-        font-size: 13px;
-    }
-
-    .reservation .checkbox_row input[type="checkbox"] {
-        width: 16px;
-        height: 16px;
-        min-width: 16px;
-        min-height: 16px;
-    }
-
-    .reservation .nested_checkbox {
-        margin-left: 24px;
-        gap: 6px;
-    }
-} */
