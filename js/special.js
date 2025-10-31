@@ -1,20 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // fade-up 애니메이션
-    gsap.utils.toArray(".articles_all article").forEach((el, i) => {
-        gsap.from(el, {
-            y: 80,              // 아래에서 위로
-            opacity: 0,         // 투명 → 보이게
-            duration: 1,        // 애니메이션 시간
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: el,
-                start: "top 85%", // 뷰포트 아래 85% 지점에서 시작
-                toggleActions: "play none none reverse",
-                once: false,      // true로 하면 1회만 실행
-            },
-            delay: i * 0.1,     // 살짝 순차 등장 효과
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 화면 크기 체크
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1025px)", () => {
+        // 데스크탑: 빠르게
+        gsap.utils.toArray(".articles_all article").forEach((el, i) => {
+            gsap.from(el, {
+                y: 80,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out",
+                delay: i * 0.1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse",
+                }
+            });
         });
     });
+
+    mm.add("(max-width: 1024px)", () => {
+        // 모바일: 천천히
+        gsap.utils.toArray(".articles_all article").forEach((el, i) => {
+            gsap.from(el, {
+                y: 80,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out",
+                delay: i * 0.3,
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse",
+                }
+            });
+        });
+    });
+
+
+
     const total_width = () => {
         const wrap = document.querySelector(".horizontal_section");
         const track = document.querySelector(".track");
@@ -70,19 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-            //SHARE
-        document.querySelector('.reserve_btn').addEventListener('click', async (e) => {
-            e.preventDefault();
-            if (navigator.share) {
-                await navigator.share({
-                    title: document.title,
-                    text: '이 페이지를 공유합니다',
-                    url: window.location.href
-                });
-            } else {
-                // 공유 미지원 시 링크 복사 fallback
-                await navigator.clipboard.writeText(window.location.href);
-                alert('링크가 복사되었습니다!');
-            }
-        });
+    //SHARE
+    document.querySelector('.reserve_btn_2').addEventListener('click', async (e) => {
+        e.preventDefault();
+        if (navigator.share) {
+            await navigator.share({
+                title: document.title,
+                text: '이 페이지를 공유합니다',
+                url: window.location.href
+            });
+        } else {
+            // 공유 미지원 시 링크 복사 fallback
+            await navigator.clipboard.writeText(window.location.href);
+            alert('링크가 복사되었습니다!');
+        }
+    });
 })

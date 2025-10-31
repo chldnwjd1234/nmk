@@ -132,7 +132,7 @@
 
     }
 
-    .btn_all .btn_left button {
+    .btn_all .btn_left .button {
         width: 34px;
         height: 34px;
         border-radius: 20px;
@@ -140,7 +140,7 @@
         background: var(--gray-05);
     }
 
-    .btn_all .btn_left button img {
+    .btn_all .btn_left .button img {
         width: 16px;
         height: 16px;
     }
@@ -501,7 +501,7 @@
         z-index: 10;
     }
 
-    .btn_all .btn_left button {
+    .btn_all .btn_left .button {
         width: 32px;
         height: 32px;
         background: var(--gray-05);
@@ -509,7 +509,8 @@
         border-radius: 50%;
     }
 
-    .btn_all .btn_left button img {
+
+    .btn_all .btn_left .button img {
         width: 14px;
     }
 
