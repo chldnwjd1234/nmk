@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* reservation_style.css 맨 위에 추가 */
+main .banner_top{
+    background-image: url(../asset/img_reservation/banner.png);
+    display: none;
+}
 .wrap {
     overflow-y: visible !important;
 }
