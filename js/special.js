@@ -1,20 +1,45 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // fade-up 애니메이션
-    gsap.utils.toArray(".articles_all article").forEach((el, i) => {
-        gsap.from(el, {
-            y: 80,              // 아래에서 위로
-            opacity: 0,         // 투명 → 보이게
-            duration: 1,        // 애니메이션 시간
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: el,
-                start: "top 85%", // 뷰포트 아래 85% 지점에서 시작
-                toggleActions: "play none none reverse",
-                once: false,      // true로 하면 1회만 실행
-            },
-            delay: i * 0.1,     // 살짝 순차 등장 효과
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 화면 크기 체크
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1025px)", () => {
+        // 데스크탑: 빠르게
+        gsap.utils.toArray(".articles_all article").forEach((el, i) => {
+            gsap.from(el, {
+                y: 80,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out",
+                delay: i * 0.1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse",
+                }
+            });
         });
     });
+
+    mm.add("(max-width: 1024px)", () => {
+        // 모바일: 천천히
+        gsap.utils.toArray(".articles_all article").forEach((el, i) => {
+            gsap.from(el, {
+                y: 80,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out",
+                delay: i * 0.3,
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse",
+                }
+            });
+        });
+    });
+
     const total_width = () => {
         const wrap = document.querySelector(".horizontal_section");
         const track = document.querySelector(".track");
@@ -23,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // matchMedia로 반응형 제어
     ScrollTrigger.matchMedia({
-
         // ✅ 데스크탑/태블릿 이상 (415px 이상)
         "(min-width: 415px)": function () {
             gsap.to(".track", {
@@ -32,10 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrollTrigger: {
                     trigger: ".horizontal_section",
                     start: "top top",
-                    end: () => "+=" + (total_width() + window.innerWidth),
-                    scrub: true,
+                    end: () => "+=" + total_width() * 2, // 스크롤 길이를 2배로 늘림
+                    scrub: 1, // 부드럽게 (0.5~2 사이 값 조정 가능)
                     pin: true,
                     anticipatePin: 1,
+                    invalidateOnRefresh: true, // 리프레시 시 재계산
                 },
             });
         },
@@ -46,10 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
             gsap.set(".track", { clearProps: "all" });
             ScrollTrigger.refresh(); // 레이아웃 새로고침
         }
-
     });
-    window.addEventListener("resize", () => ScrollTrigger.refresh());
 
+    // ✅ 리사이즈 시 페이지 새로고침
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            location.reload(); // 페이지 새로고침
+        }, 400);
+    });
+
+    // Swiper
     let Recommendedswiper = new Swiper(".Recommended", {
         effect: "coverflow",
         grabCursor: true,
@@ -69,4 +102,19 @@ document.addEventListener('DOMContentLoaded', () => {
             pauseOnMouseEnter: true
         },
     });
-})
+
+    // SHARE
+    document.querySelector('.reserve_btn_2').addEventListener('click', async (e) => {
+        e.preventDefault();
+        if (navigator.share) {
+            await navigator.share({
+                title: document.title,
+                text: '이 페이지를 공유합니다',
+                url: window.location.href
+            });
+        } else {
+            await navigator.clipboard.writeText(window.location.href);
+            alert('링크가 복사되었습니다!');
+        }
+    });
+});

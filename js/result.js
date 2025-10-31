@@ -10,6 +10,12 @@ window.addEventListener('DOMContentLoaded', function() {
         return;
     }
     
+    // 뒤로가기 함수 추가
+    window.goBack = function(event) {
+        event.preventDefault(); // 기본 링크 동작 방지
+        window.history.back(); // 브라우저 뒤로가기
+    }
+    
     function goToSlide(slideNum) {
         const slide1 = document.querySelector('.slide');
         const slide2 = document.querySelector('.slide2');

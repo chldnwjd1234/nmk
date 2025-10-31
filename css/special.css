@@ -149,12 +149,22 @@ main.bg {
     margin-left: auto;
 }
 
-.btn_all .btn_left button {
+.btn_all .btn_left .button {
     width: 60px;
     height: 60px;
-    border-radius: 50px;
+    border-radius: 50%;
     border: none;
     background: var(--gray-05);
+    
+
+}
+
+.btn_all .btn_left .button img {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    left: 15px;
+    top: 15px;
 }
 
 .btn_all .btn_right .reserve_btn {

@@ -18,6 +18,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/common_media.css">
     <link rel="stylesheet" href="../css/Information_style.css"><!-- 본인 스타일 -->
     <link rel="stylesheet" href="../css/Information_media.css">
     <!-- 본인 미디어스타일 -->
@@ -29,7 +30,7 @@
 
 <body>
     <div class="wrap">
-       <header>
+        <header>
             <div class="inner">
                 <h1><a href="./main.html"><img src="../asset/img/eng_header_logo.png" alt="NMK" class="logo"></a></h1>
                 <nav>
@@ -177,7 +178,7 @@
                         </li>
                     </ul>
                     <div class="right">
-                        <a href="./qr.html"  class="t"><img src="../asset/img/QR_icon.png" alt="qr"></a>
+                        <a href="./qr.html" class="t"><img src="../asset/img/QR_icon.png" alt="qr"></a>
                         <a href="#"><img src="../asset/img/icon1.png" alt="global"></a>
                         <a href="#"><img src="../asset/img/icon2.png" alt="mypage"></a>
                     </div><!-- //.right -->
@@ -367,18 +368,71 @@
                                     </tr>
                                 </tbody>
                             </table>
+
+                            <div class="hours_2">
+                                <div class="hours_card">
+                                    <div class="tit_2">
+                                        <img src="../asset/img_information/icon_List.png" alt="">
+                                        <h3>Main Museum</h3>
+                                    </div>
+                                    <p>10:00 am – 6:00 pm (Mon, Tue, Thu, Fri, Sun)</p>
+                                    <p>10:00 am – 9:00 pm (Wed, Sat)</p>
+                                    <p class="final">Final entrance 5:30 / 8:30 pm</p>
+                                </div>
+
+                                <div class="hours_card">
+                                    <div class="tit_2">
+                                        <img src="../asset/img_information/icon_List.png" alt="">
+                                        <h3>Outdoor Exhibition Area</h3>
+                                    </div>
+                                    <p>7:00 am – 10:00 pm (Daily)</p>
+                                </div>
+
+                                <div class="hours_card">
+                                    <div class="tit_2">
+                                        <img src="../asset/img_information/icon_List.png" alt="">
+                                        <h3>Children’s Museum</h3>
+                                    </div>
+                                    <p>10:00 am – 5:50 pm (Daily)</p>
+                                    <p>(5 sessions · 80 min each)</p>
+                                </div>
+                            </div>
                         </div><!-- //.hours_box -->
 
+                        <div class="notice_2">
+                            <div class="notice_3">
+                                <img src="../asset/img_information/icon_List.png" alt="">
+                                <p class="Closed">
+                                    Closed: Jan 1 · Jan 29 · Apr 7 · Oct 6 · Nov 3
+                                </p>
+                            </div>
+                        </div><!-- //.notice -->
+
                         <div class="AdmissionFees">
-                            <h3>Admission Fees</h3>
-                            <div class="label_1">
-                                <p>Free</p>
-                                <span>Permanent Exhibition Halls, Children’s Museum, and free Special Exhibitions</span>
-                            </div>
-                            <div class="label_2">
-                                <p>Paid</p>
-                                <span>Charged Special exhibitions</span>
-                            </div>
+                            <div class="AdmissionFees_1">
+                                <h3>Admission Fees</h3>
+                                <div class="label_1">
+                                    <p>Free</p>
+                                    <span>Permanent Exhibition Halls, Children’s Museum, and free Special
+                                        Exhibitions</span>
+                                </div>
+                                <div class="label_2">
+                                    <p>Paid</p>
+                                    <span>Charged Special exhibitions</span>
+                                </div>
+                            </div><!-- //.AdmissionFees_1 -->
+
+                            <div class="AdmissionFees_2">
+                                <h3>Admission Fees</h3>
+                                <div class="label_1">
+                                    <p>Free</p>
+                                    <span>Permanent & Special Exhibitions, Children’s Museum</span>
+                                </div>
+                                <div class="label_2">
+                                    <p>Paid</p>
+                                    <span>Charged Special exhibitions</span>
+                                </div>
+                            </div><!-- //.AdmissionFees_2 -->
                         </div><!-- //.AdmissionFees -->
                     </div>
                 </section><!-- //.OpeningHours -->
@@ -394,6 +448,7 @@
                                 <div class="box_top">
                                     <div class="service_card wheelchair_stroller">
                                         <div class="icon"> <img src="../asset/img_information/icon_1.png" alt=""></div>
+                                
                                         <h3>Wheelchair-Stroller</h3>
                                         <p>Available free of charge in the Great Hall </p>
                                         <p>(Strollers for children up to 15kg)</p>
@@ -464,7 +519,7 @@
                                 <img src="../asset/img_information/icon_NoFood.png" alt="아이콘" class="default_icon">
                                 <p class="default_text">No Food & Drinks</p>
                                 <img src="../asset/img_information/NoFood.png" alt="아이콘" class="hover_icon">
-                                <p class="hover_text"> Please do not bring food or <br> drinks into the galleries.</p>
+                                <p class="hover_text"> No food or drinks <br>in galleries.</p>
                             </div><!-- //.No_FoodDrinks -->
 
                             <div class="middle">
@@ -473,14 +528,14 @@
                                         class="default_icon">
                                     <p class="default_text">No Photography</p>
                                     <img src="../asset/img_information/NoPhotography.png" alt="아이콘" class="hover_icon">
-                                    <p class="hover_text"> Photography is not allowed <br> in the galleries</p>
+                                    <p class="hover_text"> Please refrain from <br>taking photos.
                                 </div>
                                 <div class="SilentMode icon_tips">
                                     <img src="../asset/img_information/icon_SilentMode.png" alt="아이콘"
                                         class="default_icon">
                                     <p class="default_text">Silent Mode</p>
                                     <img src="../asset/img_information/SilentMode.png" alt="아이콘" class="hover_icon">
-                                    <p class="hover_text"> Please set your mobile <br> phone to silent mode</p>
+                                    <p class="hover_text"> Please silence <br>your phone.</p>
                                 </div>
                             </div><!-- //.middle -->
 
@@ -488,7 +543,7 @@
                                 <img src="../asset/img_information/icon_NoBicycles.png" alt="아이콘" class="default_icon">
                                 <p class="default_text">NoBicycles&Skates</p>
                                 <img src="../asset/img_information/NoBicycles.png" alt="아이콘" class="hover_icon">
-                                <p class="hover_text">No bicycles, boards, <br> or skates inside.</p>
+                                <p class="hover_text">No bicycles, or <br>skates inside.</p>
                             </div><!-- //.NoBicycles_Skates -->
 
                             <div class="right">
@@ -497,7 +552,7 @@
                                         class="default_icon">
                                     <p class="default_text">Be quiet</p>
                                     <img src="../asset/img_information/BeQuiet.png" alt="아이콘" class="hover_icon">
-                                    <p class="hover_text">Please keep your voice down <br> to stay quiet.</p>
+                                    <p class="hover_text">Please keep noise <br>to a minimum.</p>
                                 </div>
                                 <div class="OnlyServiceDogs icon_tips">
                                     <img src="../asset/img_information/icon_ServiceDogs.png" alt="아이콘"
@@ -505,7 +560,7 @@
                                     <p class="default_text">Only Service Dogs</p>
                                     <img src="../asset/img_information/OnlyServiceDogs.png" alt="아이콘"
                                         class="hover_icon">
-                                    <p class="hover_text">Only service dogs are allowed <br>inside the museum</p>
+                                    <p class="hover_text">Only service dogs <br>permitted.</p>
                                 </div>
                             </div><!-- //.right -->
 
@@ -593,9 +648,9 @@
 
                                         <div class="Public_right">
                                             <div class="Subway_type">
-                                                <img src="../asset/img_information/4.png" alt="">
+                                                <img src="../asset/img_information/4.png" alt="" class="blue_line">
                                                 <span>4 Line</span>
-                                                <img src="../asset/img_information/Gyeongui-Joungang.png" alt="">
+                                                <img src="../asset/img_information/Gyeongui-Joungang.png" alt="" class="Gyeongui">
                                                 <span>Gyeongui Central Line (Munsan-Yongmun)</span>
                                             </div><!-- //.Subway_type -->
 
@@ -729,6 +784,66 @@
                                                         <img src="../asset/img_information/icon_List.png" alt="">
                                                     </div>
                                                     <p>Free parking is available for visitors with disabilities.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="parking_info_2">
+                                            <table class="parking_table">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>30 min</th>
+                                                        <th>Per 10 min</th>
+                                                        <th>Full day</span></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Car</td>
+                                                        <td>₩ 900</td>
+                                                        <td>₩ 300</td>
+                                                        <td>₩ 18,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bus</td>
+                                                        <td>₩ 1,800</td>
+                                                        <td>₩ 600</td>
+                                                        <td>₩ 36,000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <ul class="parking_notes">
+                                                <li>
+                                                    <div class="list_icon">
+                                                        <img src="../asset/img_information/icon_List.png" alt="">
+                                                    </div>
+                                                    <p>First 20 min free</p>
+                                                </li>
+                                                <li>
+                                                    <div class="list_icon">
+                                                        <img src="../asset/img_information/icon_List.png" alt="">
+                                                    </div>
+                                                    <p>Limited spaces → use bus/subway recommended</p>
+                                                </li>
+                                                <li>
+                                                    <div class="list_icon">
+                                                        <img src="../asset/img_information/icon_List.png" alt="">
+                                                    </div>
+                                                    <p>Use underground meter for quick exit</p>
+                                                </li>
+                                                <li>
+                                                    <div class="list_icon">
+                                                        <img src="../asset/img_information/icon_List.png" alt="">
+                                                    </div>
+                                                    <p> Compact & hybrid cars 50% off</p>
+                                                </li>
+                                                <li>
+                                                    <div class="list_icon">
+                                                        <img src="../asset/img_information/icon_List.png" alt="">
+                                                    </div>
+                                                    <p>Free for disabled visitors</p>
                                                 </li>
                                             </ul>
                                         </div>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./asset/favicon.ico" type="image/x-icon">
+    <title>NATIONAL MUSEUM OF KOREA</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background: #111;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* 버튼 영역 */
+        .toolbar {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: fixed;
+            left: 100px;
+            top: 100px;
+        }
+
+        button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        button.active {
+            background: #007aff;
+        }
+
+        /* 디바이스 프레임 */
+        .device {
+            position: relative;
+            border: 8px solid #333;
+            border-radius: 40px;
+            overflow: hidden;
+            background: black;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+            touch-action: none;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 32px;
+            background: #fff;
+        }
+
+        /* 디바이스 사이즈 */
+        .iphone {
+            width: 414px;
+            height: 896px;
+        }
+
+        .ipad {
+            width: 1024px;
+            height: 1366px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="toolbar">
+        <button id="btnIphone" class="active"> iPhone XR</button>
+    </div>
+
+    <div class="device iphone" id="device">
+        <iframe id="frame" src="index.html"></iframe>
+    </div>
+
+    <script>
+        const device = document.getElementById('device');
+        const btnIphone = document.getElementById('btnIphone');
+        // 💡 디바이스 전환 버튼
+        btnIphone.addEventListener('click', () => {
+            btnIphone.classList.add('active');
+            btnIpad.classList.remove('active');
+            device.classList.add('iphone');
+        });
+        btnIpad.addEventListener('click', () => {
+            btnIpad.classList.add('active');
+            btnIphone.classList.remove('active');
+            device.classList.remove('iphone');
+        });
+    </script>
+
+</body>
+
+</html>
