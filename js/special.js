@@ -40,8 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
-
     const total_width = () => {
         const wrap = document.querySelector(".horizontal_section");
         const track = document.querySelector(".track");
@@ -50,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // matchMedia로 반응형 제어
     ScrollTrigger.matchMedia({
-
         // ✅ 데스크탑/태블릿 이상 (415px 이상)
         "(min-width: 415px)": function () {
             gsap.to(".track", {
@@ -59,10 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrollTrigger: {
                     trigger: ".horizontal_section",
                     start: "top top",
-                    end: () => "+=" + (total_width() + window.innerWidth),
-                    scrub: true,
+                    end: () => "+=" + total_width() * 2, // 스크롤 길이를 2배로 늘림
+                    scrub: 1, // 부드럽게 (0.5~2 사이 값 조정 가능)
                     pin: true,
                     anticipatePin: 1,
+                    invalidateOnRefresh: true, // 리프레시 시 재계산
                 },
             });
         },
@@ -73,10 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
             gsap.set(".track", { clearProps: "all" });
             ScrollTrigger.refresh(); // 레이아웃 새로고침
         }
-
     });
-    window.addEventListener("resize", () => ScrollTrigger.refresh());
 
+    // ✅ 리사이즈 시 페이지 새로고침
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            location.reload(); // 페이지 새로고침
+        }, 400);
+    });
+
+    // Swiper
     let Recommendedswiper = new Swiper(".Recommended", {
         effect: "coverflow",
         grabCursor: true,
@@ -97,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    //SHARE
+    // SHARE
     document.querySelector('.reserve_btn_2').addEventListener('click', async (e) => {
         e.preventDefault();
         if (navigator.share) {
@@ -107,9 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 url: window.location.href
             });
         } else {
-            // 공유 미지원 시 링크 복사 fallback
             await navigator.clipboard.writeText(window.location.href);
             alert('링크가 복사되었습니다!');
         }
     });
-})
+});
