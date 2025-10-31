@@ -1,6 +1,14 @@
 @charset "UTF-8";
 /* 1024px 반응형 */
 @media (max-width: 1024px) {
+    main .banner_top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main .banner{
+        display: none;
+    }
 
     /* reservation.inner의 padding 제거 */
     .reservation.inner {
@@ -47,12 +55,10 @@
 
     /* Banner  - 화면 전체 너비 */
     .reservation .left_content .banner {
-        width: 100vw;
+        width: 100%;
         position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
+        /* left: 50%;
+        right: 50%; */
         height: 180px;
         border-radius: 0;
         /* 둥근 모서리 제거 */
@@ -218,7 +224,10 @@
         width: 100%;
         padding: 0;
     }
-
+main .banner_top {
+       background: url(../asset/img_reservation/mobile_banner.png) no-repeat center;
+       
+    }
     /* Form Section Padding 조정 */
     .reservation .form_section {
         padding: 24px 30px;
