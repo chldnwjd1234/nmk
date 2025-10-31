@@ -94,7 +94,7 @@ footer{display: none;}
 .reservation .info {
     width: 100%;
     background-color: #fff;
-    padding: 32px 30px 32px 50px;
+    padding: 32px 40px 32px 50px;
     box-shadow: 3px 2px 60.6px 0px rgba(179, 51, 44, 0.1);
 }
 
@@ -257,7 +257,7 @@ footer{display: none;}
 .reservation .form_section {
     width: 100%;
     background-color: #fff;
-    padding: 32px 30px;
+    padding: 32px 40px 32px 50px;
     box-shadow: 3px 2px 60.6px 0px rgba(0, 57, 100, 0.1);
 }
 
@@ -306,17 +306,17 @@ footer{display: none;}
 .reservation .time_buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 36px;
+    gap: 12px;
 }
 
 .reservation .time_btn {
-    padding: 8px 15px;
+    padding: 10px 30px;
     border: 1px solid var(--gray-04);
     border-radius: 10px;
     background-color: var(--w-color);
     font-family: 'pretendard', sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.3;
     color: var(--gray-06);
     cursor: pointer;
@@ -429,7 +429,7 @@ footer{display: none;}
     flex-direction: column;
     gap: 12px;
     background-color: #fff;
-    padding: 32px 30px;
+    padding: 32px 40px;
     box-shadow: 3px 2px 60.6px 0px rgba(179, 51, 44, 0.1);
 }
 
