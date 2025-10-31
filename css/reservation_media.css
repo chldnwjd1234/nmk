@@ -6,7 +6,8 @@
         justify-content: center;
         align-items: center;
     }
-    main .banner{
+
+    main .banner {
         display: none;
     }
 
@@ -106,7 +107,7 @@
 
     .reservation .time_btn {
         font-size: 17px;
-        padding: 8px 15px;
+        padding: 8px 22px;
     }
 
     .reservation .info {
@@ -128,6 +129,10 @@
     .reservation .payment_section {
         box-shadow: 0 2px 8px 0px rgba(0, 57, 100, 0.05);
         /* 약하게 */
+    }
+
+    .reservation .payment_title {
+        font-size: 22px;
     }
 
     .reservation .card_text {
@@ -224,10 +229,12 @@
         width: 100%;
         padding: 0;
     }
-main .banner_top {
-       background: url(../asset/img_reservation/mobile_banner.png) no-repeat center;
-       
+
+    main .banner_top {
+        background: url(../asset/img_reservation/mobile_banner.png) no-repeat center;
+
     }
+
     /* Form Section Padding 조정 */
     .reservation .form_section {
         padding: 24px 30px;
@@ -235,12 +242,17 @@ main .banner_top {
 
     /* Payment Section Padding 조정 */
     .reservation .payment_section {
-        padding: 24px 20px;
+        padding: 24px 30px;
+    }
+
+
+    .reservation .payment_title {
+        font-size: 18px;
     }
 
     /* Checkbox Section Padding 조정 */
     .reservation .checkbox_section {
-        padding: 24px 20px;
+        padding: 24px 30px;
     }
 
     .reservation .left_content .banner {
@@ -249,6 +261,10 @@ main .banner_top {
 
     .reservation .left_content .banner_tit h2 {
         font-size: 23px;
+    }
+
+    .reservation .info {
+        padding: 24px 30px;
     }
 
     .reservation .info h3 {
@@ -329,8 +345,13 @@ main .banner_top {
         font-size: 14px;
     }
 
+    .reservation .time_buttons {
+        gap: 6px;
+    }
+
     .reservation .time_btn {
         font-size: 14px;
+        padding: 8px 12px;
     }
 
     .reservation .visitor_label {
