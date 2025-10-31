@@ -112,4 +112,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 초기 가격 계산
     updatePrice();
+
+    // ===== 4. 리사이징 시 새로고침 =====
+    let resizeTimer;
+    let lastWidth = window.innerWidth;
+
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        
+        resizeTimer = setTimeout(function() {
+            const currentWidth = window.innerWidth;
+            
+            // 너비가 변경되었을 때만 새로고침
+            if (currentWidth !== lastWidth) {
+                location.reload();
+            }
+            
+            lastWidth = currentWidth;
+        }, 300); // 300ms 지연 후 새로고침 (리사이징이 끝난 후)
+    });
 });
