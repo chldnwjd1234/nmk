@@ -588,7 +588,7 @@ main .vision .line_right {
     bottom: -48px;
     height: auto;
     z-index: 2;
-    /* background: #1C1E1F; */
+    background: #1D2021;
 }
 
 main .vision .line_draw {

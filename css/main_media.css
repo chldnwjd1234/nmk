@@ -264,8 +264,8 @@
     }
 
 
-    .highlight .contents .top a:hover::before {
-        opacity: 1;
+    .highlight .contents .top a:hover::before, .highlight .contents .top a:hover::after {
+        opacity: 0;
     }
 
     /* h_img2 숨기기 */
@@ -328,6 +328,10 @@
         border-radius: 50px;
         align-items: center;
         justify-content: center;
+    }
+
+        .highlight .contents .bottom a:hover::before, .highlight .contents .bottom a:hover::after{
+        display: none;
     }
 
     /*  main .backimg */
